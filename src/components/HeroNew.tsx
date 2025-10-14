@@ -25,9 +25,6 @@ export const HeroNew = () => {
           
           {/* Key Message */}
           <div className="mb-8">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4">
-              Visualize your site in seconds!
-            </h2>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
               Real-time positioning, 3D visualization of your site!
             </p>
