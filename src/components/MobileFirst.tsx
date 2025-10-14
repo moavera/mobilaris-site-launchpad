@@ -14,10 +14,6 @@ export const MobileFirst = () => {
           <p className="text-xl text-muted-foreground mb-4">
             Access Mobilaris Site™ from anywhere with our intuitive mobile app. Get real-time notifications, track assets, and manage safety protocols directly from your smartphone.
           </p>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Access your site data anywhere, anytime. Our mobile-first approach ensures 
-            you have full control at your fingertips.
-          </p>
         </div>
 
         {/* Deployment Options */}
