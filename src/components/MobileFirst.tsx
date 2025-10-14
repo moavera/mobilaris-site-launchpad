@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Smartphone, Cloud, Server } from "lucide-react";
 
 export const MobileFirst = () => {
@@ -14,11 +15,14 @@ export const MobileFirst = () => {
           <p className="text-xl text-muted-foreground mb-6">
             Access Mobilaris Site™ from anywhere with our intuitive mobile app. Get real-time notifications, track assets, and manage safety protocols directly from your smartphone.
           </p>
-          <ul className="text-lg text-muted-foreground max-w-2xl mx-auto space-y-2 list-disc list-inside">
+          <ul className="text-lg text-muted-foreground max-w-2xl mx-auto space-y-2 list-disc list-inside mb-6">
             <li>Available for iOS and Android</li>
             <li>Real-time notifications and alerts</li>
             <li>Scan QR codes for quick asset information</li>
           </ul>
+          <Button size="lg" className="bg-primary hover:bg-primary/90">
+            Try now
+          </Button>
         </div>
 
         {/* Deployment Options */}
