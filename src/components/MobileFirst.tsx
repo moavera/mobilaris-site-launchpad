@@ -7,22 +7,32 @@ export const MobileFirst = () => {
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Mobile First */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <Smartphone className="w-12 h-12 text-primary" />
-            <h2 className="text-4xl md:text-5xl font-bold">Mobile First Design!</h2>
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16 animate-fade-in-up">
+          {/* Image */}
+          <div className="relative">
+            <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center">
+              <Smartphone className="w-32 h-32 text-primary/40" />
+            </div>
           </div>
-          <p className="text-xl text-muted-foreground mb-6">
-            Access Mobilaris Site™ from anywhere with our intuitive mobile app. Get real-time notifications, track assets, and manage safety protocols directly from your smartphone.
-          </p>
-          <ul className="text-lg text-muted-foreground max-w-2xl mx-auto space-y-2 list-disc list-inside mb-6">
-            <li>Available for iOS and Android</li>
-            <li>Real-time notifications and alerts</li>
-            <li>Scan QR codes for quick asset information</li>
-          </ul>
-          <Button size="lg" className="bg-primary hover:bg-primary/90">
-            Try now
-          </Button>
+
+          {/* Text Content */}
+          <div className="text-left">
+            <div className="flex items-center gap-3 mb-6">
+              <Smartphone className="w-12 h-12 text-primary" />
+              <h2 className="text-4xl md:text-5xl font-bold">Mobile First Design!</h2>
+            </div>
+            <p className="text-xl text-muted-foreground mb-6">
+              Access Mobilaris Site™ from anywhere with our intuitive mobile app. Get real-time notifications, track assets, and manage safety protocols directly from your smartphone.
+            </p>
+            <ul className="text-lg text-muted-foreground space-y-2 list-disc list-inside mb-6">
+              <li>Available for iOS and Android</li>
+              <li>Real-time notifications and alerts</li>
+              <li>Scan QR codes for quick asset information</li>
+            </ul>
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
+              Try now
+            </Button>
+          </div>
         </div>
 
         {/* Deployment Options */}
