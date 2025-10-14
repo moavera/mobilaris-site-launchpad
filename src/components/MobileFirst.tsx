@@ -12,7 +12,7 @@ export const MobileFirst = () => {
             <h2 className="text-4xl md:text-5xl font-bold">Mobile First Design!</h2>
           </div>
           <p className="text-xl text-muted-foreground mb-4">
-            App available for iOS and Android
+            Available on iOS and Android
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Access your site data anywhere, anytime. Our mobile-first approach ensures 
