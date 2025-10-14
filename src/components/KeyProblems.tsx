@@ -28,7 +28,7 @@ export const KeyProblems = () => {
             Solving Your Biggest Challenges
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Three critical problems that Site™ addresses for industrial operations
+            Three critical problems that Mobilaris Site™ addresses for industrial operations
           </p>
         </div>
 
