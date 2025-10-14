@@ -20,7 +20,7 @@ export const HeroNew = () => {
         <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
           {/* Hook Question */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-            Do you want to come home after work today?
+            Visualize your site in seconds
           </h1>
           
           {/* Key Message */}
