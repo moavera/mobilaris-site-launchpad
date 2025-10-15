@@ -14,7 +14,7 @@ export const MobileFirst = () => {
             <img 
               src={mobileAppImage} 
               alt="Mobilaris Site mobile app showing gas cylinder tracking"
-              className="h-auto max-w-full rounded-3xl shadow-2xl"
+              className="h-auto w-64 md:w-72 rounded-3xl shadow-2xl"
             />
           </div>
 
