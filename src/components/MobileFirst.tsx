@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Smartphone, Cloud, Server } from "lucide-react";
+import mobileAppImage from "@/assets/mobile-app.png";
 
 export const MobileFirst = () => {
   return (
@@ -9,10 +10,12 @@ export const MobileFirst = () => {
         {/* Mobile First */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16 animate-fade-in-up">
           {/* Image */}
-          <div className="relative">
-            <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center">
-              <Smartphone className="w-32 h-32 text-primary/40" />
-            </div>
+          <div className="relative flex justify-center">
+            <img 
+              src={mobileAppImage} 
+              alt="Mobilaris Site mobile app showing gas cylinder tracking"
+              className="h-auto max-w-full rounded-3xl shadow-2xl"
+            />
           </div>
 
           {/* Text Content */}
