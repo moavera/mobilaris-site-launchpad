@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import heroImage from "@/assets/hero-industrial-site.jpg";
+import dashboardImage from "@/assets/dashboard-preview.png";
 
 export const HeroNew = () => {
   return (
@@ -10,46 +10,58 @@ export const HeroNew = () => {
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-20">
-        <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
-          {/* Hook Question */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-            Visualize your site in seconds
-          </h1>
-          
-          {/* Key Message */}
-          <div className="mb-8">
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Real-time positioning and 3D visualization of your site
-            </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Text and Buttons */}
+          <div className="text-left animate-fade-in-up">
+            {/* Hook Question */}
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+              Visualize your site in seconds
+            </h1>
+            
+            {/* Key Message */}
+            <div className="mb-8">
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
+                Real-time positioning and 3D visualization of your site
+              </p>
+            </div>
+
+            {/* Visual Tags */}
+            <div className="flex flex-wrap gap-4 mb-10">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 py-3">
+                <span className="text-white font-semibold">🚗 Vehicles</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 py-3">
+                <span className="text-white font-semibold">👷 People</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 py-3">
+                <span className="text-white font-semibold">📦 Assets</span>
+              </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-elegant text-lg px-8">
+                Book Demo
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white/50 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-8"
+              >
+                <Play className="mr-2 h-5 w-5" />
+                Try Demo Site
+              </Button>
+            </div>
           </div>
 
-          {/* Visual Tags */}
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 py-3">
-              <span className="text-white font-semibold">🚗 Vehicles</span>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 py-3">
-              <span className="text-white font-semibold">👷 People</span>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 py-3">
-              <span className="text-white font-semibold">📦 Assets</span>
-            </div>
-          </div>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-elegant text-lg px-8">
-              Book Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white/50 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-8"
-            >
-              <Play className="mr-2 h-5 w-5" />
-              Try Demo Site
-            </Button>
+          {/* Right: Image */}
+          <div className="animate-fade-in-up lg:block hidden">
+            <img
+              src={dashboardImage}
+              alt="3D site visualization dashboard showing real-time positioning"
+              className="w-full h-auto rounded-2xl shadow-2xl"
+            />
           </div>
         </div>
       </div>
