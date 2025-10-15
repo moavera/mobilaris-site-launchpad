@@ -5,15 +5,8 @@ import heroImage from "@/assets/hero-industrial-site.jpg";
 export const HeroNew = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Industrial site with digital tracking overlay"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-hero" />
-      </div>
+      {/* Background */}
+      <div className="absolute inset-0 z-0 bg-[#222222]" />
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-20">
