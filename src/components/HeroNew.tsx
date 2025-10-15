@@ -6,7 +6,9 @@ export const HeroNew = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#1a0b2e] via-[#2d1b4e] to-[#0f0820]" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0a0a0f] via-[#1a0d26] to-[#150a20]">
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[#A029FF]/10 to-transparent" />
+      </div>
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-20">
