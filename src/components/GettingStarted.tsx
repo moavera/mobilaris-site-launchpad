@@ -58,22 +58,6 @@ export const GettingStarted = () => {
           ))}
         </div>
 
-        {/* Video Section */}
-        <div className="max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
-          <Card className="p-8 text-center">
-            <h3 className="text-2xl font-bold mb-6">See how it works</h3>
-            <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                    <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1" />
-                  </div>
-                </div>
-                <p className="text-muted-foreground">Video: Getting Started Journey</p>
-              </div>
-            </div>
-          </Card>
-        </div>
       </div>
     </section>
   );
