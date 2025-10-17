@@ -2,10 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 
 export const ContactSection = () => {
-  const handleEmailClick = () => {
-    window.location.href = "mailto:contact@mobilaris.com?subject=Inquiry about Mobilaris Site";
-  };
-
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -20,11 +16,13 @@ export const ContactSection = () => {
           <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <Button 
               size="lg" 
-              onClick={handleEmailClick}
               className="bg-primary hover:bg-primary/90 shadow-elegant text-lg px-8"
+              asChild
             >
-              <Mail className="mr-2 h-5 w-5" />
-              Contact Us
+              <a href="mailto:support@mobilaris.se">
+                <Mail className="mr-2 h-5 w-5" />
+                Contact us
+              </a>
             </Button>
           </div>
         </div>

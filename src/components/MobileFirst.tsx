@@ -32,8 +32,10 @@ export const MobileFirst = () => {
               <li>Real-time notifications and alerts</li>
               <li>Scan QR codes for quick asset information</li>
             </ul>
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              Try now
+            <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
+              <a href="mailto:support@mobilaris.se">
+                Contact us
+              </a>
             </Button>
           </div>
         </div>

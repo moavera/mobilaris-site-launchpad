@@ -30,12 +30,11 @@ export const Hero = () => {
             enhance workforce safety.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-elegant">
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-white/50 text-white hover:bg-white/10 backdrop-blur-sm">
-              Learn More
+            <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-elegant" asChild>
+              <a href="mailto:support@mobilaris.se">
+                Contact us
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>
