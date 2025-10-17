@@ -42,9 +42,11 @@ export const HeroNew = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-elegant text-lg px-8">
-                Book Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-elegant text-lg px-8" asChild>
+                <a href="mailto:contact@example.com">
+                  Contact us
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
             </div>
           </div>
