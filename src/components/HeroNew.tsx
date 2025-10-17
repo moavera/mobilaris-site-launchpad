@@ -46,14 +46,6 @@ export const HeroNew = () => {
                 Book Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white/50 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-8"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Try Demo Site
-              </Button>
             </div>
           </div>
 
