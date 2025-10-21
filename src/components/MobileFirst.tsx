@@ -20,10 +20,7 @@ export const MobileFirst = () => {
 
           {/* Text Content */}
           <div className="text-left">
-            <div className="flex items-center gap-3 mb-6">
-              <Smartphone className="w-12 h-12 text-primary" />
-              <h2 className="text-4xl md:text-5xl font-bold">Mobile First Design!</h2>
-            </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Mobile First Design!</h2>
             <p className="text-xl text-muted-foreground mb-6">
               Access Mobilaris Site™ from anywhere with our intuitive mobile app. Get real-time notifications, track assets, and manage safety protocols directly from your smartphone.
             </p>
