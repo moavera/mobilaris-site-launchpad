@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import dashboardImage from "@/assets/dashboard-preview.png";
+import dashboardImage from "@/assets/websitematerial.png";
 
 export const HeroNew = () => {
   return (
