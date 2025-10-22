@@ -28,7 +28,7 @@ export const HeroNew = () => {
             
             {/* Key Message */}
             <div className="mb-8">
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed">Real-time positioning and 3D visualization eliminates guess-work during critical moments</p>
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed">Real-time positioning and 3D visualization eliminates guess-work during critical operations</p>
             </div>
 
             {/* Visual Tags */}
