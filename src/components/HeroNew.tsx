@@ -1,15 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import dashboardImage from "@/assets/websitematerial.png";
-
 export const HeroNew = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0 bg-background">
         {/* Animated gradient orbs */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[100px] animate-pulse" style={{
+        animationDelay: '1s'
+      }} />
         
         {/* Tech grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -24,15 +24,11 @@ export const HeroNew = () => {
           {/* Left: Text and Buttons */}
           <div className="text-left animate-fade-in-up">
             {/* Hook Question */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-              Total control of your site in real-time
-            </h1>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">Total control of your site, everywhere</h1>
             
             {/* Key Message */}
             <div className="mb-8">
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-                Real-time positioning and 3D visualization of your site
-              </p>
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed">Real-time positioning and 3D visualization eliminates guess-work during critical moments</p>
             </div>
 
             {/* Visual Tags */}
@@ -61,11 +57,7 @@ export const HeroNew = () => {
 
           {/* Right: Image */}
           <div className="animate-fade-in-up lg:block hidden">
-            <img
-              src={dashboardImage}
-              alt="3D site visualization dashboard showing real-time positioning"
-              className="w-full h-auto rounded-2xl shadow-2xl"
-            />
+            <img src={dashboardImage} alt="3D site visualization dashboard showing real-time positioning" className="w-full h-auto rounded-2xl shadow-2xl" />
           </div>
         </div>
       </div>
@@ -76,6 +68,5 @@ export const HeroNew = () => {
           <div className="w-1 h-3 bg-white/50 rounded-full" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
