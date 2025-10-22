@@ -10,7 +10,7 @@ const problems = [
   {
     icon: Database,
     title: "Gas Cylinders",
-    description: "Track and manage thousands of pressure equipment units. Never lose track of critical assets and maintain complete inventory control.",
+    description: "Gain total control of your operations. Locate and manage thousands of assets in seconds, eliminate downtime caused by misplaced equipment, and optimize resource utilization across your site.",
   },
   {
     icon: FileCheck,
