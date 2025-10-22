@@ -25,7 +25,7 @@ export const HeroNew = () => {
           <div className="text-left animate-fade-in-up">
             {/* Hook Question */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-              Visualize your site in seconds
+              Total control of your site in real-time
             </h1>
             
             {/* Key Message */}
