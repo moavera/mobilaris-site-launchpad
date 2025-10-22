@@ -24,7 +24,7 @@ export const HeroNew = () => {
           {/* Left: Text and Buttons */}
           <div className="text-left animate-fade-in-up">
             {/* Hook Question */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">Total control of your site, everywhere</h1>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">Total control of your site, <span style={{ color: '#D39DFF' }}>everywhere</span></h1>
             
             {/* Key Message */}
             <div className="mb-8">
