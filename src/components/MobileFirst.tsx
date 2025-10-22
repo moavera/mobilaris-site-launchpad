@@ -54,7 +54,7 @@ export const MobileFirst = () => {
                 <li>Deploy in minutes with zero infrastructure management</li>
                 <li>Automatic updates and maintenance included</li>
                 <li>Elastic scalability to handle traffic spikes</li>
-                <li>Global CDN for optimal performance worldwide</li>
+                
                 <li>Standardized OAuth 2.0 and SAML authentication</li>
               </ul>
             </Card>
