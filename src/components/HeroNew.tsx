@@ -22,7 +22,7 @@ export const HeroNew = () => {
       <div className="container relative z-10 mx-auto px-4 py-12 md:py-20">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Text and Buttons */}
-          <div className="text-left animate-fade-in-up">
+          <div className="text-center lg:text-left animate-fade-in-up">
             {/* Hook Question */}
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight">Total control of your site, <span style={{ color: '#D39DFF' }}>everywhere</span></h1>
             
@@ -32,7 +32,7 @@ export const HeroNew = () => {
             </div>
 
             {/* Visual Tags */}
-            <div className="flex flex-wrap gap-3 md:gap-4 mb-8 md:mb-10">
+            <div className="flex flex-wrap gap-3 md:gap-4 mb-8 md:mb-10 justify-center lg:justify-start">
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 sm:px-6 py-2 sm:py-3">
                 <span className="text-white font-semibold text-sm sm:text-base">🚗 Vehicles</span>
               </div>
@@ -45,7 +45,7 @@ export const HeroNew = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-elegant text-lg px-8" asChild>
                 <a href="mailto:support@mobilaris.se">
                   Contact us
