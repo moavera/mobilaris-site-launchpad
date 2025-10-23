@@ -1,8 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Shield, Database, FileCheck, ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Shield, Database, FileCheck } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback } from "react";
 
 const problems = [
   {
@@ -23,20 +21,12 @@ const problems = [
 ];
 
 export const KeyProblems = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+  const [emblaRef] = useEmblaCarousel({ 
     align: "start",
     loop: false,
     skipSnaps: false,
     dragFree: false
   });
-
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
 
   return (
     <section className="py-20 bg-background">
@@ -50,38 +40,17 @@ export const KeyProblems = () => {
           </p>
         </div>
 
-        <div className="relative max-w-7xl mx-auto">
-          {/* Navigation Buttons */}
-          <div className="hidden md:flex justify-end gap-2 mb-4">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={scrollPrev}
-              className="rounded-full"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={scrollNext}
-              className="rounded-full"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </Button>
-          </div>
-
-          {/* Carousel */}
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6">
+        {/* Mobile Carousel */}
+        <div className="md:hidden">
+          <div className="overflow-hidden -mx-4" ref={emblaRef}>
+            <div className="flex gap-4 px-4">
               {problems.map((problem, index) => (
                 <div 
                   key={index}
-                  className="flex-[0_0_100%] md:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0"
+                  className="flex-[0_0_85%] min-w-0"
                 >
                   <Card 
-                    className="p-8 h-full hover:shadow-elegant transition-all duration-300 animate-fade-in-up border-border/50"
-                    style={{ animationDelay: `${index * 0.15}s` }}
+                    className="p-8 h-full hover:shadow-elegant transition-all duration-300 border-border/50"
                   >
                     <div className="mb-6">
                       <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
@@ -97,6 +66,27 @@ export const KeyProblems = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {problems.map((problem, index) => (
+            <Card 
+              key={index} 
+              className="p-8 hover:shadow-elegant transition-all duration-300 animate-fade-in-up border-border/50"
+              style={{ animationDelay: `${index * 0.15}s` }}
+            >
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
+                  <problem.icon className="w-8 h-8 text-white" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">{problem.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {problem.description}
+              </p>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
