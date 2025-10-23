@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import dashboardImage from "@/assets/websitematerial.png";
+import dashboardImage from "@/assets/webimage.webp";
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
