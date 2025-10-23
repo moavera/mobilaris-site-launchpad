@@ -19,28 +19,28 @@ export const HeroNew = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container relative z-10 mx-auto px-4 py-12 md:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Text and Buttons */}
           <div className="text-left animate-fade-in-up">
             {/* Hook Question */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">Total control of your site, <span style={{ color: '#D39DFF' }}>everywhere</span></h1>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight">Total control of your site, <span style={{ color: '#D39DFF' }}>everywhere</span></h1>
             
             {/* Key Message */}
-            <div className="mb-8">
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed">Real-time positioning and 3D visualization eliminates guess-work during critical operations</p>
+            <div className="mb-6 md:mb-8">
+              <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed">Real-time positioning and 3D visualization eliminates guess-work during critical operations</p>
             </div>
 
             {/* Visual Tags */}
-            <div className="flex flex-wrap gap-4 mb-10">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 py-3">
-                <span className="text-white font-semibold">🚗 Vehicles</span>
+            <div className="flex flex-wrap gap-3 md:gap-4 mb-8 md:mb-10">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 sm:px-6 py-2 sm:py-3">
+                <span className="text-white font-semibold text-sm sm:text-base">🚗 Vehicles</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 py-3">
-                <span className="text-white font-semibold">👷 People</span>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 sm:px-6 py-2 sm:py-3">
+                <span className="text-white font-semibold text-sm sm:text-base">👷 People</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 py-3">
-                <span className="text-white font-semibold">📦 Assets</span>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 sm:px-6 py-2 sm:py-3">
+                <span className="text-white font-semibold text-sm sm:text-base">📦 Assets</span>
               </div>
             </div>
 
@@ -56,8 +56,8 @@ export const HeroNew = () => {
           </div>
 
           {/* Right: Image */}
-          <div className="animate-fade-in-up lg:block hidden">
-            <img src={dashboardImage} alt="3D site visualization dashboard showing real-time positioning" className="w-full h-auto rounded-2xl shadow-2xl" />
+          <div className="animate-fade-in-up">
+            <img src={dashboardImage} alt="3D site visualization dashboard showing real-time positioning" className="w-full h-auto rounded-xl lg:rounded-2xl shadow-2xl" />
           </div>
         </div>
       </div>
