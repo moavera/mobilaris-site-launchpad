@@ -39,14 +39,21 @@ export const SecurityFeatures = () => {
   });
 
   return (
-    <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Enterprise-Grade Security
+    <section className="py-24 bg-background relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background pointer-events-none" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-20 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
+            <Shield className="w-4 h-4" />
+            <span className="text-sm font-semibold">Enterprise-Grade Security</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Built on Modern Standards
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Built with security and reliability at the core, ensuring your operations run smoothly and safely
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Comprehensive security and reliability features that ensure seamless, safe operations
           </p>
         </div>
 
@@ -60,10 +67,10 @@ export const SecurityFeatures = () => {
                   className="flex-[0_0_85%] min-w-0"
                 >
                   <Card 
-                    className="p-8 h-full hover:shadow-elegant transition-all duration-300 border-border/50"
+                    className="p-8 h-full bg-card/50 backdrop-blur-sm hover:shadow-elegant transition-all duration-300 border-border/50 hover:border-primary/20"
                   >
                     <div className="mb-6">
-                      <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
+                      <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-glow">
                         <feature.icon className="w-8 h-8 text-white" />
                       </div>
                     </div>
@@ -79,22 +86,28 @@ export const SecurityFeatures = () => {
         </div>
 
         {/* Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+        <div className="hidden md:grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="p-6 hover:shadow-elegant transition-all duration-300 animate-fade-in-up border-border/50"
+              className="group p-10 bg-card/50 backdrop-blur-sm hover:shadow-elegant transition-all duration-500 animate-fade-in-up border-border/50 hover:border-primary/20 hover:-translate-y-1"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-4">
-                <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
-                  <feature.icon className="w-7 h-7 text-white" />
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {feature.description}
-              </p>
             </Card>
           ))}
         </div>
