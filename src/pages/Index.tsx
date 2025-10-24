@@ -7,7 +7,6 @@ import { SecurityFeatures } from "@/components/SecurityFeatures";
 
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-import { Partners } from "@/components/Partners";
 
 const Index = () => {
   return (
@@ -18,7 +17,6 @@ const Index = () => {
       <MobileFirst />
       <GettingStarted />
       <SecurityFeatures />
-      <Partners />
       
       <ContactSection />
       <Footer />
