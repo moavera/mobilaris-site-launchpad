@@ -14,11 +14,6 @@ const features = [
     description: "Full observability and logging capabilities ensure complete visibility into system performance and operations.",
   },
   {
-    icon: Code2,
-    title: "Infrastructure as Code",
-    description: "Automated, infrastructure-as-code management streamlines deployment and ensures consistency across environments.",
-  },
-  {
     icon: Lock,
     title: "Secure OAuth2 Access",
     description: "Enterprise-grade OAuth2-based access control protects your data and ensures only authorized access.",
