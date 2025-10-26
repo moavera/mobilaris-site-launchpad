@@ -4,18 +4,18 @@ import dashboardImage from "@/assets/webimage-3d.webp";
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 z-0 bg-background">
+      <div className="absolute inset-0 z-0">
         {/* Animated gradient orbs */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[100px] animate-pulse" style={{
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/8 rounded-full blur-[100px] animate-pulse" style={{
         animationDelay: '1s'
       }} />
         
         {/* Tech grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff04_1px,transparent_1px),linear-gradient(to_bottom,#ffffff04_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         
         {/* Scanline effect */}
-        <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_0%,rgba(160,41,255,0.03)_50%,transparent_100%)] bg-[length:100%_4px] animate-[slide-in-right_20s_linear_infinite]" />
+        <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_0%,rgba(160,41,255,0.02)_50%,transparent_100%)] bg-[length:100%_4px] animate-[slide-in-right_20s_linear_infinite]" />
       </div>
 
       {/* Content */}
