@@ -39,12 +39,12 @@ export const Partners = () => {
                 
                 <div className="relative z-10">
                   {/* Logo/Icon */}
-                  <div className="mb-6 inline-flex items-center justify-center h-16">
+                  <div className="mb-8 inline-flex items-center justify-center h-28">
                     {partner.logo ? (
-                      <img src={partner.logo} alt={partner.name} className="h-12 w-auto object-contain" />
+                      <img src={partner.logo} alt={partner.name} className="h-24 w-auto object-contain" />
                     ) : (
-                      <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                        <partner.icon className="h-8 w-8 text-primary" />
+                      <div className="inline-flex items-center justify-center w-24 h-24 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-colors">
+                        <partner.icon className="h-14 w-14 text-primary" />
                       </div>
                     )}
                   </div>
