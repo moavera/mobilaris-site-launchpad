@@ -37,24 +37,6 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Divider */}
-        <div className="border-t border-white/5 mb-8"></div>
-
-        {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
-          <p className="text-white/40">
-            © {new Date().getFullYear()} Mobilaris Industrial Solutions. All rights reserved.
-          </p>
-          <div className="flex gap-8">
-            <a href="#" className="text-white/40 hover:text-white/80 transition-colors duration-200">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-white/40 hover:text-white/80 transition-colors duration-200">
-              Terms of Service
-            </a>
-          </div>
-        </div>
       </div>
     </footer>
   );
