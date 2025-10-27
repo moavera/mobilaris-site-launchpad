@@ -25,14 +25,12 @@ export const Partners = () => {
 
         {/* Partners Logos */}
         <div className="flex flex-wrap justify-center items-center gap-16 md:gap-24 max-w-5xl mx-auto">
-          {partners.map((partner, index) => <div key={index} className="group flex flex-col items-center gap-6 animate-fade-in-up hover:scale-105 transition-transform duration-300" style={{
+          {partners.map((partner, index) => <div key={index} className="flex flex-col items-center gap-6 animate-fade-in-up transition-transform duration-300" style={{
           animationDelay: `${index * 0.1}s`
         }}>
               {/* Logo/Icon */}
               <div className="flex items-center justify-center h-40 w-64 relative">
-                <img src={partner.logo} alt={partner.name} className="h-32 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
-                {/* Glow effect on hover */}
-                <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                <img src={partner.logo} alt={partner.name} className="h-32 w-auto object-contain" />
               </div>
             </div>)}
         </div>
