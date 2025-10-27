@@ -29,9 +29,9 @@ export const Partners = () => {
           animationDelay: `${index * 0.1}s`
         }}>
               {/* Logo/Icon */}
-              <div className="flex items-center justify-center h-32 w-48 relative">
-                {partner.logo ? <img src={partner.logo} alt={partner.name} className="h-24 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300" /> : <div className="inline-flex items-center justify-center w-24 h-24 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
-                    <partner.icon className="h-14 w-14 text-primary/70 group-hover:text-primary transition-colors" />
+              <div className="flex items-center justify-center h-40 w-64 relative">
+                {partner.logo ? <img src={partner.logo} alt={partner.name} className="h-32 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300" /> : <div className="inline-flex items-center justify-center w-32 h-32 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
+                    <partner.icon className="h-20 w-20 text-primary/70 group-hover:text-primary transition-colors" />
                   </div>}
                 {/* Glow effect on hover */}
                 <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
