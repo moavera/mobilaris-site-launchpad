@@ -65,15 +65,6 @@ export const Partners = () => {
                 <h3 className="text-2xl font-bold text-foreground">
                   {partner.name}
                 </h3>
-                
-                <div className="flex flex-wrap justify-center gap-2">
-                  <Badge variant="outline" className="text-xs">
-                    {partner.industry}
-                  </Badge>
-                  <Badge variant="outline" className="text-xs">
-                    {partner.partnership}
-                  </Badge>
-                </div>
 
                 <p className="text-muted-foreground">
                   {partner.description}
