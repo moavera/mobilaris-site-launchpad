@@ -5,7 +5,7 @@ const steps = [
   {
     icon: Radio,
     number: "1",
-    title: "Choose your positioning technology",
+    title: "Leverage what you already have",
     description: "WiFi, BLE, GPS, UWB, or a combination — deploy using existing infrastructure or add what you need.",
   },
   {
