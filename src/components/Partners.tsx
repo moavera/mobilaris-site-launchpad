@@ -1,10 +1,15 @@
 import { Briefcase } from "lucide-react";
 import axiansLogo from "@/assets/axians.png";
+import tpoLogo from "@/assets/tpo.jpeg";
 export const Partners = () => {
   const partners = [{
     name: "Axians",
     description: "Leading mining technology provider",
     logo: axiansLogo
+  }, {
+    name: "TPO",
+    description: "Technology partner",
+    logo: tpoLogo
   }, {
     name: "GlobalMine Solutions",
     description: "International mining operations",
