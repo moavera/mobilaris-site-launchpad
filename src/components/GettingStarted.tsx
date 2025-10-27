@@ -11,7 +11,7 @@ const steps = [
   {
     icon: Tag,
     number: "2",
-    title: "Order tags easily",
+    title: "Add precision where needed",
     description: "Simple tag ordering process. We'll help you get the right tags for your assets.",
   },
   {
