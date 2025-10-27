@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import dashboardImage from "@/assets/webimage.webp";
+import logoImage from "@/assets/site-logo-2.png";
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Logo */}
+      <div className="absolute top-6 left-6 z-20">
+        <img src={logoImage} alt="Mobilaris Logo" className="h-12 md:h-16 w-auto" />
+      </div>
+
       {/* Background */}
       <div className="absolute inset-0 z-0 bg-background">
         {/* Animated gradient orbs */}
