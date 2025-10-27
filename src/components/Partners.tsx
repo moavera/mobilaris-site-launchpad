@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 export const Partners = () => {
   const partners = [{
     name: "Axians",
-    description: "Leading mining technology provider",
+    description: "Infrastructure partner",
     logo: axiansLogo,
     industry: "Mining Technology",
     partnership: "Technology Integration Partner"
