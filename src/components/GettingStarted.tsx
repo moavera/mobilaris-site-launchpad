@@ -12,7 +12,7 @@ const steps = [
     icon: Tag,
     number: "2",
     title: "Add precision where needed",
-    description: "Simple tag ordering process. We'll help you get the right tags for your assets.",
+    description: "Extend coverage with BLE, UWB, GPS, or hybrid options for higher accuracy in critical zones.",
   },
   {
     icon: Map,
