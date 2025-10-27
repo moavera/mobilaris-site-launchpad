@@ -17,7 +17,7 @@ const steps = [
   {
     icon: Map,
     number: "3",
-    title: "Import your existing map",
+    title: "Import your site map",
     description: "Upload your site layout and you're ready to go. It's that simple!",
   },
 ];
