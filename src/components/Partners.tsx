@@ -11,7 +11,7 @@ export const Partners = () => {
     partnership: "Technology Integration Partner"
   }, {
     name: "TPO",
-    description: "Technology partner",
+    description: "Infrastructure partner",
     logo: tpoLogo,
     industry: "Industrial Solutions",
     partnership: "Strategic Partner"
