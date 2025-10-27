@@ -5,26 +5,44 @@ const technologies = [
   {
     icon: Satellite,
     name: "GPS",
-    description: "Outdoor tracking",
+    use: "Outdoor tracking",
+    accuracy: "5-10m",
     color: "text-blue-500"
   },
   {
     icon: Radio,
     name: "BLE",
-    description: "Indoor positioning",
+    use: "Indoor positioning",
+    accuracy: "1-5m",
     color: "text-purple-500"
-  },
-  {
-    icon: Waves,
-    name: "UWB",
-    description: "Precision tracking",
-    color: "text-red-500"
   },
   {
     icon: Tag,
     name: "RFID",
-    description: "Asset management",
+    use: "Asset tracking",
+    accuracy: "3-10m",
     color: "text-green-500"
+  },
+  {
+    icon: Scan,
+    name: "LIDAR",
+    use: "Vehicle navigation",
+    accuracy: "0.5-2m",
+    color: "text-orange-500"
+  },
+  {
+    icon: Waves,
+    name: "UWB",
+    use: "Highest precision",
+    accuracy: "0.1-0.5m",
+    color: "text-red-500"
+  },
+  {
+    icon: MapPin,
+    name: "Wi-Fi",
+    use: "Quick deployment",
+    accuracy: "5-15m",
+    color: "text-cyan-500"
   }
 ];
 
@@ -36,31 +54,59 @@ export const TechnologyAgnostic = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Technology Agnostic Platform
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Deploy multiple positioning technologies on the same platform
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">
+            Our architecture enables multiple co-existing positioning technologies on the same site, 
+            allowing flexibility in cost and accuracy to fit different needs across your facility.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto mb-20">
+        <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
           {technologies.map((tech, index) => (
             <Card
               key={index}
-              className="p-8 text-center hover:shadow-elegant transition-all duration-300 animate-fade-in-up border-border/50 hover:scale-105"
+              className="p-6 text-center hover:shadow-elegant transition-all duration-300 animate-fade-in-up border-border/50 hover:scale-105"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-4">
-                <tech.icon className={`w-16 h-16 mx-auto ${tech.color}`} />
+                <tech.icon className={`w-12 h-12 mx-auto ${tech.color}`} />
               </div>
-              <h3 className="text-xl font-bold mb-2">{tech.name}</h3>
-              <p className="text-sm text-muted-foreground">{tech.description}</p>
+              <h3 className="text-lg font-bold mb-2">{tech.name}</h3>
+              <p className="text-sm text-muted-foreground mb-1">{tech.use}</p>
+              <p className="text-xs text-muted-foreground font-mono">{tech.accuracy}</p>
             </Card>
           ))}
         </div>
 
-        <div className="text-center max-w-3xl mx-auto space-y-6 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-          <p className="text-lg text-muted-foreground">
-            Deploy the right solution for each area • Adapt and scale easily as your site evolves • Unified data model and API
-          </p>
+        <div className="mt-16 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="text-center p-6 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
+            <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <MapPin className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="font-bold text-lg mb-3">Deploy the Right Solution</h3>
+            <p className="text-muted-foreground">
+              GPS for outdoor visibility, BLE or RFID for indoor tracking, UWB for centimeter-level precision.
+            </p>
+          </div>
+
+          <div className="text-center p-6 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+            <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <Scan className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="font-bold text-lg mb-3">Adapt and Scale Easily</h3>
+            <p className="text-muted-foreground">
+              As your site evolves — add or replace technologies without changing the platform.
+            </p>
+          </div>
+
+          <div className="text-center p-6 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
+            <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <Waves className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="font-bold text-lg mb-3">Unified Data Model</h3>
+            <p className="text-muted-foreground">
+              All positioning data visualized and managed in one place with a single API.
+            </p>
+          </div>
         </div>
       </div>
     </section>
