@@ -12,7 +12,7 @@ export const Footer = () => {
             <img 
               src={siteLogo} 
               alt="Mobilaris Site logo" 
-              className="h-12 mb-6"
+              className="h-12 w-auto mb-6"
             />
             <p className="text-white/60 text-base leading-relaxed max-w-lg">
               Real-time positioning and 3D-visualization of your site
@@ -28,7 +28,7 @@ export const Footer = () => {
               <img 
                 src={mobilarisLogo} 
                 alt="Mobilaris Industrial Solutions" 
-                className="h-8 opacity-90"
+                className="h-8 w-auto opacity-90"
               />
             </div>
           </div>
