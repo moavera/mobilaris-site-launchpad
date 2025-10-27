@@ -3,46 +3,52 @@ import mobilarisLogo from "@/assets/mobilaris-industrial.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#121214] text-white py-16 border-t border-white/10">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Product Branding */}
-          <div className="flex flex-col items-start space-y-6">
-            <div>
-              <img 
-                src={siteLogo} 
-                alt="Mobilaris Site logo" 
-                className="h-14 mb-3"
-              />
-              <p className="text-white/70 text-sm max-w-md">
-                Real-time positioning and 3D-visualization of your site
-              </p>
-            </div>
+    <footer className="bg-gradient-to-b from-[#0A0A0B] to-[#121214] text-white py-20 border-t border-white/5">
+      <div className="container mx-auto px-4 max-w-6xl">
+        {/* Main Content */}
+        <div className="grid md:grid-cols-3 gap-16 mb-16">
+          {/* Product Section */}
+          <div className="md:col-span-2 flex flex-col justify-center">
+            <img 
+              src={siteLogo} 
+              alt="Mobilaris Site logo" 
+              className="h-12 mb-6"
+            />
+            <p className="text-white/60 text-base leading-relaxed max-w-lg">
+              Real-time positioning and 3D-visualization of your site
+            </p>
           </div>
 
-          {/* Right Column - Company Branding */}
-          <div className="flex flex-col items-start md:items-end space-y-4">
-            <div className="text-left md:text-right">
-              <p className="text-white/50 text-xs uppercase tracking-wider mb-3">
+          {/* Company Branding */}
+          <div className="flex flex-col justify-center md:items-end">
+            <div className="inline-block">
+              <p className="text-white/40 text-xs uppercase tracking-widest mb-4 font-medium">
                 Part of
               </p>
               <img 
                 src={mobilarisLogo} 
                 alt="Mobilaris Industrial Solutions" 
-                className="h-10 mb-2"
+                className="h-8 opacity-90"
               />
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-            <p>© {new Date().getFullYear()} Mobilaris Industrial Solutions. All rights reserved.</p>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            </div>
+        {/* Divider */}
+        <div className="border-t border-white/5 mb-8"></div>
+
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+          <p className="text-white/40">
+            © {new Date().getFullYear()} Mobilaris Industrial Solutions. All rights reserved.
+          </p>
+          <div className="flex gap-8">
+            <a href="#" className="text-white/40 hover:text-white/80 transition-colors duration-200">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-white/40 hover:text-white/80 transition-colors duration-200">
+              Terms of Service
+            </a>
           </div>
         </div>
       </div>
