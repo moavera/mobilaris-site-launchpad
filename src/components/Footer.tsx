@@ -8,7 +8,7 @@ export const Footer = () => {
         {/* Main Content */}
         <div className="grid md:grid-cols-3 gap-16 mb-16">
           <div className="md:col-span-2 flex flex-col justify-center">
-            <div className="h-10 sm:h-12 mb-6">
+            <div className="h-16 sm:h-20 mb-6">
               <img 
                 src={siteLogo} 
                 alt="Mobilaris Site logo" 
@@ -21,17 +21,19 @@ export const Footer = () => {
             </p>
           </div>
 
-          {/* Company Branding */}
           <div className="flex flex-col justify-center md:items-end">
             <div className="inline-block">
               <p className="text-white/40 text-xs uppercase tracking-widest mb-4 font-medium">
                 Part of
               </p>
-              <img 
-                src={mobilarisLogo} 
-                alt="Mobilaris Industrial Solutions" 
-                className="h-8 w-auto opacity-90"
-              />
+              <div className="h-12 sm:h-14">
+                <img 
+                  src={mobilarisLogo} 
+                  alt="Mobilaris Industrial Solutions" 
+                  className="h-full w-auto object-contain opacity-90 select-none"
+                  draggable={false}
+                />
+              </div>
             </div>
           </div>
         </div>
