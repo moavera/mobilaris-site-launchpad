@@ -1,9 +1,11 @@
-import { Building2, Briefcase } from "lucide-react";
+import { Briefcase } from "lucide-react";
+import axiansLogo from "@/assets/axians.png";
+
 export const Partners = () => {
   const partners = [{
-    name: "TechCorp Industries",
+    name: "Axians",
     description: "Leading mining technology provider",
-    icon: Building2
+    logo: axiansLogo
   }, {
     name: "GlobalMine Solutions",
     description: "International mining operations",
@@ -29,7 +31,6 @@ export const Partners = () => {
         {/* Partners Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {partners.map((partner, index) => {
-          const Icon = partner.icon;
           return <div key={index} className="group relative bg-card border border-border rounded-xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-elegant animate-fade-in-up" style={{
             animationDelay: `${index * 0.1}s`
           }}>
@@ -37,9 +38,15 @@ export const Partners = () => {
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-300" />
                 
                 <div className="relative z-10">
-                  {/* Icon */}
-                  <div className="mb-6 inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <Icon className="h-8 w-8 text-primary" />
+                  {/* Logo/Icon */}
+                  <div className="mb-6 inline-flex items-center justify-center h-16">
+                    {partner.logo ? (
+                      <img src={partner.logo} alt={partner.name} className="h-12 w-auto object-contain" />
+                    ) : (
+                      <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                        <partner.icon className="h-8 w-8 text-primary" />
+                      </div>
+                    )}
                   </div>
 
                   {/* Partner Info */}
