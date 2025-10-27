@@ -15,6 +15,9 @@ export const TechnologyIntegration = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 animate-fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Technology Agnostic Platform
+            </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
               <span className="bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent whitespace-nowrap font-semibold">Mobilaris Site™</span> is built to integrate any positioning technology — giving you the freedom to balance accuracy, cost, and coverage across your operations.
             </p>
