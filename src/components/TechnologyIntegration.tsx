@@ -33,23 +33,27 @@ export const TechnologyIntegration = () => {
             ))}
           </div>
 
-          <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <p className="text-muted-foreground">
-              <strong>Combine multiple technologies in one platform</strong> — GPS, Wi-Fi, BLE, RFID, LiDAR, and UWB all work seamlessly together.
-            </p>
-            <p className="text-muted-foreground">
-              <strong>Deploy the right solution for each area:</strong> GPS for outdoor visibility, BLE or RFID for indoor tracking, UWB for centimeter-level precision.
-            </p>
-            <p className="text-muted-foreground">
-              <strong>Adapt and scale easily as your site evolves</strong> — add or replace technologies without changing the platform.
-            </p>
-            <p className="text-muted-foreground">
-              <strong>Unified data model and API</strong> — all positioning data visualized and managed in one place.
-            </p>
-            <p className="text-center text-lg font-semibold mt-6">
-              Flexible architecture. One platform. Every technology.
-            </p>
-          </div>
+          <ul className="space-y-3 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <li className="flex items-start">
+              <span className="mr-2">•</span>
+              <span><strong>Combine multiple technologies in one platform</strong> — GPS, Wi-Fi, BLE, RFID, LiDAR, and UWB all work seamlessly together.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">•</span>
+              <span><strong>Deploy the right solution for each area:</strong> GPS for outdoor visibility, BLE or RFID for indoor tracking, UWB for centimeter-level precision.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">•</span>
+              <span><strong>Adapt and scale easily as your site evolves</strong> — add or replace technologies without changing the platform.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">•</span>
+              <span><strong>Unified data model and API</strong> — all positioning data visualized and managed in one place.</span>
+            </li>
+          </ul>
+          <p className="text-center text-lg font-semibold mt-8">
+            Flexible architecture. One platform. Every technology.
+          </p>
         </div>
       </div>
     </section>
