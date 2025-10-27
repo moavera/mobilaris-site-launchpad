@@ -77,11 +77,34 @@ export const TechnologyAgnostic = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-          <div className="inline-block bg-card border border-border/50 rounded-lg p-6 max-w-2xl">
+        <div className="mt-16 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="text-center p-6 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
+            <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <MapPin className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="font-bold text-lg mb-3">Deploy the Right Solution</h3>
             <p className="text-muted-foreground">
-              <span className="font-semibold text-foreground">Mix and match technologies</span> across different zones – 
-              use cost-effective solutions where precision isn't critical, and deploy high-accuracy options where safety demands it.
+              GPS for outdoor visibility, BLE or RFID for indoor tracking, UWB for centimeter-level precision.
+            </p>
+          </div>
+
+          <div className="text-center p-6 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+            <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <Scan className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="font-bold text-lg mb-3">Adapt and Scale Easily</h3>
+            <p className="text-muted-foreground">
+              As your site evolves — add or replace technologies without changing the platform.
+            </p>
+          </div>
+
+          <div className="text-center p-6 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
+            <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <Waves className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="font-bold text-lg mb-3">Unified Data Model</h3>
+            <p className="text-muted-foreground">
+              All positioning data visualized and managed in one place with a single API.
             </p>
           </div>
         </div>
