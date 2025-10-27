@@ -52,13 +52,6 @@ export const Partners = () => {
                 {/* Glow effect on hover */}
                 <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
               </div>
-
-              {/* Partner Info */}
-              <div className="text-center">
-                <h3 className="text-xl font-semibold text-foreground/80 group-hover:text-foreground transition-colors">
-                  {partner.name}
-                </h3>
-              </div>
             </div>
           ))}
         </div>
