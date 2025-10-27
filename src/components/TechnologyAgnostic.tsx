@@ -50,12 +50,9 @@ export const TechnologyAgnostic = () => {
   return (
     <section className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            Technology Agnostic Platform
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Deploy multiple positioning technologies on the same platform
+        <div className="text-center mb-8 animate-fade-in-up">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
+            Mobilaris Site™ is built to integrate any positioning technology — giving you the freedom to balance accuracy, cost, and coverage across your operations.
           </p>
         </div>
 
@@ -73,9 +70,21 @@ export const TechnologyAgnostic = () => {
           ))}
         </div>
 
-        <div className="max-w-3xl mx-auto text-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+        <div className="max-w-4xl mx-auto space-y-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <p className="text-muted-foreground">
-            Deploy the right solution for each area • Adapt and scale easily as your site evolves • Unified data model and API
+            <strong>Combine multiple technologies in one platform</strong> — GPS, Wi-Fi, BLE, RFID, LiDAR, and UWB all work seamlessly together.
+          </p>
+          <p className="text-muted-foreground">
+            <strong>Deploy the right solution for each area:</strong> GPS for outdoor visibility, BLE or RFID for indoor tracking, UWB for centimeter-level precision.
+          </p>
+          <p className="text-muted-foreground">
+            <strong>Adapt and scale easily as your site evolves</strong> — add or replace technologies without changing the platform.
+          </p>
+          <p className="text-muted-foreground">
+            <strong>Unified data model and API</strong> — all positioning data visualized and managed in one place.
+          </p>
+          <p className="text-center text-lg font-semibold mt-6">
+            Flexible architecture. One platform. Every technology.
           </p>
         </div>
       </div>
