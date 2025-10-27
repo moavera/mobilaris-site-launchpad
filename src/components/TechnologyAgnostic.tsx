@@ -50,63 +50,33 @@ export const TechnologyAgnostic = () => {
   return (
     <section className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 animate-fade-in-up">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">
             Technology Agnostic Platform
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">
-            Our architecture enables multiple co-existing positioning technologies on the same site, 
-            allowing flexibility in cost and accuracy to fit different needs across your facility.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Deploy multiple positioning technologies on the same platform
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto mb-12">
           {technologies.map((tech, index) => (
-            <Card
+            <div
               key={index}
-              className="p-6 text-center hover:shadow-elegant transition-all duration-300 animate-fade-in-up border-border/50 hover:scale-105"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="p-4 text-center animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className="mb-4">
-                <tech.icon className={`w-12 h-12 mx-auto ${tech.color}`} />
-              </div>
-              <h3 className="text-lg font-bold mb-2">{tech.name}</h3>
-              <p className="text-sm text-muted-foreground mb-1">{tech.use}</p>
-              <p className="text-xs text-muted-foreground font-mono">{tech.accuracy}</p>
-            </Card>
+              <tech.icon className={`w-10 h-10 mx-auto mb-2 ${tech.color}`} />
+              <h3 className="text-sm font-bold mb-1">{tech.name}</h3>
+              <p className="text-xs text-muted-foreground">{tech.accuracy}</p>
+            </div>
           ))}
         </div>
 
-        <div className="mt-16 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="text-center p-6 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
-            <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-              <MapPin className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="font-bold text-lg mb-3">Deploy the Right Solution</h3>
-            <p className="text-muted-foreground">
-              GPS for outdoor visibility, BLE or RFID for indoor tracking, UWB for centimeter-level precision.
-            </p>
-          </div>
-
-          <div className="text-center p-6 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-            <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-              <Scan className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="font-bold text-lg mb-3">Adapt and Scale Easily</h3>
-            <p className="text-muted-foreground">
-              As your site evolves — add or replace technologies without changing the platform.
-            </p>
-          </div>
-
-          <div className="text-center p-6 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
-            <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-              <Waves className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="font-bold text-lg mb-3">Unified Data Model</h3>
-            <p className="text-muted-foreground">
-              All positioning data visualized and managed in one place with a single API.
-            </p>
-          </div>
+        <div className="max-w-3xl mx-auto text-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <p className="text-muted-foreground">
+            Deploy the right solution for each area • Adapt and scale easily as your site evolves • Unified data model and API
+          </p>
         </div>
       </div>
     </section>
