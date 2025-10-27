@@ -1,21 +1,15 @@
 import { Building2, Briefcase } from "lucide-react";
-
 export const Partners = () => {
-  const partners = [
-    {
-      name: "TechCorp Industries",
-      description: "Leading mining technology provider",
-      icon: Building2,
-    },
-    {
-      name: "GlobalMine Solutions",
-      description: "International mining operations",
-      icon: Briefcase,
-    },
-  ];
-
-  return (
-    <section className="py-20 md:py-32 relative overflow-hidden">
+  const partners = [{
+    name: "TechCorp Industries",
+    description: "Leading mining technology provider",
+    icon: Building2
+  }, {
+    name: "GlobalMine Solutions",
+    description: "International mining operations",
+    icon: Briefcase
+  }];
+  return <section className="py-20 md:py-32 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/50 to-background" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
@@ -23,9 +17,7 @@ export const Partners = () => {
       <div className="container relative z-10 mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-semibold text-primary">Trusted By Industry Leaders</span>
-          </div>
+          
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             Our Partners
           </h2>
@@ -37,13 +29,10 @@ export const Partners = () => {
         {/* Partners Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {partners.map((partner, index) => {
-            const Icon = partner.icon;
-            return (
-              <div
-                key={index}
-                className="group relative bg-card border border-border rounded-xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-elegant animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+          const Icon = partner.icon;
+          return <div key={index} className="group relative bg-card border border-border rounded-xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-elegant animate-fade-in-up" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-300" />
                 
@@ -64,11 +53,9 @@ export const Partners = () => {
 
                 {/* Decorative element */}
                 <div className="absolute top-4 right-4 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
-              </div>
-            );
-          })}
+              </div>;
+        })}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
