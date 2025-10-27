@@ -1,4 +1,4 @@
-import { Satellite, Radio, Tag, Scan, Waves, Wifi } from "lucide-react";
+import { Satellite, Radio, Tag, Scan, Waves, Wifi, Check } from "lucide-react";
 
 const technologies = [
   { icon: Satellite, name: "GPS", color: "text-blue-500" },
@@ -33,22 +33,30 @@ export const TechnologyIntegration = () => {
             ))}
           </div>
 
-          <ul className="space-y-3 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              <span><strong>Combine multiple technologies in one platform</strong> — GPS, Wi-Fi, BLE, RFID, LiDAR, and UWB all work seamlessly together.</span>
+          <ul className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <li className="flex items-start gap-3">
+              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                <Check className="w-4 h-4 text-primary" />
+              </div>
+              <span className="text-muted-foreground"><strong className="text-foreground">Combine multiple technologies in one platform</strong> — GPS, Wi-Fi, BLE, RFID, LiDAR, and UWB all work seamlessly together.</span>
             </li>
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              <span><strong>Deploy the right solution for each area:</strong> GPS for outdoor visibility, BLE or RFID for indoor tracking, UWB for centimeter-level precision.</span>
+            <li className="flex items-start gap-3">
+              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                <Check className="w-4 h-4 text-primary" />
+              </div>
+              <span className="text-muted-foreground"><strong className="text-foreground">Deploy the right solution for each area:</strong> GPS for outdoor visibility, BLE or RFID for indoor tracking, UWB for centimeter-level precision.</span>
             </li>
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              <span><strong>Adapt and scale easily as your site evolves</strong> — add or replace technologies without changing the platform.</span>
+            <li className="flex items-start gap-3">
+              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                <Check className="w-4 h-4 text-primary" />
+              </div>
+              <span className="text-muted-foreground"><strong className="text-foreground">Adapt and scale easily as your site evolves</strong> — add or replace technologies without changing the platform.</span>
             </li>
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              <span><strong>Unified data model and API</strong> — all positioning data visualized and managed in one place.</span>
+            <li className="flex items-start gap-3">
+              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                <Check className="w-4 h-4 text-primary" />
+              </div>
+              <span className="text-muted-foreground"><strong className="text-foreground">Unified data model and API</strong> — all positioning data visualized and managed in one place.</span>
             </li>
           </ul>
           <p className="text-center text-lg font-semibold mt-8">
