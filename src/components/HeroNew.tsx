@@ -34,7 +34,7 @@ export const HeroNew = () => {
             
             {/* Key Message */}
             <div className="mb-6 md:mb-8">
-              <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed">Real-time positioning and 3D visualization eliminates guess-work during critical operations</p>
+              <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed"><span className="bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent whitespace-nowrap font-semibold">Mobilaris Site™</span> real-time positioning and 3D visualization eliminates guess-work during critical operations</p>
             </div>
 
             {/* Visual Tags */}
