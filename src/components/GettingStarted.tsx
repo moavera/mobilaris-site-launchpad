@@ -1,12 +1,12 @@
 import { Card } from "@/components/ui/card";
-import { Wifi, Tag, Map } from "lucide-react";
+import { Wifi, Tag, Map, Radio } from "lucide-react";
 
 const steps = [
   {
-    icon: Wifi,
+    icon: Radio,
     number: "1",
-    title: "Use your existing Wi-Fi",
-    description: "No need for expensive infrastructure. Leverage your current network setup.",
+    title: "Choose your positioning technology",
+    description: "WiFi, BLE, GPS, UWB, or a combination — deploy using existing infrastructure or add what you need.",
   },
   {
     icon: Tag,
@@ -56,6 +56,16 @@ export const GettingStarted = () => {
               </p>
             </Card>
           ))}
+        </div>
+
+        {/* Technology Note */}
+        <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary/5 border border-primary/20">
+            <Wifi className="h-5 w-5 text-primary" />
+            <p className="text-sm md:text-base text-foreground/80">
+              <span className="font-semibold text-primary">Quick deployment option:</span> Leverage your existing WiFi infrastructure for easy setup
+            </p>
+          </div>
         </div>
 
       </div>
