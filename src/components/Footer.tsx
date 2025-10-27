@@ -7,13 +7,15 @@ export const Footer = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Main Content */}
         <div className="grid md:grid-cols-3 gap-16 mb-16">
-          {/* Product Section */}
           <div className="md:col-span-2 flex flex-col justify-center">
-            <img 
-              src={siteLogo} 
-              alt="Mobilaris Site logo" 
-              className="h-12 w-auto mb-6"
-            />
+            <div className="h-10 sm:h-12 mb-6">
+              <img 
+                src={siteLogo} 
+                alt="Mobilaris Site logo" 
+                className="h-full w-auto object-contain select-none"
+                draggable={false}
+              />
+            </div>
             <p className="text-white/60 text-base leading-relaxed max-w-lg">
               Real-time positioning and 3D-visualization of your site
             </p>
