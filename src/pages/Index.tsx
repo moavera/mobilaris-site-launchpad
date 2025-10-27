@@ -4,6 +4,7 @@ import { KeyProblems } from "@/components/KeyProblems";
 import { MobileFirst } from "@/components/MobileFirst";
 import { GettingStarted } from "@/components/GettingStarted";
 import { SecurityFeatures } from "@/components/SecurityFeatures";
+import { Evolution } from "@/components/Evolution";
 import { Partners } from "@/components/Partners";
 
 import { ContactSection } from "@/components/ContactSection";
@@ -18,6 +19,7 @@ const Index = () => {
       <MobileFirst />
       <GettingStarted />
       <SecurityFeatures />
+      <Evolution />
       <Partners />
       
       <ContactSection />
