@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import logoImage from "@/assets/site-logo-2.png";
-import { IndustrialCinematic3D } from "./IndustrialCinematic3D";
+import videoBackground from "@/assets/snurren_blur.mp4";
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Logo */}
@@ -9,24 +9,25 @@ export const HeroNew = () => {
         <img src={logoImage} alt="Mobilaris Logo" className="h-12 md:h-16 w-auto" />
       </div>
 
-      {/* Background */}
-      <div className="absolute inset-0 z-0 bg-background">
-        {/* Animated gradient orbs */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[100px] animate-pulse" style={{
-        animationDelay: '1s'
-      }} />
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={videoBackground} type="video/mp4" />
+        </video>
         
-        {/* Tech grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-        
-        {/* Scanline effect */}
-        <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_0%,rgba(160,41,255,0.03)_50%,transparent_100%)] bg-[length:100%_4px] animate-[slide-in-right_20s_linear_infinite]" />
+        {/* Dark purple gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/60 via-background/80 to-background" />
       </div>
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-12 md:py-20">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="flex items-center justify-center lg:justify-start">
           {/* Left: Text and Buttons */}
           <div className="text-center lg:text-left animate-fade-in-up">
             {/* Hook Question */}
@@ -67,10 +68,6 @@ export const HeroNew = () => {
             </div>
           </div>
 
-          {/* Right: Cinematic 3D Animation */}
-          <div className="animate-fade-in-up">
-            <IndustrialCinematic3D />
-          </div>
         </div>
       </div>
 
