@@ -56,7 +56,7 @@ const DemoStart = () => {
 
           {/* CTA Button */}
           <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-elegant text-lg px-12 py-6 h-auto group" asChild>
-            <a href="https://demo.mobilaris.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://mobile.demo.site.mobilaris.se/api/share/vq5ejng0p6">
               Start Demo
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
