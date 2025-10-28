@@ -56,7 +56,7 @@ export const HeroNew = () => {
               <Button 
                 size="lg" 
                 variant="secondary" 
-                className="relative text-base px-6 overflow-hidden group" 
+                className="relative text-base px-6 overflow-hidden group border-2 border-primary/50" 
                 asChild
               >
                 <a href="/demo-start" className="relative z-10">
