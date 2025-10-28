@@ -48,18 +48,14 @@ const DemoStart = () => {
           </p>
 
           {/* Feature Pills */}
-          <div className="flex flex-wrap gap-4 justify-center mb-12">
-            <div className="flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-3">
-              <Map className="h-5 w-5 text-primary" />
-              <span className="text-foreground font-medium">3D Visualization</span>
+          <div className="flex flex-wrap gap-3 justify-center mb-8">
+            <div className="flex items-center gap-2 bg-card border border-border rounded-lg px-3 py-2">
+              <Map className="h-4 w-4 text-primary" />
+              <span className="text-foreground font-medium text-sm">3D Visualization</span>
             </div>
-            <div className="flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-3">
-              <Zap className="h-5 w-5 text-primary" />
-              <span className="text-foreground font-medium">Real-time Tracking</span>
-            </div>
-            <div className="flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-3">
-              <Users className="h-5 w-5 text-primary" />
-              <span className="text-foreground font-medium">Complete Coverage</span>
+            <div className="flex items-center gap-2 bg-card border border-border rounded-lg px-3 py-2">
+              <Zap className="h-4 w-4 text-primary" />
+              <span className="text-foreground font-medium text-sm">Real-time Tracking</span>
             </div>
           </div>
 
