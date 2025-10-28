@@ -10,19 +10,25 @@ export const HeroNew = () => {
       </div>
 
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <video 
-          autoPlay 
-          loop 
-          muted 
+      <div className="absolute inset-0 z-0" aria-hidden>
+        <video
+          autoPlay
+          loop
+          muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover saturate-110 contrast-110 brightness-110"
         >
           <source src={videoBackground} type="video/mp4" />
         </video>
-        
-        {/* Dark purple gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/60 via-background/80 to-background" />
+
+        {/* Subtle gradients for legibility without hiding the video */}
+        <div className="pointer-events-none absolute inset-0">
+          {/* top purple tint */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_bottom,hsl(var(--primary)/0.2)_0%,transparent_60%)]" />
+          {/* soft bottom vignette */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_top,hsl(var(--background)/0.25)_0%,transparent_40%)]" />
+        </div>
       </div>
 
       {/* Content */}
