@@ -1,92 +1,102 @@
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { useRef, useState, useEffect } from 'react';
-import { useSpring, animated } from '@react-spring/three';
 import * as THREE from 'three';
 
 interface FloorProps {
-  position: [number, number, number];
+  targetY: number;
   delay: number;
   floorNumber: number;
 }
 
-const Floor = ({ position, delay, floorNumber }: FloorProps) => {
-  const meshRef = useRef<THREE.Mesh>(null);
+const Floor = ({ targetY, delay, floorNumber }: FloorProps) => {
+  const groupRef = useRef<THREE.Group>(null);
   const [startAnimation, setStartAnimation] = useState(false);
+  const [currentY, setCurrentY] = useState(-8);
+  const [currentOpacity, setCurrentOpacity] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => setStartAnimation(true), delay);
     return () => clearTimeout(timer);
   }, [delay]);
 
-  const springs = useSpring({
-    position: startAnimation ? position : [position[0], position[1] - 5, position[2]],
-    opacity: startAnimation ? 1 : 0,
-    config: { mass: 1, tension: 80, friction: 26 },
+  useFrame(() => {
+    if (startAnimation && groupRef.current) {
+      const speed = 0.05;
+      const newY = currentY + (targetY - currentY) * speed;
+      setCurrentY(newY);
+      groupRef.current.position.y = newY;
+
+      const newOpacity = currentOpacity + (1 - currentOpacity) * speed;
+      setCurrentOpacity(newOpacity);
+    }
   });
 
-  const colors = ['#8B9DC3', '#A0B0D0', '#B5C5DD', '#CAD5EA'];
-  const accentColors = ['#D4AF37', '#C9A961', '#BEA38B', '#B39DB5'];
+  const colors = ['#6B7C9D', '#7A8CAE', '#899CBF', '#98ACD0'];
+  const accentColor = '#D4AF37';
 
   return (
-    <animated.group position={springs.position as any}>
+    <group ref={groupRef} position={[0, currentY, 0]}>
       {/* Main floor plate */}
       <mesh receiveShadow castShadow>
-        <boxGeometry args={[4, 0.1, 3]} />
-        <animated.meshStandardMaterial
+        <boxGeometry args={[5, 0.12, 3.5]} />
+        <meshStandardMaterial
           color={colors[floorNumber]}
           transparent
-          opacity={springs.opacity as any}
+          opacity={currentOpacity}
+          metalness={0.3}
+          roughness={0.6}
+        />
+      </mesh>
+
+      {/* Perimeter walls */}
+      <mesh position={[0, 0.08, 0]}>
+        <boxGeometry args={[5.1, 0.04, 3.6]} />
+        <meshStandardMaterial
+          color="#1a1a2e"
+          transparent
+          opacity={currentOpacity}
+          metalness={0.7}
+          roughness={0.2}
+        />
+      </mesh>
+
+      {/* Room divisions - Left section */}
+      <mesh position={[-1.2, 0.08, 0.6]} castShadow>
+        <boxGeometry args={[1.5, 0.06, 1.2]} />
+        <meshStandardMaterial
+          color={accentColor}
+          transparent
+          opacity={currentOpacity * 0.7}
           metalness={0.2}
           roughness={0.7}
         />
       </mesh>
 
-      {/* Floor outline/walls */}
-      <mesh position={[0, 0.05, 0]}>
-        <boxGeometry args={[4.05, 0.02, 3.05]} />
-        <animated.meshStandardMaterial
-          color="#2D3748"
+      {/* Room divisions - Right section */}
+      <mesh position={[1.1, 0.08, -0.4]} castShadow>
+        <boxGeometry args={[1.6, 0.06, 1.4]} />
+        <meshStandardMaterial
+          color={accentColor}
           transparent
-          opacity={springs.opacity as any}
-          metalness={0.8}
-          roughness={0.3}
+          opacity={currentOpacity * 0.7}
+          metalness={0.2}
+          roughness={0.7}
         />
       </mesh>
 
-      {/* Accent sections (rooms) */}
-      <mesh position={[-0.8, 0.06, 0.5]} castShadow>
-        <boxGeometry args={[1.2, 0.04, 1]} />
-        <animated.meshStandardMaterial
-          color={accentColors[floorNumber]}
+      {/* Small room - top */}
+      <mesh position={[0, 0.08, 1.2]} castShadow>
+        <boxGeometry args={[1.2, 0.06, 0.8]} />
+        <meshStandardMaterial
+          color={accentColor}
           transparent
-          opacity={springs.opacity as any}
-          metalness={0.1}
-          roughness={0.8}
+          opacity={currentOpacity * 0.7}
+          metalness={0.2}
+          roughness={0.7}
         />
       </mesh>
-
-      <mesh position={[0.9, 0.06, -0.3]} castShadow>
-        <boxGeometry args={[1.4, 0.04, 1.2]} />
-        <animated.meshStandardMaterial
-          color={accentColors[floorNumber]}
-          transparent
-          opacity={springs.opacity as any}
-          metalness={0.1}
-          roughness={0.8}
-        />
-      </mesh>
-
-      {/* Floor label */}
-      <mesh position={[0, 0.08, 0]}>
-        <planeGeometry args={[0.6, 0.3]} />
-        <animated.meshBasicMaterial
-          color="#FFFFFF"
-          transparent
-          opacity={springs.opacity as any}
-        />
-      </mesh>
-    </animated.group>
+    </group>
   );
 };
 
@@ -117,10 +127,10 @@ const FloorScene = () => {
       <pointLight position={[0, 8, 0]} intensity={0.5} color="#ffffff" />
 
       {/* Floors stacking from bottom to top */}
-      <Floor position={[0, 0, 0]} delay={200} floorNumber={0} />
-      <Floor position={[0, 0.8, 0]} delay={600} floorNumber={1} />
-      <Floor position={[0, 1.6, 0]} delay={1000} floorNumber={2} />
-      <Floor position={[0, 2.4, 0]} delay={1400} floorNumber={3} />
+      <Floor targetY={0} delay={200} floorNumber={0} />
+      <Floor targetY={0.8} delay={600} floorNumber={1} />
+      <Floor targetY={1.6} delay={1000} floorNumber={2} />
+      <Floor targetY={2.4} delay={1400} floorNumber={3} />
 
       {/* Ground plane */}
       <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]}>
