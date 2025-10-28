@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Map, Users } from "lucide-react";
 import videoBackground from "@/assets/snurren_blur.mp4";
+import logoImage from "@/assets/site-logo-2.png";
+
 const DemoStart = () => {
   return <main className="min-h-screen relative flex items-center justify-center overflow-hidden">
+      {/* Logo */}
+      <div className="absolute top-6 left-6 z-20">
+        <img src={logoImage} alt="Mobilaris Logo" className="h-12 md:h-16 w-auto" />
+      </div>
+
       {/* Video Background */}
       <div className="absolute inset-0 z-[1]">
         <video
