@@ -4,7 +4,7 @@ import videoBackground from "@/assets/snurren_blur.mp4";
 import logoImage from "@/assets/site-logo-2.png";
 
 const DemoStart = () => {
-  return <main className="min-h-screen relative flex items-center justify-center overflow-hidden">
+  return <main className="min-h-screen relative flex items-start md:items-center justify-center overflow-hidden pt-20 md:pt-0">
       {/* Logo */}
       <div className="absolute top-6 left-6 z-20">
         <a href="/">
