@@ -65,16 +65,34 @@ export const HeroNew = () => {
             </div>
           </div>
 
-          {/* Right: Image */}
-          <div className="relative lg:pl-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-              <img 
-                src={demoImage} 
-                alt="Mobilaris Site Demo" 
-                className="w-full h-auto"
+          {/* Right: Image - Linear Style */}
+          <div className="relative lg:pl-8 animate-fade-in perspective-1000" style={{ animationDelay: '0.2s' }}>
+            <div className="relative">
+              {/* Image container with rotation and glow */}
+              <div 
+                className="relative rounded-xl overflow-hidden border border-border/30 transition-transform duration-700 hover:scale-[1.02]"
+                style={{ 
+                  transform: 'perspective(1000px) rotateY(-8deg) rotateX(2deg)',
+                  boxShadow: '0 20px 60px -10px hsl(var(--primary) / 0.2), 0 0 80px -20px hsl(var(--primary) / 0.15)'
+                }}
+              >
+                <img 
+                  src={demoImage} 
+                  alt="Mobilaris Site Demo" 
+                  className="w-full h-auto"
+                />
+                {/* Subtle gradient overlay for depth */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none" />
+              </div>
+              
+              {/* Glow effect behind image */}
+              <div 
+                className="absolute inset-0 -z-10 blur-3xl opacity-30"
+                style={{
+                  background: 'radial-gradient(circle at 50% 50%, hsl(var(--primary) / 0.3), transparent 70%)',
+                  transform: 'scale(1.1)'
+                }}
               />
-              {/* Subtle gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
