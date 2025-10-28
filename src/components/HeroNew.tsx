@@ -1,84 +1,54 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import dashboardImage from "@/assets/webimage.webp";
-import logoImage from "@/assets/site-logo-2.png";
-export const HeroNew = () => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Logo */}
-      <div className="absolute top-6 left-6 z-20">
-        <img src={logoImage} alt="Mobilaris Logo" className="h-12 md:h-16 w-auto" />
-      </div>
 
-      {/* Background */}
-      <div className="absolute inset-0 z-0 bg-background">
-        {/* Animated gradient orbs */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[100px] animate-pulse" style={{
-        animationDelay: '1s'
-      }} />
-        
-        {/* Tech grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-        
-        {/* Scanline effect */}
-        <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_0%,rgba(160,41,255,0.03)_50%,transparent_100%)] bg-[length:100%_4px] animate-[slide-in-right_20s_linear_infinite]" />
-      </div>
+export const HeroNew = () => {
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-24 pb-20">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background" />
+      
+      {/* Radial gradient accent */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
 
       {/* Content */}
-      <div className="container relative z-10 mx-auto px-4 py-12 md:py-20">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left: Text and Buttons */}
-          <div className="text-center lg:text-left animate-fade-in-up">
-            {/* Hook Question */}
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight">Total control of your site, <span style={{ color: '#D39DFF' }}>everywhere</span></h1>
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
             
-            {/* Key Message */}
-            <div className="mb-6 md:mb-8">
-              <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed"><span className="bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent whitespace-nowrap font-semibold">Mobilaris Site™</span> - real-time positioning and 3D visualization eliminates guess-work during critical operations</p>
-            </div>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-foreground">
+              Real-time site coordination made simple
+            </h1>
+            
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              <span className="bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent whitespace-nowrap font-semibold">Mobilaris Site™</span> - real-time positioning and 3D visualization eliminates guess-work during critical operations
+            </p>
 
-            {/* Visual Tags */}
-            <div className="flex flex-wrap gap-3 md:gap-4 mb-8 md:mb-10 justify-center lg:justify-start">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 sm:px-6 py-2 sm:py-3">
-                <span className="text-white font-semibold text-sm sm:text-base">🚗 Vehicles</span>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 sm:px-6 py-2 sm:py-3">
-                <span className="text-white font-semibold text-sm sm:text-base">👷 People</span>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 sm:px-6 py-2 sm:py-3">
-                <span className="text-white font-semibold text-sm sm:text-base">📦 Assets</span>
-              </div>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-elegant text-lg px-8" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button size="lg" asChild>
                 <a href="mailto:support@mobilaris.se">
-                  Contact us
+                  Get started
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 border-white/20 text-white hover:bg-white/10" asChild>
+              <Button size="lg" variant="ghost" asChild>
                 <a href="/demo-start">
-                  Try Demo Site
-                  <Play className="ml-2 h-5 w-5" />
+                  <Play className="mr-2 h-5 w-5" />
+                  Try demo
                 </a>
               </Button>
             </div>
-          </div>
 
-          {/* Right: Image */}
-          <div className="animate-fade-in-up">
-            <img src={dashboardImage} alt="3D site visualization dashboard showing real-time positioning" className="w-full h-auto rounded-xl lg:rounded-2xl shadow-2xl" />
+          {/* Dashboard Preview */}
+          <div className="relative pt-12 animate-fade-in">
+            <div className="relative rounded-lg overflow-hidden border border-border/50 shadow-2xl bg-card/50 backdrop-blur-sm">
+              <img 
+                src={dashboardImage}
+                alt="Mobilaris Site dashboard showing real-time tracking"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-white/50 rounded-full" />
-        </div>
-      </div>
     </section>;
 };
