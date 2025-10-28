@@ -55,8 +55,8 @@ export const HeroNew = () => {
               </Button>
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="relative text-base px-6 border-2 border-transparent bg-gradient-to-r from-primary via-purple-500 to-primary bg-[length:200%_100%] animate-[gradient_3s_ease-in-out_infinite] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-300 overflow-hidden group" 
+                variant="secondary" 
+                className="relative text-base px-6 bg-gradient-to-r from-secondary via-secondary/80 to-secondary bg-[length:200%_100%] animate-[gradient_8s_ease-in-out_infinite] hover:shadow-lg transition-all duration-300 overflow-hidden group" 
                 asChild
               >
                 <a href="/demo-start" className="relative z-10">
