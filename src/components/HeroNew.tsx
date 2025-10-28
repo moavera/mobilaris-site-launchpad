@@ -56,15 +56,26 @@ export const HeroNew = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="text-base px-6 border-2 border-primary/50 bg-primary/5 hover:bg-primary/10 hover:border-primary hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300 backdrop-blur-sm" 
+                className="relative text-base px-6 border-2 border-transparent bg-gradient-to-r from-primary via-purple-500 to-primary bg-[length:200%_100%] animate-[gradient_3s_ease-in-out_infinite] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-300 overflow-hidden group" 
                 asChild
               >
-                <a href="/demo-start">
+                <a href="/demo-start" className="relative z-10">
                   Try Demo Site
-                  <Play className="ml-2 h-5 w-5" />
+                  <Play className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
               </Button>
             </div>
+            
+            <style>{`
+              @keyframes gradient {
+                0%, 100% {
+                  background-position: 0% 50%;
+                }
+                50% {
+                  background-position: 100% 50%;
+                }
+              }
+            `}</style>
           </div>
 
           {/* Right: Image - Linear Style */}
