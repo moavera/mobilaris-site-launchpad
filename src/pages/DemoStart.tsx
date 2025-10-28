@@ -41,7 +41,7 @@ const DemoStart = () => {
           </h1>
 
           {/* Intro Paragraph */}
-          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-12 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6 max-w-2xl mx-auto">
             Experience real-time positioning and 3D visualization technology in action. 
             Explore how our platform transforms site management with instant visibility 
             of vehicles, people, and assets across your entire operation.
