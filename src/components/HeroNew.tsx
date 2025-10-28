@@ -56,10 +56,12 @@ export const HeroNew = () => {
               <Button 
                 size="lg" 
                 variant="secondary" 
-                className="relative text-base px-6 bg-gradient-to-r from-secondary via-secondary/80 to-secondary bg-[length:200%_100%] animate-[gradient_8s_ease-in-out_infinite] hover:shadow-lg transition-all duration-300 overflow-hidden group" 
+                className="relative text-base px-6 overflow-hidden group" 
                 asChild
               >
                 <a href="/demo-start" className="relative z-10">
+                  {/* Animated gradient overlay */}
+                  <span className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-[shimmer_5s_ease-in-out_infinite] translate-x-[-200%]" />
                   Try Demo Site
                   <Play className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
@@ -67,12 +69,12 @@ export const HeroNew = () => {
             </div>
             
             <style>{`
-              @keyframes gradient {
-                0%, 100% {
-                  background-position: 0% 50%;
+              @keyframes shimmer {
+                0% {
+                  transform: translateX(-200%);
                 }
-                50% {
-                  background-position: 100% 50%;
+                50%, 100% {
+                  transform: translateX(200%);
                 }
               }
             `}</style>
