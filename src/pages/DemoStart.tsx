@@ -7,7 +7,9 @@ const DemoStart = () => {
   return <main className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Logo */}
       <div className="absolute top-6 left-6 z-20">
-        <img src={logoImage} alt="Mobilaris Logo" className="h-12 md:h-16 w-auto" />
+        <a href="/">
+          <img src={logoImage} alt="Mobilaris Logo" className="h-12 md:h-16 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+        </a>
       </div>
 
       {/* Video Background */}
