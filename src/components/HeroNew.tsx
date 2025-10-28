@@ -61,7 +61,7 @@ export const HeroNew = () => {
               >
                 <a href="/demo-start" className="relative z-10">
                   {/* Animated gradient overlay */}
-                  <span className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-[shimmer_8s_ease-in-out_infinite] translate-x-[-200%]" />
+                  <span className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-[shimmer_3s_ease-in-out_infinite] translate-x-[-200%]" />
                   Try Demo Site
                   <Play className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
