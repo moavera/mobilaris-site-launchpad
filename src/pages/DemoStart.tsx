@@ -15,6 +15,9 @@ const DemoStart = () => {
         >
           <source src={videoBackground} type="video/mp4" />
         </video>
+        
+        {/* Dark purple gradient overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(271_81%_20%/0.7),hsl(220_20%_8%/0.8))]" />
       </div>
 
       {/* Content */}
