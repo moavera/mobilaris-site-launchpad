@@ -22,13 +22,6 @@ export const HeroNew = () => {
           <source src={videoBackground} type="video/mp4" />
         </video>
 
-        {/* Very subtle gradients for legibility */}
-        <div className="pointer-events-none absolute inset-0">
-          {/* minimal top purple tint */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_bottom,hsl(var(--primary)/0.08)_0%,transparent_50%)]" />
-          {/* very soft bottom vignette */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_top,hsl(var(--background)/0.1)_0%,transparent_30%)]" />
-        </div>
       </div>
 
       {/* Content */}
