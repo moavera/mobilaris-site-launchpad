@@ -27,7 +27,7 @@ const DemoStart = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 mx-auto px-4 py-12 max-w-4xl">
+      <div className="container relative z-10 mx-auto px-4 py-6 md:py-12 max-w-4xl">
         <div className="text-center animate-fade-in-up">
           {/* Welcome Badge */}
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-8">
