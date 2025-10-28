@@ -73,7 +73,7 @@ export const HeroNew = () => {
                 0% {
                   transform: translateX(-200%);
                 }
-                90% {
+                95% {
                   transform: translateX(200%);
                 }
                 100% {
