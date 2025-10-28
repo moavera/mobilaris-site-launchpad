@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import floorVisualization from "@/assets/floor-visualization.png";
 import logoImage from "@/assets/site-logo-2.png";
+import { FloorAnimation3D } from "./FloorAnimation3D";
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Logo */}
@@ -67,9 +67,9 @@ export const HeroNew = () => {
             </div>
           </div>
 
-          {/* Right: Image */}
+          {/* Right: 3D Floor Animation */}
           <div className="animate-fade-in-up">
-            <img src={floorVisualization} alt="3D floor visualization showing multi-level site coordination" className="w-full h-auto rounded-xl lg:rounded-2xl shadow-2xl animate-[floor-stack_2s_ease-out]" />
+            <FloorAnimation3D />
           </div>
         </div>
       </div>
