@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import logoImage from "@/assets/site-logo-2.png";
-import { FloorAnimation3D } from "./FloorAnimation3D";
+import { IndustrialCinematic3D } from "./IndustrialCinematic3D";
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Logo */}
@@ -67,9 +67,9 @@ export const HeroNew = () => {
             </div>
           </div>
 
-          {/* Right: 3D Floor Animation */}
+          {/* Right: Cinematic 3D Animation */}
           <div className="animate-fade-in-up">
-            <FloorAnimation3D />
+            <IndustrialCinematic3D />
           </div>
         </div>
       </div>
