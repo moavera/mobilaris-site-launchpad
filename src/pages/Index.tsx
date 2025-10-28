@@ -1,5 +1,5 @@
-import { Navigation } from "@/components/Navigation";
 import { HeroNew } from "@/components/HeroNew";
+
 import { KeyProblems } from "@/components/KeyProblems";
 import { MobileFirst } from "@/components/MobileFirst";
 import { GettingStarted } from "@/components/GettingStarted";
@@ -14,7 +14,6 @@ import { Footer } from "@/components/Footer";
 const Index = () => {
   return (
     <main className="min-h-screen">
-      <Navigation />
       <HeroNew />
       
       <KeyProblems />
