@@ -101,12 +101,23 @@ export default {
             opacity: "1",
           },
         },
+        "floor-stack": {
+          "0%": {
+            opacity: "0",
+            transform: "perspective(1000px) rotateX(20deg) translateY(50px) scale(0.9)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "perspective(1000px) rotateX(0deg) translateY(0) scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.6s ease-out",
         "fade-in": "fade-in 0.8s ease-out",
+        "floor-stack": "floor-stack 2s ease-out",
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
