@@ -10,7 +10,7 @@ export const HeroNew = () => {
       </div>
 
       {/* Video Background */}
-      <div className="absolute inset-0 z-0" aria-hidden>
+      <div className="absolute inset-0 z-[1]" aria-hidden>
         <video
           autoPlay
           loop
