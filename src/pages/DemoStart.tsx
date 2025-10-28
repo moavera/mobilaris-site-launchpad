@@ -1,23 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Map, Users } from "lucide-react";
+import videoBackground from "@/assets/snurren_blur.mp4";
 const DemoStart = () => {
   return <main className="min-h-screen relative flex items-center justify-center overflow-hidden">
-      {/* Animated Background Effects */}
-      <div className="absolute inset-0 z-0">
-        {/* Gradient orbs */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[150px] animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[120px] animate-pulse" style={{
-        animationDelay: '1.5s'
-      }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[100px] animate-pulse" style={{
-        animationDelay: '0.75s'
-      }} />
-        
-        {/* Tech grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-        
-        {/* Scanline effect */}
-        <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_0%,rgba(160,41,255,0.02)_50%,transparent_100%)] bg-[length:100%_4px] animate-[slide-in-right_15s_linear_infinite]" />
+      {/* Video Background */}
+      <div className="absolute inset-0 z-[1]">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover saturate-110 contrast-110 brightness-110"
+        >
+          <source src={videoBackground} type="video/mp4" />
+        </video>
       </div>
 
       {/* Content */}

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import logoImage from "@/assets/site-logo-2.png";
-import videoBackground from "@/assets/snurren_blur.mp4";
+
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Logo */}
@@ -9,20 +9,6 @@ export const HeroNew = () => {
         <img src={logoImage} alt="Mobilaris Logo" className="h-12 md:h-16 w-auto" />
       </div>
 
-      {/* Video Background */}
-      <div className="absolute inset-0 z-[1]" aria-hidden>
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover saturate-110 contrast-110 brightness-110"
-        >
-          <source src={videoBackground} type="video/mp4" />
-        </video>
-
-      </div>
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-12 md:py-20">
