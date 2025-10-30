@@ -17,12 +17,12 @@ export const Partners = () => {
     industry: "Industrial Solutions",
     partnership: "Strategic Partner"
   }];
-  return <section id="partners" className="py-20 md:py-32 relative bg-gradient-subtle scroll-mt-20 group">
+  return <section id="partners" className="py-32 border-t border-border scroll-mt-20 group">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
+        <div className="text-center mb-20">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               Our Partners
             </h2>
             <SectionShareButton sectionId="partners" sectionName="Partners" />
@@ -33,20 +33,20 @@ export const Partners = () => {
         </div>
 
         {/* Partners Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {partners.map((partner, index) => <Card key={index} className="p-8">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {partners.map((partner, index) => <Card key={index} className="p-12 border-border">
               {/* Logo Container */}
-              <div className="flex items-center justify-center h-32 mb-6 p-6">
-                <img src={partner.logo} alt={partner.name} className="h-full w-auto object-contain" />
+              <div className="flex items-center justify-center h-24 mb-6">
+                <img src={partner.logo} alt={partner.name} className="h-full w-auto object-contain opacity-80" />
               </div>
 
               {/* Partner Info */}
-              <div className="text-center space-y-3">
-                <h3 className="text-2xl font-bold text-foreground">
+              <div className="text-center space-y-2">
+                <h3 className="text-xl font-semibold">
                   {partner.name}
                 </h3>
 
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-base">
                   {partner.description}
                 </p>
               </div>
@@ -54,12 +54,10 @@ export const Partners = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center animate-fade-in-up" style={{
-        animationDelay: '0.4s'
-      }}>
+        <div className="mt-16 text-center">
           <p className="text-muted-foreground">
             Interested in partnership opportunities?{" "}
-            <a href="#contact" className="text-primary font-semibold hover:underline">
+            <a href="#contact" className="text-primary font-medium hover:underline">
               Get in touch
             </a>
           </p>
