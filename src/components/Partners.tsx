@@ -34,12 +34,10 @@ export const Partners = () => {
 
         {/* Partners Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {partners.map((partner, index) => <Card key={index} className="group p-8 hover:shadow-elegant transition-all duration-500 animate-fade-in-up border-border/50 hover:scale-105 bg-card/50 backdrop-blur-sm" style={{
-          animationDelay: `${index * 0.15}s`
-        }}>
+          {partners.map((partner, index) => <Card key={index} className="p-8">
               {/* Logo Container */}
-              <div className="flex items-center justify-center h-32 mb-6 relative overflow-hidden rounded-lg bg-background/50 p-6">
-                <img src={partner.logo} alt={partner.name} className="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-110" />
+              <div className="flex items-center justify-center h-32 mb-6 p-6">
+                <img src={partner.logo} alt={partner.name} className="h-full w-auto object-contain" />
               </div>
 
               {/* Partner Info */}
