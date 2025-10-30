@@ -2,6 +2,7 @@ import { HeroNew } from "@/components/HeroNew";
 import { useSectionShare } from "@/hooks/use-section-share";
 import { KeyProblems } from "@/components/KeyProblems";
 import { MobileFirst } from "@/components/MobileFirst";
+import { DeploymentOptions } from "@/components/DeploymentOptions";
 import { GettingStarted } from "@/components/GettingStarted";
 import { TechnologyIntegration } from "@/components/TechnologyIntegration";
 import { SecurityFeatures } from "@/components/SecurityFeatures";
@@ -20,6 +21,7 @@ const Index = () => {
       
       <KeyProblems />
       <MobileFirst />
+      <DeploymentOptions />
       <GettingStarted />
       <TechnologyIntegration />
       <SecurityFeatures />
