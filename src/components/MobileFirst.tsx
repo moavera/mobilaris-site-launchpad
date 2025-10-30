@@ -2,10 +2,11 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Smartphone, Cloud, Server } from "lucide-react";
 import mobileAppImage from "@/assets/mobile-app.png";
+import { SectionShareButton } from "@/components/SectionShareButton";
 
 export const MobileFirst = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section id="mobile-access" className="py-20 bg-muted/30 scroll-mt-20 group">
       <div className="container mx-auto px-4">
         {/* Mobile First */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16 animate-fade-in-up">
@@ -20,7 +21,10 @@ export const MobileFirst = () => {
 
           {/* Text Content */}
           <div className="text-left">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Mobile First Design!</h2>
+            <div className="flex items-center gap-2 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold">Mobile First Design!</h2>
+              <SectionShareButton sectionId="mobile-access" sectionName="Mobile Access" />
+            </div>
             <p className="text-xl text-muted-foreground mb-6">
               Access Mobilaris Site™ from anywhere with our intuitive mobile app. Get real-time notifications, track assets, and manage safety protocols directly from your smartphone.
             </p>

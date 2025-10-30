@@ -1,4 +1,5 @@
 import { CheckCircle2, TrendingUp, Shield, Zap, ArrowRight } from "lucide-react";
+import { SectionShareButton } from "@/components/SectionShareButton";
 
 export const Evolution = () => {
   const highlights = [
@@ -25,7 +26,7 @@ export const Evolution = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden">
+    <section id="evolution" className="py-24 md:py-32 relative overflow-hidden scroll-mt-20 group">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
       
@@ -36,9 +37,12 @@ export const Evolution = () => {
             <span className="text-primary text-sm font-semibold tracking-wide">Next Generation Technology</span>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-8 leading-tight">
-            Mobilaris 2.0 - Site™
-          </h2>
+          <div className="flex items-center justify-center gap-2 mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-tight">
+              Mobilaris 2.0 - Site™
+            </h2>
+            <SectionShareButton sectionId="evolution" sectionName="Evolution" />
+          </div>
           
           <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
             Our platform builds on a long history of real-time positioning and 3D visualization in industrial and mining operations.

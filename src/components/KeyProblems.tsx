@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Shield, Database, FileCheck } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
+import { SectionShareButton } from "@/components/SectionShareButton";
 
 const problems = [
   {
@@ -29,12 +30,15 @@ export const KeyProblems = () => {
   });
 
   return (
-    <section className="py-20 bg-background">
+    <section id="challenges" className="py-20 bg-background scroll-mt-20 group">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Solving Your Biggest Challenges
-          </h2>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              Solving Your Biggest Challenges
+            </h2>
+            <SectionShareButton sectionId="challenges" sectionName="Challenges" />
+          </div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Three critical problems that Mobilaris Site™ addresses for industrial operations
           </p>

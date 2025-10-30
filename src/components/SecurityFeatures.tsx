@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Shield, Activity, Code2, Lock, Box } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
+import { SectionShareButton } from "@/components/SectionShareButton";
 
 const features = [
   {
@@ -34,7 +35,7 @@ export const SecurityFeatures = () => {
   });
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section id="security" className="py-24 bg-background relative overflow-hidden scroll-mt-20 group">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background pointer-events-none" />
       
@@ -44,9 +45,12 @@ export const SecurityFeatures = () => {
             <Shield className="w-4 h-4" />
             <span className="text-sm font-semibold">Enterprise-Grade Security</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Built on Modern Standards
-          </h2>
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              Built on Modern Standards
+            </h2>
+            <SectionShareButton sectionId="security" sectionName="Security" />
+          </div>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Comprehensive security and reliability features that ensure seamless, safe operations
           </p>

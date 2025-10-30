@@ -2,6 +2,7 @@ import axiansLogo from "@/assets/axians.png";
 import tpoLogo from "@/assets/tpo.jpeg";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { SectionShareButton } from "@/components/SectionShareButton";
 export const Partners = () => {
   const partners = [{
     name: "Axians",
@@ -16,7 +17,7 @@ export const Partners = () => {
     industry: "Industrial Solutions",
     partnership: "Strategic Partner"
   }];
-  return <section className="py-20 md:py-32 relative overflow-hidden bg-gradient-subtle">
+  return <section id="partners" className="py-20 md:py-32 relative overflow-hidden bg-gradient-subtle scroll-mt-20 group">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
@@ -26,10 +27,12 @@ export const Partners = () => {
       <div className="container relative z-10 mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Our Partners
-          </h2>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
+              Our Partners
+            </h2>
+            <SectionShareButton sectionId="partners" sectionName="Partners" />
+          </div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Working with industry leaders to deliver cutting-edge positioning solutions
           </p>

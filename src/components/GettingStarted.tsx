@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Wifi, Tag, Map, Radio } from "lucide-react";
+import { SectionShareButton } from "@/components/SectionShareButton";
 const steps = [{
   icon: Radio,
   number: "1",
@@ -17,12 +18,15 @@ const steps = [{
   description: "Upload your layout and begin visualizing people, vehicles, and assets in real time."
 }];
 export const GettingStarted = () => {
-  return <section className="py-20 bg-background">
+  return <section id="getting-started" className="py-20 bg-background scroll-mt-20 group">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            What do I need?
-          </h2>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              What do I need?
+            </h2>
+            <SectionShareButton sectionId="getting-started" sectionName="Getting Started" />
+          </div>
           <p className="text-xl text-muted-foreground mb-2">
             Ready to get started? Only 3 simple steps:
           </p>
