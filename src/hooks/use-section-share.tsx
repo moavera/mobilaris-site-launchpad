@@ -9,7 +9,8 @@ export const useSectionShare = () => {
       const element = document.getElementById(id);
       if (element) {
         setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
+          const top = element.offsetTop;
+          window.scrollTo({ top, behavior: "smooth" });
         }, 100);
       }
     }
