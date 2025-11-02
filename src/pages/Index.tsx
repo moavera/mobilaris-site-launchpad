@@ -3,6 +3,7 @@ import { useSectionShare } from "@/hooks/use-section-share";
 import { KeyProblems } from "@/components/KeyProblems";
 import { MobileFirst } from "@/components/MobileFirst";
 import { Environments } from "@/components/Environments";
+import { EnvironmentJourney } from "@/components/EnvironmentJourney";
 import { DeploymentOptions } from "@/components/DeploymentOptions";
 import { GettingStarted } from "@/components/GettingStarted";
 import { TechnologyIntegration } from "@/components/TechnologyIntegration";
@@ -23,6 +24,7 @@ const Index = () => {
       <KeyProblems />
       <MobileFirst />
       <Environments />
+      <EnvironmentJourney />
       <DeploymentOptions />
       <GettingStarted />
       <TechnologyIntegration />
