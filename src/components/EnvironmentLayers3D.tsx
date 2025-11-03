@@ -9,12 +9,12 @@ const Tree = ({ position }: { position: [number, number, number] }) => {
     <group position={position}>
       {/* Trunk */}
       <mesh position={[0, 0.5, 0]}>
-        <cylinderGeometry args={[0.15, 0.2, 1, 8]} />
+        <cylinderGeometry args={[0.12, 0.15, 1, 8]} />
         <meshStandardMaterial color="#3a2a1a" roughness={0.9} />
       </mesh>
-      {/* Foliage - cone shape */}
-      <mesh position={[0, 1.5, 0]}>
-        <coneGeometry args={[0.6, 1.2, 8]} />
+      {/* Foliage */}
+      <mesh position={[0, 1.3, 0]}>
+        <coneGeometry args={[0.5, 1, 8]} />
         <meshStandardMaterial color="#2a4a2a" roughness={0.8} />
       </mesh>
     </group>
@@ -29,122 +29,144 @@ const SurfaceBuilding = ({ position, width, depth }: {
 }) => {
   return (
     <group position={position}>
-      <mesh position={[0, 0.6, 0]} castShadow>
-        <boxGeometry args={[width, 1.2, depth]} />
+      <mesh position={[0, 0.4, 0]} castShadow>
+        <boxGeometry args={[width, 0.8, depth]} />
         <meshStandardMaterial 
-          color="#505050" 
+          color="#555555" 
           metalness={0.3} 
           roughness={0.7}
         />
       </mesh>
       {/* Roof */}
-      <mesh position={[0, 1.3, 0]}>
-        <boxGeometry args={[width + 0.1, 0.1, depth + 0.1]} />
-        <meshStandardMaterial color="#404040" metalness={0.4} roughness={0.6} />
+      <mesh position={[0, 0.85, 0]}>
+        <boxGeometry args={[width + 0.05, 0.1, depth + 0.05]} />
+        <meshStandardMaterial color="#454545" metalness={0.4} roughness={0.6} />
       </mesh>
     </group>
   );
 };
 
-// Underground floor with rooms
-const UndergroundFloor = ({ position, floorNumber }: { 
+// Exploded floor view - floors float ABOVE surface
+const ExplodedFloor = ({ position, floorNumber, label }: { 
   position: [number, number, number],
-  floorNumber: number
+  floorNumber: number,
+  label: string
 }) => {
   return (
     <group position={position}>
       {/* Main floor plate */}
-      <mesh receiveShadow>
-        <boxGeometry args={[12, 0.15, 12]} />
+      <mesh castShadow receiveShadow>
+        <boxGeometry args={[10, 0.2, 10]} />
         <meshStandardMaterial 
-          color="#2a2a2a" 
-          metalness={0.5} 
-          roughness={0.6}
-          emissive="#1a1a1a"
-          emissiveIntensity={0.2}
+          color="#3a3a3a" 
+          metalness={0.4} 
+          roughness={0.5}
         />
       </mesh>
       
-      {/* Room dividers creating a floor plan */}
-      {/* Vertical walls */}
-      {[-3, 0, 3].map((x, i) => (
-        <mesh key={`v${i}`} position={[x, 0.4, 0]}>
-          <boxGeometry args={[0.1, 0.8, 12]} />
+      {/* Room layout - creating a floor plan */}
+      {/* Vertical dividers */}
+      {[-2.5, 0, 2.5].map((x, i) => (
+        <mesh key={`v${i}`} position={[x, 0.3, 0]} castShadow>
+          <boxGeometry args={[0.08, 0.6, 10]} />
           <meshStandardMaterial 
-            color="#3a3a3a" 
-            metalness={0.4} 
-            roughness={0.7}
-            opacity={0.7}
-            transparent
+            color="#4a4a4a" 
+            metalness={0.3} 
+            roughness={0.6}
           />
         </mesh>
       ))}
       
-      {/* Horizontal walls */}
-      {[-3, 0, 3].map((z, i) => (
-        <mesh key={`h${i}`} position={[0, 0.4, z]}>
-          <boxGeometry args={[12, 0.8, 0.1]} />
+      {/* Horizontal dividers */}
+      {[-2.5, 0, 2.5].map((z, i) => (
+        <mesh key={`h${i}`} position={[0, 0.3, z]} castShadow>
+          <boxGeometry args={[10, 0.6, 0.08]} />
           <meshStandardMaterial 
-            color="#3a3a3a" 
-            metalness={0.4} 
-            roughness={0.7}
-            opacity={0.7}
-            transparent
+            color="#4a4a4a" 
+            metalness={0.3} 
+            roughness={0.6}
           />
         </mesh>
       ))}
 
-      {/* Floor number indicator */}
-      <mesh position={[5, 0.08, 5]}>
-        <boxGeometry args={[0.8, 0.01, 0.8]} />
+      {/* Floor label indicator */}
+      <mesh position={[4.2, 0.11, 4.2]}>
+        <boxGeometry args={[0.6, 0.01, 0.6]} />
         <meshStandardMaterial 
-          color="#4a4a4a"
-          emissive="#6a6a6a"
-          emissiveIntensity={0.5}
+          color="#5a5a5a"
+          emissive="#7a7a7a"
+          emissiveIntensity={0.4}
         />
       </mesh>
     </group>
   );
 };
 
-// Large visible tunnel
-const LargeTunnel = ({ position, rotation }: { 
+// Realistic tunnel corridor
+const TunnelCorridor = ({ position, rotation, length = 8 }: { 
   position: [number, number, number], 
-  rotation?: [number, number, number] 
+  rotation?: [number, number, number],
+  length?: number
 }) => {
   return (
     <group position={position} rotation={rotation}>
-      {/* Main tunnel tube - larger and more visible */}
-      <mesh>
-        <torusGeometry args={[2.5, 0.3, 16, 32]} />
+      {/* Tunnel floor */}
+      <mesh position={[0, -0.8, 0]}>
+        <boxGeometry args={[2, 0.15, length]} />
         <meshStandardMaterial 
-          color="#4a4a4a" 
-          metalness={0.7} 
-          roughness={0.3}
-          emissive="#2a2a2a"
-          emissiveIntensity={0.3}
+          color="#2a2a2a" 
+          metalness={0.3} 
+          roughness={0.8}
         />
       </mesh>
       
-      {/* Support structure */}
-      {[0, Math.PI / 2, Math.PI, (3 * Math.PI) / 2].map((angle, i) => (
-        <mesh key={i} position={[Math.cos(angle) * 2.2, Math.sin(angle) * 2.2, 0]}>
-          <boxGeometry args={[0.15, 0.5, 0.15]} />
-          <meshStandardMaterial 
-            color="#3a3a3a" 
-            metalness={0.6} 
-            roughness={0.4}
-            emissive="#2a2a2a"
-            emissiveIntensity={0.2}
-          />
-        </mesh>
+      {/* Tunnel walls */}
+      <mesh position={[-1, 0, 0]}>
+        <boxGeometry args={[0.15, 2, length]} />
+        <meshStandardMaterial 
+          color="#353535" 
+          metalness={0.4} 
+          roughness={0.7}
+        />
+      </mesh>
+      <mesh position={[1, 0, 0]}>
+        <boxGeometry args={[0.15, 2, length]} />
+        <meshStandardMaterial 
+          color="#353535" 
+          metalness={0.4} 
+          roughness={0.7}
+        />
+      </mesh>
+      
+      {/* Tunnel ceiling */}
+      <mesh position={[0, 0.8, 0]}>
+        <boxGeometry args={[2, 0.15, length]} />
+        <meshStandardMaterial 
+          color="#3a3a3a" 
+          metalness={0.4} 
+          roughness={0.6}
+        />
+      </mesh>
+
+      {/* Support beams along tunnel */}
+      {Array.from({ length: Math.floor(length / 2) }).map((_, i) => (
+        <group key={i} position={[0, 0, -length/2 + i * 2 + 1]}>
+          <mesh position={[-0.9, 0.6, 0]}>
+            <boxGeometry args={[0.1, 1.4, 0.1]} />
+            <meshStandardMaterial color="#454545" metalness={0.5} roughness={0.5} />
+          </mesh>
+          <mesh position={[0.9, 0.6, 0]}>
+            <boxGeometry args={[0.1, 1.4, 0.1]} />
+            <meshStandardMaterial color="#454545" metalness={0.5} roughness={0.5} />
+          </mesh>
+        </group>
       ))}
 
-      {/* Tunnel lighting */}
+      {/* Tunnel lights */}
       <pointLight
-        position={[0, 0, 0]}
-        intensity={0.8}
-        distance={8}
+        position={[0, 0.5, 0]}
+        intensity={1.2}
+        distance={6}
         color="#ff9a3d"
       />
     </group>
@@ -152,13 +174,13 @@ const LargeTunnel = ({ position, rotation }: {
 };
 
 // Main scene
-const LayersScene = () => {
+const ExplodedViewScene = () => {
   const groupRef = useRef<THREE.Group>(null);
 
   // Gentle rotation animation
   useFrame((state, delta) => {
     if (groupRef.current) {
-      groupRef.current.rotation.y += delta * 0.1;
+      groupRef.current.rotation.y += delta * 0.08;
     }
   });
 
@@ -166,93 +188,90 @@ const LayersScene = () => {
     <>
       <PerspectiveCamera 
         makeDefault 
-        position={[15, 12, 15]} 
-        fov={60}
+        position={[18, 14, 18]} 
+        fov={55}
       />
       <OrbitControls 
         enableZoom={true}
         enablePan={true}
-        minDistance={10}
-        maxDistance={40}
-        maxPolarAngle={Math.PI / 2.2}
+        minDistance={12}
+        maxDistance={45}
+        maxPolarAngle={Math.PI / 2.1}
       />
 
-      {/* Enhanced lighting for better visibility */}
-      <ambientLight intensity={0.5} />
+      {/* Enhanced lighting for clear visibility */}
+      <ambientLight intensity={0.6} />
       <directionalLight
-        position={[10, 15, 10]}
-        intensity={1.2}
+        position={[15, 20, 15]}
+        intensity={1.5}
         castShadow
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
       />
-      <directionalLight position={[-10, 10, -10]} intensity={0.6} />
-      <pointLight position={[0, 8, 0]} intensity={0.5} color="#ffffff" />
+      <directionalLight position={[-10, 15, -10]} intensity={0.8} />
+      <pointLight position={[0, 12, 0]} intensity={0.6} color="#ffffff" />
 
       <group ref={groupRef}>
-        {/* Surface ground layer - clear separation */}
+        {/* EXPLODED FLOORS - Floating ABOVE the surface */}
+        <ExplodedFloor position={[0, 8, 0]} floorNumber={3} label="Floor 3" />
+        <ExplodedFloor position={[0, 5.5, 0]} floorNumber={2} label="Floor 2" />
+        <ExplodedFloor position={[0, 3, 0]} floorNumber={1} label="Floor 1" />
+
+        {/* GROUND LEVEL - Clear separation */}
         <mesh position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-          <planeGeometry args={[20, 20]} />
+          <planeGeometry args={[24, 24]} />
           <meshStandardMaterial 
             color="#3a3a3a" 
-            roughness={0.8}
-            metalness={0.2}
+            roughness={0.85}
+            metalness={0.15}
           />
         </mesh>
 
-        {/* Ground grid for surface */}
-        <gridHelper args={[20, 20, '#4a4a4a', '#3a3a3a']} position={[0, 0.01, 0]} />
+        {/* Ground grid */}
+        <gridHelper args={[24, 24, '#4a4a4a', '#3a3a3a']} position={[0, 0.01, 0]} />
 
-        {/* Surface buildings */}
-        <SurfaceBuilding position={[-4, 0, -4]} width={2.5} depth={2} />
-        <SurfaceBuilding position={[4, 0, -3]} width={3} depth={2.5} />
-        <SurfaceBuilding position={[-3, 0, 4]} width={2} depth={2.5} />
-        <SurfaceBuilding position={[3, 0, 3]} width={2.8} depth={2.2} />
+        {/* Surface buildings on ground */}
+        <SurfaceBuilding position={[-5, 0, -5]} width={2.2} depth={2} />
+        <SurfaceBuilding position={[5, 0, -4]} width={2.5} depth={2.2} />
+        <SurfaceBuilding position={[-4, 0, 5]} width={2} depth={2.3} />
+        <SurfaceBuilding position={[4, 0, 4]} width={2.4} depth={2.1} />
 
         {/* Trees on surface */}
-        <Tree position={[-2, 0, 1]} />
-        <Tree position={[1, 0, -2]} />
-        <Tree position={[-5, 0, -1]} />
-        <Tree position={[5, 0, 1]} />
-        <Tree position={[0, 0, 5]} />
-        <Tree position={[-1, 0, -5]} />
+        <Tree position={[-2, 0, 1.5]} />
+        <Tree position={[2, 0, -2]} />
+        <Tree position={[-6, 0, -1]} />
+        <Tree position={[6, 0, 2]} />
+        <Tree position={[0, 0, 6]} />
+        <Tree position={[-1.5, 0, -6]} />
 
-        {/* Clear ground layer separator - visual element */}
-        <mesh position={[0, -0.5, 0]}>
-          <boxGeometry args={[13, 0.4, 13]} />
+        {/* Ground layer separator - visual marker */}
+        <mesh position={[0, -0.3, 0]}>
+          <boxGeometry args={[11, 0.2, 11]} />
           <meshStandardMaterial 
             color="#2a2a2a" 
-            metalness={0.6} 
-            roughness={0.4}
-            emissive="#1a1a1a"
-            emissiveIntensity={0.3}
+            metalness={0.5} 
+            roughness={0.5}
           />
         </mesh>
 
-        {/* Underground floors - 3 levels */}
-        <UndergroundFloor position={[0, -2.5, 0]} floorNumber={1} />
-        <UndergroundFloor position={[0, -5, 0]} floorNumber={2} />
-        <UndergroundFloor position={[0, -7.5, 0]} floorNumber={3} />
+        {/* UNDERGROUND TUNNEL SYSTEM - Below ground */}
+        {/* Main tunnel network */}
+        <TunnelCorridor position={[0, -2.5, 0]} length={12} />
+        <TunnelCorridor position={[0, -2.5, 0]} rotation={[0, Math.PI / 2, 0]} length={12} />
+        
+        {/* Cross tunnels */}
+        <TunnelCorridor position={[4, -2.5, 0]} rotation={[0, Math.PI / 2, 0]} length={6} />
+        <TunnelCorridor position={[-4, -2.5, 0]} rotation={[0, Math.PI / 2, 0]} length={6} />
+        <TunnelCorridor position={[0, -2.5, 4]} length={6} />
+        <TunnelCorridor position={[0, -2.5, -4]} length={6} />
 
-        {/* Large visible tunnel system */}
-        <LargeTunnel position={[0, -10, 0]} />
-        <LargeTunnel position={[0, -10, -6]} rotation={[0, 0, Math.PI / 8]} />
-        <LargeTunnel position={[0, -10, 6]} rotation={[0, 0, -Math.PI / 8]} />
-        <LargeTunnel position={[-6, -10, 0]} rotation={[0, Math.PI / 2, Math.PI / 8]} />
-        <LargeTunnel position={[6, -10, 0]} rotation={[0, Math.PI / 2, -Math.PI / 8]} />
-
-        {/* Connecting tunnel segments */}
-        {Array.from({ length: 3 }).map((_, i) => (
-          <LargeTunnel 
-            key={i} 
-            position={[0, -10, -12 - i * 6]} 
-            rotation={[0, 0, (i * Math.PI) / 16]}
-          />
-        ))}
+        {/* Deeper tunnel level */}
+        <TunnelCorridor position={[2, -4.5, 2]} length={8} />
+        <TunnelCorridor position={[-2, -4.5, -2]} rotation={[0, Math.PI / 2, 0]} length={8} />
       </group>
 
       {/* Subtle fog for depth */}
-      <fog attach="fog" args={['#0a0a0a', 20, 50]} />
+      <fog attach="fog" args={['#0a0a0a', 25, 60]} />
     </>
   );
 };
@@ -262,7 +281,7 @@ export const EnvironmentLayers3D = () => {
     <div className="w-full h-[600px] lg:h-[700px] rounded-xl overflow-hidden bg-[#0a0a0a] shadow-lg">
       <Canvas shadows gl={{ antialias: true, alpha: false }}>
         <color attach="background" args={['#0a0a0a']} />
-        <LayersScene />
+        <ExplodedViewScene />
       </Canvas>
     </div>
   );
