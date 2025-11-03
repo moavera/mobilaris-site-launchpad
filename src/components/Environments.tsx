@@ -25,7 +25,7 @@ export const Environments = () => {
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-slate-50">Positioning That Works Everywhere</h2>
             <p className="text-xl text-muted-foreground max-w-2xl">
-              Our system seamlessly transitions between different environments, providing reliable tracking wherever your operations take you.
+              Our system is built for every environment, from deep underground tunnels to open outdoor sites and complex indoor facilities. It automatically adapts the positioning technology to ensure accurate, continuous tracking wherever your operations happen.
             </p>
           </div>
           <SectionShareButton sectionId="environments" sectionName="Environments" />
