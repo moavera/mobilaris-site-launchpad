@@ -21,6 +21,36 @@ const Index = () => {
         </div>
       </nav>
 
+      {/* Announcement Banner */}
+      <section className="relative pt-24 pb-8 md:pt-28 md:pb-12 overflow-hidden" style={{ backgroundColor: 'hsl(220 20% 5%)' }}>
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-7xl mx-auto">
+            <div className="flex-1">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 leading-tight" style={{ color: 'hsl(15 100% 60%)' }}>
+                Introducing Mobilaris Site™
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground/80">
+                The future of industrial positioning starts now
+              </p>
+            </div>
+            <Button 
+              size="lg" 
+              className="text-lg px-10 py-7 h-auto font-bold shadow-2xl hover:scale-105 transition-transform"
+              style={{ 
+                backgroundColor: 'hsl(15 100% 60%)',
+                color: 'hsl(220 20% 5%)'
+              }}
+              asChild
+            >
+              <a href="/site" className="flex items-center gap-3">
+                Learn More
+                <ArrowRight className="h-6 w-6" />
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         {/* Background Elements */}
