@@ -1,4 +1,4 @@
-import { Shield, Users, AlertTriangle, Lock } from "lucide-react";
+import { Shield, Users, AlertTriangle } from "lucide-react";
 
 export const PrivacySection = () => {
   return (
@@ -29,24 +29,15 @@ export const PrivacySection = () => {
                 </p>
               </div>
             </div>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <Lock className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">
-                  <strong>Group-level tracking only</strong> - No individual identification
-                </span>
+            <ul className="space-y-3 list-disc list-inside ml-4">
+              <li className="text-foreground">
+                <strong>Group-level tracking only</strong> - No individual identification
               </li>
-              <li className="flex items-start gap-3">
-                <Shield className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">
-                  Personal information remains <strong>encrypted and locked</strong>
-                </span>
+              <li className="text-foreground">
+                Personal information remains <strong>encrypted and locked</strong>
               </li>
-              <li className="flex items-start gap-3">
-                <Users className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">
-                  View positions by <strong>work groups and teams</strong>
-                </span>
+              <li className="text-foreground">
+                View positions by <strong>work groups and teams</strong>
               </li>
             </ul>
           </div>
@@ -66,24 +57,15 @@ export const PrivacySection = () => {
                 </p>
               </div>
             </div>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <AlertTriangle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">
-                  <strong>Personal information unlocked</strong> by authorized personnel
-                </span>
+            <ul className="space-y-3 list-disc list-inside ml-4">
+              <li className="text-foreground">
+                <strong>Personal information unlocked</strong> by authorized personnel
               </li>
-              <li className="flex items-start gap-3">
-                <Shield className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">
-                  Enable direct contact with <strong>people in danger</strong>
-                </span>
+              <li className="text-foreground">
+                Enable direct contact with <strong>people in danger</strong>
               </li>
-              <li className="flex items-start gap-3">
-                <Users className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">
-                  Rapid identification for <strong>evacuation and rescue</strong>
-                </span>
+              <li className="text-foreground">
+                Rapid identification for <strong>evacuation and rescue</strong>
               </li>
             </ul>
           </div>
