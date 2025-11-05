@@ -35,7 +35,7 @@ const Index = () => {
             </div>
             <Button 
               size="lg" 
-              className="group relative overflow-hidden px-8 py-8 h-auto font-bold shadow-2xl transition-all duration-500 hover:px-12 hover:py-10"
+              className="group relative overflow-hidden px-12 py-12 h-auto font-bold shadow-2xl transition-all duration-500 hover:px-14 hover:py-12"
               style={{ 
                 backgroundColor: 'hsl(15 100% 60%)',
                 color: 'hsl(220 20% 5%)'
@@ -46,7 +46,7 @@ const Index = () => {
                 <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-xl font-bold group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500">
                   Visit Mobilaris Site™
                 </span>
-                <ArrowRight className="h-16 w-16 group-hover:h-6 group-hover:w-6 transition-all duration-500 flex-shrink-0" strokeWidth={3} />
+                <ArrowRight className="h-24 w-24 group-hover:h-6 group-hover:w-6 transition-all duration-500 flex-shrink-0" strokeWidth={3.5} />
               </a>
             </Button>
           </div>
