@@ -1,21 +1,25 @@
 import { Building2, Mountain, Layers } from "lucide-react";
 import { SectionShareButton } from "./SectionShareButton";
 import environmentPreview from "@/assets/environment-preview.png";
+import environmentIndoor from "@/assets/environment-indoor.png";
 const environments = [{
   icon: Layers,
   title: "Underground",
   description: "Navigate complex tunnel systems and underground facilities with precise positioning and real-time tracking, even in GPS-denied environments.",
-  gradient: "from-purple-500/20 to-blue-500/20"
+  gradient: "from-purple-500/20 to-blue-500/20",
+  image: environmentPreview
 }, {
   icon: Mountain,
   title: "Outdoor",
   description: "Track assets and personnel across large outdoor sites with GPS integration, geofencing, and environmental awareness capabilities.",
-  gradient: "from-blue-500/20 to-cyan-500/20"
+  gradient: "from-blue-500/20 to-cyan-500/20",
+  image: environmentPreview
 }, {
   icon: Building2,
   title: "Indoor",
   description: "Monitor movement through warehouses, factories, and facilities with meter-level accuracy using BLE, Wi-Fi, and UWB technologies.",
-  gradient: "from-cyan-500/20 to-teal-500/20"
+  gradient: "from-cyan-500/20 to-teal-500/20",
+  image: environmentIndoor
 }];
 export const Environments = () => {
   return <section id="environments" className="relative py-24 px-4 overflow-hidden">
@@ -50,7 +54,7 @@ export const Environments = () => {
               {/* Visual preview area */}
               <div className="relative h-64 bg-gradient-to-br from-background via-primary/5 to-background flex items-center justify-center border-b border-border overflow-hidden">
                 <img 
-                  src={environmentPreview} 
+                  src={env.image} 
                   alt={`${env.title} environment visualization with 3D mapping`}
                   className="w-full h-full object-cover shadow-elegant group-hover:scale-105 transition-transform duration-500"
                   style={{
