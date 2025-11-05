@@ -5,7 +5,7 @@ import heroImage from "@/assets/site-hero-launch.png";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background font-galano">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
