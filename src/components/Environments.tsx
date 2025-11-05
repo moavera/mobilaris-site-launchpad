@@ -62,6 +62,8 @@ export const Environments = () => {
                     boxShadow: '0 20px 60px -10px rgba(0, 0, 0, 0.4), 0 10px 30px -15px rgba(0, 0, 0, 0.3)'
                   }}
                 />
+                {/* Shadow overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300" />
               </div>
 
               {/* Card content */}
