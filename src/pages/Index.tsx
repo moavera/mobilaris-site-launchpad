@@ -3,10 +3,8 @@ import { ArrowBigRight, MapPin, Shield, Zap, Sparkles, ArrowRight } from "lucide
 import mobilarisLogo from "@/assets/mobilaris-industrial.png";
 import heroImage from "@/assets/site-hero-launch.png";
 import arrowForward from "@/assets/arrow-forward.svg";
-
 const Index = () => {
-  return (
-    <main className="min-h-screen bg-background font-galano">
+  return <main className="min-h-screen bg-background font-galano">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
@@ -23,26 +21,25 @@ const Index = () => {
       </nav>
 
       {/* Announcement Banner */}
-      <section className="relative pt-24 pb-8 md:pt-28 md:pb-12 overflow-hidden" style={{ backgroundColor: 'hsl(220 20% 5%)' }}>
+      <section className="relative pt-24 pb-8 md:pt-28 md:pb-12 overflow-hidden" style={{
+      backgroundColor: 'hsl(220 20% 5%)'
+    }}>
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-7xl mx-auto">
             <div className="flex-1">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 leading-tight" style={{ color: 'hsl(15 100% 60%)' }}>
+              <h2 style={{
+              color: 'hsl(15 100% 60%)'
+            }} className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 leading-tight lg:text-6xl">
                 Introducing Mobilaris Site™
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground/80">
                 The future of industrial positioning starts now
               </p>
             </div>
-            <Button 
-              size="lg" 
-              className="group relative overflow-hidden px-6 py-6 h-auto font-bold shadow-2xl transition-all duration-500 hover:px-7 hover:py-6 [&_svg]:!size-auto"
-              style={{ 
-                backgroundColor: 'hsl(15 100% 60%)',
-                color: 'hsl(220 20% 5%)'
-              }}
-              asChild
-            >
+            <Button size="lg" className="group relative overflow-hidden px-6 py-6 h-auto font-bold shadow-2xl transition-all duration-500 hover:px-7 hover:py-6 [&_svg]:!size-auto" style={{
+            backgroundColor: 'hsl(15 100% 60%)',
+            color: 'hsl(220 20% 5%)'
+          }} asChild>
               <a href="/site" className="flex items-center gap-0 group-hover:gap-2 transition-all duration-500">
                 <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-sm font-bold group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500">
                   Visit Mobilaris Site™
@@ -133,31 +130,23 @@ const Index = () => {
             </div>
 
             {/* Right: Hero Image */}
-            <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="relative animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
               <div className="relative">
-                <div 
-                  className="relative rounded-2xl overflow-hidden border border-border/30 transition-all duration-700 hover:scale-[1.02]"
-                  style={{ 
-                    transform: 'perspective(1000px) rotateY(-5deg) rotateX(2deg)',
-                    boxShadow: '0 25px 70px -15px hsl(var(--primary) / 0.3), 0 0 100px -25px hsl(var(--primary) / 0.2)'
-                  }}
-                >
-                  <img 
-                    src={heroImage} 
-                    alt="Mobilaris Site - Industrial Positioning Technology" 
-                    className="w-full h-auto"
-                  />
+                <div className="relative rounded-2xl overflow-hidden border border-border/30 transition-all duration-700 hover:scale-[1.02]" style={{
+                transform: 'perspective(1000px) rotateY(-5deg) rotateX(2deg)',
+                boxShadow: '0 25px 70px -15px hsl(var(--primary) / 0.3), 0 0 100px -25px hsl(var(--primary) / 0.2)'
+              }}>
+                  <img src={heroImage} alt="Mobilaris Site - Industrial Positioning Technology" className="w-full h-auto" />
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
                 </div>
                 
                 {/* Glow effect */}
-                <div 
-                  className="absolute inset-0 -z-10 blur-3xl opacity-40"
-                  style={{
-                    background: 'radial-gradient(circle at 60% 50%, hsl(var(--primary) / 0.4), transparent 70%)',
-                    transform: 'scale(1.1)'
-                  }}
-                />
+                <div className="absolute inset-0 -z-10 blur-3xl opacity-40" style={{
+                background: 'radial-gradient(circle at 60% 50%, hsl(var(--primary) / 0.4), transparent 70%)',
+                transform: 'scale(1.1)'
+              }} />
               </div>
             </div>
           </div>
@@ -194,8 +183,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </main>
-  );
+    </main>;
 };
-
 export default Index;
