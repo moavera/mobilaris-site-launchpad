@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowBigRight, MapPin, Shield, Zap, Sparkles, ArrowRight } from "lucide-react";
 import mobilarisLogo from "@/assets/mobilaris-industrial.png";
 import heroImage from "@/assets/site-hero-launch.png";
+import arrowForward from "@/assets/arrow-forward.svg";
 
 const Index = () => {
   return (
@@ -46,7 +47,7 @@ const Index = () => {
                 <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-xl font-bold group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500">
                   Visit Mobilaris Site™
                 </span>
-                <ArrowBigRight className="size-48 group-hover:size-7 transition-all duration-500 flex-shrink-0" strokeWidth={2} />
+                <img src={arrowForward} alt="Arrow" className="size-64 group-hover:size-8 transition-all duration-500 flex-shrink-0" />
               </a>
             </Button>
           </div>
