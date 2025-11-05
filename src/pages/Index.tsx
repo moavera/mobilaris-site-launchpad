@@ -20,31 +20,41 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Announcement Banner */}
-      <section className="relative pt-24 pb-8 md:pt-28 md:pb-12 overflow-hidden" style={{
+      {/* Hero Banner */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden" style={{
       backgroundColor: 'hsl(274 100% 8%)'
     }}>
+        {/* Background Effects */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
+        </div>
+
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-7xl mx-auto">
-            <div className="flex-1">
-              <h2 style={{
-              color: 'hsl(274 100% 75%)'
-            }} className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 leading-tight lg:text-6xl">
-                <span style={{ color: '#ffffff' }}>Introducing</span> Mobilaris Site™
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground/80">
+          <div className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up">
+            <div className="space-y-6">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight" style={{
+                color: 'hsl(274 100% 75%)'
+              }}>
+                <span style={{ color: '#ffffff' }}>Introducing</span><br />
+                Mobilaris Site™
+              </h1>
+              <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground/90 max-w-3xl mx-auto leading-relaxed">
                 Real-time positioning and 3D visualization that brings total control to complex work environments.
               </p>
             </div>
-            <Button size="lg" className="group relative overflow-hidden px-6 py-6 h-auto font-bold shadow-2xl transition-all duration-500 hover:px-7 hover:py-6 [&_svg]:!size-auto" style={{
-            backgroundColor: 'hsl(274 100% 58%)',
-            color: 'hsl(0 0% 100%)'
-          }} asChild>
+            
+            <Button size="lg" className="group relative overflow-hidden px-8 py-7 h-auto font-bold text-lg shadow-2xl transition-all duration-500 hover:px-9 hover:py-7 hover:shadow-purple-500/50 [&_svg]:!size-auto animate-fade-in" style={{
+              backgroundColor: 'hsl(274 100% 58%)',
+              color: 'hsl(0 0% 100%)',
+              animationDelay: '0.2s'
+            }} asChild>
               <a href="/site" className="flex items-center gap-0 group-hover:gap-2 transition-all duration-500">
-                <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-sm font-bold group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500">
+                <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-base font-bold group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500">
                   Visit Mobilaris Site™
                 </span>
-                <img src={arrowForward} alt="Arrow" className="size-12 group-hover:size-3 transition-all duration-500 flex-shrink-0" />
+                <img src={arrowForward} alt="Arrow" className="size-12 group-hover:size-4 transition-all duration-500 flex-shrink-0" />
               </a>
             </Button>
           </div>
