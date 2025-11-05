@@ -28,7 +28,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-7xl mx-auto">
             <div className="flex-1">
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 leading-tight" style={{ color: 'hsl(15 100% 60%)' }}>
-                Introducing<br />Mobilaris Site™
+                Introducing Mobilaris Site™
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground/80">
                 The future of industrial positioning starts now
