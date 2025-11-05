@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, Shield, Zap, Sparkles } from "lucide-react";
+import { ArrowBigRight, MapPin, Shield, Zap, Sparkles, ArrowRight } from "lucide-react";
 import mobilarisLogo from "@/assets/mobilaris-industrial.png";
 import heroImage from "@/assets/site-hero-launch.png";
 
@@ -35,7 +35,7 @@ const Index = () => {
             </div>
             <Button 
               size="lg" 
-              className="group relative overflow-hidden px-12 py-12 h-auto font-bold shadow-2xl transition-all duration-500 hover:px-14 hover:py-12"
+              className="group relative overflow-hidden px-12 py-12 h-auto font-bold shadow-2xl transition-all duration-500 hover:px-14 hover:py-12 [&_svg]:!size-auto"
               style={{ 
                 backgroundColor: 'hsl(15 100% 60%)',
                 color: 'hsl(220 20% 5%)'
@@ -46,7 +46,7 @@ const Index = () => {
                 <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-xl font-bold group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500">
                   Visit Mobilaris Site™
                 </span>
-                <ArrowRight className="h-32 w-32 group-hover:h-7 group-hover:w-7 transition-all duration-500 flex-shrink-0" strokeWidth={4} />
+                <ArrowBigRight className="size-48 group-hover:size-7 transition-all duration-500 flex-shrink-0" strokeWidth={2} />
               </a>
             </Button>
           </div>
