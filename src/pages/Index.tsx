@@ -33,6 +33,16 @@ const Index = () => {
 
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up">
+            {/* New Launch Badge */}
+            <div className="relative inline-flex items-center gap-3 bg-gradient-to-r from-purple-500/20 via-purple-500/10 to-transparent backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3 group hover:border-purple-500/50 transition-all">
+              <div className="relative">
+                <Sparkles className="h-5 w-5 text-purple-400 animate-pulse" />
+                <div className="absolute inset-0 bg-purple-400/20 blur-md animate-pulse" />
+              </div>
+              <span className="text-base font-semibold text-purple-300 tracking-wide">NEW LAUNCH</span>
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/0 via-purple-500/20 to-purple-500/0 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
+            </div>
+
             <div className="space-y-6">
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight" style={{
                 color: 'hsl(274 100% 75%)'
