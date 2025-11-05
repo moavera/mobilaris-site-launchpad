@@ -1,5 +1,6 @@
 import { Building2, Mountain, Layers } from "lucide-react";
 import { SectionShareButton } from "./SectionShareButton";
+import environmentPreview from "@/assets/environment-preview.png";
 const environments = [{
   icon: Layers,
   title: "Underground",
@@ -47,9 +48,15 @@ export const Environments = () => {
               }}
             >
               {/* Visual preview area */}
-              <div className="relative h-64 bg-gradient-to-br from-background via-primary/5 to-background flex items-center justify-center border-b border-border">
-                <div className={`absolute inset-0 bg-gradient-to-br ${env.gradient} opacity-20`} />
-                <env.icon className="h-20 w-20 text-primary/40 relative z-10" />
+              <div className="relative h-64 bg-gradient-to-br from-background via-primary/5 to-background flex items-center justify-center border-b border-border overflow-hidden">
+                <img 
+                  src={environmentPreview} 
+                  alt={`${env.title} environment visualization with 3D mapping`}
+                  className="w-full h-full object-cover shadow-elegant group-hover:scale-105 transition-transform duration-500"
+                  style={{
+                    boxShadow: '0 20px 60px -10px rgba(0, 0, 0, 0.4), 0 10px 30px -15px rgba(0, 0, 0, 0.3)'
+                  }}
+                />
               </div>
 
               {/* Card content */}
