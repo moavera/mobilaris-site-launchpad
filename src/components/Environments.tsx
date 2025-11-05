@@ -24,7 +24,7 @@ const environments = [{
 }];
 export const Environments = () => {
   return <section id="environments" className="relative py-24 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background" />
       
       <div className="container mx-auto relative z-10">
         {/* Two-column header layout */}
@@ -53,7 +53,7 @@ export const Environments = () => {
               }}
             >
               {/* Visual preview area */}
-              <div className="relative h-64 bg-gradient-to-br from-background via-primary/5 to-background flex items-center justify-center border-b border-border overflow-hidden">
+              <div className="relative h-64 bg-muted/30 flex items-center justify-center border-b border-border overflow-hidden">
                 <img 
                   src={env.image} 
                   alt={`${env.title} environment visualization with 3D mapping`}
