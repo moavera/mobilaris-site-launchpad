@@ -30,8 +30,8 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up">
             {/* New Release Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20">
-              <span className="text-sm font-bold tracking-wider text-purple-400">NEW RELEASE</span>
+            <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-purple-500/20 border-2 border-purple-500/40">
+              <span className="text-lg md:text-xl font-bold tracking-widest" style={{ color: 'hsl(274 100% 70%)' }}>NEW RELEASE</span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight text-white">
