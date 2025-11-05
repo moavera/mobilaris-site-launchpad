@@ -33,14 +33,19 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
             {/* Left: Text Content */}
             <div className="animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 mb-6">
-                <Sparkles className="h-4 w-4 text-primary" />
-                <span className="text-sm text-foreground font-medium">New Launch</span>
+              {/* Prominent New Launch Badge */}
+              <div className="relative inline-flex items-center gap-3 bg-gradient-to-r from-primary/20 via-primary/10 to-transparent backdrop-blur-sm border border-primary/30 rounded-full px-6 py-3 mb-8 group hover:border-primary/50 transition-all">
+                <div className="relative">
+                  <Sparkles className="h-5 w-5 text-primary animate-pulse" />
+                  <div className="absolute inset-0 bg-primary/20 blur-md animate-pulse" />
+                </div>
+                <span className="text-base font-semibold text-primary tracking-wide">NEW LAUNCH</span>
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
 
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight">
                 Introducing<br />
-                <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
                   Mobilaris Site™
                 </span>
               </h1>
