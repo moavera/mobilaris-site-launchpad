@@ -32,21 +32,26 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
             {/* Left: Text Content */}
-            <div className="animate-fade-in-up">
-              {/* Prominent New Launch Badge */}
-              <div className="relative inline-flex items-center gap-3 bg-gradient-to-r from-primary/20 via-primary/10 to-transparent backdrop-blur-sm border border-primary/30 rounded-full px-6 py-3 mb-8 group hover:border-primary/50 transition-all">
+            <div>
+              {/* Prominent New Launch Badge with dramatic entrance */}
+              <div className="relative inline-flex items-center gap-3 bg-gradient-to-r from-primary/20 via-primary/10 to-transparent backdrop-blur-sm border border-primary/30 rounded-full px-6 py-3 mb-8 group hover:border-primary/50 transition-all animate-launch-badge opacity-0">
                 <div className="relative">
-                  <Sparkles className="h-5 w-5 text-primary animate-pulse" />
-                  <div className="absolute inset-0 bg-primary/20 blur-md animate-pulse" />
+                  <Sparkles className="h-5 w-5 text-primary animate-glow-pulse" />
+                  <div className="absolute inset-0 bg-primary/30 blur-lg animate-glow-pulse" />
                 </div>
                 <span className="text-base font-semibold text-primary tracking-wide">NEW LAUNCH</span>
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
+                {/* Shimmer effect */}
+                <div className="absolute inset-0 rounded-full overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" style={{ backgroundSize: '200% 100%' }} />
+                </div>
               </div>
 
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight animate-launch-title opacity-0">
                 Introducing<br />
-                <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
+                <span className="relative inline-block bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
                   Mobilaris Site™
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary/60 blur-xl opacity-30 animate-glow-pulse" />
                 </span>
               </h1>
 
