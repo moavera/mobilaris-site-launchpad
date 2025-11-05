@@ -66,11 +66,7 @@ export const Environments = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300" />
               </div>
 
-              {/* Card content */}
               <div className="p-6">
-                <div className="mb-3">
-                  <span className="text-xs text-muted-foreground uppercase tracking-wider">Environment Type</span>
-                </div>
                 <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
                   {env.title}
                 </h3>
