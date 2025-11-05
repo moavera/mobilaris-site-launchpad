@@ -22,13 +22,13 @@ const Index = () => {
 
       {/* Announcement Banner */}
       <section className="relative pt-24 pb-8 md:pt-28 md:pb-12 overflow-hidden" style={{
-      backgroundColor: 'hsl(220 20% 5%)'
+      backgroundColor: 'hsl(274 100% 8%)'
     }}>
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-7xl mx-auto">
             <div className="flex-1">
               <h2 style={{
-              color: 'hsl(15 100% 60%)'
+              color: 'hsl(274 100% 58%)'
             }} className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 leading-tight lg:text-6xl">
                 Introducing Mobilaris Site™
               </h2>
@@ -37,8 +37,8 @@ const Index = () => {
               </p>
             </div>
             <Button size="lg" className="group relative overflow-hidden px-6 py-6 h-auto font-bold shadow-2xl transition-all duration-500 hover:px-7 hover:py-6 [&_svg]:!size-auto" style={{
-            backgroundColor: 'hsl(15 100% 60%)',
-            color: 'hsl(220 20% 5%)'
+            backgroundColor: 'hsl(274 100% 58%)',
+            color: 'hsl(0 0% 100%)'
           }} asChild>
               <a href="/site" className="flex items-center gap-0 group-hover:gap-2 transition-all duration-500">
                 <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-sm font-bold group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500">
