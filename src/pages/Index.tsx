@@ -8,6 +8,7 @@ import { DeploymentOptions } from "@/components/DeploymentOptions";
 import { GettingStarted } from "@/components/GettingStarted";
 import { TechnologyIntegration } from "@/components/TechnologyIntegration";
 import { SecurityFeatures } from "@/components/SecurityFeatures";
+import { PrivacySection } from "@/components/PrivacySection";
 import { Evolution } from "@/components/Evolution";
 import { Partners } from "@/components/Partners";
 
@@ -61,6 +62,7 @@ const Index = () => {
       <GettingStarted />
       <TechnologyIntegration />
       <SecurityFeatures />
+      <PrivacySection />
       <Evolution />
       <Partners />
       
