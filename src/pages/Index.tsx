@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, Shield, Zap, ChevronRight } from "lucide-react";
+import { ArrowRight, MapPin, Shield, Zap, Sparkles } from "lucide-react";
 import mobilarisLogo from "@/assets/mobilaris-industrial.png";
-import sitePreview from "@/assets/dashboard-preview.png";
+import heroImage from "@/assets/site-hero-launch.png";
 
 const Index = () => {
   return (
@@ -25,65 +25,102 @@ const Index = () => {
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+          <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl" />
         </div>
 
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 bg-muted/50 backdrop-blur-sm border border-border rounded-full px-4 py-2 mb-8">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-sm text-muted-foreground font-medium">Industrial Solutions</span>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+            {/* Left: Text Content */}
+            <div className="animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 mb-6">
+                <Sparkles className="h-4 w-4 text-primary" />
+                <span className="text-sm text-foreground font-medium">New Launch</span>
+              </div>
+
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight">
+                Introducing<br />
+                <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                  Mobilaris Site™
+                </span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+                The next generation of industrial site management. Real-time positioning and 3D visualization that brings total control to complex work environments.
+              </p>
+
+              <div className="space-y-4 mb-10">
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                  </div>
+                  <div>
+                    <p className="text-foreground font-medium">Track everything, everywhere</p>
+                    <p className="text-sm text-muted-foreground">Indoor, outdoor, and underground positioning in one unified system</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                  </div>
+                  <div>
+                    <p className="text-foreground font-medium">3D visualization that scales</p>
+                    <p className="text-sm text-muted-foreground">From single buildings to entire industrial complexes</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                  </div>
+                  <div>
+                    <p className="text-foreground font-medium">Technology agnostic</p>
+                    <p className="text-sm text-muted-foreground">Works with GPS, BLE, Wi-Fi, UWB, and more</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="text-base px-8 shadow-lg hover:shadow-xl transition-all" asChild>
+                  <a href="/site">
+                    Explore Mobilaris Site™
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="text-base px-8" asChild>
+                  <a href="mailto:support@mobilaris.se">
+                    Contact Sales
+                  </a>
+                </Button>
+              </div>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-[1.05] tracking-tight">
-              Making industrial sites <span className="text-primary">safer and smarter</span>
-            </h1>
-
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-              Real-time positioning technology that transforms how you manage people, vehicles, and assets in complex industrial environments
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Button size="lg" className="text-base px-8" asChild>
-                <a href="/site">
-                  Explore Mobilaris Site™
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="text-base px-8" asChild>
-                <a href="mailto:support@mobilaris.se">
-                  Contact Sales
-                </a>
-              </Button>
-            </div>
-
-            {/* Featured Product Preview */}
-            <div className="relative group">
-              <a href="/site" className="block">
+            {/* Right: Hero Image */}
+            <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="relative">
                 <div 
-                  className="relative rounded-xl overflow-hidden border border-border/50 transition-all duration-500 hover:border-primary/50 hover:scale-[1.02]"
+                  className="relative rounded-2xl overflow-hidden border border-border/30 transition-all duration-700 hover:scale-[1.02]"
                   style={{ 
-                    boxShadow: '0 20px 60px -10px hsl(var(--foreground) / 0.1)'
+                    transform: 'perspective(1000px) rotateY(-5deg) rotateX(2deg)',
+                    boxShadow: '0 25px 70px -15px hsl(var(--primary) / 0.3), 0 0 100px -25px hsl(var(--primary) / 0.2)'
                   }}
                 >
                   <img 
-                    src={sitePreview} 
-                    alt="Mobilaris Site Platform" 
+                    src={heroImage} 
+                    alt="Mobilaris Site - Industrial Positioning Technology" 
                     className="w-full h-auto"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-6 left-6 right-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                    <div className="flex items-center justify-between bg-background/95 backdrop-blur-sm rounded-lg p-4 border border-border">
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-1">Mobilaris Site™</h3>
-                        <p className="text-sm text-muted-foreground">Real-time positioning & 3D visualization</p>
-                      </div>
-                      <ChevronRight className="h-6 w-6 text-primary" />
-                    </div>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
                 </div>
-              </a>
+                
+                {/* Glow effect */}
+                <div 
+                  className="absolute inset-0 -z-10 blur-3xl opacity-40"
+                  style={{
+                    background: 'radial-gradient(circle at 60% 50%, hsl(var(--primary) / 0.4), transparent 70%)',
+                    transform: 'scale(1.1)'
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
