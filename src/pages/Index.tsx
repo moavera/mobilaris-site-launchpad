@@ -28,7 +28,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-7xl mx-auto">
             <div className="flex-1">
               <h2 style={{
-              color: 'hsl(274 100% 58%)'
+              color: 'hsl(274 100% 75%)'
             }} className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 leading-tight lg:text-6xl">
                 <span style={{ color: '#ffffff' }}>Introducing</span> Mobilaris Site™
               </h2>
