@@ -11,15 +11,11 @@ import { SecurityFeatures } from "@/components/SecurityFeatures";
 import { PrivacySection } from "@/components/PrivacySection";
 import { Evolution } from "@/components/Evolution";
 import { Partners } from "@/components/Partners";
-
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-
 const Index = () => {
   useSectionShare();
-  
-  return (
-    <main className="min-h-screen">
+  return <main className="min-h-screen">
       <HeroNew />
       
       <KeyProblems />
@@ -38,23 +34,7 @@ const Index = () => {
             One unified positioning system that works seamlessly across all environments. Track assets and personnel whether they're inside buildings, outdoors on site, or deep underground in tunnels—all in real-time with the same accuracy.
           </p>
           <EnvironmentLayers3D />
-          <div className="grid md:grid-cols-3 gap-8 mt-12 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-4xl mb-3">🏢</div>
-              <h3 className="text-xl font-bold mb-2 text-foreground">Indoor</h3>
-              <p className="text-sm text-muted-foreground">Multi-floor buildings and complex indoor spaces</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">🌍</div>
-              <h3 className="text-xl font-bold mb-2 text-foreground">Outdoor</h3>
-              <p className="text-sm text-muted-foreground">Open areas, construction sites, and surface operations</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">⛏️</div>
-              <h3 className="text-xl font-bold mb-2 text-foreground">Underground</h3>
-              <p className="text-sm text-muted-foreground">Tunnels, mines, and subterranean infrastructure</p>
-            </div>
-          </div>
+          
         </div>
       </section>
       
@@ -68,8 +48,6 @@ const Index = () => {
       
       <ContactSection />
       <Footer />
-    </main>
-  );
+    </main>;
 };
-
 export default Index;
