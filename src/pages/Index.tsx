@@ -36,18 +36,18 @@ const Index = () => {
             </div>
             <Button 
               size="lg" 
-              className="group relative overflow-hidden px-12 py-12 h-auto font-bold shadow-2xl transition-all duration-500 hover:px-14 hover:py-12 [&_svg]:!size-auto"
+              className="group relative overflow-hidden px-6 py-6 h-auto font-bold shadow-2xl transition-all duration-500 hover:px-7 hover:py-6 [&_svg]:!size-auto"
               style={{ 
                 backgroundColor: 'hsl(15 100% 60%)',
                 color: 'hsl(220 20% 5%)'
               }}
               asChild
             >
-              <a href="/site" className="flex items-center gap-0 group-hover:gap-4 transition-all duration-500">
-                <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-base font-bold group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500">
+              <a href="/site" className="flex items-center gap-0 group-hover:gap-2 transition-all duration-500">
+                <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-sm font-bold group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500">
                   Visit Mobilaris Site™
                 </span>
-                <img src={arrowForward} alt="Arrow" className="size-24 group-hover:size-6 transition-all duration-500 flex-shrink-0" />
+                <img src={arrowForward} alt="Arrow" className="size-12 group-hover:size-3 transition-all duration-500 flex-shrink-0" />
               </a>
             </Button>
           </div>
