@@ -2,12 +2,13 @@ import { Building2, Mountain, Layers } from "lucide-react";
 import { SectionShareButton } from "./SectionShareButton";
 import environmentPreview from "@/assets/environment-preview.png";
 import environmentIndoor from "@/assets/environment-indoor.png";
+import environmentUnderground from "@/assets/environment-underground.png";
 const environments = [{
   icon: Layers,
   title: "Underground",
   description: "Navigate complex tunnel systems and underground facilities with precise positioning and real-time tracking, even in GPS-denied environments.",
   gradient: "from-purple-500/20 to-blue-500/20",
-  image: environmentPreview
+  image: environmentUnderground
 }, {
   icon: Mountain,
   title: "Outdoor",
