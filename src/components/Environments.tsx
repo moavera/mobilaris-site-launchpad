@@ -1,4 +1,4 @@
-import { Building2, Mountain, Layers, ArrowRight } from "lucide-react";
+import { Building2, Mountain, Layers } from "lucide-react";
 import { SectionShareButton } from "./SectionShareButton";
 const environments = [{
   icon: Layers,
@@ -60,15 +60,9 @@ export const Environments = () => {
                 <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
                   {env.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {env.description}
                 </p>
-                
-                {/* Interactive element */}
-                <div className="flex items-center text-primary text-sm font-medium group-hover:gap-2 transition-all cursor-pointer">
-                  <span>Learn more</span>
-                  <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-all" />
-                </div>
               </div>
             </div>
           ))}
