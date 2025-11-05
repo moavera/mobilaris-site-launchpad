@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Truck } from "lucide-react";
 import logoImage from "@/assets/site-logo-2.png";
 import demoImage from "@/assets/demo-scenario.png";
 
@@ -31,7 +31,7 @@ export const HeroNew = () => {
             {/* Visual Tags */}
             <div className="flex flex-wrap gap-3 mb-10">
               <div className="bg-muted/50 backdrop-blur-sm border border-border rounded-lg px-5 py-2.5">
-                <span className="text-foreground font-medium text-sm">🚗 Vehicles</span>
+                <span className="text-foreground font-medium text-sm flex items-center gap-2"><Truck className="h-4 w-4" /> Vehicles</span>
               </div>
               <div className="bg-muted/50 backdrop-blur-sm border border-border rounded-lg px-5 py-2.5">
                 <span className="text-foreground font-medium text-sm">👷 People</span>
