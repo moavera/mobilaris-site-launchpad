@@ -57,7 +57,7 @@ export const Environments = () => {
                 <img 
                   src={env.image} 
                   alt={`${env.title} environment visualization with 3D mapping`}
-                  className="w-full h-full object-cover shadow-elegant group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover shadow-elegant scale-105 group-hover:scale-110 transition-transform duration-500"
                   style={{
                     boxShadow: '0 20px 60px -10px rgba(0, 0, 0, 0.4), 0 10px 30px -15px rgba(0, 0, 0, 0.3)'
                   }}
