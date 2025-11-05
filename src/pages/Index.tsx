@@ -33,7 +33,7 @@ const Index = () => {
                 Introducing Mobilaris Site™
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground/80">
-                The future of industrial positioning starts now
+                Real-time positioning and 3D visualization that brings total control to complex work environments.
               </p>
             </div>
             <Button size="lg" className="group relative overflow-hidden px-6 py-6 h-auto font-bold shadow-2xl transition-all duration-500 hover:px-7 hover:py-6 [&_svg]:!size-auto" style={{
