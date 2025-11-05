@@ -116,109 +116,6 @@ export default {
             transform: "perspective(1200px) rotateX(0deg) translateY(0) translateZ(0) scale(1)",
           },
         },
-        "launch-badge": {
-          "0%": {
-            opacity: "0",
-            transform: "scale(0.3) rotate(-180deg) translateY(-50px)",
-          },
-          "60%": {
-            transform: "scale(1.2) rotate(10deg) translateY(0)",
-          },
-          "80%": {
-            transform: "scale(0.95) rotate(-5deg) translateY(0)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "scale(1) rotate(0deg) translateY(0)",
-          },
-        },
-        "launch-title": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(30px) scale(0.8)",
-            filter: "blur(10px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0) scale(1)",
-            filter: "blur(0)",
-          },
-        },
-        "confetti": {
-          "0%": {
-            transform: "translateY(-100vh) rotate(0deg)",
-            opacity: "1",
-          },
-          "100%": {
-            transform: "translateY(100vh) rotate(720deg)",
-            opacity: "0",
-          },
-        },
-        "firework": {
-          "0%": {
-            transform: "translate(0, 0) scale(0)",
-            opacity: "1",
-          },
-          "50%": {
-            opacity: "1",
-          },
-          "100%": {
-            transform: "translate(var(--x), var(--y)) scale(1)",
-            opacity: "0",
-          },
-        },
-        "sparkle-burst": {
-          "0%": {
-            transform: "scale(0) rotate(0deg)",
-            opacity: "0",
-          },
-          "50%": {
-            transform: "scale(1.5) rotate(180deg)",
-            opacity: "1",
-          },
-          "100%": {
-            transform: "scale(0) rotate(360deg)",
-            opacity: "0",
-          },
-        },
-        "shimmer": {
-          "0%": {
-            backgroundPosition: "-200% center",
-          },
-          "100%": {
-            backgroundPosition: "200% center",
-          },
-        },
-        "glow-pulse": {
-          "0%, 100%": {
-            opacity: "0.4",
-            transform: "scale(1)",
-          },
-          "33%": {
-            opacity: "1",
-            transform: "scale(1.15)",
-          },
-          "66%": {
-            opacity: "0.6",
-            transform: "scale(1.05)",
-          },
-        },
-        "bounce-in": {
-          "0%": {
-            transform: "scale(0) translateY(-200px)",
-            opacity: "0",
-          },
-          "50%": {
-            transform: "scale(1.1) translateY(0)",
-          },
-          "70%": {
-            transform: "scale(0.9) translateY(-10px)",
-          },
-          "100%": {
-            transform: "scale(1) translateY(0)",
-            opacity: "1",
-          },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -226,14 +123,6 @@ export default {
         "fade-in-up": "fade-in-up 0.6s ease-out",
         "fade-in": "fade-in 0.8s ease-out",
         "floor-stack": "floor-stack 2.5s cubic-bezier(0.34, 1.56, 0.64, 1)",
-        "launch-badge": "launch-badge 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards",
-        "launch-title": "launch-title 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards",
-        "shimmer": "shimmer 2s linear infinite",
-        "glow-pulse": "glow-pulse 1.5s ease-in-out infinite",
-        "confetti": "confetti 3s linear infinite",
-        "firework": "firework 1s ease-out forwards",
-        "sparkle-burst": "sparkle-burst 1.5s ease-out infinite",
-        "bounce-in": "bounce-in 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards",
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",

@@ -25,71 +25,28 @@ const Index = () => {
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl animate-glow-pulse" />
-          <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: '0.5s' }} />
-        </div>
-
-        {/* Confetti Elements */}
-        <div className="absolute inset-0 -z-5 pointer-events-none overflow-hidden">
-          {[...Array(15)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-3 h-3 rounded-full animate-confetti opacity-0"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: '-10%',
-                background: `hsl(${Math.random() * 360}, 70%, 60%)`,
-                animationDelay: `${Math.random() * 2}s`,
-                animationDuration: `${3 + Math.random() * 2}s`,
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Sparkle Bursts */}
-        <div className="absolute inset-0 -z-5 pointer-events-none">
-          {[...Array(8)].map((_, i) => (
-            <Sparkles
-              key={i}
-              className="absolute w-6 h-6 text-primary/40 animate-sparkle-burst"
-              style={{
-                left: `${20 + Math.random() * 60}%`,
-                top: `${20 + Math.random() * 60}%`,
-                animationDelay: `${i * 0.3}s`,
-              }}
-            />
-          ))}
+          <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl" />
         </div>
 
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
             {/* Left: Text Content */}
-            <div>
-              {/* Prominent New Launch Badge with fireworks entrance */}
-              <div className="relative inline-flex items-center gap-3 bg-gradient-to-r from-primary/30 via-primary/20 to-primary/10 backdrop-blur-sm border-2 border-primary/40 rounded-full px-6 py-3 mb-8 group hover:border-primary/60 transition-all animate-launch-badge opacity-0 shadow-lg shadow-primary/20">
+            <div className="animate-fade-in-up">
+              {/* Prominent New Launch Badge */}
+              <div className="relative inline-flex items-center gap-3 bg-gradient-to-r from-primary/20 via-primary/10 to-transparent backdrop-blur-sm border border-primary/30 rounded-full px-6 py-3 mb-8 group hover:border-primary/50 transition-all">
                 <div className="relative">
-                  <Sparkles className="h-6 w-6 text-primary animate-glow-pulse" />
-                  <div className="absolute inset-0 bg-primary/40 blur-lg animate-glow-pulse" />
-                  {/* Mini sparkles around */}
-                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full animate-ping" />
-                  <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-accent rounded-full animate-ping" style={{ animationDelay: '0.3s' }} />
+                  <Sparkles className="h-5 w-5 text-primary animate-pulse" />
+                  <div className="absolute inset-0 bg-primary/20 blur-md animate-pulse" />
                 </div>
-                <span className="text-base font-bold text-primary tracking-wide">🎉 NEW LAUNCH 🎊</span>
-                <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-full blur-md opacity-50 group-hover:opacity-100 transition-opacity animate-glow-pulse" />
-                {/* Enhanced Shimmer effect */}
-                <div className="absolute inset-0 rounded-full overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" style={{ backgroundSize: '200% 100%' }} />
-                </div>
+                <span className="text-base font-semibold text-primary tracking-wide">NEW LAUNCH</span>
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
 
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight animate-launch-title opacity-0">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight">
                 Introducing<br />
-                <span className="relative inline-block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
                   Mobilaris Site™
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary blur-2xl opacity-40 animate-glow-pulse" />
-                  {/* Celebration sparkles */}
-                  <Sparkles className="absolute -top-8 -right-8 w-8 h-8 text-primary animate-bounce-in opacity-0" style={{ animationDelay: '1s' }} />
-                  <Sparkles className="absolute -bottom-4 -left-8 w-6 h-6 text-accent animate-bounce-in opacity-0" style={{ animationDelay: '1.2s' }} />
                 </span>
               </h1>
 
