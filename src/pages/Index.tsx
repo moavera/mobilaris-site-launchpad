@@ -30,7 +30,7 @@ const Index = () => {
               <h2 style={{
               color: 'hsl(274 100% 58%)'
             }} className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 leading-tight lg:text-6xl">
-                Introducing Mobilaris Site™
+                <span style={{ color: '#ffffff' }}>Introducing</span> Mobilaris Site™
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground/80">
                 Real-time positioning and 3D visualization that brings total control to complex work environments.
