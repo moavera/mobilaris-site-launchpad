@@ -44,10 +44,10 @@ const Index = () => {
               asChild
             >
               <a href="/site" className="flex items-center gap-0 group-hover:gap-4 transition-all duration-500">
-                <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-xl font-bold group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500">
+                <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-base font-bold group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500">
                   Visit Mobilaris Site™
                 </span>
-                <img src={arrowForward} alt="Arrow" className="size-32 group-hover:size-7 transition-all duration-500 flex-shrink-0" />
+                <img src={arrowForward} alt="Arrow" className="size-24 group-hover:size-6 transition-all duration-500 flex-shrink-0" />
               </a>
             </Button>
           </div>
