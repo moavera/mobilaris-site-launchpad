@@ -46,7 +46,7 @@ const Index = () => {
                 <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-xl font-bold group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500">
                   Visit Mobilaris Site™
                 </span>
-                <ArrowRight className="h-12 w-12 group-hover:h-6 group-hover:w-6 transition-all duration-500 flex-shrink-0" />
+                <ArrowRight className="h-16 w-16 group-hover:h-6 group-hover:w-6 transition-all duration-500 flex-shrink-0" strokeWidth={3} />
               </a>
             </Button>
           </div>
