@@ -38,9 +38,7 @@ const Index = () => {
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">Mobilaris 2.0 - Site™</h1>
             
-            <p className="text-xl md:text-2xl text-gray-400 leading-relaxed max-w-3xl">
-              Total control of your site, everywhere. Real-time awareness and safety—redesigned for performance, scalability, and effortless deployment.
-            </p>
+            <p className="text-xl md:text-2xl text-gray-400 leading-relaxed max-w-3xl">Total control of your site, everywhere. Real-time awareness and safety—redesigned for performance, scalability, and effortless deployment.</p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
               <Button size="lg" className="px-12 py-8 text-lg font-bold rounded-full" style={{
