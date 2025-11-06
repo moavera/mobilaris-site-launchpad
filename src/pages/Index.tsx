@@ -28,7 +28,7 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up bg-card/60 backdrop-blur-xl border-2 border-border/50 rounded-3xl p-12 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-primary cursor-pointer">
+          <a href="https://site.mobilaris.se/" className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up bg-card/60 backdrop-blur-xl border-2 border-border/50 rounded-3xl p-12 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-primary cursor-pointer">
             {/* New Release Badge */}
             <div>
               <span className="text-lg font-bold tracking-widest md:text-3xl" style={{ color: 'hsl(274 100% 75%)' }}>NEW RELEASE</span>
@@ -58,7 +58,7 @@ const Index = () => {
                 </a>
               </Button>
             </div>
-          </div>
+          </a>
         </div>
       </section>
 
