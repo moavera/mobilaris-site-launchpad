@@ -21,13 +21,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Banner */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden" style={{
-        backgroundColor: 'hsl(274 20% 12%)',
-        boxShadow: 'inset 0 0 100px hsl(274 100% 50% / 0.15)'
-      }}>
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-transparent to-background/30 pointer-events-none" />
-        
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-black">
         {/* Background Effects */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-purple-500/10 rounded-full blur-3xl" />
