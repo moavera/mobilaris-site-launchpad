@@ -43,7 +43,7 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
-              <Button size="lg" className="px-8 py-6 text-base font-bold rounded-full" style={{
+              <Button size="lg" className="px-12 py-8 text-lg font-bold rounded-full" style={{
                 backgroundColor: 'hsl(274 100% 58%)',
                 color: 'hsl(0 0% 0%)'
               }} asChild>
@@ -52,7 +52,7 @@ const Index = () => {
                 </a>
               </Button>
               
-              <Button size="lg" variant="outline" className="px-8 py-6 text-base font-bold rounded-full border-2 border-white/20 text-white hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="px-12 py-8 text-lg font-bold rounded-full border-2 border-white/20 text-white hover:bg-white/10" asChild>
                 <a href="mailto:support@mobilaris.se">
                   See Live Demo
                 </a>
