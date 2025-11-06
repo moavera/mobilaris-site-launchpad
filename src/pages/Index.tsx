@@ -53,7 +53,7 @@ const Index = () => {
               </Button>
               
               <Button size="lg" variant="outline" className="px-12 py-8 text-lg font-bold rounded-full border-2 border-white/20 text-white hover:bg-white/10" asChild>
-                <a href="mailto:support@mobilaris.se">
+                <a href="https://site.mobilaris.se/demo-start">
                   See Live Demo
                 </a>
               </Button>
