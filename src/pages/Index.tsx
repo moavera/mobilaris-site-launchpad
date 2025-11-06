@@ -21,11 +21,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Banner */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-black">
-        {/* Background Effects */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-purple-500/10 rounded-full blur-3xl" />
-        </div>
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-gradient-to-b from-background to-background/95">
 
         <div className="container mx-auto px-6">
           <a href="https://site.mobilaris.se/" className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up bg-card/60 backdrop-blur-xl border-2 border-border/50 rounded-3xl p-12 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-primary cursor-pointer">
@@ -61,12 +57,7 @@ const Index = () => {
       </section>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl" />
-        </div>
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-background">
 
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
