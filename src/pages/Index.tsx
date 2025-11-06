@@ -50,11 +50,11 @@ const Index = () => {
                 </a>
               </Button>
               
-              <Button size="lg" variant="outline" className="px-12 py-8 text-lg font-bold rounded-full border-2 border-white/20 text-white hover:bg-white/10" asChild>
-                <a href="https://site.mobilaris.se/demo-start">
-                  See Live Demo
-                </a>
-              </Button>
+            <Button size="lg" variant="outline" className="px-12 py-8 text-lg font-bold rounded-full border-2 border-white/40 text-white hover:bg-white/20 hover:border-white/60 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all" asChild>
+              <a href="https://site.mobilaris.se/demo-start">
+                See Live Demo
+              </a>
+            </Button>
             </div>
           </a>
         </div>
