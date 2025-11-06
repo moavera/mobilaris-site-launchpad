@@ -48,7 +48,7 @@ const Index = () => {
                 color: 'hsl(0 0% 0%)'
               }} asChild>
                 <a href="/site">
-                  Experience Mobilaris Site™ 2.0
+                  Visit Mobilaris Site™
                 </a>
               </Button>
               
