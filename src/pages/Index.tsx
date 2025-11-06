@@ -20,38 +20,15 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Banner */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-gradient-to-b from-background to-background/95">
-
+      {/* Promotional Banner */}
+      <section className="relative pt-24 pb-4 overflow-hidden">
         <div className="container mx-auto px-6">
-          <a href="https://site.mobilaris.se/" className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up bg-card/60 backdrop-blur-xl border-2 border-border/50 rounded-3xl p-12 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-primary cursor-pointer">
-            {/* New Release Badge */}
-            <div>
-              <span className="text-base font-bold tracking-widest md:text-2xl" style={{
-              color: 'hsl(274 100% 75%)'
-            }}>NEW RELEASE</span>
+          <a href="/site" className="flex items-center justify-center gap-4 max-w-3xl mx-auto bg-primary/10 border border-primary/20 rounded-full px-6 py-3 transition-all duration-300 hover:bg-primary/15 hover:border-primary/30 group">
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-semibold text-primary tracking-wide uppercase">New Release</span>
+              <span className="text-sm text-foreground font-medium">Mobilaris Site™ is now available</span>
             </div>
-
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">Mobilaris 2.0 - Site™</h1>
-            
-            <p className="text-xl md:text-2xl text-gray-400 leading-relaxed max-w-3xl">Total control of your site, everywhere. Real-time awareness and safety—redesigned for performance, scalability, and effortless deployment.</p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mt-4">
-              <Button size="lg" className="px-12 py-8 text-lg font-bold rounded-full" style={{
-              backgroundColor: 'hsl(274 100% 58%)',
-              color: 'hsl(0 0% 100%)'
-            }} asChild>
-                <a href="/site">
-                  Visit Mobilaris Site™
-                </a>
-              </Button>
-              
-            <Button size="lg" variant="outline" className="px-12 py-8 text-lg font-bold rounded-full border-2 border-white bg-white/20 text-white hover:bg-white/30 hover:border-white shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:shadow-[0_0_40px_rgba(255,255,255,0.35)] transition-all" asChild>
-              <a href="https://site.mobilaris.se/demo-start">
-                See Live Demo
-              </a>
-            </Button>
-            </div>
+            <ArrowRight className="h-4 w-4 text-primary transition-transform group-hover:translate-x-1" />
           </a>
         </div>
       </section>
