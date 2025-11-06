@@ -28,7 +28,7 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up bg-card/40 backdrop-blur-xl border border-border/50 rounded-3xl p-12 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_60px_hsl(var(--primary)/0.3)] hover:border-primary/30">
+          <div className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up bg-card/60 backdrop-blur-xl border-2 border-border/50 rounded-3xl p-12 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-primary">
             {/* New Release Badge */}
             <div>
               <span className="text-lg md:text-xl font-bold tracking-widest" style={{ color: 'hsl(274 100% 70%)' }}>NEW RELEASE</span>
