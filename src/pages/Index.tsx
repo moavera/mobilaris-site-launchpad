@@ -34,7 +34,7 @@ const Index = () => {
               <span className="text-lg font-bold tracking-widest md:text-3xl" style={{ color: 'hsl(274 100% 75%)' }}>NEW RELEASE</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight text-white">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
               Mobilaris Site™ 2.0
             </h1>
             
