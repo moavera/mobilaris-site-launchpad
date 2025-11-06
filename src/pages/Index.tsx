@@ -30,7 +30,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up">
             {/* New Release Badge */}
-            <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-purple-500/20 border-2 border-purple-500/40">
+            <div>
               <span className="text-lg md:text-xl font-bold tracking-widest" style={{ color: 'hsl(274 100% 70%)' }}>NEW RELEASE</span>
             </div>
 
