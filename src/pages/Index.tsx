@@ -45,7 +45,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
               <Button size="lg" className="px-12 py-8 text-lg font-bold rounded-full" style={{
               backgroundColor: 'hsl(274 100% 58%)',
-              color: 'hsl(0 0% 0%)'
+              color: 'hsl(0 0% 100%)'
             }} asChild>
                 <a href="/site">
                   Visit Mobilaris Site™
