@@ -1,126 +1,188 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Shield, Zap } from "lucide-react";
+import { ArrowBigRight, MapPin, Shield, Zap, Sparkles, ArrowRight } from "lucide-react";
 import mobilarisLogo from "@/assets/mobilaris-industrial.png";
 import heroImage from "@/assets/site-hero-launch.png";
-
+import arrowForward from "@/assets/arrow-forward.svg";
 const Index = () => {
-  return (
-    <main className="min-h-screen bg-background">
+  return <main className="min-h-screen bg-background font-galano">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-sm border-b border-border/40">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between max-w-7xl">
-          <img 
-            src={mobilarisLogo} 
-            alt="Mobilaris Industrial Solutions" 
-            className="h-8 w-auto" 
-          />
-          <div className="flex items-center gap-6">
-            <a href="/site" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Products
-            </a>
-            <Button size="sm" className="rounded-md" asChild>
+      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <img src={mobilarisLogo} alt="Mobilaris Industrial Solutions" className="h-10 md:h-12 w-auto" />
+          <div className="flex items-center gap-4">
+            <Button variant="ghost" asChild>
+              <a href="/site">Products</a>
+            </Button>
+            <Button asChild>
               <a href="mailto:support@mobilaris.se">Contact</a>
             </Button>
           </div>
         </div>
       </nav>
 
+      {/* Hero Banner */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-gradient-to-b from-background to-background/95">
+
+        <div className="container mx-auto px-6">
+          <a href="https://site.mobilaris.se/" className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up bg-card/60 backdrop-blur-xl border-2 border-border/50 rounded-3xl p-12 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-primary cursor-pointer">
+            {/* New Release Badge */}
+            <div>
+              <span className="text-base font-bold tracking-widest md:text-2xl" style={{
+              color: 'hsl(274 100% 75%)'
+            }}>NEW RELEASE</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">Mobilaris 2.0 - Site™</h1>
+            
+            <p className="text-xl md:text-2xl text-gray-400 leading-relaxed max-w-3xl">Total control of your site, everywhere. Real-time awareness and safety—redesigned for performance, scalability, and effortless deployment.</p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+              <Button size="lg" className="px-12 py-8 text-lg font-bold rounded-full" style={{
+              backgroundColor: 'hsl(274 100% 58%)',
+              color: 'hsl(0 0% 100%)'
+            }} asChild>
+                <a href="/site">
+                  Visit Mobilaris Site™
+                </a>
+              </Button>
+              
+            <Button size="lg" variant="outline" className="px-12 py-8 text-lg font-bold rounded-full border-2 border-white bg-white/20 text-white hover:bg-white/30 hover:border-white shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:shadow-[0_0_40px_rgba(255,255,255,0.35)] transition-all" asChild>
+              <a href="https://site.mobilaris.se/demo-start">
+                See Live Demo
+              </a>
+            </Button>
+            </div>
+          </a>
+        </div>
+      </section>
+
       {/* Hero Section */}
-      <section className="pt-32 pb-24 md:pt-40 md:pb-32">
-        <div className="container mx-auto px-6 max-w-7xl">
-          {/* Announcement Badge */}
-          <div className="flex justify-center mb-8">
-            <a 
-              href="https://site.mobilaris.se/" 
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary border border-border text-xs text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <span className="flex h-1.5 w-1.5 rounded-full bg-primary" />
-              New: Mobilaris 2.0 - Site™
-            </a>
-          </div>
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-background">
 
-          {/* Main Headline */}
-          <div className="text-center max-w-4xl mx-auto mb-16">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-              <span className="text-foreground">Mobilaris Site™</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-normal">
-              Meet the system for modern industrial site management. Streamline real-time positioning, safety, and operations.
-            </p>
-          </div>
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+            {/* Left: Text Content */}
+            <div className="animate-fade-in-up">
+              {/* Prominent New Launch Badge */}
+              <div className="relative inline-flex items-center gap-3 bg-gradient-to-r from-primary/20 via-primary/10 to-transparent backdrop-blur-sm border border-primary/30 rounded-full px-6 py-3 mb-8 group hover:border-primary/50 transition-all">
+                <div className="relative">
+                  <Sparkles className="h-5 w-5 text-primary animate-pulse" />
+                  <div className="absolute inset-0 bg-primary/20 blur-md animate-pulse" />
+                </div>
+                <span className="text-base font-semibold text-primary tracking-wide">NEW LAUNCH</span>
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-20">
-            <Button size="lg" className="rounded-md font-medium" asChild>
-              <a href="/site">Start building</a>
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="rounded-md font-medium border-border hover:bg-secondary" 
-              asChild
-            >
-              <a href="https://site.mobilaris.se/demo-start">See live demo</a>
-            </Button>
-          </div>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight">
+                Introducing<br />
+                <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
+                  Mobilaris Site™
+                </span>
+              </h1>
 
-          {/* Hero Image */}
-          <div className="relative max-w-5xl mx-auto">
-            <div className="relative rounded-lg overflow-hidden border border-border/50 shadow-2xl">
-              <img 
-                src={heroImage} 
-                alt="Mobilaris Site Dashboard" 
-                className="w-full h-auto"
-              />
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+                The next generation of industrial site management. Real-time positioning and 3D visualization that brings total control to complex work environments.
+              </p>
+
+              <div className="space-y-4 mb-10">
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                  </div>
+                  <div>
+                    <p className="text-foreground font-medium">Track everything, everywhere</p>
+                    <p className="text-sm text-muted-foreground">Indoor, outdoor, and underground positioning in one unified system</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                  </div>
+                  <div>
+                    <p className="text-foreground font-medium">3D visualization that scales</p>
+                    <p className="text-sm text-muted-foreground">From single buildings to entire industrial complexes</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                  </div>
+                  <div>
+                    <p className="text-foreground font-medium">Technology agnostic</p>
+                    <p className="text-sm text-muted-foreground">Works with GPS, BLE, Wi-Fi, UWB, and more</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="text-base px-8 shadow-lg hover:shadow-xl transition-all" asChild>
+                  <a href="/site">
+                    Explore Mobilaris Site™
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="text-base px-8" asChild>
+                  <a href="mailto:support@mobilaris.se">
+                    Contact Sales
+                  </a>
+                </Button>
+              </div>
+            </div>
+
+            {/* Right: Hero Image */}
+            <div className="relative animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
+              <div className="relative">
+                <div className="relative rounded-2xl overflow-hidden border border-border/30 transition-all duration-700 hover:scale-[1.02]" style={{
+                transform: 'perspective(1000px) rotateY(-5deg) rotateX(2deg)',
+                boxShadow: '0 25px 70px -15px hsl(var(--primary) / 0.3), 0 0 100px -25px hsl(var(--primary) / 0.2)'
+              }}>
+                  <img src={heroImage} alt="Mobilaris Site - Industrial Positioning Technology" className="w-full h-auto" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
+                </div>
+                
+                {/* Glow effect */}
+                <div className="absolute inset-0 -z-10 blur-3xl opacity-40" style={{
+                background: 'radial-gradient(circle at 60% 50%, hsl(var(--primary) / 0.4), transparent 70%)',
+                transform: 'scale(1.1)'
+              }} />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24 border-t border-border/40">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-md bg-secondary flex items-center justify-center">
-                  <MapPin className="h-5 w-5 text-foreground" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground">Precision Positioning</h3>
+      {/* Key Features */}
+      <section className="py-20 border-t border-border/50">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="text-center p-6">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <MapPin className="h-6 w-6 text-primary" />
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                Track everything in real-time across indoor, outdoor, and underground environments
-              </p>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Precision Positioning</h3>
+              <p className="text-muted-foreground">Track everything in real-time across indoor, outdoor, and underground environments</p>
             </div>
 
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-md bg-secondary flex items-center justify-center">
-                  <Shield className="h-5 w-5 text-foreground" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground">Enhanced Safety</h3>
+            <div className="text-center p-6">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-6 w-6 text-primary" />
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                Protect workers with real-time alerts, zone management, and emergency response tools
-              </p>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Enhanced Safety</h3>
+              <p className="text-muted-foreground">Protect workers with real-time alerts, zone management, and emergency response tools</p>
             </div>
 
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-md bg-secondary flex items-center justify-center">
-                  <Zap className="h-5 w-5 text-foreground" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground">Operational Efficiency</h3>
+            <div className="text-center p-6">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <Zap className="h-6 w-6 text-primary" />
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                Optimize workflows, reduce delays, and improve coordination across your entire site
-              </p>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Operational Efficiency</h3>
+              <p className="text-muted-foreground">Optimize workflows, reduce delays, and improve coordination across your entire site</p>
             </div>
           </div>
         </div>
       </section>
-    </main>
-  );
+    </main>;
 };
-
 export default Index;

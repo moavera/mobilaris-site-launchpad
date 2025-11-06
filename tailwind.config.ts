@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        galano: ['Galano Grotesque', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['Bricolage Grotesque', 'sans-serif'],
+        galano: ['Galano Grotesque', 'system-ui', '-apple-system', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
