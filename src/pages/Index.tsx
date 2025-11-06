@@ -21,14 +21,20 @@ const Index = () => {
       </nav>
 
       {/* Promotional Banner */}
-      <section className="relative pt-24 pb-4 overflow-hidden">
+      <section className="relative pt-28 pb-12 overflow-hidden">
         <div className="container mx-auto px-6">
-          <a href="/site" className="flex items-center justify-center gap-4 max-w-3xl mx-auto bg-primary/10 border border-primary/20 rounded-full px-6 py-3 transition-all duration-300 hover:bg-primary/15 hover:border-primary/30 group">
-            <div className="flex items-center gap-3">
-              <span className="text-xs font-semibold text-primary tracking-wide uppercase">New Release</span>
-              <span className="text-sm text-foreground font-medium">Mobilaris Site™ is now available</span>
+          <a href="/site" className="flex flex-col md:flex-row items-center justify-center gap-6 max-w-5xl mx-auto bg-primary/10 backdrop-blur-sm border-2 border-primary/30 rounded-2xl px-12 py-8 transition-all duration-300 hover:bg-primary/15 hover:border-primary/40 hover:scale-[1.02] group shadow-lg">
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-center md:text-left">
+              <span className="text-sm md:text-base font-bold text-primary tracking-widest uppercase bg-primary/10 px-4 py-2 rounded-full">New Release</span>
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-1">Mobilaris Site™ is now available</h2>
+                <p className="text-sm md:text-base text-muted-foreground">Discover the next generation of industrial site management</p>
+              </div>
             </div>
-            <ArrowRight className="h-4 w-4 text-primary transition-transform group-hover:translate-x-1" />
+            <div className="flex items-center gap-2 text-primary font-semibold">
+              <span className="text-base">Learn More</span>
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </div>
           </a>
         </div>
       </section>
