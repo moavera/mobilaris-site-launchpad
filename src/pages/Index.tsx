@@ -31,12 +31,12 @@ const Index = () => {
           <a href="https://site.mobilaris.se/" className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up bg-card/60 backdrop-blur-xl border-2 border-border/50 rounded-3xl p-12 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-primary cursor-pointer">
             {/* New Release Badge */}
             <div>
-              <span className="text-base font-bold tracking-widest md:text-2xl" style={{ color: 'hsl(274 100% 75%)' }}>NEW RELEASE</span>
+              <span className="text-base font-bold tracking-widest md:text-2xl" style={{
+              color: 'hsl(274 100% 75%)'
+            }}>NEW RELEASE</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-              Mobilaris Site™ 2.0
-            </h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">Mobilaris 2.0 - Site™</h1>
             
             <p className="text-xl md:text-2xl text-gray-400 leading-relaxed max-w-3xl">
               Total control of your site, everywhere. Real-time awareness and safety—redesigned for performance, scalability, and effortless deployment.
