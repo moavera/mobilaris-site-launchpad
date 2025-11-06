@@ -31,9 +31,7 @@ const Index = () => {
           <div className="flex flex-col items-center text-center gap-8 max-w-5xl mx-auto animate-fade-in-up bg-card/60 backdrop-blur-xl border-2 border-border/50 rounded-3xl p-12 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-primary">
             {/* New Release Badge */}
             <div>
-              <span style={{
-              color: 'hsl(274 100% 70%)'
-            }} className="text-lg font-bold tracking-widest md:text-3xl">NEW RELEASE</span>
+              <span className="text-lg font-bold tracking-widest md:text-3xl text-primary">NEW RELEASE</span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight text-white">
