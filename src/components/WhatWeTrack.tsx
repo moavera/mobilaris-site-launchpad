@@ -126,7 +126,7 @@ export const WhatWeTrack = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
-                Comprehensive Sensor Integration
+                Sensor Integration
               </h3>
               <p className="text-muted-foreground">
                 Integrate sensors across all tracking categories to monitor environmental factors like air quality, temperature, and more. Get a complete view of your operational environment alongside your tracked people, assets, and vehicles.
