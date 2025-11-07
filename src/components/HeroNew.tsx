@@ -23,7 +23,7 @@ export const HeroNew = () => {
           <div className="max-w-2xl animate-fade-in-up">
             {/* Hook Question */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight">
-              Total control of your site, <span className="text-primary">everywhere</span>
+              Total control of your site, <span className="text-primary-light">everywhere</span>
             </h1>
             
             {/* Key Message */}
