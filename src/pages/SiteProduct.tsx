@@ -10,6 +10,7 @@ import { GettingStarted } from "@/components/GettingStarted";
 import { TechnologyIntegration } from "@/components/TechnologyIntegration";
 import { SecurityFeatures } from "@/components/SecurityFeatures";
 import { PrivacySection } from "@/components/PrivacySection";
+import { WhatWeTrack } from "@/components/WhatWeTrack";
 import { Evolution } from "@/components/Evolution";
 import { Partners } from "@/components/Partners";
 import { ContactSection } from "@/components/ContactSection";
@@ -31,6 +32,7 @@ const SiteProduct = () => {
       <TechnologyIntegration />
       <SecurityFeatures />
       <PrivacySection />
+      <WhatWeTrack />
       <Evolution />
       
       
