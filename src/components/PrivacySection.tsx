@@ -37,8 +37,8 @@ export const PrivacySection = () => {
           {/* Emergency Situations */}
           <div className="bg-destructive/10 border border-destructive/30 rounded-2xl p-8 transition-all hover:shadow-md hover:border-destructive/40">
             <div className="flex flex-col items-center text-center gap-4">
-              <div className="bg-accent/10 p-4 rounded-full">
-                <AlertTriangle className="h-8 w-8 text-accent" />
+              <div className="bg-destructive/10 p-4 rounded-full">
+                <AlertTriangle className="h-8 w-8 text-destructive" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">
