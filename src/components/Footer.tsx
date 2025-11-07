@@ -35,7 +35,7 @@ export const Footer = () => {
               <a href="https://mobilarisindustrialsolutions.se/asset-tracking/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
                 Asset Tracking
               </a>
-              <a href="#people-workgroup" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
+              <a href="https://mobilarisindustrialsolutions.se/people-workgroup-location/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
                 People & Workgroup Location
               </a>
               <a href="https://mobilarisindustrialsolutions.se/evacuation-support/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
