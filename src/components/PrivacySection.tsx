@@ -1,8 +1,6 @@
 import { Shield, Users, AlertTriangle } from "lucide-react";
-
 export const PrivacySection = () => {
-  return (
-    <section className="py-20 md:py-32 bg-background">
+  return <section className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -30,7 +28,7 @@ export const PrivacySection = () => {
                 <ul className="space-y-2 text-muted-foreground">
                   <li>Group-level tracking only</li>
                   <li>Personal information encrypted & locked</li>
-                  <li>Team-based positioning</li>
+                  
                 </ul>
               </div>
             </div>
@@ -65,6 +63,5 @@ export const PrivacySection = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
