@@ -96,7 +96,7 @@ export const WhatWeTrack = () => {
                   Vehicles & Machines
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Monitor vehicle locations and integrate with sensors for comprehensive operational insight
+                  Monitor vehicle and machinery locations across your site in real-time
                 </p>
                 
                 <div className="space-y-4">
@@ -107,16 +107,24 @@ export const WhatWeTrack = () => {
                       <p className="text-sm text-muted-foreground">Track all vehicles and machinery across your site</p>
                     </div>
                   </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <Gauge className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-foreground">Sensor Integration</p>
-                      <p className="text-sm text-muted-foreground">Monitor air quality and other environmental factors</p>
-                    </div>
-                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 max-w-4xl mx-auto bg-card border border-border rounded-2xl p-8">
+          <div className="flex items-start gap-4">
+            <div className="bg-primary/10 p-3 rounded-full flex-shrink-0">
+              <Gauge className="h-6 w-6 text-primary" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Comprehensive Sensor Integration
+              </h3>
+              <p className="text-muted-foreground">
+                Integrate sensors across all tracking categories to monitor environmental factors like air quality, temperature, and more. Get a complete view of your operational environment alongside your tracked people, assets, and vehicles.
+              </p>
             </div>
           </div>
         </div>
