@@ -11,7 +11,7 @@ export const Footer = () => {
             <h3 className="text-[#8B5CF6] text-[13px] font-bold uppercase tracking-[0.2em] mb-8">
               Newsletter
             </h3>
-            <h4 className="text-[#1A1A1A] text-[28px] font-bold mb-10 leading-[1.3] max-w-[340px]">
+            <h4 className="text-[#1A1A1A] text-[28px] font-bold mb-10 leading-[1.3] max-w-[480px]">
               Subscribe to our newsletter to stay up to date with the future of industry
             </h4>
             <button 
