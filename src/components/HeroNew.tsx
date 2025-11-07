@@ -6,7 +6,7 @@ import heroVideo from "@/assets/systemvideo.mov";
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Video Background */}
-      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover object-[center_45%]">
+      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover object-[center_65%]">
         <source src={heroVideo} type="video/mp4" />
       </video>
       
