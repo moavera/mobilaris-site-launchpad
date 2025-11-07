@@ -13,7 +13,7 @@ export const WhatWeTrack = () => {
           
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* People Tracking */}
           <div className="bg-card border border-border rounded-2xl p-8 transition-all hover:shadow-lg">
             <div className="flex flex-col gap-6">
@@ -51,7 +51,7 @@ export const WhatWeTrack = () => {
             </div>
           </div>
 
-          {/* Assets Tracking */}
+          {/* Assets and Machines Tracking */}
           <div className="bg-card border border-border rounded-2xl p-8 transition-all hover:shadow-lg">
             <div className="flex flex-col gap-6">
               <div className="bg-primary/10 p-4 rounded-full w-fit">
@@ -60,10 +60,10 @@ export const WhatWeTrack = () => {
               
               <div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">
-                  Assets
+                  Assets and Machines
                 </h3>
                 <p className="text-base text-muted-foreground mb-6">
-                  Track any asset that matters to your operation, from regulatory requirements to custom needs
+                  Track any asset or machine that matters to your operation, from regulatory requirements to custom needs
                 </p>
                 
                 <div className="space-y-3">
@@ -73,38 +73,13 @@ export const WhatWeTrack = () => {
                   </div>
                   
                   <div className="bg-muted/50 rounded-lg p-3">
+                    <p className="text-lg font-medium text-foreground mb-1">Vehicles & Machinery</p>
+                    <p className="text-base text-muted-foreground">Monitor real-time locations across your site</p>
+                  </div>
+                  
+                  <div className="bg-muted/50 rounded-lg p-3">
                     <p className="text-lg font-medium text-foreground mb-1">Custom Assets</p>
                     <p className="text-base text-muted-foreground">Track whatever your operation requires</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Vehicles/Machines Tracking */}
-          <div className="bg-card border border-border rounded-2xl p-8 transition-all hover:shadow-lg">
-            <div className="flex flex-col gap-6">
-              <div className="bg-primary/10 p-4 rounded-full w-fit">
-                <Truck className="h-8 w-8 text-primary" />
-              </div>
-              
-              <div>
-                <h3 className="text-2xl font-semibold text-foreground mb-3">
-                  Vehicles & Machines
-                </h3>
-                <p className="text-base text-muted-foreground mb-6">
-                  Monitor vehicle and machinery locations across your site in real-time
-                </p>
-                
-                <div className="space-y-3">
-                  <div className="bg-muted/50 rounded-lg p-3">
-                    <div className="flex items-start gap-3">
-                      <Truck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="text-lg font-medium text-foreground mb-1">Real-time Location</p>
-                        <p className="text-base text-muted-foreground">Track all vehicles and machinery across your site</p>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
