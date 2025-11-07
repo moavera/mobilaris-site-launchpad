@@ -32,7 +32,7 @@ export const Footer = () => {
               <a href="#" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
                 Home
               </a>
-              <a href="#asset-tracking" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
+              <a href="https://mobilarisindustrialsolutions.se/asset-tracking/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
                 Asset Tracking
               </a>
               <a href="#people-workgroup" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
