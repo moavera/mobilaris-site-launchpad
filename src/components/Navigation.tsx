@@ -30,8 +30,8 @@ export const Navigation = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6">
-        <nav className="flex items-center justify-between h-20">
+      <div className="w-full px-6">
+        <nav className="flex items-center justify-between h-20 max-w-full">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="https://www.mobilarisinnovationcenter.se/" className="block">
