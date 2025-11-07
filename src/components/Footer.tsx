@@ -56,13 +56,13 @@ export const Footer = () => {
               <a href="#about" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
                 About
               </a>
-              <a href="#stories" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
+              <a href="https://mobilarisindustrialsolutions.se/stories/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
                 Stories
               </a>
-              <a href="#career" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
+              <a href="https://mobilarisindustrialsolutions.se/careers/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
                 Career
               </a>
-              <a href="#contact" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
+              <a href="https://mobilarisindustrialsolutions.se/contact/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
                 Contact
               </a>
             </nav>
