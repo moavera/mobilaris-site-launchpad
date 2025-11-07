@@ -57,12 +57,7 @@ export const Partners = () => {
         <div className="mt-16 text-center animate-fade-in-up" style={{
         animationDelay: '0.4s'
       }}>
-          <p className="text-muted-foreground">
-            Interested in partnership opportunities?{" "}
-            <a href="#contact" className="text-primary font-semibold hover:underline">
-              Get in touch
-            </a>
-          </p>
+          
         </div>
       </div>
     </section>;
