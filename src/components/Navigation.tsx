@@ -31,7 +31,7 @@ export const Navigation = () => {
       }`}
     >
       <div className="w-full px-6">
-        <nav className="flex items-center justify-between h-20 max-w-full">
+        <nav className="flex items-center justify-between h-24 max-w-full">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="https://www.mobilarisinnovationcenter.se/" className="block">
@@ -44,14 +44,14 @@ export const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-12">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-xl font-medium transition-opacity hover:opacity-80 flex items-center gap-1"
+                className="text-white text-xl font-semibold transition-opacity hover:opacity-80 flex items-center gap-1"
               >
                 {link.label}
                 {link.hasDropdown && <ChevronDown className="h-4 w-4" />}
@@ -61,7 +61,7 @@ export const Navigation = () => {
               href="https://mobilarisindustrialsolutions.se/contact/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-xl font-medium border-2 border-white px-6 py-2 rounded hover:bg-white hover:text-foreground transition-all"
+              className="text-white text-xl font-semibold border-2 border-white px-6 py-2 rounded hover:bg-white hover:text-foreground transition-all"
             >
               Contact us
             </a>
