@@ -23,13 +23,25 @@ export const Navigation = () => {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-md"
-          : "bg-transparent"
-      }`}
-    >
+    <>
+      {/* Fixed Contact Button */}
+      <a
+        href="https://mobilarisindustrialsolutions.se/contact/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hidden lg:block fixed top-0 right-0 px-[75px] py-[50px] text-white no-underline rounded-b-lg z-[999] font-medium tracking-wider transition-all duration-700 ease-out delay-200"
+        style={{ background: '#ffffff29', opacity: 1 }}
+      >
+        Contact us
+      </a>
+
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-background/95 backdrop-blur-md shadow-md"
+            : "bg-transparent"
+        }`}
+      >
       <div className="w-full px-6">
         <nav className="flex items-center justify-between h-32 max-w-full">
           {/* Logo */}
@@ -57,14 +69,6 @@ export const Navigation = () => {
                 {link.hasDropdown && <ChevronDown className="h-4 w-4" />}
               </a>
             ))}
-            <a
-              href="https://mobilarisindustrialsolutions.se/contact/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white text-lg font-semibold border-2 border-white px-6 py-2 rounded hover:bg-white hover:text-foreground transition-all"
-            >
-              Contact us
-            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -111,6 +115,7 @@ export const Navigation = () => {
           </div>
         )}
       </div>
-    </header>
+      </header>
+    </>
   );
 };
