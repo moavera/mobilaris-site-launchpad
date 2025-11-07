@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logoImage from "@/assets/site-logo-2.png";
+import logoImage from "@/assets/mobilaris-industrial-logga.svg";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
