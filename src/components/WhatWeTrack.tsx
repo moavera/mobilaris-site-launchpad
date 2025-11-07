@@ -34,8 +34,8 @@ export const WhatWeTrack = () => {
                     <div className="flex items-start gap-3">
                       <Shield className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="text-base font-medium text-foreground mb-1">Normal Operations</p>
-                        <p className="text-sm text-muted-foreground">Group-level tracking with encrypted personal information</p>
+                        <p className="text-lg font-medium text-foreground mb-1">Normal Operations</p>
+                        <p className="text-base text-muted-foreground">Group-level tracking with encrypted personal information</p>
                       </div>
                     </div>
                   </div>
@@ -44,8 +44,8 @@ export const WhatWeTrack = () => {
                     <div className="flex items-start gap-3">
                       <AlertCircle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="text-base font-medium text-foreground mb-1">Emergency Response</p>
-                        <p className="text-sm text-muted-foreground">Unlock personal data for contact and rescue service visibility</p>
+                        <p className="text-lg font-medium text-foreground mb-1">Emergency Response</p>
+                        <p className="text-base text-muted-foreground">Unlock personal data for contact and rescue service visibility</p>
                       </div>
                     </div>
                   </div>
@@ -71,13 +71,13 @@ export const WhatWeTrack = () => {
                 
                 <div className="space-y-3">
                   <div className="bg-muted/50 rounded-lg p-3">
-                    <p className="text-base font-medium text-foreground mb-1">Gas Cylinders</p>
-                    <p className="text-sm text-muted-foreground">Meet legal tracking requirements</p>
+                    <p className="text-lg font-medium text-foreground mb-1">Gas Cylinders</p>
+                    <p className="text-base text-muted-foreground">Meet legal tracking requirements</p>
                   </div>
                   
                   <div className="bg-muted/50 rounded-lg p-3">
-                    <p className="text-base font-medium text-foreground mb-1">Custom Assets</p>
-                    <p className="text-sm text-muted-foreground">Track whatever your operation requires</p>
+                    <p className="text-lg font-medium text-foreground mb-1">Custom Assets</p>
+                    <p className="text-base text-muted-foreground">Track whatever your operation requires</p>
                   </div>
                 </div>
               </div>
@@ -104,8 +104,8 @@ export const WhatWeTrack = () => {
                     <div className="flex items-start gap-3">
                       <Truck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="text-base font-medium text-foreground mb-1">Real-time Location</p>
-                        <p className="text-sm text-muted-foreground">Track all vehicles and machinery across your site</p>
+                        <p className="text-lg font-medium text-foreground mb-1">Real-time Location</p>
+                        <p className="text-base text-muted-foreground">Track all vehicles and machinery across your site</p>
                       </div>
                     </div>
                   </div>
