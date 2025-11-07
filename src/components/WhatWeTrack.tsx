@@ -1,9 +1,7 @@
 import { Users, Package, Truck, Shield, AlertCircle, Gauge } from "lucide-react";
 import { SectionShareButton } from "@/components/SectionShareButton";
-
 export const WhatWeTrack = () => {
-  return (
-    <section id="what-we-track" className="py-20 md:py-32 bg-muted/30 scroll-mt-20 group">
+  return <section id="what-we-track" className="py-20 md:py-32 bg-muted/30 scroll-mt-20 group">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-6">
@@ -12,9 +10,7 @@ export const WhatWeTrack = () => {
             </h2>
             <SectionShareButton sectionId="what-we-track" sectionName="What We Track" />
           </div>
-          <p className="text-lg text-muted-foreground">
-            Comprehensive tracking solutions for people, assets, and vehicles
-          </p>
+          
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -135,6 +131,5 @@ export const WhatWeTrack = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
