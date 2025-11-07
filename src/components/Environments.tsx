@@ -30,9 +30,7 @@ export const Environments = () => {
         {/* Two-column header layout */}
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="flex items-start gap-4">
-            <h2 className="text-5xl md:text-6xl font-bold leading-tight">
-              Positioning That Works Everywhere
-            </h2>
+            <h2 className="text-5xl md:text-6xl font-bold leading-tight">Positioning Everywhere</h2>
             <SectionShareButton sectionId="environments" sectionName="Environments" />
           </div>
           <div className="flex items-center">
@@ -44,24 +42,14 @@ export const Environments = () => {
 
         {/* Grid of environment cards */}
         <div className="grid md:grid-cols-3 gap-6">
-          {environments.map((env, index) => (
-            <div 
-              key={env.title} 
-              className="group relative rounded-2xl border border-border bg-card/30 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-primary/50"
-              style={{
-                animation: `fade-in 0.6s ease-out ${index * 0.1}s both`
-              }}
-            >
+          {environments.map((env, index) => <div key={env.title} className="group relative rounded-2xl border border-border bg-card/30 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-primary/50" style={{
+          animation: `fade-in 0.6s ease-out ${index * 0.1}s both`
+        }}>
               {/* Visual preview area */}
               <div className="relative h-64 bg-gradient-to-br from-background via-primary/5 to-background flex items-center justify-center border-b border-border overflow-hidden">
-                <img 
-                  src={env.image} 
-                  alt={`${env.title} environment visualization with 3D mapping`}
-                  className="w-full h-full object-cover shadow-elegant scale-105 group-hover:scale-110 transition-transform duration-500"
-                  style={{
-                    boxShadow: '0 20px 60px -10px rgba(0, 0, 0, 0.4), 0 10px 30px -15px rgba(0, 0, 0, 0.3)'
-                  }}
-                />
+                <img src={env.image} alt={`${env.title} environment visualization with 3D mapping`} className="w-full h-full object-cover shadow-elegant scale-105 group-hover:scale-110 transition-transform duration-500" style={{
+              boxShadow: '0 20px 60px -10px rgba(0, 0, 0, 0.4), 0 10px 30px -15px rgba(0, 0, 0, 0.3)'
+            }} />
                 {/* Shadow overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300" />
               </div>
@@ -74,8 +62,7 @@ export const Environments = () => {
                   {env.description}
                 </p>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
     </section>;
