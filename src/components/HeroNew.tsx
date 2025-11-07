@@ -5,10 +5,21 @@ import demoImage from "@/assets/demo-scenario.png";
 import heroVideo from "@/assets/test.mp4";
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Video Background */}
-      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover object-center scale-105">
+      {/* Video Background with Quality Enhancement */}
+      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover object-center scale-105 blur-[2px] brightness-90 contrast-110">
         <source src={heroVideo} type="video/mp4" />
       </video>
+      
+      {/* Film Grain Overlay */}
+      <div className="absolute inset-0 opacity-[0.15] mix-blend-overlay pointer-events-none" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+        backgroundRepeat: 'repeat'
+      }} />
+      
+      {/* Vignette Effect */}
+      <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/60" style={{
+        background: 'radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(0,0,0,0.4) 100%)'
+      }} />
       
       {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/20" />
