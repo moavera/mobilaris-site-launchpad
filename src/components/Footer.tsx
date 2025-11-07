@@ -53,7 +53,7 @@ export const Footer = () => {
               Navigate
             </h3>
             <nav className="space-y-5">
-              <a href="#about" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
+              <a href="https://mobilarisindustrialsolutions.se/about-us/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
                 About
               </a>
               <a href="https://mobilarisindustrialsolutions.se/stories/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
