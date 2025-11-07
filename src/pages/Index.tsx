@@ -4,7 +4,7 @@ import mobilarisLogo from "@/assets/mobilaris-industrial.png";
 import heroImage from "@/assets/site-hero-launch.png";
 import arrowForward from "@/assets/arrow-forward.svg";
 const Index = () => {
-  return <main className="min-h-screen bg-background font-galano">
+  return <main className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
