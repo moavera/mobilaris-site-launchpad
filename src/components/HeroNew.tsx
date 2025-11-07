@@ -15,13 +15,6 @@ export const HeroNew = () => {
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60" />
       
-      {/* Animated Tech Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 animate-pulse" style={{ animationDuration: '4s' }} />
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/20 to-transparent animate-scan" />
-      </div>
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(var(--primary-rgb),0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(var(--primary-rgb),0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
-      
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -79,19 +72,6 @@ export const HeroNew = () => {
                 100% {
                   transform: translateX(200%);
                 }
-              }
-              
-              @keyframes scan {
-                0% {
-                  transform: translateY(-100%);
-                }
-                100% {
-                  transform: translateY(100%);
-                }
-              }
-              
-              .animate-scan {
-                animation: scan 8s ease-in-out infinite;
               }
             `}</style>
           </div>
