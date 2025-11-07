@@ -38,7 +38,7 @@ export const Navigation = () => {
               <img
                 src={logoImage}
                 alt="Mobilaris Industrial Solutions"
-                className="h-12 w-auto hover:opacity-80 transition-opacity"
+                className="h-14 w-auto hover:opacity-80 transition-opacity"
               />
             </a>
           </div>
@@ -51,7 +51,7 @@ export const Navigation = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-lg font-medium transition-opacity hover:opacity-80 flex items-center gap-1"
+                className="text-white text-xl font-medium transition-opacity hover:opacity-80 flex items-center gap-1"
               >
                 {link.label}
                 {link.hasDropdown && <ChevronDown className="h-4 w-4" />}
@@ -61,7 +61,7 @@ export const Navigation = () => {
               href="https://mobilarisindustrialsolutions.se/contact/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-lg font-medium border-2 border-white px-6 py-2 rounded hover:bg-white hover:text-foreground transition-all"
+              className="text-white text-xl font-medium border-2 border-white px-6 py-2 rounded hover:bg-white hover:text-foreground transition-all"
             >
               Contact us
             </a>
