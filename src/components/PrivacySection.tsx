@@ -50,7 +50,7 @@ export const PrivacySection = () => {
                 <ul className="space-y-2 text-muted-foreground">
                   <li>Personal information unlocked by authorized personnel</li>
                   <li>Direct contact enabled</li>
-                  <li>Rapid evacuation & rescue support</li>
+                  
                 </ul>
               </div>
             </div>
