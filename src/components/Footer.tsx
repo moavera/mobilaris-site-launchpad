@@ -5,10 +5,10 @@ export const Footer = () => {
     <footer className="bg-[#F5F5F7] py-24">
       <div className="container mx-auto px-6 max-w-[1400px]">
         {/* First Row - Newsletter and Navigate */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-20 mb-20">
-          {/* Newsletter Section */}
-          <div className="lg:col-span-1">
-            <h3 className="text-[#8B5CF6] text-[11px] font-bold uppercase tracking-[0.2em] mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 mb-20">
+          {/* Newsletter Section - Takes 4 columns */}
+          <div className="lg:col-span-4">
+            <h3 className="text-[#8B5CF6] text-[13px] font-bold uppercase tracking-[0.2em] mb-8">
               Newsletter
             </h3>
             <h4 className="text-[#1A1A1A] text-[28px] font-bold mb-10 leading-[1.3] max-w-[340px]">
@@ -23,9 +23,12 @@ export const Footer = () => {
             </button>
           </div>
 
-          {/* Navigate Section - Column 1 */}
-          <div className="lg:col-span-1">
-            <h3 className="text-[#8B5CF6] text-[11px] font-bold uppercase tracking-[0.2em] mb-8">
+          {/* Empty spacer - 2 columns */}
+          <div className="hidden lg:block lg:col-span-2"></div>
+
+          {/* Navigate Section - Column 1 - Takes 3 columns */}
+          <div className="lg:col-span-3">
+            <h3 className="text-[#8B5CF6] text-[13px] font-bold uppercase tracking-[0.2em] mb-8">
               Navigate
             </h3>
             <nav className="space-y-5">
@@ -47,9 +50,9 @@ export const Footer = () => {
             </nav>
           </div>
 
-          {/* Navigate Section - Column 2 */}
-          <div className="lg:col-span-1">
-            <h3 className="text-transparent text-[11px] font-bold uppercase tracking-[0.2em] mb-8 select-none pointer-events-none">
+          {/* Navigate Section - Column 2 - Takes 3 columns */}
+          <div className="lg:col-span-3">
+            <h3 className="text-transparent text-[13px] font-bold uppercase tracking-[0.2em] mb-8 select-none pointer-events-none">
               Navigate
             </h3>
             <nav className="space-y-5">
@@ -70,10 +73,10 @@ export const Footer = () => {
         </div>
 
         {/* Second Row - Our Headquarters & Social Media */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-20">
-          {/* Our Headquarters */}
-          <div className="lg:col-span-1">
-            <h3 className="text-[#8B5CF6] text-[11px] font-bold uppercase tracking-[0.2em] mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
+          {/* Our Headquarters - Takes 4 columns */}
+          <div className="lg:col-span-4">
+            <h3 className="text-[#8B5CF6] text-[13px] font-bold uppercase tracking-[0.2em] mb-8">
               Our Headquarters
             </h3>
             <div className="flex items-start gap-4">
@@ -93,10 +96,13 @@ export const Footer = () => {
               </div>
             </div>
           </div>
+
+          {/* Empty spacer - 2 columns */}
+          <div className="hidden lg:block lg:col-span-2"></div>
           
-          {/* Social Media */}
-          <div className="lg:col-span-1">
-            <h3 className="text-[#8B5CF6] text-[11px] font-bold uppercase tracking-[0.2em] mb-8">
+          {/* Social Media - Takes 3 columns */}
+          <div className="lg:col-span-3">
+            <h3 className="text-[#8B5CF6] text-[13px] font-bold uppercase tracking-[0.2em] mb-8">
               Social Media
             </h3>
             <div className="flex gap-5">
