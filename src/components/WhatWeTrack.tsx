@@ -31,12 +31,9 @@ export const WhatWeTrack = () => {
                 
                 <div className="space-y-3">
                   <div className="bg-muted/50 rounded-lg p-3">
-                    <div className="flex items-start gap-3">
-                      <Shield className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="text-lg font-medium text-foreground mb-1">Normal Operations</p>
-                        <p className="text-base text-muted-foreground">Group-level tracking with encrypted personal information</p>
-                      </div>
+                    <div>
+                      <p className="text-lg font-medium text-foreground mb-1">Normal Operations</p>
+                      <p className="text-base text-muted-foreground">Group-level tracking with encrypted personal information</p>
                     </div>
                   </div>
                   
