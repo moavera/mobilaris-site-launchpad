@@ -1,4 +1,5 @@
 import { Linkedin, Facebook, Instagram, ArrowRight } from "lucide-react";
+import micLogo from "@/assets/mic_logo.svg";
 
 export const Footer = () => {
   return (
@@ -77,20 +78,11 @@ export const Footer = () => {
               Our Headquarters
             </h3>
             <div className="flex items-start gap-4">
-              <div className="w-[60px] h-[60px] bg-gradient-to-br from-[#DC2626] via-[#9333EA] to-[#DC2626] rounded-[10px] flex items-center justify-center flex-shrink-0 relative overflow-hidden">
-                <div className="absolute inset-[6px] bg-white rounded-[6px]"></div>
-              </div>
-              <div className="flex flex-col justify-center">
-                <div className="text-[#1A1A1A] font-extrabold text-[13px] uppercase leading-[1.3] tracking-wide">
-                  Mobilaris
-                </div>
-                <div className="text-[#1A1A1A] font-extrabold text-[13px] uppercase leading-[1.3] tracking-wide">
-                  Innovation
-                </div>
-                <div className="text-[#1A1A1A] font-extrabold text-[13px] uppercase leading-[1.3] tracking-wide">
-                  Center
-                </div>
-              </div>
+              <img 
+                src={micLogo} 
+                alt="Mobilaris Innovation Center" 
+                className="h-[60px] w-auto"
+              />
             </div>
           </div>
 
