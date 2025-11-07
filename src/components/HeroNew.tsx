@@ -3,18 +3,10 @@ import { ArrowRight, Play, Truck } from "lucide-react";
 import logoImage from "@/assets/site-logo-2.png";
 import demoImage from "@/assets/demo-scenario.png";
 import heroVideo from "@/assets/systemvideo.mov";
-
 export const HeroNew = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Video Background */}
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
+      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
         <source src={heroVideo} type="video/mp4" />
       </video>
       
@@ -51,22 +43,13 @@ export const HeroNew = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button 
-                size="lg" 
-                className="text-base px-6 shadow-lg hover:shadow-xl transition-all duration-300" 
-                asChild
-              >
+              <Button size="lg" className="text-base px-6 shadow-lg hover:shadow-xl transition-all duration-300" asChild>
                 <a href="mailto:support@mobilaris.se">
                   Contact us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button 
-                size="lg" 
-                variant="secondary" 
-                className="relative text-base px-6 overflow-hidden group border-2 border-primary/50" 
-                asChild
-              >
+              <Button size="lg" variant="secondary" className="relative text-base px-6 overflow-hidden group border-2 border-primary/50" asChild>
                 <a href="/demo-start" className="relative z-10">
                   {/* Animated gradient overlay */}
                   <span className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-[shimmer_3s_ease-in-out_infinite] translate-x-[-200%]" />
@@ -92,34 +75,10 @@ export const HeroNew = () => {
           </div>
 
           {/* Right: Image - Linear Style */}
-          <div className="relative lg:pl-8 animate-fade-in perspective-1000" style={{ animationDelay: '0.2s' }}>
-            <div className="relative">
-              {/* Image container with rotation and glow */}
-              <div 
-                className="relative rounded-xl overflow-hidden border border-border/30 transition-transform duration-700 hover:scale-[1.02]"
-                style={{ 
-                  transform: 'perspective(1000px) rotateY(-8deg) rotateX(2deg)',
-                  boxShadow: '0 20px 60px -10px hsl(var(--primary) / 0.2), 0 0 80px -20px hsl(var(--primary) / 0.15)'
-                }}
-              >
-                <img 
-                  src={demoImage} 
-                  alt="Mobilaris Site Demo" 
-                  className="w-full h-auto"
-                />
-                {/* Subtle gradient overlay for depth */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none" />
-              </div>
-              
-              {/* Glow effect behind image */}
-              <div 
-                className="absolute inset-0 -z-10 blur-3xl opacity-30"
-                style={{
-                  background: 'radial-gradient(circle at 50% 50%, hsl(var(--primary) / 0.3), transparent 70%)',
-                  transform: 'scale(1.1)'
-                }}
-              />
-            </div>
+          <div className="relative lg:pl-8 animate-fade-in perspective-1000" style={{
+          animationDelay: '0.2s'
+        }}>
+            
           </div>
         </div>
       </div>
@@ -130,6 +89,5 @@ export const HeroNew = () => {
           <div className="w-1 h-3 bg-muted-foreground rounded-full" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
