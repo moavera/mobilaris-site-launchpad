@@ -115,7 +115,7 @@ export const WhatWeTrack = () => {
           </div>
         </div>
 
-        <div className="mt-12 max-w-4xl mx-auto bg-card border border-border rounded-2xl p-8">
+        <div className="mt-12 max-w-6xl mx-auto bg-card border border-border rounded-2xl p-8">
           <div className="flex items-start gap-4">
             <div className="bg-primary/10 p-3 rounded-full flex-shrink-0">
               <Gauge className="h-6 w-6 text-primary" />
