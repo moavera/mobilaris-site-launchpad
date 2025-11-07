@@ -6,13 +6,13 @@ export const Footer = () => {
       <div className="container mx-auto px-6 max-w-[1400px]">
         {/* First Row - Newsletter and Navigate */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 mb-20">
-          {/* Newsletter Section - Takes 4 columns */}
-          <div className="lg:col-span-4">
+          {/* Newsletter Section - Takes 6 columns */}
+          <div className="lg:col-span-6">
             <h3 className="text-[#8B5CF6] text-[13px] font-bold uppercase tracking-[0.2em] mb-8">
               Newsletter
             </h3>
-            <h4 className="text-[#1A1A1A] text-[28px] font-bold mb-10 leading-[1.3] max-w-[700px]">
-              Subscribe to our newsletter to stay up to date with the future of industry
+            <h4 className="text-[#1A1A1A] text-[28px] font-bold mb-10 leading-[1.3]">
+              Subscribe to our newsletter to stay up&nbsp;to<br className="hidden lg:block" /> date with the future of industry
             </h4>
             <button 
               className="bg-[#1A1A1A] hover:bg-[#333333] text-white font-semibold rounded-[8px] px-9 py-4 inline-flex items-center gap-3 transition-all duration-200 group"
@@ -22,9 +22,6 @@ export const Footer = () => {
               <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
             </button>
           </div>
-
-          {/* Empty spacer - 2 columns */}
-          <div className="hidden lg:block lg:col-span-2"></div>
 
           {/* Navigate Section - Column 1 - Takes 3 columns */}
           <div className="lg:col-span-3">
