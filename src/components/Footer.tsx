@@ -78,11 +78,18 @@ export const Footer = () => {
               Our Headquarters
             </h3>
             <div className="flex items-start gap-4">
-              <img 
-                src={micLogo} 
-                alt="Mobilaris Innovation Center" 
-                className="h-[60px] w-auto"
-              />
+              <a 
+                href="https://www.mobilarisinnovationcenter.se/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <img 
+                  src={micLogo} 
+                  alt="Mobilaris Innovation Center" 
+                  className="h-[60px] w-auto"
+                />
+              </a>
             </div>
           </div>
 
