@@ -2,80 +2,55 @@ import { Shield, Users, AlertTriangle } from "lucide-react";
 
 export const PrivacySection = () => {
   return (
-    <section className="py-20 md:py-32 bg-muted/30">
+    <section className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Privacy-First Tracking
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground">
-            We believe in protecting worker privacy while maintaining safety capabilities when they matter most
+          <p className="text-lg text-muted-foreground">
+            Protecting privacy while ensuring safety
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Normal Operations */}
-          <div className="bg-background border border-border rounded-xl p-8 hover:shadow-lg transition-shadow">
-            <div className="flex items-start gap-4 mb-4">
-              <div className="bg-primary/10 p-3 rounded-lg">
-                <Users className="h-6 w-6 text-primary" />
+          <div className="bg-card border border-border rounded-2xl p-8 transition-all hover:shadow-md">
+            <div className="flex flex-col items-center text-center gap-4">
+              <div className="bg-primary/10 p-4 rounded-full">
+                <Shield className="h-8 w-8 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
+                <h3 className="text-xl font-semibold text-foreground mb-3">
                   Normal Operations
                 </h3>
-                <p className="text-muted-foreground mb-4">
-                  During regular work conditions
-                </p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>Group-level tracking only</li>
+                  <li>Encrypted personal data</li>
+                  <li>Team-based positioning</li>
+                </ul>
               </div>
             </div>
-            <ul className="space-y-3 list-disc list-inside ml-4">
-              <li className="text-foreground">
-                <strong>Group-level tracking only</strong> - No individual identification
-              </li>
-              <li className="text-foreground">
-                Personal information remains <strong>encrypted and locked</strong>
-              </li>
-              <li className="text-foreground">
-                View positions by <strong>work groups and teams</strong>
-              </li>
-            </ul>
           </div>
 
           {/* Emergency Situations */}
-          <div className="bg-background border border-destructive/30 rounded-xl p-8 hover:shadow-lg transition-shadow">
-            <div className="flex items-start gap-4 mb-4">
-              <div className="bg-destructive/10 p-3 rounded-lg">
-                <AlertTriangle className="h-6 w-6 text-destructive" />
+          <div className="bg-card border border-border rounded-2xl p-8 transition-all hover:shadow-md">
+            <div className="flex flex-col items-center text-center gap-4">
+              <div className="bg-accent/10 p-4 rounded-full">
+                <AlertTriangle className="h-8 w-8 text-accent" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
-                  Emergency Situations
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  Emergency Response
                 </h3>
-                <p className="text-muted-foreground mb-4">
-                  When lives are at risk
-                </p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>Authorized data access</li>
+                  <li>Direct contact enabled</li>
+                  <li>Rapid rescue support</li>
+                </ul>
               </div>
             </div>
-            <ul className="space-y-3 list-disc list-inside ml-4">
-              <li className="text-foreground">
-                <strong>Personal information unlocked</strong> by authorized personnel
-              </li>
-              <li className="text-foreground">
-                Enable direct contact with <strong>people in danger</strong>
-              </li>
-              <li className="text-foreground">
-                Rapid identification for <strong>evacuation and rescue</strong>
-              </li>
-            </ul>
           </div>
-        </div>
-
-        <div className="mt-12 max-w-3xl mx-auto bg-primary/5 border border-primary/20 rounded-xl p-6 text-center">
-          <p className="text-foreground text-lg">
-            <strong>Balance privacy with safety:</strong> Your workers' privacy is protected during normal operations, 
-            but their safety comes first when emergencies strike.
-          </p>
         </div>
       </div>
     </section>
