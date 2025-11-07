@@ -5,26 +5,22 @@ import demoImage from "@/assets/demo-scenario.png";
 import heroVideo from "@/assets/test.mp4";
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Video Background with Quality Enhancement */}
-      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover object-center scale-105 blur-[2px] brightness-90 contrast-110">
+      {/* Video Background */}
+      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover object-center scale-105">
         <source src={heroVideo} type="video/mp4" />
       </video>
-      
-      {/* Film Grain Overlay */}
-      <div className="absolute inset-0 opacity-[0.15] mix-blend-overlay pointer-events-none" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-        backgroundRepeat: 'repeat'
-      }} />
-      
-      {/* Vignette Effect */}
-      <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/60" style={{
-        background: 'radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(0,0,0,0.4) 100%)'
-      }} />
       
       {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/20" />
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60" />
+      
+      {/* Animated Tech Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 animate-pulse" style={{ animationDuration: '4s' }} />
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/20 to-transparent animate-scan" />
+      </div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(var(--primary-rgb),0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(var(--primary-rgb),0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
       
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 py-20 md:py-32">
@@ -83,6 +79,19 @@ export const HeroNew = () => {
                 100% {
                   transform: translateX(200%);
                 }
+              }
+              
+              @keyframes scan {
+                0% {
+                  transform: translateY(-100%);
+                }
+                100% {
+                  transform: translateY(100%);
+                }
+              }
+              
+              .animate-scan {
+                animation: scan 8s ease-in-out infinite;
               }
             `}</style>
           </div>
