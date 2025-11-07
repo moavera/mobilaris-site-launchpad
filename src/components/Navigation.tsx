@@ -29,8 +29,10 @@ export const Navigation = () => {
         href="https://mobilarisindustrialsolutions.se/contact/"
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden lg:block fixed top-0 right-0 px-[75px] py-[50px] text-white no-underline rounded-b-lg z-[999] font-medium tracking-wider transition-all duration-700 ease-out delay-200"
+        className="hidden lg:block fixed top-0 right-0 px-[75px] py-[50px] text-white no-underline rounded-b-lg z-[999] font-medium tracking-wider transition-all duration-700 ease-out delay-200 hover:font-bold"
         style={{ background: '#ffffff29', opacity: 1 }}
+        onMouseEnter={(e) => e.currentTarget.style.background = '#A029FF'}
+        onMouseLeave={(e) => e.currentTarget.style.background = '#ffffff29'}
       >
         Contact us
       </a>
