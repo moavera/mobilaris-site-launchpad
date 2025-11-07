@@ -14,7 +14,7 @@ export const MobileFirst = () => {
           {/* Text Content */}
           <div className="text-left">
             <div className="flex items-center gap-2 mb-6">
-              <h2 className="text-4xl md:text-5xl font-bold">Made for work on the move</h2>
+              <h2 className="text-4xl md:text-5xl font-bold">Work on the move</h2>
               <SectionShareButton sectionId="mobile-access" sectionName="Mobile Access" />
             </div>
             <p className="text-xl text-muted-foreground mb-6">
