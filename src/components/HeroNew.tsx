@@ -6,12 +6,13 @@ import heroVideo from "@/assets/Min_film_2.mov";
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Video Background */}
-      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover object-[center_65%]">
+      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover object-center scale-105">
         <source src={heroVideo} type="video/mp4" />
       </video>
       
-      {/* Gradient Overlay - darker on left, transparent on right */}
+      {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/20" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
       
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 py-20 md:py-32">
