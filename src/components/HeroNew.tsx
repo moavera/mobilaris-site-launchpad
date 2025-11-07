@@ -13,6 +13,7 @@ export const HeroNew = () => {
       {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/20" />
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60" />
       
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 py-20 md:py-32">
