@@ -4,8 +4,8 @@ export const Footer = () => {
   return (
     <footer className="bg-[#F5F5F7] py-24">
       <div className="container mx-auto px-6 max-w-[1400px]">
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-20">
+        {/* First Row - Newsletter and Navigate */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-20 mb-20">
           {/* Newsletter Section */}
           <div className="lg:col-span-1">
             <h3 className="text-[#8B5CF6] text-[11px] font-bold uppercase tracking-[0.2em] mb-8">
@@ -67,66 +67,66 @@ export const Footer = () => {
               </a>
             </nav>
           </div>
+        </div>
 
-          {/* Our Headquarters & Social Media */}
+        {/* Second Row - Our Headquarters & Social Media */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-20">
+          {/* Our Headquarters */}
           <div className="lg:col-span-1">
-            {/* Our Headquarters */}
             <h3 className="text-[#8B5CF6] text-[11px] font-bold uppercase tracking-[0.2em] mb-8">
               Our Headquarters
             </h3>
-            <div className="mb-14">
-              <div className="flex items-start gap-4">
-                <div className="w-[60px] h-[60px] bg-gradient-to-br from-[#DC2626] via-[#9333EA] to-[#DC2626] rounded-[10px] flex items-center justify-center flex-shrink-0 relative overflow-hidden">
-                  <div className="absolute inset-[6px] bg-white rounded-[6px]"></div>
+            <div className="flex items-start gap-4">
+              <div className="w-[60px] h-[60px] bg-gradient-to-br from-[#DC2626] via-[#9333EA] to-[#DC2626] rounded-[10px] flex items-center justify-center flex-shrink-0 relative overflow-hidden">
+                <div className="absolute inset-[6px] bg-white rounded-[6px]"></div>
+              </div>
+              <div className="flex flex-col justify-center">
+                <div className="text-[#1A1A1A] font-extrabold text-[13px] uppercase leading-[1.3] tracking-wide">
+                  Mobilaris
                 </div>
-                <div className="flex flex-col justify-center">
-                  <div className="text-[#1A1A1A] font-extrabold text-[13px] uppercase leading-[1.3] tracking-wide">
-                    Mobilaris
-                  </div>
-                  <div className="text-[#1A1A1A] font-extrabold text-[13px] uppercase leading-[1.3] tracking-wide">
-                    Innovation
-                  </div>
-                  <div className="text-[#1A1A1A] font-extrabold text-[13px] uppercase leading-[1.3] tracking-wide">
-                    Center
-                  </div>
+                <div className="text-[#1A1A1A] font-extrabold text-[13px] uppercase leading-[1.3] tracking-wide">
+                  Innovation
+                </div>
+                <div className="text-[#1A1A1A] font-extrabold text-[13px] uppercase leading-[1.3] tracking-wide">
+                  Center
                 </div>
               </div>
             </div>
-            
-            {/* Social Media */}
-            <div>
-              <h3 className="text-[#8B5CF6] text-[11px] font-bold uppercase tracking-[0.2em] mb-8">
-                Social Media
-              </h3>
-              <div className="flex gap-5">
-                <a 
-                  href="https://linkedin.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-[28px] w-[28px]" fill="currentColor" strokeWidth={0} />
-                </a>
-                <a 
-                  href="https://facebook.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="h-[28px] w-[28px]" fill="currentColor" strokeWidth={0} />
-                </a>
-                <a 
-                  href="https://instagram.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="h-[28px] w-[28px]" fill="currentColor" strokeWidth={0} />
-                </a>
-              </div>
+          </div>
+          
+          {/* Social Media */}
+          <div className="lg:col-span-1">
+            <h3 className="text-[#8B5CF6] text-[11px] font-bold uppercase tracking-[0.2em] mb-8">
+              Social Media
+            </h3>
+            <div className="flex gap-5">
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-[28px] w-[28px]" fill="currentColor" strokeWidth={0} />
+              </a>
+              <a 
+                href="https://facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-[28px] w-[28px]" fill="currentColor" strokeWidth={0} />
+              </a>
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-[28px] w-[28px]" fill="currentColor" strokeWidth={0} />
+              </a>
             </div>
           </div>
         </div>
