@@ -29,19 +29,21 @@ export const Navigation = () => {
         href="https://mobilarisindustrialsolutions.se/contact/"
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden lg:block fixed top-0 right-0 px-[75px] py-[50px] text-white no-underline rounded-b-lg z-[999] font-medium tracking-wider transition-all duration-700 ease-out delay-200 hover:font-bold"
-        style={{ background: '#ffffff29', opacity: 1 }}
+        className={`hidden lg:block fixed top-0 right-0 text-white no-underline rounded-b-lg z-[999] font-medium tracking-wider transition-all duration-700 ease-out delay-200 hover:font-bold ${
+          isScrolled ? 'px-[40px] py-[25px]' : 'px-[75px] py-[50px]'
+        }`}
+        style={{ background: isScrolled ? '#A029FF' : '#ffffff29', opacity: 1 }}
         onMouseEnter={(e) => e.currentTarget.style.background = '#A029FF'}
-        onMouseLeave={(e) => e.currentTarget.style.background = '#ffffff29'}
+        onMouseLeave={(e) => e.currentTarget.style.background = isScrolled ? '#A029FF' : '#ffffff29'}
       >
         Contact us
       </a>
 
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-background/95 backdrop-blur-md shadow-md"
-            : "bg-transparent"
+            ? "opacity-0 invisible -translate-y-full"
+            : "opacity-100 visible translate-y-0"
         }`}
       >
       <div className="w-full px-6">
