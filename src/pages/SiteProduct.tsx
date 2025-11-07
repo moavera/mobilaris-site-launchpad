@@ -32,7 +32,7 @@ const SiteProduct = () => {
       <SecurityFeatures />
       <PrivacySection />
       <Evolution />
-      <Partners />
+      
       
       <ContactSection />
       <Footer />
