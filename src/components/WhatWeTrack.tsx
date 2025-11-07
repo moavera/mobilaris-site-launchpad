@@ -30,14 +30,14 @@ export const WhatWeTrack = () => {
                 </p>
                 
                 <div className="space-y-3">
-                  <div className="bg-muted/50 rounded-lg p-3">
+                  <div className="bg-muted/50 rounded-lg p-3 pl-5">
                     <div>
                       <p className="text-lg font-medium text-foreground mb-1">Normal Operations</p>
                       <p className="text-base text-muted-foreground">Group-level tracking with encrypted personal information</p>
                     </div>
                   </div>
                   
-                  <div className="bg-muted/50 rounded-lg p-3">
+                  <div className="bg-muted/50 rounded-lg p-3 pl-5">
                     <div className="flex items-start gap-3">
                       <AlertCircle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
                       <div>
@@ -67,17 +67,17 @@ export const WhatWeTrack = () => {
                 </p>
                 
                 <div className="space-y-3">
-                  <div className="bg-muted/50 rounded-lg p-3">
+                  <div className="bg-muted/50 rounded-lg p-3 pl-5">
                     <p className="text-lg font-medium text-foreground mb-1">Gas Cylinders</p>
                     <p className="text-base text-muted-foreground">Meet legal tracking requirements</p>
                   </div>
                   
-                  <div className="bg-muted/50 rounded-lg p-3">
+                  <div className="bg-muted/50 rounded-lg p-3 pl-5">
                     <p className="text-lg font-medium text-foreground mb-1">Vehicles & Machinery</p>
                     <p className="text-base text-muted-foreground">Monitor real-time locations across your site</p>
                   </div>
                   
-                  <div className="bg-muted/50 rounded-lg p-3">
+                  <div className="bg-muted/50 rounded-lg p-3 pl-5">
                     <p className="text-lg font-medium text-foreground mb-1">Custom Assets</p>
                     <p className="text-base text-muted-foreground">Track whatever your operation requires</p>
                   </div>
