@@ -10,8 +10,8 @@ export const HeroNew = () => {
         <source src={heroVideo} type="video/mp4" />
       </video>
       
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      {/* Gradient Overlay - darker on left, transparent on right */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/20" />
       
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 py-20 md:py-32">
