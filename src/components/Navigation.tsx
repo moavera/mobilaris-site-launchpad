@@ -58,7 +58,7 @@ export const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-12">
+          <div className="hidden lg:flex items-center gap-12 mr-[250px]">
             {navLinks.map((link) => (
               <a
                 key={link.label}
