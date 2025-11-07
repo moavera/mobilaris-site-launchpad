@@ -4,7 +4,7 @@ import { SectionShareButton } from "@/components/SectionShareButton";
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 bg-muted/30 scroll-mt-20 group">
+    <section id="contact" className="py-20 bg-background scroll-mt-20 group">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
           <div className="mb-12 animate-fade-in-up">
