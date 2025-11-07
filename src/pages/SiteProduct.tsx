@@ -22,6 +22,7 @@ const SiteProduct = () => {
       <HeroNew />
       
       <KeyProblems />
+      <WhatWeTrack />
       <MobileFirst />
       <Environments />
       
@@ -32,7 +33,6 @@ const SiteProduct = () => {
       <TechnologyIntegration />
       <SecurityFeatures />
       <PrivacySection />
-      <WhatWeTrack />
       <Evolution />
       
       
