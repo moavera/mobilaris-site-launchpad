@@ -6,13 +6,6 @@ import demoImage from "@/assets/demo-scenario.png";
 export const HeroNew = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Logo */}
-      <div className="absolute top-6 left-6 z-20">
-        <a href="/">
-          <img src={logoImage} alt="Mobilaris Site Logo" className="h-12 md:h-16 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
-        </a>
-      </div>
-
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">

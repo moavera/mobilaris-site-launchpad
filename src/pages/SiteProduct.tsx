@@ -1,3 +1,4 @@
+import { Navigation } from "@/components/Navigation";
 import { HeroNew } from "@/components/HeroNew";
 import { useSectionShare } from "@/hooks/use-section-share";
 import { KeyProblems } from "@/components/KeyProblems";
@@ -16,6 +17,7 @@ import { Footer } from "@/components/Footer";
 const SiteProduct = () => {
   useSectionShare();
   return <main className="min-h-screen">
+      <Navigation />
       <HeroNew />
       
       <KeyProblems />
