@@ -31,7 +31,7 @@ export const Navigation = () => {
       }`}
     >
       <div className="w-full px-6">
-        <nav className="flex items-center justify-between h-24 max-w-full">
+        <nav className="flex items-center justify-between h-48 max-w-full">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="https://www.mobilarisinnovationcenter.se/" className="block">
