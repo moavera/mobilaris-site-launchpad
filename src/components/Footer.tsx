@@ -103,7 +103,7 @@ export const Footer = () => {
             </h3>
             <div className="flex gap-5">
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/mobilaris/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors"
@@ -112,7 +112,7 @@ export const Footer = () => {
                 <Linkedin className="h-[28px] w-[28px]" fill="currentColor" strokeWidth={0} />
               </a>
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/MobilarisAB" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors"
@@ -121,10 +121,10 @@ export const Footer = () => {
                 <Facebook className="h-[28px] w-[28px]" fill="currentColor" strokeWidth={0} />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/worldofmobilaris/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors"
+                className="text-white hover:text-[#8B5CF6] transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-[28px] w-[28px]" fill="currentColor" strokeWidth={0} />
