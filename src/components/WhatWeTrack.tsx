@@ -33,20 +33,24 @@ export const WhatWeTrack = () => {
                   Track work groups to meet legal requirements for knowing personnel locations underground
                 </p>
                 
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <Shield className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-foreground">Normal Operations</p>
-                      <p className="text-sm text-muted-foreground">Group-level tracking with encrypted personal information</p>
+                <div className="space-y-3">
+                  <div className="bg-muted/50 rounded-lg p-3">
+                    <div className="flex items-start gap-3">
+                      <Shield className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="text-sm font-medium text-foreground mb-1">Normal Operations</p>
+                        <p className="text-xs text-muted-foreground">Group-level tracking with encrypted personal information</p>
+                      </div>
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3">
-                    <AlertCircle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-foreground">Emergency Response</p>
-                      <p className="text-sm text-muted-foreground">Unlock personal data for contact and rescue service visibility</p>
+                  <div className="bg-muted/50 rounded-lg p-3">
+                    <div className="flex items-start gap-3">
+                      <AlertCircle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="text-sm font-medium text-foreground mb-1">Emergency Response</p>
+                        <p className="text-xs text-muted-foreground">Unlock personal data for contact and rescue service visibility</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -99,12 +103,14 @@ export const WhatWeTrack = () => {
                   Monitor vehicle and machinery locations across your site in real-time
                 </p>
                 
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <Truck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-foreground">Real-time Location</p>
-                      <p className="text-sm text-muted-foreground">Track all vehicles and machinery across your site</p>
+                <div className="space-y-3">
+                  <div className="bg-muted/50 rounded-lg p-3">
+                    <div className="flex items-start gap-3">
+                      <Truck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="text-sm font-medium text-foreground mb-1">Real-time Location</p>
+                        <p className="text-xs text-muted-foreground">Track all vehicles and machinery across your site</p>
+                      </div>
                     </div>
                   </div>
                 </div>
