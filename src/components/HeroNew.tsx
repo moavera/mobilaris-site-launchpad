@@ -2,10 +2,25 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Truck } from "lucide-react";
 import logoImage from "@/assets/site-logo-2.png";
 import demoImage from "@/assets/demo-scenario.png";
+import heroVideo from "@/assets/systemvideo.mov";
 
 export const HeroNew = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Video Background */}
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
+      
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
