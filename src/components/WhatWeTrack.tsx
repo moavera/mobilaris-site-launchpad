@@ -87,24 +87,6 @@ export const WhatWeTrack = () => {
             </CardContent>
           </Card>
         </div>
-
-        <Card className="mt-12 max-w-6xl mx-auto">
-          <CardContent className="pt-6">
-            <div className="flex items-start gap-4">
-              <div className="bg-primary/10 p-3 rounded-full flex-shrink-0">
-                <Gauge className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
-                  Sensor Integration
-                </h3>
-                <p className="text-muted-foreground">
-                  Monitor environmental factors like air quality and temperature alongside your tracked people and assets.
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </section>;
 };
