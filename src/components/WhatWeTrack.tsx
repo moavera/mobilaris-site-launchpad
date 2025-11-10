@@ -1,4 +1,4 @@
-import { Users, Package, Shield, AlertCircle, Radio } from "lucide-react";
+import { Users, Package, Truck, Settings } from "lucide-react";
 import { SectionShareButton } from "@/components/SectionShareButton";
 import { Card, CardContent } from "@/components/ui/card";
 export const WhatWeTrack = () => {
@@ -28,25 +28,7 @@ export const WhatWeTrack = () => {
                     People
                   </h3>
                   <p className="text-muted-foreground">
-                    Group-level tracking with encrypted personal information
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-6">
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="bg-destructive/10 p-4 rounded-full">
-                  <AlertCircle className="h-8 w-8 text-destructive" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
-                    Emergency Response
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Unlock personal data for contact and rescue visibility
+                    Track work groups with privacy-first location monitoring
                   </p>
                 </div>
               </div>
@@ -61,10 +43,10 @@ export const WhatWeTrack = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">
-                    Assets & Machines
+                    Assets
                   </h3>
                   <p className="text-muted-foreground">
-                    Track gas cylinders, vehicles, machinery, and custom assets
+                    Monitor gas cylinders and critical equipment
                   </p>
                 </div>
               </div>
@@ -75,14 +57,32 @@ export const WhatWeTrack = () => {
             <CardContent className="pt-6">
               <div className="flex flex-col items-center text-center gap-4">
                 <div className="bg-primary/10 p-4 rounded-full">
-                  <Radio className="h-8 w-8 text-primary" />
+                  <Truck className="h-8 w-8 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">
-                    Real-time Monitoring
+                    Machines & Vehicles
                   </h3>
                   <p className="text-muted-foreground">
-                    Live location tracking across your entire site
+                    Real-time location tracking of all machinery
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-6">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="bg-primary/10 p-4 rounded-full">
+                  <Settings className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    Custom
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Track any operational asset you need
                   </p>
                 </div>
               </div>
