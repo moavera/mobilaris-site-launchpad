@@ -16,6 +16,9 @@ export const Evolution = () => {
   }, {
     icon: ArrowRight,
     text: "Seamless upgrade path from earlier Mobilaris solutions to Site™"
+  }, {
+    icon: TrendingUp,
+    text: "Building on decades of industrial expertise"
   }];
   return <section id="evolution" className="py-24 md:py-32 relative overflow-hidden scroll-mt-20 group">
       {/* Background Effects */}
@@ -42,7 +45,7 @@ export const Evolution = () => {
         </div>
 
         {/* Highlights List */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-20">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {highlights.map((highlight, index) => <div key={index} className="flex items-center gap-6 p-6 rounded-2xl bg-card/30 border border-border/40 backdrop-blur-sm hover:bg-card/50 hover:border-primary/20 transition-all duration-300 animate-fade-in-up" style={{
           animationDelay: `${index * 0.1}s`
         }}>
@@ -55,16 +58,6 @@ export const Evolution = () => {
             </div>)}
         </div>
 
-        {/* Bottom Accent */}
-        <div className="text-center animate-fade-in-up" style={{
-        animationDelay: '0.5s'
-      }}>
-          <div className="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 border border-primary/20">
-            <p className="text-base md:text-lg font-semibold text-primary">
-              Building on decades of industrial expertise
-            </p>
-          </div>
-        </div>
       </div>
     </section>;
 };
