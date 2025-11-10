@@ -43,13 +43,13 @@ export const Evolution = () => {
 
         {/* Highlights List */}
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-20">
-          {highlights.map((highlight, index) => <div key={index} className="flex items-start gap-5 p-8 rounded-2xl bg-card/30 border border-border/40 backdrop-blur-sm hover:bg-card/50 hover:border-primary/20 transition-all duration-300 animate-fade-in-up" style={{
+        {highlights.map((highlight, index) => <div key={index} className="flex items-center gap-6 p-6 rounded-2xl bg-card/30 border border-border/40 backdrop-blur-sm hover:bg-card/50 hover:border-primary/20 transition-all duration-300 animate-fade-in-up" style={{
           animationDelay: `${index * 0.1}s`
         }}>
-              <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
-                <highlight.icon className="h-7 w-7 text-primary" />
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
+                <highlight.icon className="h-6 w-6 text-primary" />
               </div>
-              <p className="text-lg md:text-xl text-foreground leading-relaxed pt-3">
+              <p className="text-base md:text-lg text-foreground leading-relaxed">
                 {highlight.text}
               </p>
             </div>)}
