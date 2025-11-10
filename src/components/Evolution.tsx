@@ -39,9 +39,7 @@ export const Evolution = () => {
           </div>
           
           <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">Our platform builds on a long history of real-time positioning and 3D visualization in industrial and mining operations.The new Mobilaris 2.0 - Site™ is the next generation, redesigned for higher performance, scalability, and user experience.</p>
-          <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed mt-4">
-            The new Mobilaris 2.0 - Site™ is the next generation, redesigned for higher performance, scalability, and user experience.
-          </p>
+          
         </div>
 
         {/* Highlights List */}
