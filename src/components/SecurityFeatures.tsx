@@ -66,11 +66,11 @@ export const SecurityFeatures = () => {
                   className="flex-[0_0_85%] min-w-0"
                 >
                   <Card 
-                    className="p-8 h-full bg-card/50 backdrop-blur-sm hover:shadow-elegant transition-all duration-300 border-border/50 hover:border-primary/20"
+                    className="p-8 h-full bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300"
                   >
                     <div className="mb-6">
-                      <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-glow">
-                        <feature.icon className="w-8 h-8 text-white" />
+                      <div className="w-16 h-16 bg-muted rounded-2xl flex items-center justify-center">
+                        <feature.icon className="w-8 h-8 text-foreground" />
                       </div>
                     </div>
                     <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
@@ -89,17 +89,17 @@ export const SecurityFeatures = () => {
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="group p-10 bg-card/50 backdrop-blur-sm hover:shadow-elegant transition-all duration-500 animate-fade-in-up border-border/50 hover:border-primary/20 hover:-translate-y-1"
+              className="group p-10 bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-muted rounded-2xl flex items-center justify-center">
+                    <feature.icon className="w-8 h-8 text-foreground" />
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-2xl font-bold mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
