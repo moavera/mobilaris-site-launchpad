@@ -20,7 +20,7 @@ const steps = [{
 export const GettingStarted = () => {
   return <section id="getting-started" className="py-16 md:py-24 bg-background scroll-mt-20 group min-h-screen flex items-center">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in-up">
+        <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
           <div className="flex items-center justify-center gap-2 mb-4">
             <h2 className="text-3xl md:text-5xl font-bold">
               What do I need?
@@ -32,7 +32,7 @@ export const GettingStarted = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-8 md:mb-12">
           {steps.map((step, index) => <Card key={index} className="p-8 text-center hover:shadow-elegant transition-all duration-300 animate-fade-in-up border-border/50 relative" style={{
           animationDelay: `${index * 0.15}s`
         }}>
