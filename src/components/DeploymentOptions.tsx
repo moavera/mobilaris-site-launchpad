@@ -4,7 +4,7 @@ import { SectionShareButton } from "@/components/SectionShareButton";
 
 export const DeploymentOptions = () => {
   return (
-    <section id="deployment" className="py-32 md:py-40 bg-background scroll-mt-20 group min-h-screen flex items-center">
+    <section id="deployment" className="py-16 md:py-24 bg-background scroll-mt-20 group">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-center gap-2 mb-4">

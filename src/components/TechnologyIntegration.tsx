@@ -12,7 +12,7 @@ const technologies = [
 
 export const TechnologyIntegration = () => {
   return (
-    <section id="technology" className="py-20 bg-gradient-subtle scroll-mt-20 group">
+    <section id="technology" className="py-16 md:py-24 bg-gradient-subtle scroll-mt-20 group">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 animate-fade-in-up">
