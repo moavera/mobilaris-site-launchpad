@@ -63,9 +63,7 @@ export const WhatWeTrack = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-2">
                     Machines & Vehicles
                   </h3>
-                  <p className="text-muted-foreground">
-                    Real-time location tracking of all machinery
-                  </p>
+                  <p className="text-muted-foreground">Real-time location tracking of machinery</p>
                 </div>
               </div>
             </CardContent>
