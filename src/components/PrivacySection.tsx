@@ -23,7 +23,7 @@ export const PrivacySection = () => {
                   Normal Operations
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  During regular work conditions
+                  In day-to-day operations, worker privacy is our priority. We track work groups rather than individuals, with all personal information encrypted and inaccessible to supervisors.
                 </p>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>Group-level tracking only</li>
@@ -45,7 +45,7 @@ export const PrivacySection = () => {
                   Emergency Response
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  When lives are at risk
+                  When critical situations occur—such as accidents, evacuations, or missing persons—authorized personnel can unlock personal information to enable direct contact and ensure worker safety.
                 </p>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>Personal information unlocked by authorized personnel</li>
