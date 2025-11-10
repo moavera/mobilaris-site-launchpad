@@ -21,11 +21,11 @@ export const DeploymentOptions = () => {
                 <Cloud className="w-12 h-12 text-primary mb-4" />
                 <h4 className="text-2xl font-bold mb-2">Cloud</h4>
               </div>
-              <ul className="text-muted-foreground leading-relaxed space-y-2 list-disc list-inside">
-                <li>Deploy in minutes with zero infrastructure management</li>
-                <li>Automatic updates and maintenance included</li>
-                <li>Elastic scalability to handle traffic spikes</li>
-                <li>Standardized OAuth 2.0 and SAML authentication</li>
+              <ul className="text-muted-foreground leading-relaxed space-y-2 list-disc list-outside ml-5">
+                <li className="pl-2">Deploy in minutes with zero infrastructure management</li>
+                <li className="pl-2">Automatic updates and maintenance included</li>
+                <li className="pl-2">Elastic scalability to handle traffic spikes</li>
+                <li className="pl-2">Standardized OAuth 2.0 and SAML authentication</li>
               </ul>
             </Card>
 
@@ -34,12 +34,12 @@ export const DeploymentOptions = () => {
                 <Server className="w-12 h-12 text-primary mb-4" />
                 <h4 className="text-2xl font-bold mb-2">On-Premises</h4>
               </div>
-              <ul className="text-muted-foreground leading-relaxed space-y-2 list-disc list-inside">
-                <li>Full data sovereignty with complete control</li>
-                <li>Docker containers for consistent deployments</li>
-                <li>Integration with existing IT infrastructure</li>
-                <li>Air-gapped installation support available</li>
-                <li>Compatible with enterprise SSO and Active Directory</li>
+              <ul className="text-muted-foreground leading-relaxed space-y-2 list-disc list-outside ml-5">
+                <li className="pl-2">Full data sovereignty with complete control</li>
+                <li className="pl-2">Docker containers for consistent deployments</li>
+                <li className="pl-2">Integration with existing IT infrastructure</li>
+                <li className="pl-2">Air-gapped installation support available</li>
+                <li className="pl-2">Compatible with enterprise SSO and Active Directory</li>
               </ul>
             </Card>
           </div>
