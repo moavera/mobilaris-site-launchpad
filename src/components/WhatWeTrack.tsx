@@ -11,9 +11,7 @@ export const WhatWeTrack = () => {
             </h2>
             <SectionShareButton sectionId="what-we-track" sectionName="What We Track" />
           </div>
-          <p className="text-lg text-muted-foreground">
-            Comprehensive tracking solutions for people, assets, and machines
-          </p>
+          
         </div>
 
         <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
