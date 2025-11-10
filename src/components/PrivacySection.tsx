@@ -6,9 +6,7 @@ export const PrivacySection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Privacy-First Tracking
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Protecting worker privacy while maintaining safety when it matters most
-          </p>
+          <p className="text-lg text-muted-foreground">Protecting worker privacy while maintaining safety when it matters most</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
