@@ -47,11 +47,7 @@ export const PrivacySection = () => {
           </div>
         </div>
 
-        <div className="mt-12 max-w-3xl mx-auto bg-card border border-border rounded-2xl p-6 text-center">
-          <p className="text-muted-foreground">
-             Worker privacy is protected during normal operations, but safety comes first when emergencies strike.
-          </p>
-        </div>
+        
       </div>
     </section>;
 };
