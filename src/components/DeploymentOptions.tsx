@@ -16,7 +16,7 @@ export const DeploymentOptions = () => {
             we support both with standardized containers and unified authorization flows.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
-            <Card className="p-8 hover:shadow-elegant transition-all duration-300 animate-fade-in-up">
+            <Card className="p-8 hover:shadow-lg transition-all duration-300 animate-fade-in-up">
               <div className="mb-4">
                 <Cloud className="w-12 h-12 text-primary mb-4" />
                 <h4 className="text-2xl font-bold mb-2">Cloud</h4>
@@ -29,7 +29,7 @@ export const DeploymentOptions = () => {
               </ul>
             </Card>
 
-            <Card className="p-8 hover:shadow-elegant transition-all duration-300 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+            <Card className="p-8 hover:shadow-lg transition-all duration-300 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
               <div className="mb-4">
                 <Server className="w-12 h-12 text-primary mb-4" />
                 <h4 className="text-2xl font-bold mb-2">On-Premises</h4>
