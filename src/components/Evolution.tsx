@@ -53,7 +53,7 @@ export const Evolution = () => {
         </div>
 
         {/* Highlights List */}
-        <div className="space-y-6 max-w-3xl mx-auto mb-20">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-20">
           {highlights.map((highlight, index) => (
             <div 
               key={index}
