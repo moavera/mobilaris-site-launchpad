@@ -43,11 +43,7 @@ export const PrivacySection = () => {
                 <p className="text-sm text-muted-foreground mb-4">
                   When critical situations occur—such as accidents, evacuations, or missing persons—authorized personnel can unlock personal information to enable direct contact and ensure worker safety.
                 </p>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>Personal information unlocked by authorized personnel</li>
-                  <li>Direct contact enabled</li>
-                  
-                </ul>
+                
               </div>
             </div>
           </div>
