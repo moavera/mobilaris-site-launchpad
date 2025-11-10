@@ -18,7 +18,7 @@ const steps = [{
   description: "Upload your layout and begin visualizing people, vehicles, and assets in real time."
 }];
 export const GettingStarted = () => {
-  return <section id="getting-started" className="py-20 bg-background scroll-mt-20 group">
+  return <section id="getting-started" className="py-32 md:py-40 bg-background scroll-mt-20 group min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="flex items-center justify-center gap-2 mb-4">
