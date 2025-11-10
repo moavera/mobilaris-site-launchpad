@@ -25,11 +25,7 @@ export const PrivacySection = () => {
                 <p className="text-sm text-muted-foreground mb-4">
                   In day-to-day operations, worker privacy is our priority. We track work groups rather than individuals, with all personal information encrypted and inaccessible to supervisors.
                 </p>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>Group-level tracking only</li>
-                  <li>Personal information encrypted & locked</li>
-                  
-                </ul>
+                
               </div>
             </div>
           </div>
