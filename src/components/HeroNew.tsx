@@ -5,15 +5,15 @@ import demoImage from "@/assets/demo-scenario.png";
 import heroVideo from "@/assets/test.mp4";
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Video Background - Centered and smaller on desktop */}
-      <video autoPlay loop muted playsInline className="absolute inset-0 md:inset-auto md:right-0 md:top-1/2 md:-translate-y-1/2 w-full md:w-[70%] h-full md:h-[70%] object-cover object-center rounded-none md:rounded-2xl">
+      {/* Video Background - Seamlessly fades into background */}
+      <video autoPlay loop muted playsInline className="absolute inset-0 md:inset-auto md:right-0 md:top-1/2 md:-translate-y-1/2 w-full md:w-[70%] h-full md:h-[70%] object-cover object-center">
         <source src={heroVideo} type="video/mp4" />
       </video>
       
-      {/* Soft Overlay Shadows - Fade video into background */}
-      <div className="absolute inset-x-0 top-0 h-48 md:h-64 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none z-10" />
-      <div className="absolute inset-x-0 bottom-0 h-48 md:h-64 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none z-10" />
-      <div className="absolute inset-y-0 right-0 left-0 md:left-auto md:right-[70%] w-full md:w-64 bg-gradient-to-r from-background via-background/60 to-transparent pointer-events-none z-10" />
+      {/* Strong Gradient Overlays - Seamlessly fade video edges into background */}
+      <div className="absolute inset-x-0 top-0 h-64 md:h-80 bg-gradient-to-b from-background via-background/80 to-transparent pointer-events-none z-10" />
+      <div className="absolute inset-x-0 bottom-0 h-64 md:h-80 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none z-10" />
+      <div className="absolute inset-y-0 right-0 left-0 md:left-auto md:right-[70%] w-full md:w-80 bg-gradient-to-r from-background via-background/90 to-transparent pointer-events-none z-10" />
       <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/50 to-background/20" />
       
       {/* Content */}
