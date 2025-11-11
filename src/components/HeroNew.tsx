@@ -6,7 +6,7 @@ import heroVideo from "@/assets/test.mp4";
 export const HeroNew = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Video Background - Centered and smaller on desktop */}
-      <video autoPlay loop muted playsInline className="absolute inset-0 md:inset-auto md:right-0 md:top-1/2 md:-translate-y-1/2 w-full md:w-[90%] h-full md:h-[90%] object-cover object-center rounded-none md:rounded-2xl">
+      <video autoPlay loop muted playsInline className="absolute inset-0 md:inset-auto md:right-0 md:top-1/2 md:-translate-y-1/2 w-full md:w-[70%] h-full md:h-[70%] object-cover object-center rounded-none md:rounded-2xl shadow-[-40px_0_80px_-20px_rgba(0,0,0,0.5),0_-40px_80px_-20px_rgba(0,0,0,0.5),0_40px_80px_-20px_rgba(0,0,0,0.5)]">
         <source src={heroVideo} type="video/mp4" />
       </video>
       
