@@ -4,7 +4,7 @@ import logoImage from "@/assets/site-logo-2.png";
 import demoImage from "@/assets/demo-scenario.png";
 import heroVideo from "@/assets/test.mp4";
 export const HeroNew = () => {
-  return <section className="relative h-[92vh] flex items-center justify-center overflow-visible bg-background">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-visible bg-background">
       {/* Video Background */}
       <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover object-center scale-105">
         <source src={heroVideo} type="video/mp4" />

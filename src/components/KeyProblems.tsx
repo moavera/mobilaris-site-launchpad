@@ -22,7 +22,7 @@ export const KeyProblems = () => {
     skipSnaps: false,
     dragFree: false
   });
-  return <section id="challenges" className="relative -mt-24 pt-32 pb-20 bg-background scroll-mt-20 group z-10">
+  return <section id="challenges" className="relative -mt-32 pt-20 pb-20 bg-background scroll-mt-20 group z-10">
       <div className="container mx-auto px-4">
         
 
@@ -49,7 +49,7 @@ export const KeyProblems = () => {
 
         {/* Desktop Grid */}
         <div className="hidden md:grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {problems.map((problem, index) => <Card key={index} className="p-8 hover:shadow-elegant transition-all duration-300 animate-fade-in-up border-border/50" style={{
+          {problems.map((problem, index) => <Card key={index} className="p-8 hover:shadow-elegant transition-all duration-300 animate-fade-in-up border-border/50 shadow-lg" style={{
           animationDelay: `${index * 0.15}s`
         }}>
               <div className="mb-6">
