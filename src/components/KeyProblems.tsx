@@ -22,7 +22,7 @@ export const KeyProblems = () => {
     skipSnaps: false,
     dragFree: false
   });
-  return <section id="challenges" className="py-20 bg-background scroll-mt-20 group">
+  return <section id="challenges" className="relative -mt-24 pt-32 pb-20 bg-background scroll-mt-20 group z-10">
       <div className="container mx-auto px-4">
         
 
