@@ -4,7 +4,7 @@ import logoImage from "@/assets/site-logo-2.png";
 import demoImage from "@/assets/demo-scenario.png";
 import heroVideo from "@/assets/test.mp4";
 export const HeroNew = () => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+  return <section className="relative h-[92vh] flex items-center justify-center overflow-visible bg-background">
       {/* Video Background */}
       <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover object-center scale-105">
         <source src={heroVideo} type="video/mp4" />
@@ -14,7 +14,7 @@ export const HeroNew = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/20" />
       <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-background/90 via-background/50 to-transparent" />
       <div className="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-background/60 via-background/30 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-transparent" />
       
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 py-20 md:py-32">
