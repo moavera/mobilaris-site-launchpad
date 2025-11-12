@@ -4,17 +4,17 @@ import logoImage from "@/assets/site-logo-2.png";
 import demoImage from "@/assets/demo-scenario.png";
 import heroVideo from "@/assets/test.mp4";
 export const HeroNew = () => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-visible bg-background">
-      {/* Video Background */}
-      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover object-center scale-105">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Video Background - Seamlessly fades into background */}
+      <video autoPlay loop muted playsInline className="absolute inset-0 md:inset-auto md:right-0 md:top-1/2 md:-translate-y-1/2 w-full md:w-[70%] h-full md:h-[70%] object-cover object-center">
         <source src={heroVideo} type="video/mp4" />
       </video>
       
-      {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/20" />
-      <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-background/90 via-background/50 to-transparent" />
-      <div className="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-background/60 via-background/30 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-transparent" />
+      {/* Strong Gradient Overlays - Seamlessly fade video edges into background */}
+      <div className="absolute inset-x-0 top-0 h-64 md:h-80 bg-gradient-to-b from-background via-background/80 to-transparent pointer-events-none z-10" />
+      <div className="absolute inset-x-0 bottom-0 h-64 md:h-80 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none z-10" />
+      <div className="absolute inset-y-0 right-0 left-0 md:left-auto md:right-[70%] w-full md:w-80 bg-gradient-to-r from-background via-background/90 to-transparent pointer-events-none z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/50 to-background/20" />
       
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 py-20 md:py-32">
