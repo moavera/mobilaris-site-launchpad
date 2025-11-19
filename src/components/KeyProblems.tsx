@@ -16,7 +16,7 @@ const problems = [
   },
   {
     icon: FileCheck,
-    title: "Compliance with Legal Requirements",
+    title: "Compliance",
     description: "Meet AFS regulations and industry standards effortlessly. Automated documentation and audit trails keep you compliant.",
   },
 ];
