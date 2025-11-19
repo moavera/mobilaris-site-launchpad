@@ -34,7 +34,7 @@ export const HeroNew = () => {
             {/* Visual Tags */}
             <div className="flex flex-wrap gap-3 mb-10">
               <div className="bg-muted/50 backdrop-blur-sm border border-border rounded-lg px-5 py-2.5">
-                <span className="text-foreground font-medium text-sm flex items-center gap-2"><Truck className="h-4 w-4" /> Vehicles</span>
+                <span className="text-foreground font-medium text-sm flex items-center gap-2"><Truck className="h-4 w-4" />Vehicles & machines</span>
               </div>
               <div className="bg-muted/50 backdrop-blur-sm border border-border rounded-lg px-5 py-2.5">
                 <span className="text-foreground font-medium text-sm">👷 People</span>
