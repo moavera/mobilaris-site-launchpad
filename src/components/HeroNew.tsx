@@ -44,37 +44,15 @@ export const HeroNew = () => {
               </div>
             </div>
 
-            {/* CTAs */}
+            {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-3">
               <Button size="lg" className="text-base px-6 shadow-lg hover:shadow-xl transition-all duration-300" asChild>
-                <a href="mailto:support@mobilaris.se">
-                  Contact us
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-              <Button size="lg" variant="secondary" className="relative text-base px-6 overflow-hidden group border-2 border-primary/50" asChild>
-                <a href="/demo-start" className="relative z-10">
-                  {/* Animated gradient overlay */}
-                  <span className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-[shimmer_3s_ease-in-out_infinite] translate-x-[-200%]" />
+                <a href="/demo-start">
                   Try Demo Site
-                  <Play className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  <Play className="ml-2 h-5 w-5" />
                 </a>
               </Button>
             </div>
-            
-            <style>{`
-              @keyframes shimmer {
-                0% {
-                  transform: translateX(-200%);
-                }
-                95% {
-                  transform: translateX(200%);
-                }
-                100% {
-                  transform: translateX(200%);
-                }
-              }
-            `}</style>
           </div>
 
           {/* Right: Image - Linear Style */}
