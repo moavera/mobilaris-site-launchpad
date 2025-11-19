@@ -1,4 +1,4 @@
-import { Gauge, Thermometer, Wind, Droplet, Activity, Lightbulb, Settings, Fan, Zap, Camera, Database, Building, Wrench, AlertTriangle, Radio } from "lucide-react";
+import { Gauge, Thermometer, Wind, Droplet, Radio, Settings, Fan, Plug } from "lucide-react";
 import { SectionShareButton } from "@/components/SectionShareButton";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -18,202 +18,107 @@ export const SensorIntegration = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
-          {/* Environmental Sensors */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {/* Air Quality */}
           <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Wind className="h-6 w-6 text-primary" />
+            <CardContent className="pt-6 pb-6">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="bg-primary/10 p-4 rounded-full">
+                  <Wind className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">Air Quality</h4>
-                  <p className="text-muted-foreground text-xs">O₂, CO, NO₂, methane, CO₂, PM2.5/PM10</p>
+                  <h4 className="text-lg font-semibold text-foreground mb-2">Air Quality</h4>
+                  <p className="text-muted-foreground text-sm">O₂, CO, NO₂, methane, CO₂, PM2.5/PM10</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
+          {/* Temperature & Humidity */}
           <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Thermometer className="h-6 w-6 text-primary" />
+            <CardContent className="pt-6 pb-6">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="bg-primary/10 p-4 rounded-full">
+                  <Thermometer className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">Temperature & Humidity</h4>
-                  <p className="text-muted-foreground text-xs">Heat stress and condensation detection</p>
+                  <h4 className="text-lg font-semibold text-foreground mb-2">Temperature & Humidity</h4>
+                  <p className="text-muted-foreground text-sm">Heat stress and condensation detection</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
+          {/* Dust Level */}
           <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Droplet className="h-6 w-6 text-primary" />
+            <CardContent className="pt-6 pb-6">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="bg-primary/10 p-4 rounded-full">
+                  <Droplet className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">Dust Level</h4>
-                  <p className="text-muted-foreground text-xs">Worker safety and equipment monitoring</p>
+                  <h4 className="text-lg font-semibold text-foreground mb-2">Dust Level</h4>
+                  <p className="text-muted-foreground text-sm">Worker safety and equipment monitoring</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
+          {/* Gas Detectors */}
           <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Lightbulb className="h-6 w-6 text-primary" />
+            <CardContent className="pt-6 pb-6">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="bg-primary/10 p-4 rounded-full">
+                  <Radio className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">Light Level</h4>
-                  <p className="text-muted-foreground text-xs">Automatic tunnel lighting control</p>
+                  <h4 className="text-lg font-semibold text-foreground mb-2">Gas Detectors</h4>
+                  <p className="text-muted-foreground text-sm">Stationary and wearable detection</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          {/* Safety & Detection */}
+          {/* Machine Status */}
           <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Radio className="h-6 w-6 text-primary" />
+            <CardContent className="pt-6 pb-6">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="bg-primary/10 p-4 rounded-full">
+                  <Settings className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">Gas Detectors</h4>
-                  <p className="text-muted-foreground text-xs">Stationary and wearable detection</p>
+                  <h4 className="text-lg font-semibold text-foreground mb-2">Machine Status</h4>
+                  <p className="text-muted-foreground text-sm">SCADA, OPC UA, MQTT monitoring</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
+          {/* Ventilation Control */}
           <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Activity className="h-6 w-6 text-primary" />
+            <CardContent className="pt-6 pb-6">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="bg-primary/10 p-4 rounded-full">
+                  <Fan className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">Vibration & Seismic</h4>
-                  <p className="text-muted-foreground text-xs">Rock falls and structural monitoring</p>
+                  <h4 className="text-lg font-semibold text-foreground mb-2">Ventilation Control</h4>
+                  <p className="text-muted-foreground text-sm">PLC/SCADA airflow automation</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          {/* Industrial Systems */}
+          {/* Custom */}
           <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Settings className="h-6 w-6 text-primary" />
+            <CardContent className="pt-6 pb-6">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="bg-primary/10 p-4 rounded-full">
+                  <Plug className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">Machine Status</h4>
-                  <p className="text-muted-foreground text-xs">SCADA, OPC UA, MQTT monitoring</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Fan className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">Ventilation Control</h4>
-                  <p className="text-muted-foreground text-xs">PLC/SCADA airflow automation</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Zap className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">Power & Energy</h4>
-                  <p className="text-muted-foreground text-xs">Substations and charging stations</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Database className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">SCADA Systems</h4>
-                  <p className="text-muted-foreground text-xs">Bidirectional data exchange</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Monitoring & Integration */}
-          <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Camera className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">CCTV & Thermal</h4>
-                  <p className="text-muted-foreground text-xs">Visual alarm confirmation</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Building className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">ERP Systems</h4>
-                  <p className="text-muted-foreground text-xs">SAP integration and asset tracking</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Wrench className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">Maintenance Systems</h4>
-                  <p className="text-muted-foreground text-xs">Maximo and Infor EAM integration</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="transition-all hover:shadow-lg">
-            <CardContent className="pt-4 pb-4">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <AlertTriangle className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1">Incident Management</h4>
-                  <p className="text-muted-foreground text-xs">Position-based alerts to control rooms</p>
+                  <h4 className="text-lg font-semibold text-foreground mb-2">Custom</h4>
+                  <p className="text-muted-foreground text-sm">Integrate your own sensors and systems</p>
                 </div>
               </div>
             </CardContent>
