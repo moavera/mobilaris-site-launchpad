@@ -4,294 +4,220 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export const SensorIntegration = () => {
   return (
-    <section id="sensor-integration" className="py-20 md:py-32 bg-background scroll-mt-20 group">
+    <section id="sensor-integration" className="py-12 bg-background scroll-mt-20 group">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+        <div className="max-w-3xl mx-auto text-center mb-8">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Sensor Integration
             </h2>
             <SectionShareButton sectionId="sensor-integration" sectionName="Sensor Integration" />
           </div>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base text-muted-foreground">
             Monitor environmental factors alongside your tracked people and assets for a complete operational view
           </p>
         </div>
 
-        {/* Environmental Sensors */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">Environmental Sensors</h3>
-          <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Wind className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      Air Quality
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Measure O₂, CO, NO₂, methane, CO₂, and dust particles (PM2.5/PM10) with map alerts
-                    </p>
-                  </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+          {/* Environmental Sensors */}
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Wind className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Air Quality</h4>
+                  <p className="text-muted-foreground text-xs">O₂, CO, NO₂, methane, CO₂, PM2.5/PM10</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Thermometer className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      Temperature & Humidity
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Detect heat stress or condensation risks across all zones
-                    </p>
-                  </div>
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Thermometer className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Temperature & Humidity</h4>
+                  <p className="text-muted-foreground text-xs">Heat stress and condensation detection</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Droplet className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      Dust Level
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Monitor dust for worker safety and equipment maintenance
-                    </p>
-                  </div>
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Droplet className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Dust Level</h4>
+                  <p className="text-muted-foreground text-xs">Worker safety and equipment monitoring</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Lightbulb className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      Light Level
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Automatic control of tunnel and area lighting
-                    </p>
-                  </div>
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Lightbulb className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Light Level</h4>
+                  <p className="text-muted-foreground text-xs">Automatic tunnel lighting control</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-        {/* Safety & Detection */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">Safety & Detection</h3>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Radio className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      Gas Detectors
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Stationary or wearable gas detection with instant alerts
-                    </p>
-                  </div>
+          {/* Safety & Detection */}
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Radio className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Gas Detectors</h4>
+                  <p className="text-muted-foreground text-xs">Stationary and wearable detection</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Activity className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      Vibration & Seismic
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Detect rock falls, blasts, or structural instability
-                    </p>
-                  </div>
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Activity className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Vibration & Seismic</h4>
+                  <p className="text-muted-foreground text-xs">Rock falls and structural monitoring</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-        {/* Industrial Systems */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">Industrial Systems</h3>
-          <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Settings className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      Machine Status
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      SCADA, OPC UA, MQTT monitoring for engine, fuel, speed, and errors
-                    </p>
-                  </div>
+          {/* Industrial Systems */}
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Settings className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Machine Status</h4>
+                  <p className="text-muted-foreground text-xs">SCADA, OPC UA, MQTT monitoring</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Fan className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      Ventilation Control
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Auto-adjust airflow via PLC/SCADA based on air quality or personnel
-                    </p>
-                  </div>
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Fan className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Ventilation Control</h4>
+                  <p className="text-muted-foreground text-xs">PLC/SCADA airflow automation</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Zap className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      Power & Energy
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Monitor substations, charging stations, and UPS devices
-                    </p>
-                  </div>
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Zap className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Power & Energy</h4>
+                  <p className="text-muted-foreground text-xs">Substations and charging stations</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Database className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      SCADA Systems
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Bidirectional data exchange for process and equipment data
-                    </p>
-                  </div>
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Database className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">SCADA Systems</h4>
+                  <p className="text-muted-foreground text-xs">Bidirectional data exchange</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-        {/* Monitoring & Integration */}
-        <div>
-          <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">Monitoring & Integration</h3>
-          <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Camera className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      CCTV & Thermal
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Visual confirmation of alarms or movements on the map
-                    </p>
-                  </div>
+          {/* Monitoring & Integration */}
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Camera className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">CCTV & Thermal</h4>
+                  <p className="text-muted-foreground text-xs">Visual alarm confirmation</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Building className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      ERP Systems
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Link asset locations with maintenance or production data (SAP)
-                    </p>
-                  </div>
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Building className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">ERP Systems</h4>
+                  <p className="text-muted-foreground text-xs">SAP integration and asset tracking</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Wrench className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      Maintenance Systems
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Locate equipment due for service (Maximo, Infor EAM)
-                    </p>
-                  </div>
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Wrench className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Maintenance Systems</h4>
+                  <p className="text-muted-foreground text-xs">Maximo and Infor EAM integration</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="transition-all hover:shadow-lg">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <AlertTriangle className="h-8 w-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      Incident Management
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Position-based alerts to safety or control room teams
-                    </p>
-                  </div>
+          <Card className="transition-all hover:shadow-lg">
+            <CardContent className="pt-4 pb-4">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <AlertTriangle className="h-6 w-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-1">Incident Management</h4>
+                  <p className="text-muted-foreground text-xs">Position-based alerts to control rooms</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
