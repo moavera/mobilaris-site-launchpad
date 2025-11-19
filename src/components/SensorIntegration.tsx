@@ -1,4 +1,4 @@
-import { Gauge, Thermometer, Wind, Droplet, Radio, Settings, Fan, Plug } from "lucide-react";
+import { Gauge, Thermometer, Wind, Droplet, Radio, Settings, Fan, Puzzle } from "lucide-react";
 import { SectionShareButton } from "@/components/SectionShareButton";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -114,7 +114,7 @@ export const SensorIntegration = () => {
             <CardContent className="pt-6 pb-6">
               <div className="flex flex-col items-center text-center gap-4">
                 <div className="bg-primary/10 p-4 rounded-full">
-                  <Plug className="h-8 w-8 text-primary" />
+                  <Puzzle className="h-8 w-8 text-primary" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-foreground mb-2">Custom</h4>
