@@ -1,14 +1,12 @@
 import { Gauge, Thermometer, Wind, Droplet, Radio, Settings, Fan, Puzzle } from "lucide-react";
 import { SectionShareButton } from "@/components/SectionShareButton";
 import { Card, CardContent } from "@/components/ui/card";
-
 export const SensorIntegration = () => {
-  return (
-    <section id="sensor-integration" className="py-12 bg-background scroll-mt-20 group">
+  return <section id="sensor-integration" className="py-12 bg-background scroll-mt-20 group">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-3xl font-bold text-foreground md:text-5xl">
               Sensor Integration
             </h2>
             <SectionShareButton sectionId="sensor-integration" sectionName="Sensor Integration" />
@@ -125,6 +123,5 @@ export const SensorIntegration = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
