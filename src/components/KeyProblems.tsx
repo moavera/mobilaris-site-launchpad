@@ -11,7 +11,7 @@ const problems = [
   },
   {
     icon: Database,
-    title: "Operational Efficiency",
+    title: "Productivity",
     description: "Gain total control of your operations. Locate and manage thousands of assets in seconds, eliminate downtime caused by misplaced equipment, and optimize resource utilization across your site.",
   },
   {
