@@ -31,7 +31,7 @@ export const ContactSection = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="text-lg px-8"
+              className="text-lg px-8 border-2 border-primary/30 bg-primary/5 hover:bg-primary/10 hover:border-primary/40"
               asChild
             >
               <a href="mailto:support@mobilaris.se">
