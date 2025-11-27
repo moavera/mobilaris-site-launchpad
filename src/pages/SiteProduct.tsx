@@ -29,13 +29,12 @@ const SiteProduct = () => {
       <Environments />
       
       
-      
+      <Evolution />
       <DeploymentOptions />
       <GettingStarted />
       <TechnologyIntegration />
       <SecurityFeatures />
       <PrivacySection />
-      <Evolution />
       
       
       <ContactSection />
