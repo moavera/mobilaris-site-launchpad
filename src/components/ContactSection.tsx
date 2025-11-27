@@ -20,7 +20,7 @@ export const ContactSection = () => {
           <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <Button 
               size="lg" 
-              className="text-base px-6 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 text-base px-6"
               asChild
             >
               <a href="/demo-start">
@@ -29,8 +29,9 @@ export const ContactSection = () => {
               </a>
             </Button>
             <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 shadow-elegant text-lg px-8"
+              size="lg"
+              variant="outline"
+              className="text-lg px-8"
               asChild
             >
               <a href="mailto:support@mobilaris.se">
