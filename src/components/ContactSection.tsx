@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
+import { Mail, Play } from "lucide-react";
 import { SectionShareButton } from "@/components/SectionShareButton";
 
 export const ContactSection = () => {
@@ -17,7 +17,17 @@ export const ContactSection = () => {
             </p>
           </div>
 
-          <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <Button 
+              size="lg" 
+              className="text-base px-6 shadow-lg hover:shadow-xl transition-all duration-300"
+              asChild
+            >
+              <a href="/demo-start">
+                Try Demo Site™
+                <Play className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 shadow-elegant text-lg px-8"
