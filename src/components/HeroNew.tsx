@@ -24,7 +24,7 @@ export const HeroNew = () => {
             {/* Hook Question */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-[1.15] tracking-tight">
               <span className="block whitespace-nowrap">Real-time situational awareness</span>
-              <span className="block">for <span className="text-primary">mining</span> and critical infrastructure</span>
+              <span className="block whitespace-nowrap">for <span className="text-primary">mining</span> and critical infrastructure</span>
             </h1>
             
             {/* Key Message */}
