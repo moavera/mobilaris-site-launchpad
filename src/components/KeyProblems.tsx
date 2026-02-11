@@ -39,9 +39,9 @@ export const KeyProblems = () => {
             </h2>
             <SectionShareButton sectionId="challenges" sectionName="Challenges" />
           </div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Three critical problems that Mobilaris Site™ addresses for industrial operations
-          </p>
+          
+
+
         </div>
 
         {/* Mobile Carousel */}
