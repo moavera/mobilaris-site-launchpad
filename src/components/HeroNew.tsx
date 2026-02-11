@@ -22,8 +22,8 @@ export const HeroNew = () => {
           {/* Left: Text and Buttons */}
           <div className="max-w-2xl animate-fade-in-up">
             {/* Hook Question */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-[1.15] tracking-tight">
-              <span className="block">Real-time situational awareness</span>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-[1.15] tracking-tight">
+              <span className="block whitespace-nowrap">Real-time situational awareness</span>
               <span className="block">for <span className="text-primary">mining</span> and critical infrastructure</span>
             </h1>
             
