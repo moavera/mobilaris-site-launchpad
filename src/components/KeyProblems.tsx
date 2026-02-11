@@ -49,22 +49,19 @@ export const KeyProblems = () => {
               key={index}
               className="p-8 md:p-10 border-border/50 transition-all duration-300"
             >
-              <div className="flex items-center gap-3 mb-2">
-                <industry.icon className="w-5 h-5 text-muted-foreground" />
-                <span className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+              <div className="flex items-center gap-3 mb-6">
+                <industry.icon className="w-6 h-6 text-foreground" />
+                <h3 className="text-2xl md:text-3xl font-bold">
                   {industry.label}
-                </span>
+                </h3>
               </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-4">
-                {industry.headline}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
                 {industry.copy}
               </p>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {industry.benefits.map((benefit, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                  <li key={i} className="flex items-start gap-2.5 text-base text-muted-foreground">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                     {benefit}
                   </li>
                 ))}
