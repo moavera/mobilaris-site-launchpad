@@ -28,8 +28,8 @@ export const HeroNew = () => {
             </h1>
             
             {/* Key Message */}
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">Mobilaris Site™ provides a real-time overview of people, vehicles and assets – helping mining and industrial operations work safer, smarter and more efficiently.
-            <span className="text-foreground font-semibold">Mobilaris Site™</span> - real-time positioning and 3D visualization eliminates guess-work during critical operations
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+              Mobilaris Site™ provides a real-time overview of people, vehicles and assets – helping mining and industrial operations work safer, smarter and more efficiently. Real-time positioning and 3D visualization eliminates guesswork during critical operations.
             </p>
 
             {/* Visual Tags */}
