@@ -74,22 +74,22 @@ export const KeyProblems = () => {
 
         {/* Desktop Grid */}
         <div className="hidden md:grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {problems.map((problem, index) =>
-          <Card
-            key={index}
-            className="p-8 hover:shadow-elegant transition-all duration-300 animate-fade-in-up border-border/50"
-            style={{ animationDelay: `${index * 0.15}s` }}>
+          {problems.map((problem, index) => {}
 
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
-                  <problem.icon className="w-8 h-8 text-white" />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold mb-4">{problem.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {problem.description}
-              </p>
-            </Card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           )}
         </div>
       </div>
