@@ -4,6 +4,7 @@ import { useSectionShare } from "@/hooks/use-section-share";
 import { KeyProblems } from "@/components/KeyProblems";
 import { MobileFirst } from "@/components/MobileFirst";
 import { Environments } from "@/components/Environments";
+import { ValueProposition } from "@/components/ValueProposition";
 import { EnvironmentLayers3D } from "@/components/EnvironmentLayers3D";
 import { DeploymentOptions } from "@/components/DeploymentOptions";
 import { GettingStarted } from "@/components/GettingStarted";
@@ -24,6 +25,7 @@ const SiteProduct = () => {
       
       <KeyProblems />
       <Environments />
+      <ValueProposition />
       <WhatWeTrack />
       <SensorIntegration />
       <MobileFirst />
