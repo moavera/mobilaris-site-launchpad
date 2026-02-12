@@ -44,7 +44,7 @@ export const KeyProblems = () => {
                 </p>
                 <a
                   href="#solutions"
-                  className="inline-flex items-center gap-2 text-white font-semibold underline decoration-primary decoration-2 underline-offset-4 hover:gap-3 transition-all duration-200"
+                  className="inline-flex items-center gap-2 text-white font-semibold underline decoration-primary decoration-2 underline-offset-8 hover:gap-3 transition-all duration-200"
                 >
                   Explore solutions
                   <ArrowRight className="h-5 w-5" />
