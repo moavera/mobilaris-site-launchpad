@@ -1,32 +1,18 @@
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Mountain, Factory } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SectionShareButton } from "@/components/SectionShareButton";
+import miningImage from "@/assets/mining-illustration.png";
+import infrastructureImage from "@/assets/infrastructure-illustration.png";
 
 const industries = [
   {
-    icon: Mountain,
     label: "Mining",
-    headline: "Built for complex mining environments",
     copy: "Mobilaris Site gives mining operations full real-time visibility of personnel, vehicles, and critical assets – both above and below ground.",
-    benefits: [
-      "Real-time positioning underground",
-      "Evacuation and incident support",
-      "Improved safety and risk reduction",
-      "More efficient production and planning",
-    ],
+    image: miningImage,
   },
   {
-    icon: Factory,
-    label: "Critical Infrastructure",
-    headline: "Designed for demanding industrial sites",
+    label: "Critical infrastructure",
     copy: "For factories, energy facilities and other complex industrial sites that require high levels of safety, coordination and operational control.",
-    benefits: [
-      "Coordination of people and vehicles",
-      "Improved compliance and work environment",
-      "Faster operational decision-making",
-      "Reduced downtime",
-    ],
+    image: infrastructureImage,
   },
 ];
 
@@ -42,43 +28,39 @@ export const KeyProblems = () => {
             <SectionShareButton sectionId="challenges" sectionName="Challenges" />
           </div>
         </div>
-        {/* Industry Cards */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto mt-12">
+
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {industries.map((industry, index) => (
-            <Card
+            <div
               key={index}
-              className="p-8 md:p-10 border-border/50 transition-all duration-300"
+              className="rounded-xl border border-border/30 bg-card overflow-hidden transition-all duration-300"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <industry.icon className="w-6 h-6 text-foreground" />
-                <h3 className="text-2xl md:text-3xl font-bold">
+              <div className="p-8 md:p-10">
+                <h3 className="text-2xl md:text-3xl font-bold mb-5">
                   {industry.label}
                 </h3>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+                  {industry.copy}
+                </p>
+                <a
+                  href="#solutions"
+                  className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-200"
+                >
+                  Explore solutions
+                  <ArrowRight className="h-5 w-5" />
+                </a>
               </div>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-                {industry.copy}
-              </p>
-              <ul className="space-y-3">
-                {industry.benefits.map((benefit, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-base text-muted-foreground">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-            </Card>
+              <div className="px-4 pb-0">
+                <img
+                  src={industry.image}
+                  alt={industry.label}
+                  className="w-full h-auto object-cover rounded-t-lg"
+                />
+              </div>
+            </div>
           ))}
         </div>
-
-        {/* CTA */}
-        <div className="flex justify-center mt-12">
-          <Button size="lg" className="text-base px-6" asChild>
-            <a href="#solutions">
-              Explore our solutions
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
-        </div>
       </div>
-    </section>);
+    </section>
+  );
 };
