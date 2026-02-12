@@ -23,10 +23,10 @@ const SiteProduct = () => {
       <HeroNew />
       
       <KeyProblems />
+      <Environments />
       <WhatWeTrack />
       <SensorIntegration />
       <MobileFirst />
-      <Environments />
       
       
       <Evolution />
