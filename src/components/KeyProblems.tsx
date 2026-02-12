@@ -33,7 +33,7 @@ export const KeyProblems = () => {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="rounded-xl border border-border/30 bg-card overflow-hidden transition-all duration-300"
+              className="rounded-xl border border-border/30 bg-[#232426] overflow-hidden transition-all duration-300"
             >
               <div className="p-8 md:p-10">
                 <h3 className="text-2xl md:text-3xl font-bold mb-5">
