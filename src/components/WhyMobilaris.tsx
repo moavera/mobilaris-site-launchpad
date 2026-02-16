@@ -53,7 +53,7 @@ export const WhyMobilaris = () => {
             <Link
               to="/why-mobilaris-site"
               key={card.title}
-              className="rounded-xl border border-border/30 bg-[#232426] p-8 transition-all duration-300 hover:border-primary/50 group block no-underline"
+              className="rounded-xl border border-border/30 bg-[#181A21] p-8 transition-all duration-300 hover:border-primary/50 group block no-underline"
             >
               <div className="flex items-start justify-between">
                 <card.icon className="h-8 w-8 text-primary mb-5" />
