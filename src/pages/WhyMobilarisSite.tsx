@@ -7,6 +7,7 @@ import { TechnologyIntegration } from "@/components/TechnologyIntegration";
 import { SecurityFeatures } from "@/components/SecurityFeatures";
 import { PrivacySection } from "@/components/PrivacySection";
 import { Gauge, Puzzle, Rocket, Settings, Smartphone, Users } from "lucide-react";
+import heroImage from "@/assets/why-mobilaris-hero.png";
 
 const sections = [
   {
@@ -51,16 +52,31 @@ const WhyMobilarisSite = () => {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <section className="pt-40 pb-16 md:pb-24 bg-background">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Why <span className="text-foreground font-bold">Mobilaris Site™</span>
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Discover why leading industrial operations trust Mobilaris Site for real-time situational awareness.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-xl">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Why <span className="text-foreground font-bold">Mobilaris Site™</span>
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Discover why leading industrial operations trust Mobilaris Site for real-time situational awareness, safety and operational efficiency.
+              </p>
+            </div>
+            <div className="relative lg:pl-8">
+              <img
+                src={heroImage}
+                alt="Mobilaris Site dashboard showing real-time map overview"
+                className="w-full h-auto rounded-xl"
+              />
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
 
           <div className="space-y-12 max-w-4xl mx-auto">
             {sections.map((section) => (
