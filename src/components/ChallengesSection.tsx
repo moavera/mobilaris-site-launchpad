@@ -1,28 +1,4 @@
 import { SectionShareButton } from "./SectionShareButton";
-import { AlertTriangle, Clock, Eye, Radio } from "lucide-react";
-
-const challenges = [
-  {
-    icon: AlertTriangle,
-    title: "Safety Blind Spots",
-    description: "Without real-time visibility, hazardous situations go undetected until it's too late.",
-  },
-  {
-    icon: Clock,
-    title: "Delayed Response Times",
-    description: "Manual processes slow down emergency response and critical decision-making.",
-  },
-  {
-    icon: Eye,
-    title: "Limited Situational Awareness",
-    description: "Fragmented data sources make it hard to see the full operational picture.",
-  },
-  {
-    icon: Radio,
-    title: "Poor Coordination",
-    description: "Disconnected teams and systems lead to inefficiencies and miscommunication.",
-  },
-];
 
 export const ChallengesSection = () => {
   return (
@@ -35,19 +11,15 @@ export const ChallengesSection = () => {
           <SectionShareButton sectionId="challenges" sectionName="Challenges" />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {challenges.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-xl border border-border/30 bg-[#232426] p-8 transition-all duration-300"
-            >
-              <item.icon className="h-8 w-8 text-primary mb-5" />
-              <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          ))}
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="rounded-xl bg-[#232426] border border-border/30 aspect-video flex items-center justify-center">
+            <span className="text-muted-foreground text-sm">Image placeholder</span>
+          </div>
+          <div>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Safety and Emergency management
+            </h3>
+          </div>
         </div>
       </div>
     </section>
