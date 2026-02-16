@@ -7,6 +7,7 @@ const cards = [
     icon: Gauge,
     title: "Sensor Integration",
     description: "Monitor environmental factors alongside tracked people and assets for a complete operational view.",
+    link: "/why-mobilaris-site#sensor-integration",
   },
   {
     icon: Puzzle,
@@ -51,7 +52,7 @@ export const WhyMobilaris = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {cards.map((card) => (
             <Link
-              to="/why-mobilaris-site"
+              to={card.link || "/why-mobilaris-site"}
               key={card.title}
               className="rounded-xl border border-border/30 bg-[#181A21] p-8 transition-all duration-300 hover:border-primary/50 group block no-underline"
             >
