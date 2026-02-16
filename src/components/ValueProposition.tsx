@@ -66,11 +66,11 @@ export const ValueProposition = () => {
             >
               <card.icon className="h-8 w-8 text-primary mb-5" />
               <h3 className="text-xl font-bold mb-4">{card.title}</h3>
-              <ul className="space-y-3">
+              <ul className="space-y-3 list-disc list-inside">
                 {card.points.map((point) => (
                   <li
                     key={point}
-                    className="text-sm text-muted-foreground leading-relaxed"
+                    className="text-base text-muted-foreground leading-relaxed"
                   >
                     {point}
                   </li>
