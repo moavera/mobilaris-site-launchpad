@@ -5,7 +5,7 @@ const cards = [
   {
     icon: Shield,
     title: "Improve Safety",
-    description: "Real-time awareness, faster emergency response and better evacuation coordination.",
+    description: "Real-time awareness for faster emergency response.",
   },
   {
     icon: Gauge,
