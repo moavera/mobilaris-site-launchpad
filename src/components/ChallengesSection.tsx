@@ -41,6 +41,21 @@ export const ChallengesSection = () => {
             <img src={emergencyDashboard} alt="Asset tracking dashboard showing vehicle and equipment locations" className="w-full h-auto" />
           </div>
         </div>
+
+        <div className="grid md:grid-cols-2 gap-8 items-center mt-16">
+          <div className="rounded-xl overflow-hidden">
+            <img src={emergencyDashboard} alt="Asset tracking dashboard" className="w-full h-auto" />
+          </div>
+          <div>
+            <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+              Asset Tracking
+            </h3>
+            <p className="text-muted-foreground text-xl leading-relaxed">
+              Track the location and status of vehicles, equipment and critical assets across your entire operation.
+              Optimize utilization, reduce downtime and ensure the right resources are always where they're needed.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
