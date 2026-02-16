@@ -60,7 +60,7 @@ export const ChallengesSection = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center mt-16">
           <div>
             <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-              Sensor Integration
+              Vehicle and fleet visibility
             </h3>
             <p className="text-muted-foreground text-xl leading-relaxed">
               Connect environmental and equipment sensors to gain a unified view of conditions across your site.
