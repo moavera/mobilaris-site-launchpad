@@ -55,22 +55,20 @@ const WhyMobilarisSite = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="max-w-xl">
+          <div className="text-center mb-12">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 Why <span className="text-foreground font-bold">Mobilaris Site™</span>
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 Discover why leading industrial operations trust Mobilaris Site for real-time situational awareness, safety and operational efficiency.
               </p>
-            </div>
-            <div className="relative lg:pl-8">
+          </div>
+          <div className="max-w-4xl mx-auto">
               <img
                 src={heroImage}
                 alt="Mobilaris Site dashboard showing real-time map overview"
                 className="w-full h-auto rounded-xl"
               />
-            </div>
           </div>
         </div>
       </section>
