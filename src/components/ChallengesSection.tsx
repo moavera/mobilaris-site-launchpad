@@ -30,7 +30,7 @@ export const ChallengesSection = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center mt-16">
           <div>
             <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-              Asset Tracking
+              Personnel and workgroup coordination
             </h3>
             <p className="text-muted-foreground text-xl leading-relaxed">
               Track the location and status of vehicles, equipment and critical assets across your entire operation.
