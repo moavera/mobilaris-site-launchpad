@@ -31,7 +31,7 @@ export const ValueProposition = () => {
         <div className="mb-16">
           <div className="flex items-start gap-4 mb-6">
             <h2 className="text-5xl leading-tight">
-              Gain real-time control across your entire site
+              Gain real-time control<br />across your entire site
             </h2>
             <SectionShareButton sectionId="value" sectionName="Value Proposition" />
           </div>
