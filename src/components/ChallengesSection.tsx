@@ -1,5 +1,6 @@
 import { SectionShareButton } from "./SectionShareButton";
 import emergencyDashboard from "@/assets/emergency-dashboard.png";
+import iphoneImage from "@/assets/iphone.png";
 
 export const ChallengesSection = () => {
   return (
@@ -38,7 +39,7 @@ export const ChallengesSection = () => {
             </p>
           </div>
           <div className="rounded-xl overflow-hidden">
-            <img src={emergencyDashboard} alt="Asset tracking dashboard showing vehicle and equipment locations" className="w-full h-auto" />
+            <img src={iphoneImage} alt="Mobile app showing personnel tracking and workgroup coordination" className="w-full h-auto" />
           </div>
         </div>
 
