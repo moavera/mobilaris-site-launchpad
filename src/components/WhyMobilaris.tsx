@@ -13,6 +13,7 @@ const cards = [
     icon: Puzzle,
     title: "Technology Agnostic Platform",
     description: "Integrate any positioning technology — GPS, BLE, RFID, UWB, Wi-Fi, LiDAR — in one unified platform.",
+    link: "/why-mobilaris-site#technology",
   },
   {
     icon: Rocket,
@@ -23,11 +24,13 @@ const cards = [
     icon: Settings,
     title: "Flexible Deployment Solutions",
     description: "Deploy in the cloud for speed or on-premises for full control — with standardized containers and unified auth.",
+    link: "/why-mobilaris-site#deployment",
   },
   {
     icon: Smartphone,
     title: "Work on the Move",
     description: "Access real-time data, notifications, and asset tracking from anywhere with our mobile app for iOS and Android.",
+    link: "/why-mobilaris-site#mobile-access",
   },
   {
     icon: Users,
