@@ -1,6 +1,7 @@
 import { SectionShareButton } from "./SectionShareButton";
 import emergencyDashboard from "@/assets/emergency-dashboard.png";
 import iphoneImage from "@/assets/iphone.png";
+import mobildesktopImage from "@/assets/mobildesktop.png";
 
 export const ChallengesSection = () => {
   return (
@@ -45,7 +46,7 @@ export const ChallengesSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 items-center mt-16">
           <div className="rounded-xl overflow-hidden">
-            <img src={emergencyDashboard} alt="Asset tracking dashboard" className="w-full h-auto" />
+            <img src={mobildesktopImage} alt="Asset tracking dashboard showing tag board and mobile views" className="w-full h-auto" />
           </div>
           <div>
             <h3 className="text-2xl md:text-3xl font-semibold mb-4">
