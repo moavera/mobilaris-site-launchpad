@@ -20,6 +20,10 @@ export const ChallengesSection = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Safety and Emergency management
             </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Get instant visibility of people, vehicles and critical assets during emergencies.
+              Verify evacuation status in real time and support faster, safer decision-making when every second counts.
+            </p>
           </div>
         </div>
       </div>
