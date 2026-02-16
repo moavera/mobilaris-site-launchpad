@@ -61,7 +61,7 @@ const WhyMobilarisSite = () => {
                 Why <span className="text-foreground font-bold">Mobilaris Site™</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                Discover why leading industrial operations trust Mobilaris Site for real-time situational awareness, safety and operational efficiency.
+                Discover why industrial operations trust Mobilaris Site for real-time situational awareness, safety and operational efficiency.
               </p>
           </div>
           <div className="max-w-4xl mx-auto">
