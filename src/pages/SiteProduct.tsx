@@ -8,7 +8,7 @@ import { ValueProposition } from "@/components/ValueProposition";
 import { ChallengesSection } from "@/components/ChallengesSection";
 import { WhyMobilaris } from "@/components/WhyMobilaris";
 import { GettingStarted } from "@/components/GettingStarted";
-import { WhatWeTrack } from "@/components/WhatWeTrack";
+
 
 import { Partners } from "@/components/Partners";
 import { ContactSection } from "@/components/ContactSection";
@@ -24,7 +24,7 @@ const SiteProduct = () => {
       <ValueProposition />
       <ChallengesSection />
       <WhyMobilaris />
-      <WhatWeTrack />
+      
       
       
       <GettingStarted />
