@@ -6,14 +6,8 @@ import { MobileFirst } from "@/components/MobileFirst";
 import { Environments } from "@/components/Environments";
 import { ValueProposition } from "@/components/ValueProposition";
 import { WhyMobilaris } from "@/components/WhyMobilaris";
-import { EnvironmentLayers3D } from "@/components/EnvironmentLayers3D";
-import { DeploymentOptions } from "@/components/DeploymentOptions";
 import { GettingStarted } from "@/components/GettingStarted";
-import { TechnologyIntegration } from "@/components/TechnologyIntegration";
-import { SecurityFeatures } from "@/components/SecurityFeatures";
-import { PrivacySection } from "@/components/PrivacySection";
 import { WhatWeTrack } from "@/components/WhatWeTrack";
-import { SensorIntegration } from "@/components/SensorIntegration";
 import { Evolution } from "@/components/Evolution";
 import { Partners } from "@/components/Partners";
 import { ContactSection } from "@/components/ContactSection";
@@ -29,17 +23,9 @@ const SiteProduct = () => {
       <ValueProposition />
       <WhyMobilaris />
       <WhatWeTrack />
-      <SensorIntegration />
-      <MobileFirst />
-      
       
       <Evolution />
-      <DeploymentOptions />
       <GettingStarted />
-      <TechnologyIntegration />
-      <SecurityFeatures />
-      <PrivacySection />
-      
       
       <ContactSection />
       <Footer />
