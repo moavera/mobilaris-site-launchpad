@@ -5,6 +5,7 @@ import { KeyProblems } from "@/components/KeyProblems";
 import { MobileFirst } from "@/components/MobileFirst";
 import { Environments } from "@/components/Environments";
 import { ValueProposition } from "@/components/ValueProposition";
+import { ChallengesSection } from "@/components/ChallengesSection";
 import { WhyMobilaris } from "@/components/WhyMobilaris";
 import { GettingStarted } from "@/components/GettingStarted";
 import { WhatWeTrack } from "@/components/WhatWeTrack";
@@ -21,6 +22,7 @@ const SiteProduct = () => {
       <KeyProblems />
       <Environments />
       <ValueProposition />
+      <ChallengesSection />
       <WhyMobilaris />
       <WhatWeTrack />
       
