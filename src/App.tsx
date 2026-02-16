@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SiteProduct from "./pages/SiteProduct";
 import DemoStart from "./pages/DemoStart";
+import WhyMobilarisSite from "./pages/WhyMobilarisSite";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -18,6 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<SiteProduct />} />
           <Route path="/demo-start" element={<DemoStart />} />
+          <Route path="/why-mobilaris-site" element={<WhyMobilarisSite />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
