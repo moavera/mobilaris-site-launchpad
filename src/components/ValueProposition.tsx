@@ -10,7 +10,7 @@ const cards = [
   {
     icon: Gauge,
     title: "Operational Efficiency",
-    description: "Optimize vehicle movement, reduce bottlenecks and improve shift coordination.",
+    description: "Clear visibility of vehicle movement and coordination.",
   },
   {
     icon: Zap,
