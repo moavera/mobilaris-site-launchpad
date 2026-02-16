@@ -6,7 +6,7 @@ import environmentUnderground from "@/assets/environment-underground.png";
 const environments = [{
   icon: Layers,
   title: "Underground",
-  description: "Navigate complex tunnel systems and underground facilities with precise positioning and real-time tracking, even in GPS-denied environments.",
+  description: "",
   gradient: "from-purple-500/20 to-blue-500/20",
   image: environmentUnderground
 }, {
