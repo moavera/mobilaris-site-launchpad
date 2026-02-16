@@ -56,21 +56,6 @@ export const ChallengesSection = () => {
             </p>
           </div>
         </div>
-
-        <div className="grid md:grid-cols-2 gap-8 items-center mt-16">
-          <div>
-            <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-              Vehicle and fleet visibility
-            </h3>
-            <p className="text-muted-foreground text-xl leading-relaxed">
-              Connect environmental and equipment sensors to gain a unified view of conditions across your site.
-              Detect hazards early and respond proactively to keep operations safe and efficient.
-            </p>
-          </div>
-          <div className="rounded-xl overflow-hidden">
-            <img src={emergencyDashboard} alt="Sensor integration dashboard" className="w-full h-auto" />
-          </div>
-        </div>
       </div>
     </section>
   );
