@@ -1,5 +1,6 @@
 import { SectionShareButton } from "./SectionShareButton";
 import emergencyDashboard from "@/assets/emergency-dashboard.png";
+import iphoneImage from "@/assets/iphone.png";
 
 export const ChallengesSection = () => {
   return (
