@@ -42,13 +42,6 @@ export const KeyProblems = () => {
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
                   {industry.copy}
                 </p>
-                <a
-                  href="#solutions"
-                  className="inline-flex items-center gap-2 text-white font-semibold underline decoration-primary decoration-2 underline-offset-8 hover:gap-3 transition-all duration-200"
-                >
-                  Explore solutions
-                  <ArrowRight className="h-5 w-5" />
-                </a>
               </div>
               <div className="px-4 pb-0">
                 <img
