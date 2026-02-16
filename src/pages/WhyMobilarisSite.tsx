@@ -53,7 +53,7 @@ const WhyMobilarisSite = () => {
     <main className="min-h-screen">
       <Navigation />
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-background">
+      <section className="relative pt-40 pb-16 md:pt-52 md:pb-24 overflow-hidden bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
