@@ -29,7 +29,7 @@ export const ChallengesSection = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-center mt-24">
+        <div className="grid md:grid-cols-2 gap-8 items-center mt-32">
           <div>
             <h3 className="text-2xl md:text-3xl font-semibold mb-4">
               Personnel and workgroup coordination
@@ -44,7 +44,7 @@ export const ChallengesSection = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-center mt-24">
+        <div className="grid md:grid-cols-2 gap-8 items-center mt-32">
           <div className="rounded-xl overflow-hidden">
             <img src={mobildesktopImage} alt="Asset tracking dashboard showing tag board and mobile views" className="w-full h-auto" />
           </div>
