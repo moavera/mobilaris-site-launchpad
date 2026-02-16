@@ -20,7 +20,7 @@ const cards = [
   {
     icon: ClipboardCheck,
     title: "Compliance & Reporting",
-    description: "Historical data traceability, documentation for audits and improved accountability.",
+    description: "Traceable historical data for audits.",
   },
 ];
 
