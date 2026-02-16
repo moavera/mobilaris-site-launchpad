@@ -85,7 +85,7 @@ const WhyMobilarisSite = () => {
               >
                 <div className="flex items-center gap-4 mb-4">
                   <section.icon className="h-10 w-10 text-primary flex-shrink-0" />
-                  <h2 className="text-2xl md:text-3xl font-bold">{section.title}</h2>
+                  <h2>{section.title}</h2>
                 </div>
                 <p className="text-muted-foreground mb-4">{section.description}</p>
                 <p className="text-sm text-muted-foreground/80 leading-relaxed">{section.details}</p>

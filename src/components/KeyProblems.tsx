@@ -22,7 +22,7 @@ export const KeyProblems = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <h2 className="text-3xl md:text-5xl font-bold">
+            <h2 className="text-3xl md:text-5xl font-semibold">
               Built for Complex Operations
             </h2>
             <SectionShareButton sectionId="challenges" sectionName="Challenges" />

@@ -3,7 +3,7 @@ export const PrivacySection = () => {
   return <section className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="mb-4">
             Privacy-First Tracking
           </h2>
           <p className="text-muted-foreground text-lg">Worker privacy is protected during normal operations, but safety comes first when emergencies strike.</p>

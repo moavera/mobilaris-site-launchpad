@@ -32,7 +32,7 @@ export const ProductIntro = () => {
           <p className="text-primary text-sm font-semibold uppercase tracking-wider mb-4">
             Introducing Mobilaris Site™
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 max-w-4xl mx-auto">
+          <h2 className="mb-6 max-w-4xl mx-auto">
             Real-time site coordination and decision support solutions for real industry needs
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">

@@ -32,7 +32,7 @@ export const Evolution = () => {
           </div>
           
           <div className="flex items-center justify-center gap-2 mb-8">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-tight">
+            <h2 className="leading-tight">
               Mobilaris 2.0 - Site™
             </h2>
             <SectionShareButton sectionId="evolution" sectionName="Evolution" />

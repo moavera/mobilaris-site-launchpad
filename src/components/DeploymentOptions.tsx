@@ -8,7 +8,7 @@ export const DeploymentOptions = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center">Flexible Deployment Solutions</h2>
+            <h2 className="text-center">Flexible Deployment Solutions</h2>
             <SectionShareButton sectionId="deployment" sectionName="Deployment" />
           </div>
           <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
