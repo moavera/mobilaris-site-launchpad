@@ -9,7 +9,7 @@ export const ContactSection = () => {
         <div className="max-w-2xl mx-auto text-center">
           <div className="mb-12 animate-fade-in-up">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <h2 className="text-3xl md:text-5xl font-bold">Want to know more?</h2>
+              <h2>Want to know more?</h2>
               <SectionShareButton sectionId="contact" sectionName="Contact" />
             </div>
             <p className="text-lg text-muted-foreground">

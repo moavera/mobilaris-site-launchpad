@@ -41,8 +41,8 @@ export const WhyMobilaris = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <h2 className="text-3xl md:text-5xl font-bold">
-              Why <span className="text-foreground font-bold">Mobilaris Site™</span>
+            <h2>
+              Why <span className="text-foreground font-semibold">Mobilaris Site™</span>
             </h2>
             <SectionShareButton sectionId="why-mobilaris" sectionName="Why Mobilaris Site" />
           </div>

@@ -22,7 +22,7 @@ export const GettingStarted = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <h2 className="text-3xl md:text-5xl font-bold">
+            <h2>
               What do I need?
             </h2>
             <SectionShareButton sectionId="getting-started" sectionName="Getting Started" />

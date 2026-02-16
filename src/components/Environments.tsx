@@ -30,7 +30,7 @@ export const Environments = () => {
         {/* Two-column header layout */}
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="flex items-start gap-4">
-            <h2 className="text-5xl md:text-6xl font-bold leading-tight">Positioning Everywhere</h2>
+            <h2 className="leading-tight">Positioning Everywhere</h2>
             <SectionShareButton sectionId="environments" sectionName="Environments" />
           </div>
           <div className="flex items-center">

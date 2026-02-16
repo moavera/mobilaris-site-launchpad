@@ -46,7 +46,7 @@ export const SecurityFeatures = () => {
             <span className="text-sm font-semibold">Enterprise-Grade Security</span>
           </div>
           <div className="flex items-center justify-center gap-2 mb-6">
-            <h2 className="text-3xl md:text-5xl font-bold">
+            <h2>
               Built on Modern Standards
             </h2>
             <SectionShareButton sectionId="security" sectionName="Security" />

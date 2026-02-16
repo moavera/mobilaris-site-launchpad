@@ -22,7 +22,7 @@ export const Partners = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
+            <h2>
               Our Partners
             </h2>
             <SectionShareButton sectionId="partners" sectionName="Partners" />
