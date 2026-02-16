@@ -1,5 +1,11 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { SensorIntegration } from "@/components/SensorIntegration";
+import { MobileFirst } from "@/components/MobileFirst";
+import { DeploymentOptions } from "@/components/DeploymentOptions";
+import { TechnologyIntegration } from "@/components/TechnologyIntegration";
+import { SecurityFeatures } from "@/components/SecurityFeatures";
+import { PrivacySection } from "@/components/PrivacySection";
 import { Gauge, Puzzle, Rocket, Settings, Smartphone, Users } from "lucide-react";
 
 const sections = [
@@ -73,6 +79,14 @@ const WhyMobilarisSite = () => {
           </div>
         </div>
       </section>
+
+      <SensorIntegration />
+      <MobileFirst />
+      <DeploymentOptions />
+      <TechnologyIntegration />
+      <SecurityFeatures />
+      <PrivacySection />
+
       <Footer />
     </main>
   );
