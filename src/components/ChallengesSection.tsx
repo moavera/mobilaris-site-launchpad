@@ -1,4 +1,5 @@
 import { SectionShareButton } from "./SectionShareButton";
+import emergencyDashboard from "@/assets/emergency-dashboard.png";
 
 export const ChallengesSection = () => {
   return (
@@ -12,8 +13,8 @@ export const ChallengesSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="rounded-xl bg-[#232426] border border-border/30 aspect-video flex items-center justify-center">
-            <span className="text-muted-foreground text-sm">Image placeholder</span>
+          <div className="rounded-xl overflow-hidden">
+            <img src={emergencyDashboard} alt="Emergency management dashboard showing real-time alerts and site monitoring" className="w-full h-auto" />
           </div>
           <div>
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
