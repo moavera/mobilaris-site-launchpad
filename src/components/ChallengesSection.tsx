@@ -17,7 +17,7 @@ export const ChallengesSection = () => {
             <img src={emergencyDashboard} alt="Emergency management dashboard showing real-time alerts and site monitoring" className="w-full h-auto" />
           </div>
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            <h3 className="text-2xl md:text-3xl font-semibold mb-4">
               Safety and Emergency
             </h3>
             <p className="text-muted-foreground text-xl leading-relaxed">
