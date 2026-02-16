@@ -28,16 +28,14 @@ export const Environments = () => {
       
       <div className="container mx-auto relative z-10">
         {/* Two-column header layout */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          <div className="flex items-start gap-4">
+        <div className="mb-16">
+          <div className="flex items-start gap-4 mb-6">
             <h2 className="leading-tight">Positioning Everywhere</h2>
             <SectionShareButton sectionId="environments" sectionName="Environments" />
           </div>
-          <div className="flex items-center">
-            <p className="text-xl text-muted-foreground">
-              Our system is built for every environment, from deep underground tunnels to open outdoor sites and complex indoor facilities. It automatically adapts the positioning technology to ensure accurate, continuous tracking wherever your operations happen.
-            </p>
-          </div>
+          <p className="text-xl text-muted-foreground max-w-3xl">
+            Our system is built for every environment, from deep underground tunnels to open outdoor sites and complex indoor facilities. It automatically adapts the positioning technology to ensure accurate, continuous tracking wherever your operations happen.
+          </p>
         </div>
 
         {/* Grid of environment cards */}
