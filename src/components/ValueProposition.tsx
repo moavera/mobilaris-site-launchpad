@@ -62,7 +62,7 @@ export const ValueProposition = () => {
           {cards.map((card) => (
             <div
               key={card.title}
-              className="rounded-xl border border-border/30 bg-[#232426] p-8 transition-all duration-300"
+              className="rounded-xl border border-border/30 bg-[#181A21] p-8 transition-all duration-300"
             >
               <card.icon className="h-8 w-8 text-primary mb-5" />
               <h3 className="text-xl font-bold mb-4">{card.title}</h3>
