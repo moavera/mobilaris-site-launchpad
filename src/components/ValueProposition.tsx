@@ -15,7 +15,7 @@ const cards = [
   {
     icon: Zap,
     title: "Faster Decisions",
-    description: "Live data in one interface with shared situational awareness and actionable insights.",
+    description: "A shared real-time view of site activity.",
   },
   {
     icon: ClipboardCheck,
