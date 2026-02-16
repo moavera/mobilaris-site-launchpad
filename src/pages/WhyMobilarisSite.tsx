@@ -74,26 +74,8 @@ const WhyMobilarisSite = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
 
-          <div className="space-y-12 max-w-4xl mx-auto">
-            {sections.map((section) => (
-              <div
-                key={section.title}
-                className="rounded-xl border border-border/30 bg-[#232426] p-8 md:p-10"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <section.icon className="h-10 w-10 text-primary flex-shrink-0" />
-                  <h2>{section.title}</h2>
-                </div>
-                <p className="text-muted-foreground mb-4">{section.description}</p>
-                <p className="text-sm text-muted-foreground/80 leading-relaxed">{section.details}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       <Evolution />
       <SensorIntegration />
