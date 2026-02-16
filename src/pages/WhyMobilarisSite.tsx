@@ -6,6 +6,7 @@ import { DeploymentOptions } from "@/components/DeploymentOptions";
 import { TechnologyIntegration } from "@/components/TechnologyIntegration";
 import { SecurityFeatures } from "@/components/SecurityFeatures";
 import { PrivacySection } from "@/components/PrivacySection";
+import { Evolution } from "@/components/Evolution";
 import { Gauge, Puzzle, Rocket, Settings, Smartphone, Users } from "lucide-react";
 import heroImage from "@/assets/why-mobilaris-hero.png";
 
@@ -94,6 +95,7 @@ const WhyMobilarisSite = () => {
         </div>
       </section>
 
+      <Evolution />
       <SensorIntegration />
       <MobileFirst />
       <DeploymentOptions />

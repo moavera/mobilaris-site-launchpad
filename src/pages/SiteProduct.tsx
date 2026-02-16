@@ -8,7 +8,7 @@ import { ValueProposition } from "@/components/ValueProposition";
 import { WhyMobilaris } from "@/components/WhyMobilaris";
 import { GettingStarted } from "@/components/GettingStarted";
 import { WhatWeTrack } from "@/components/WhatWeTrack";
-import { Evolution } from "@/components/Evolution";
+
 import { Partners } from "@/components/Partners";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
@@ -24,7 +24,7 @@ const SiteProduct = () => {
       <WhyMobilaris />
       <WhatWeTrack />
       
-      <Evolution />
+      
       <GettingStarted />
       
       <ContactSection />
