@@ -52,7 +52,7 @@ export const ValueProposition = () => {
                 <card.icon className="h-8 w-8 text-foreground" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground mb-1">{card.title}</p>
+                <p className="text-base text-muted-foreground mb-1">{card.title}</p>
                 <p className="text-xl font-semibold leading-snug">{card.description}</p>
               </div>
             </div>
