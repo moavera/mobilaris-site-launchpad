@@ -1,0 +1,67 @@
+import { Gauge, Puzzle, Rocket, Settings, Smartphone, Users } from "lucide-react";
+import { SectionShareButton } from "./SectionShareButton";
+
+const cards = [
+  {
+    icon: Gauge,
+    title: "Sensor Integration",
+    description: "Monitor environmental factors alongside tracked people and assets for a complete operational view.",
+  },
+  {
+    icon: Puzzle,
+    title: "Technology Agnostic Platform",
+    description: "Integrate any positioning technology — GPS, BLE, RFID, UWB, Wi-Fi, LiDAR — in one unified platform.",
+  },
+  {
+    icon: Rocket,
+    title: "Easy to Get Started, Effortless",
+    description: "Start with your existing infrastructure and scale precision where needed — up and running in days, not months.",
+  },
+  {
+    icon: Settings,
+    title: "Flexible Deployment Solutions",
+    description: "Deploy in the cloud for speed or on-premises for full control — with standardized containers and unified auth.",
+  },
+  {
+    icon: Smartphone,
+    title: "Work on the Move",
+    description: "Access real-time data, notifications, and asset tracking from anywhere with our mobile app for iOS and Android.",
+  },
+  {
+    icon: Users,
+    title: "Developed in Close Collaboration",
+    description: "Built together with customers and industry partners to solve real operational challenges on the ground.",
+  },
+];
+
+export const WhyMobilaris = () => {
+  return (
+    <section id="why-mobilaris" className="py-16 md:py-24 bg-background scroll-mt-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              Why <span className="text-foreground font-bold">Mobilaris Site™</span>
+            </h2>
+            <SectionShareButton sectionId="why-mobilaris" sectionName="Why Mobilaris Site" />
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {cards.map((card) => (
+            <div
+              key={card.title}
+              className="rounded-xl border border-border/30 bg-[#232426] p-8 transition-all duration-300"
+            >
+              <card.icon className="h-8 w-8 text-primary mb-5" />
+              <h3 className="text-xl font-bold mb-3">{card.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {card.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
