@@ -1,5 +1,6 @@
-import { Gauge, Puzzle, Rocket, Settings, Smartphone, Users } from "lucide-react";
+import { Gauge, Puzzle, Rocket, Settings, Smartphone, Users, ArrowRight } from "lucide-react";
 import { SectionShareButton } from "./SectionShareButton";
+import { Link } from "react-router-dom";
 
 const cards = [
   {
@@ -49,16 +50,20 @@ export const WhyMobilaris = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {cards.map((card) => (
-            <div
+            <Link
+              to="/why-mobilaris-site"
               key={card.title}
-              className="rounded-xl border border-border/30 bg-[#232426] p-8 transition-all duration-300"
+              className="rounded-xl border border-border/30 bg-[#232426] p-8 transition-all duration-300 hover:border-primary/50 group block no-underline"
             >
-              <card.icon className="h-8 w-8 text-primary mb-5" />
+              <div className="flex items-start justify-between">
+                <card.icon className="h-8 w-8 text-primary mb-5" />
+                <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </div>
               <h3 className="text-xl font-bold mb-3">{card.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {card.description}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
