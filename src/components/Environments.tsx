@@ -12,13 +12,13 @@ const environments = [{
 }, {
   icon: Mountain,
   title: "Outdoor",
-  description: "Track assets and personnel across large outdoor sites with GPS integration, geofencing, and environmental awareness capabilities.",
+  description: "",
   gradient: "from-blue-500/20 to-cyan-500/20",
   image: environmentPreview
 }, {
   icon: Building2,
   title: "Indoor",
-  description: "Monitor movement through warehouses, factories, and facilities with meter-level accuracy using BLE, Wi-Fi, and UWB technologies.",
+  description: "",
   gradient: "from-cyan-500/20 to-teal-500/20",
   image: environmentIndoor
 }];
@@ -53,12 +53,9 @@ export const Environments = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2">
+                <h3 className="text-2xl font-bold">
                   {env.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {env.description}
-                </p>
               </div>
             </div>)}
         </div>
