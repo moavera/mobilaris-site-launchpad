@@ -143,4 +143,7 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-sans antialiased;
   }
 
+  h2 {
+    @apply text-5xl font-semibold;
+  }
 }
