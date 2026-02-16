@@ -33,8 +33,8 @@ export const ChallengesSection = () => {
               Personnel and workgroup coordination
             </h3>
             <p className="text-muted-foreground text-xl leading-relaxed">
-              Track the location and status of vehicles, equipment and critical assets across your entire operation.
-              Optimize utilization, reduce downtime and ensure the right resources are always where they're needed.
+              Understand where your workforce is, how teams are distributed, and who is operating in hazardous areas.
+              Improve daily coordination, safety awareness and operational control across the site.
             </p>
           </div>
           <div className="rounded-xl overflow-hidden">
