@@ -5,38 +5,22 @@ const cards = [
   {
     icon: Shield,
     title: "Improve Safety",
-    points: [
-      "Real-time awareness of personnel",
-      "Faster emergency response",
-      "Better evacuation coordination",
-    ],
+    description: "Real-time awareness, faster emergency response and better evacuation coordination.",
   },
   {
     icon: Gauge,
-    title: "Increase Operational Efficiency",
-    points: [
-      "Optimize vehicle movement",
-      "Reduce bottlenecks",
-      "Improve shift coordination",
-    ],
+    title: "Operational Efficiency",
+    description: "Optimize vehicle movement, reduce bottlenecks and improve shift coordination.",
   },
   {
     icon: Zap,
-    title: "Enable Faster Decisions",
-    points: [
-      "Live data in one interface",
-      "Shared situational awareness",
-      "Actionable insights",
-    ],
+    title: "Faster Decisions",
+    description: "Live data in one interface with shared situational awareness and actionable insights.",
   },
   {
     icon: ClipboardCheck,
-    title: "Strengthen Compliance & Reporting",
-    points: [
-      "Historical data and traceability",
-      "Documentation for audits",
-      "Improved accountability",
-    ],
+    title: "Compliance & Reporting",
+    description: "Historical data traceability, documentation for audits and improved accountability.",
   },
 ];
 
@@ -58,24 +42,19 @@ export const ValueProposition = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {cards.map((card) => (
             <div
               key={card.title}
-              className="rounded-xl border border-border/30 bg-[#181A21] p-8 transition-all duration-300"
+              className="flex items-start gap-6 p-6 transition-all duration-300"
             >
-              <card.icon className="h-8 w-8 text-primary mb-5" />
-              <h3 className="text-xl font-bold mb-4">{card.title}</h3>
-              <ul className="space-y-3 list-disc list-inside">
-                {card.points.map((point) => (
-                  <li
-                    key={point}
-                    className="text-base text-muted-foreground leading-relaxed"
-                  >
-                    {point}
-                  </li>
-                ))}
-              </ul>
+              <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#181A21] border border-border/30 flex items-center justify-center">
+                <card.icon className="h-8 w-8 text-foreground" />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground mb-1">{card.title}</p>
+                <p className="text-xl font-semibold leading-snug">{card.description}</p>
+              </div>
             </div>
           ))}
         </div>
