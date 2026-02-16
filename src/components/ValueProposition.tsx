@@ -28,18 +28,16 @@ export const ValueProposition = () => {
   return (
     <section id="value" className="py-16 md:py-24 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          <div className="flex items-start gap-4">
+        <div className="mb-16">
+          <div className="flex items-start gap-4 mb-6">
             <h2 className="text-5xl leading-tight">
               Gain real-time control across your entire site
             </h2>
             <SectionShareButton sectionId="value" sectionName="Value Proposition" />
           </div>
-          <div className="flex items-center">
-            <p className="text-xl text-muted-foreground">
-              Mobilaris Site gives operations full visibility of people, vehicles and assets in one shared real-time view — improving safety, coordination, and decision-making.
-            </p>
-          </div>
+          <p className="text-xl text-muted-foreground max-w-3xl">
+            Mobilaris Site gives operations full visibility of people, vehicles and assets in one shared real-time view — improving safety, coordination, and decision-making.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
