@@ -43,7 +43,7 @@ export const KeyProblems = () => {
                   {industry.copy}
                 </p>
               </div>
-              <div className="px-4 pb-4">
+              <div className="px-4 pb-4 mt-auto">
                 <img
                   src={industry.image}
                   alt={industry.label}
