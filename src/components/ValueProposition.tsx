@@ -36,7 +36,7 @@ export const ValueProposition = () => {
             <SectionShareButton sectionId="value" sectionName="Value Proposition" />
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            Mobilaris Site gives operations full visibility of people, vehicles and assets in one shared real-time view — improving safety, coordination, and decision-making.
+            Mobilaris Site gives operations full visibility of people, vehicles and assets in one shared real-time view — reducing uncertainty and supporting safer, more confident decisions.
           </p>
         </div>
 
