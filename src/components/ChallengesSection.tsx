@@ -53,8 +53,8 @@ export const ChallengesSection = () => {
               Asset Tracking
             </h3>
             <p className="text-muted-foreground text-xl leading-relaxed">
-              Track the location and status of vehicles, equipment and critical assets across your entire operation.
-              Optimize utilization, reduce downtime and ensure the right resources are always where they're needed.
+              Track the location and status of vehicles, equipment and critical assets across your operation.
+              Reduce uncertainty, support planning and ensure critical resources are available when needed.
             </p>
           </div>
         </div>
