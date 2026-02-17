@@ -20,9 +20,9 @@ const SiteProduct = () => {
       <HeroNew />
       
       <KeyProblems />
+      <ChallengesSection />
       <Environments />
       <ValueProposition />
-      <ChallengesSection />
       <WhyMobilaris />
       
       
