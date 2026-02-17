@@ -8,11 +8,6 @@ const cards = [
     description: "Real-time awareness for faster emergency response.",
   },
   {
-    icon: Gauge,
-    title: "Operational Efficiency",
-    description: "Clear visibility of site activity and coordination.",
-  },
-  {
     icon: Zap,
     title: "Faster Decisions",
     description: "A shared real-time view of site activity.",
