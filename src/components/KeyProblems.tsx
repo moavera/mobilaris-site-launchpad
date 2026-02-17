@@ -11,7 +11,7 @@ const industries = [
   },
   {
     label: "Critical infrastructure",
-    copy: "For factories, energy facilities and other complex industrial sites that require high levels of safety, coordination and operational control.",
+    copy: "Mobilaris Site supports complex industrial sites with a shared real-time view of people, assets and activity – helping teams maintain safety, coordination and operational control.",
     image: infrastructureImage,
   },
 ];
