@@ -11,7 +11,7 @@ const industries = [
   },
   {
     label: "Critical infrastructure",
-    copy: "Mobilaris Site supports complex industrial sites with a shared real-time view of people, assets and activity – helping teams maintain safety, coordination and operational control.",
+    copy: "Mobilaris Site provides a shared real-time view of people, assets and activity – supporting safety, coordination and operational control across complex industrial sites.",
     image: infrastructureImage,
   },
 ];
