@@ -33,9 +33,9 @@ export const KeyProblems = () => {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="rounded-xl border border-border/30 bg-[#181A21] overflow-hidden transition-all duration-300"
+              className="rounded-xl border border-border/30 bg-[#181A21] overflow-hidden transition-all duration-300 flex flex-col"
             >
-              <div className="p-8 md:p-10">
+              <div className="p-8 md:p-10 md:min-h-[200px]">
                 <h3 className="text-2xl md:text-3xl font-bold mb-5">
                   {industry.label}
                 </h3>
@@ -43,7 +43,7 @@ export const KeyProblems = () => {
                   {industry.copy}
                 </p>
               </div>
-              <div className="px-4 pb-4 mt-auto">
+              <div className="px-4 pb-4">
                 <img
                   src={industry.image}
                   alt={industry.label}
