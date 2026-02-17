@@ -37,7 +37,7 @@ export const HeroNew = () => {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-3">
               <Button size="lg" className="text-base px-6 shadow-lg hover:shadow-xl transition-all duration-300" asChild>
-                <a href="#contact">
+                <a href="https://mobilarisindustrialsolutions.se/contact/" target="_blank" rel="noopener noreferrer">
                   Book a Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
