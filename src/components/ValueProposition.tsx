@@ -10,7 +10,7 @@ const cards = [
   {
     icon: Gauge,
     title: "Operational Efficiency",
-    description: "Clear visibility of vehicle movement and coordination.",
+    description: "Clear visibility of site activity and coordination.",
   },
   {
     icon: Zap,
