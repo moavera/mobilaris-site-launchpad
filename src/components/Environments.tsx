@@ -23,7 +23,7 @@ const environments = [{
   image: environmentIndoor
 }];
 export const Environments = () => {
-  return <section id="environments" className="relative py-24 px-4 overflow-hidden">
+  return <section id="environments" className="relative py-24 md:py-32 px-4 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
       
       <div className="container mx-auto relative z-10">

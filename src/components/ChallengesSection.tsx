@@ -5,7 +5,7 @@ import mobildesktopImage from "@/assets/mobildesktop.png";
 
 export const ChallengesSection = () => {
   return (
-    <section id="challenges" className="py-16 md:py-24 bg-background scroll-mt-20">
+    <section id="challenges" className="py-24 md:py-32 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="flex items-start gap-4 mb-12">
           <h2 className="leading-tight max-w-3xl">
