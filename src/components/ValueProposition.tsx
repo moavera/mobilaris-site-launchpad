@@ -46,7 +46,7 @@ export const ValueProposition = () => {
               key={card.title}
               className="flex items-start gap-6 p-6 transition-all duration-300"
             >
-              <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#181A21] border border-border/30 flex items-center justify-center">
+              <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#252832] border border-border/30 flex items-center justify-center">
                 <card.icon className="h-8 w-8 text-foreground" />
               </div>
               <div>
