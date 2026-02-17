@@ -35,7 +35,7 @@ export const ValueProposition = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 max-w-3xl">
           {cards.map((card) => (
             <div
               key={card.title}
