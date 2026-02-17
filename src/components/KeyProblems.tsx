@@ -18,7 +18,7 @@ const industries = [
 
 export const KeyProblems = () => {
   return (
-    <section id="challenges" className="py-16 md:py-24 bg-background scroll-mt-20 group">
+    <section id="challenges" className="py-24 md:py-32 bg-background scroll-mt-20 group">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="flex items-center justify-center gap-2 mb-4">
