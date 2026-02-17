@@ -29,17 +29,17 @@ export const KeyProblems = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto items-start">
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="rounded-xl border border-border/30 bg-[#181A21] overflow-hidden transition-all duration-300 flex flex-col"
+              className="rounded-xl border border-border/30 bg-[#181A21] overflow-hidden transition-all duration-300 grid grid-rows-[1fr_auto]"
             >
-              <div className="p-8 md:p-10 md:min-h-[200px]">
-                <h3 className="text-2xl md:text-3xl font-bold mb-5">
+              <div className="p-8 md:p-10">
+                <h3 className="text-2xl md:text-3xl font-semibold mb-5">
                   {industry.label}
                 </h3>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   {industry.copy}
                 </p>
               </div>
