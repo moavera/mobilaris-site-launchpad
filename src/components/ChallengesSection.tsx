@@ -35,8 +35,8 @@ export const ChallengesSection = () => {
               Personnel and workgroup coordination
             </h3>
             <p className="text-muted-foreground text-xl leading-relaxed">
-              Understand where your workforce is, how teams are distributed, and who is operating in hazardous areas.
-              Improve daily coordination, safety awareness and operational control across the site.
+              In daily operations, understand where your workforce is, how teams are distributed, and who is operating in hazardous areas.
+              Improve coordination, safety awareness and operational control across the site.
             </p>
           </div>
           <div className="rounded-xl overflow-hidden">
