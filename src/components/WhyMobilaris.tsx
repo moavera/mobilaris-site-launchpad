@@ -7,13 +7,13 @@ const cards = [
     icon: Gauge,
     title: "Sensor Integration",
     description: "Monitor environmental factors alongside tracked people and assets for a complete operational view.",
-    link: "/why-mobilaris-site#sensor-integration",
+    link: "/platform#sensor-integration",
   },
   {
     icon: Puzzle,
     title: "Technology Agnostic Platform",
     description: "Integrate any positioning technology — GPS, BLE, RFID, UWB, Wi-Fi, LiDAR — in one unified platform.",
-    link: "/why-mobilaris-site#technology",
+    link: "/platform#technology",
   },
   {
     icon: Rocket,
@@ -24,13 +24,13 @@ const cards = [
     icon: Settings,
     title: "Flexible Deployment Solutions",
     description: "Deploy in the cloud for speed or on-premises for full control — with standardized containers and unified auth.",
-    link: "/why-mobilaris-site#deployment",
+    link: "/platform#deployment",
   },
   {
     icon: Smartphone,
     title: "Work on the Move",
     description: "Access real-time data, notifications, and asset tracking from anywhere with our mobile app for iOS and Android.",
-    link: "/why-mobilaris-site#mobile-access",
+    link: "/platform#mobile-access",
   },
   {
     icon: Users,
@@ -55,7 +55,7 @@ export const WhyMobilaris = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {cards.map((card) => (
             <Link
-              to={card.link || "/why-mobilaris-site"}
+              to={card.link || "/platform"}
               key={card.title}
               className="rounded-xl border border-border/30 bg-[#181A21] p-8 transition-all duration-300 hover:border-primary/50 group block no-underline"
             >
