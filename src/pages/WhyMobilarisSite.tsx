@@ -58,7 +58,7 @@ const WhyMobilarisSite = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Why <span className="text-foreground font-bold">Mobilaris Site™</span>
+                Platform <span className="text-foreground font-bold">and Technology</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 Discover why industrial operations trust Mobilaris Site for real-time situational awareness, safety and operational efficiency.
