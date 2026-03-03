@@ -1,9 +1,40 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap, Map, Users } from "lucide-react";
+import { ArrowRight, Zap, Map, Mail } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 import videoBackground from "@/assets/snurren_blur.mp4";
 import logoImage from "@/assets/site-logo-2.png";
 
 const DemoStart = () => {
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const DEMO_URL = "https://demo.site.mobilaris.se/api/share/vq5ejng0p6";
+
+  const validateEmail = (value: string) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(value);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmed = email.trim();
+    if (!validateEmail(trimmed)) {
+      setEmailError("Ange en giltig e-postadress");
+      return;
+    }
+    setIsSubmitting(true);
+    // Save to localStorage list
+    const existing = JSON.parse(localStorage.getItem("demo_emails") || "[]");
+    existing.push({ email: trimmed, timestamp: new Date().toISOString() });
+    localStorage.setItem("demo_emails", JSON.stringify(existing));
+    // Redirect to demo
+    window.location.href = DEMO_URL;
+  };
+
   return (
     <main className="min-h-screen relative flex items-start md:items-center justify-center overflow-hidden pt-28 md:pt-0">
       {/* Logo */}
@@ -72,17 +103,59 @@ const DemoStart = () => {
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 shadow-elegant text-lg px-12 py-6 h-auto group"
-            asChild
+            onClick={() => setShowEmailModal(true)}
           >
-            <a href="https://demo.site.mobilaris.se/api/share/vq5ejng0p6">
-              Start Demo
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            Start Demo
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
 
           {/* Info Text */}
         </div>
       </div>
+
+      {/* Email Capture Modal */}
+      <Dialog open={showEmailModal} onOpenChange={setShowEmailModal}>
+        <DialogContent className="sm:max-w-md bg-card border-border">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-foreground flex items-center gap-2">
+              <Mail className="h-5 w-5 text-primary" />
+              Få tillgång till demon
+            </DialogTitle>
+            <DialogDescription className="text-muted-foreground">
+              Ange din e-postadress för att starta Mobilaris Site™ demo.
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="space-y-4 mt-2">
+            <div>
+              <Input
+                type="email"
+                placeholder="din@email.com"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  if (emailError) setEmailError("");
+                }}
+                className="bg-background border-border text-foreground placeholder:text-muted-foreground"
+                autoFocus
+              />
+              {emailError && (
+                <p className="text-sm text-destructive mt-1.5">{emailError}</p>
+              )}
+            </div>
+            <Button
+              type="submit"
+              className="w-full bg-primary hover:bg-primary/90 text-lg py-5 h-auto"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Startar..." : "Starta Demo"}
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <p className="text-xs text-muted-foreground text-center">
+              Vi delar aldrig din e-post med tredje part.
+            </p>
+          </form>
+        </DialogContent>
+      </Dialog>
 
       {/* Floating particles effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
