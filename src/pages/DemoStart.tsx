@@ -125,7 +125,7 @@ const DemoStart = () => {
               Enter your email address to start the Mobilaris Site™ demo.
             </DialogDescription>
           </DialogHeader>
-          <form onSubmit={handleSubmit} className="space-y-4 mt-2">
+          <form onSubmit={handleSubmit} className="space-y-5 mt-2">
             <div>
               <Input
                 type="email"
