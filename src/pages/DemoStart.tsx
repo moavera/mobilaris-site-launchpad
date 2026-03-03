@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Map, Mail } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import videoBackground from "@/assets/snurren_blur.mp4";
@@ -12,7 +13,7 @@ const DemoStart = () => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const [consent, setConsent] = useState(false);
   const DEMO_URL = "https://demo.site.mobilaris.se/api/share/vq5ejng0p6";
 
   const validateEmail = (value: string) => {
@@ -144,14 +145,22 @@ const DemoStart = () => {
             <Button
               type="submit"
               className="w-full bg-primary hover:bg-primary/90 text-lg py-5 h-auto"
-              disabled={isSubmitting}
+              disabled={isSubmitting || !consent}
             >
               {isSubmitting ? "Startar..." : "Starta Demo"}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <p className="text-xs text-muted-foreground text-center">
-              Vi delar aldrig din e-post med tredje part.
-            </p>
+            <div className="flex items-start gap-2">
+              <Checkbox
+                id="consent"
+                checked={consent}
+                onCheckedChange={(checked) => setConsent(checked === true)}
+                className="mt-0.5"
+              />
+              <label htmlFor="consent" className="text-xs text-muted-foreground leading-snug cursor-pointer select-none">
+                Jag samtycker till att Mobilaris Industrial Solutions behandlar mina uppgifter för att tillhandahålla information om Mobilaris Site.
+              </label>
+            </div>
           </form>
         </DialogContent>
       </Dialog>
