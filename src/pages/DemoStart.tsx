@@ -25,7 +25,7 @@ const DemoStart = () => {
     e.preventDefault();
     const trimmed = email.trim();
     if (!validateEmail(trimmed)) {
-      setEmailError("Ange en giltig e-postadress");
+      setEmailError("Please enter a valid email address");
       return;
     }
     setIsSubmitting(true);
@@ -119,27 +119,27 @@ const DemoStart = () => {
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-foreground flex items-center gap-2">
               <Mail className="h-5 w-5 text-primary" />
-              Få tillgång till demon
+              Access the Demo
             </DialogTitle>
-            <DialogDescription className="text-muted-foreground">
-              Ange din e-postadress för att starta Mobilaris Site™ demo.
+            <DialogDescription className="text-base text-muted-foreground">
+              Enter your email address to start the Mobilaris Site™ demo.
             </DialogDescription>
           </DialogHeader>
           <form onSubmit={handleSubmit} className="space-y-4 mt-2">
             <div>
               <Input
                 type="email"
-                placeholder="din@email.com"
+                placeholder="your@email.com"
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
                   if (emailError) setEmailError("");
                 }}
-                className="bg-background border-border text-foreground placeholder:text-muted-foreground"
+                className="bg-background border-border text-foreground placeholder:text-muted-foreground text-base"
                 autoFocus
               />
               {emailError && (
-                <p className="text-sm text-destructive mt-1.5">{emailError}</p>
+                <p className="text-base text-destructive mt-1.5">{emailError}</p>
               )}
             </div>
             <div className="flex items-start gap-2">
@@ -149,8 +149,8 @@ const DemoStart = () => {
                 onCheckedChange={(checked) => setConsent(checked === true)}
                 className="mt-0.5"
               />
-              <label htmlFor="consent" className="text-xs text-muted-foreground leading-snug cursor-pointer select-none">
-                Jag samtycker till att Mobilaris Industrial Solutions behandlar mina uppgifter för att tillhandahålla information om Mobilaris Site.
+              <label htmlFor="consent" className="text-sm text-muted-foreground leading-snug cursor-pointer select-none">
+                I consent to Mobilaris Industrial Solutions processing my data to provide information about Mobilaris Site.
               </label>
             </div>
             <Button
@@ -158,7 +158,7 @@ const DemoStart = () => {
               className="w-full bg-primary hover:bg-primary/90 text-lg py-5 h-auto"
               disabled={isSubmitting || !consent}
             >
-              {isSubmitting ? "Startar..." : "Starta Demo"}
+              {isSubmitting ? "Starting..." : "Start Demo"}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </form>
