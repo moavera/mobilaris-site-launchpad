@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Map, Mail } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/integrations/supabase/client";
 import videoBackground from "@/assets/snurren_blur.mp4";
 import logoImage from "@/assets/site-logo-2.png";
 
