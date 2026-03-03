@@ -50,7 +50,7 @@ export const Navigation = () => {
         <nav className="flex items-center justify-between h-32 max-w-full">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="https://www.mobilarisinnovationcenter.se/" className="block">
+            <a href="https://mobilarisindustrialsolutions.se/" className="block">
               <img
                 src={logoImage}
                 alt="Mobilaris Industrial Solutions"
