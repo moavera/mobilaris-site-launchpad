@@ -115,7 +115,7 @@ const DemoStart = () => {
 
       {/* Email Capture Modal */}
       <Dialog open={showEmailModal} onOpenChange={setShowEmailModal}>
-        <DialogContent className="sm:max-w-md bg-card border-border">
+        <DialogContent className="sm:max-w-lg bg-card border-border">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-foreground flex items-center gap-2">
               <Mail className="h-5 w-5 text-primary" />
