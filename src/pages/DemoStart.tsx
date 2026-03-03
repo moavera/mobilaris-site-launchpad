@@ -30,7 +30,12 @@ const DemoStart = () => {
     }
     setIsSubmitting(true);
     // Save to database
-    await supabase.from("demo_emails").insert({ email: trimmed });
+    const { error } = await supabase.from("demo_emails").insert({ email: trimmed });
+    if (error) {
+      setEmailError("Unable to submit. Please try again.");
+      setIsSubmitting(false);
+      return;
+    }
     // Redirect to demo
     window.location.href = DEMO_URL;
   };
