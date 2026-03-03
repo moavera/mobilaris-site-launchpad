@@ -34,7 +34,7 @@ export const ContactSection = () => {
               className="text-lg px-8 border-2 border-primary/30 bg-primary/5 hover:bg-primary/10 hover:border-primary/40"
               asChild
             >
-              <a href="mailto:support@mobilaris.se">
+              <a href="https://mobilarisindustrialsolutions.se/contact/" target="_blank" rel="noopener noreferrer">
                 <Mail className="mr-2 h-5 w-5" />
                 Contact us
               </a>
