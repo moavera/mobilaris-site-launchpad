@@ -142,14 +142,6 @@ const DemoStart = () => {
                 <p className="text-sm text-destructive mt-1.5">{emailError}</p>
               )}
             </div>
-            <Button
-              type="submit"
-              className="w-full bg-primary hover:bg-primary/90 text-lg py-5 h-auto"
-              disabled={isSubmitting || !consent}
-            >
-              {isSubmitting ? "Startar..." : "Starta Demo"}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
             <div className="flex items-start gap-2">
               <Checkbox
                 id="consent"
@@ -161,6 +153,14 @@ const DemoStart = () => {
                 Jag samtycker till att Mobilaris Industrial Solutions behandlar mina uppgifter för att tillhandahålla information om Mobilaris Site.
               </label>
             </div>
+            <Button
+              type="submit"
+              className="w-full bg-primary hover:bg-primary/90 text-lg py-5 h-auto"
+              disabled={isSubmitting || !consent}
+            >
+              {isSubmitting ? "Startar..." : "Starta Demo"}
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </form>
         </DialogContent>
       </Dialog>
