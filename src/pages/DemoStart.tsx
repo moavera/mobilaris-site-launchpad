@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Map, Mail } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import { supabase } from "@/lib/supabase";
 import videoBackground from "@/assets/snurren_blur.mp4";
 import logoImage from "@/assets/site-logo-2.png";
 
@@ -19,7 +20,7 @@ const DemoStart = () => {
     return regex.test(value);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const trimmed = email.trim();
     if (!validateEmail(trimmed)) {
@@ -27,10 +28,8 @@ const DemoStart = () => {
       return;
     }
     setIsSubmitting(true);
-    // Save to localStorage list
-    const existing = JSON.parse(localStorage.getItem("demo_emails") || "[]");
-    existing.push({ email: trimmed, timestamp: new Date().toISOString() });
-    localStorage.setItem("demo_emails", JSON.stringify(existing));
+    // Save to database
+    await supabase.from("demo_emails").insert({ email: trimmed });
     // Redirect to demo
     window.location.href = DEMO_URL;
   };
