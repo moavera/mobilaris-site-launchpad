@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Play } from "lucide-react";
+import { Mail } from "lucide-react";
 import { SectionShareButton } from "@/components/SectionShareButton";
 
 export const ContactSection = () => {
@@ -21,17 +21,6 @@ export const ContactSection = () => {
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 text-base px-6"
-              asChild
-            >
-              <a href="/demo-start">
-                Try Demo Site™
-                <Play className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 border-2 border-primary/30 bg-primary/5 hover:bg-primary/10 hover:border-primary/40"
               asChild
             >
               <a href="https://mobilarisindustrialsolutions.se/contact/" target="_blank" rel="noopener noreferrer">
