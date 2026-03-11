@@ -42,12 +42,6 @@ export const HeroNew = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="text-base px-6 border-2 border-border bg-muted/20 hover:bg-muted/40 transition-all duration-300" asChild>
-                <a href="/demo-start">
-                  Try Demo Site
-                  <Play className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
             </div>
           </div>
 
