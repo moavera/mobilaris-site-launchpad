@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Play } from "lucide-react";
+import { Mail } from "lucide-react";
 import { SectionShareButton } from "@/components/SectionShareButton";
 
 export const ContactSection = () => {
