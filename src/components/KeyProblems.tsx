@@ -6,7 +6,7 @@ import infrastructureImage from "@/assets/infrastructure-illustration.png";
 const industries = [
   {
     label: "Mining",
-    copy: "Mobilaris Site provides a shared real-time view of personnel, vehicles and critical assets – supporting safer coordination above and below ground.",
+    copy: "Built for mining operations, Mobilaris Site delivers real-time insights across surface and underground environments, enhancing safety, coordination and site management.",
     image: miningImage,
   },
   {
