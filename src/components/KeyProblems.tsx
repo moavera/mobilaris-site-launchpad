@@ -11,7 +11,7 @@ const industries = [
   },
   {
     label: "Critical infrastructure",
-    copy: "Mobilaris Site provides a shared real-time view of people, assets and activity – supporting safety, coordination and operational control across complex industrial sites.",
+    copy: "Built for critical infrastructure, Mobilaris Site delivers a unified real-time view of people, assets, and operations across both outdoor and indoor environments. By integrating seamlessly with existing positioning systems like WiFi, GPS, and BLE, it enables safer operations, improved coordination, and full visibility across complex industrial sites.",
     image: infrastructureImage,
   },
 ];
