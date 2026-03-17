@@ -11,7 +11,7 @@ const industries = [
   },
   {
     label: "Critical infrastructure",
-    copy: "Mobilaris Site provides real-time visibility across indoor and outdoor industrial sites, integrating with existing systems or helping select the optimal positioning solution.",
+    copy: "Mobilaris Site gives real-time visibility across indoor, outdoor and tunnel sites, integrating with existing systems or helping select the best positioning approach.",
     image: infrastructureImage,
   },
 ];
