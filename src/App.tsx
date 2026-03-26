@@ -21,6 +21,7 @@ const App = () => (
           <Route path="/" element={<SiteProduct />} />
           <Route path="/demo-start" element={<DemoStart />} />
           <Route path="/platform" element={<WhyMobilarisSite />} />
+          <Route path="/product" element={<ProductPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
