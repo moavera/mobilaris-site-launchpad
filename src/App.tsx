@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SiteProduct from "./pages/SiteProduct";
 import DemoStart from "./pages/DemoStart";
 import WhyMobilarisSite from "./pages/WhyMobilarisSite";
+import ProductPage from "./pages/ProductPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
