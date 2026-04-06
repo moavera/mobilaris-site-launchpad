@@ -20,6 +20,7 @@ const SiteProduct = () => {
       <Navigation />
       <HeroNew />
       
+      <RiskSection />
       <KeyProblems />
       <ChallengesSection />
       <ValueProposition />
