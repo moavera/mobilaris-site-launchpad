@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { HeroNew } from "@/components/HeroNew";
 import { useSectionShare } from "@/hooks/use-section-share";
+import { RiskSection } from "@/components/RiskSection";
 import { KeyProblems } from "@/components/KeyProblems";
 import { MobileFirst } from "@/components/MobileFirst";
 import { Environments } from "@/components/Environments";
@@ -19,6 +20,7 @@ const SiteProduct = () => {
       <Navigation />
       <HeroNew />
       
+      <RiskSection />
       <KeyProblems />
       <ChallengesSection />
       <ValueProposition />
