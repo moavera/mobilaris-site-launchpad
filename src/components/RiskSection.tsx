@@ -41,7 +41,7 @@ export const RiskSection = () => {
             >
               <div className="p-8 flex flex-col gap-4">
                 <h3 className="text-xl font-semibold leading-snug">{card.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   {card.description}
                 </p>
               </div>
