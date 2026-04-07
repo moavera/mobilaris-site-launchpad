@@ -16,6 +16,7 @@ const cards = [
   {
     title: "Delayed response to incidents and risks",
     description: "Limited visibility slows assessment and response during incidents.",
+    image: riskCard3Image,
   },
 ];
 
