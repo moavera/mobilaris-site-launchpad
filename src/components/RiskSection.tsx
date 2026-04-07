@@ -1,19 +1,15 @@
 const cards = [
   {
-    title: "Limited visibility of personnel",
-    description: "It can be difficult to quickly locate personnel across large or complex environments, especially in time-critical situations.",
+    title: "Limited visibility of personnel and assets",
+    description: "Locating people, vehicles, and equipment quickly in large or complex environments is challenging, especially in urgent situations.",
   },
   {
-    title: "Inefficient coordination",
-    description: "Without a shared real-time view, teams rely on manual communication, which can lead to delays and misalignment.",
+    title: "Challenges in coordinating operations",
+    description: "Without a shared real-time view, coordination is slower and less reliable.",
   },
   {
-    title: "Delayed incident response",
-    description: "Limited visibility makes it harder to assess situations and respond effectively when incidents occur.",
-  },
-  {
-    title: "Limited asset overview",
-    description: "Vehicles and equipment are distributed across the site, making them difficult to locate and manage efficiently.",
+    title: "Delayed response to incidents and risks",
+    description: "Limited visibility slows assessment and response during incidents.",
   },
 ];
 
