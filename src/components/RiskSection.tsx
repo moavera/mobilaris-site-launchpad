@@ -26,7 +26,7 @@ export const RiskSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl">
           {cards.map((card, index) => (
             <div
               key={index}
