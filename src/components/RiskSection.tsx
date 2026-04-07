@@ -5,7 +5,7 @@ import riskCard3Image from "@/assets/risk-card-3.png";
 const cards = [
   {
     title: "Limited visibility of personnel and assets",
-    description: "Locating people, vehicles, and equipment quickly in large or complex environments is challenging, especially in urgent situations.",
+    description: "Quickly locating people, vehicles and equipment in complex environments is challenging.",
     image: riskCard1Image,
   },
   {
