@@ -21,8 +21,8 @@ const SiteProduct = () => {
       <HeroNew />
       
       <RiskSection />
-      <KeyProblems />
       <ChallengesSection />
+      <KeyProblems />
       <ValueProposition />
       <Environments />
       <WhyMobilaris />
