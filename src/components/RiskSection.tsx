@@ -1,4 +1,5 @@
 import riskCard1Image from "@/assets/risk-card-1.png";
+import riskCard2Image from "@/assets/risk-card-2.png";
 
 const cards = [
   {
@@ -9,6 +10,7 @@ const cards = [
   {
     title: "Challenges in coordinating operations",
     description: "Without a shared real-time view, coordination is slower and less reliable.",
+    image: riskCard2Image,
   },
   {
     title: "Delayed response to incidents and risks",
