@@ -28,7 +28,7 @@ export const RiskSection = () => {
           <h2 className="text-3xl md:text-5xl font-semibold mb-6">
             Lack of real-time visibility creates risk
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-xl text-muted-foreground leading-relaxed">
             Managing complex industrial sites without real-time insight makes it harder to keep people safe, coordinate work and respond to incidents.
           </p>
         </div>
