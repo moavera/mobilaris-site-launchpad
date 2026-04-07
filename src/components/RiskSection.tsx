@@ -1,28 +1,52 @@
-import { Eye, Users, AlertTriangle, Truck } from "lucide-react";
-
 const cards = [
   {
-    icon: Eye,
     title: "Limited visibility of personnel",
     description: "It can be difficult to quickly locate personnel across large or complex environments, especially in time-critical situations.",
   },
   {
-    icon: Users,
     title: "Inefficient coordination",
     description: "Without a shared real-time view, teams rely on manual communication, which can lead to delays and misalignment.",
   },
   {
-    icon: AlertTriangle,
     title: "Delayed incident response",
     description: "Limited visibility makes it harder to assess situations and respond effectively when incidents occur.",
   },
   {
-    icon: Truck,
     title: "Limited asset overview",
     description: "Vehicles and equipment are distributed across the site, making them difficult to locate and manage efficiently.",
   },
 ];
 
+export const RiskSection = () => {
+  return (
+    <section className="py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl mb-16">
+          <h2 className="text-3xl md:text-5xl font-semibold mb-6">
+            Lack of real-time visibility creates risk
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Managing complex industrial sites without real-time insight makes it harder to keep people safe, coordinate work and respond to incidents.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="rounded-2xl bg-secondary/60 p-8 flex flex-col gap-4"
+            >
+              <h3 className="text-xl font-semibold leading-snug">{card.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {card.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 export const RiskSection = () => {
   return (
     <section className="py-24 md:py-32 bg-background">
