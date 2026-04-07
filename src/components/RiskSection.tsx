@@ -1,7 +1,10 @@
+import riskCard1Image from "@/assets/risk-card-1.png";
+
 const cards = [
   {
     title: "Limited visibility of personnel and assets",
     description: "Locating people, vehicles, and equipment quickly in large or complex environments is challenging, especially in urgent situations.",
+    image: riskCard1Image,
   },
   {
     title: "Challenges in coordinating operations",
@@ -30,12 +33,23 @@ export const RiskSection = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="rounded-2xl bg-secondary/60 p-8 flex flex-col gap-4"
+              className="rounded-2xl bg-secondary/60 overflow-hidden flex flex-col"
             >
-              <h3 className="text-xl font-semibold leading-snug">{card.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {card.description}
-              </p>
+              <div className="p-8 flex flex-col gap-4">
+                <h3 className="text-xl font-semibold leading-snug">{card.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {card.description}
+                </p>
+              </div>
+              {card.image && (
+                <div className="mt-auto px-0">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              )}
             </div>
           ))}
         </div>
