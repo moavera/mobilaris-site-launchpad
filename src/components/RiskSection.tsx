@@ -1,5 +1,6 @@
 import riskCard1Image from "@/assets/risk-card-1.png";
 import riskCard2Image from "@/assets/risk-card-2.png";
+import riskCard3Image from "@/assets/risk-card-3.png";
 
 const cards = [
   {
