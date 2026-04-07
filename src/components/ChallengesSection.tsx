@@ -9,7 +9,7 @@ export const ChallengesSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-start gap-4 mb-12">
           <h2 className="leading-tight max-w-3xl">
-            Solving critical safety and operational challenges
+            Turning visibility gaps into actionable insights
           </h2>
           <SectionShareButton sectionId="challenges" sectionName="Challenges" />
         </div>
