@@ -42,9 +42,6 @@ export const Footer = () => {
               <a href="https://mobilarisindustrialsolutions.se/evacuation-support/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
                 Evacuation Support
               </a>
-              <a href="https://mobilarisindustrialsolutions.se/mobilaris-prevent/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
-                Collision Avoidance
-              </a>
             </nav>
           </div>
 
