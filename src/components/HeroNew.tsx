@@ -7,9 +7,9 @@ export const HeroNew = () => {
     <section className="relative overflow-hidden bg-background">
       {/* Ambient glow behind the product frame */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[600px]">
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-[-260px] w-[1100px] h-[520px] rounded-full bg-primary/25 blur-[140px]" />
-        <div className="absolute bottom-[-120px] left-[8%] w-[380px] h-[380px] rounded-full bg-primary/10 blur-[110px]" />
-        <div className="absolute bottom-[-120px] right-[8%] w-[380px] h-[380px] rounded-full bg-primary/10 blur-[110px]" />
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-[-300px] w-[1200px] h-[600px] rounded-full bg-primary/40 blur-[150px]" />
+        <div className="absolute bottom-[-160px] left-[4%] w-[440px] h-[440px] rounded-full bg-primary/20 blur-[120px]" />
+        <div className="absolute bottom-[-160px] right-[4%] w-[440px] h-[440px] rounded-full bg-primary/20 blur-[120px]" />
       </div>
 
       {/* Content */}
