@@ -1,64 +1,70 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Truck } from "lucide-react";
-import logoImage from "@/assets/site-logo-2.png";
+import { ArrowRight } from "lucide-react";
 import demoImage from "@/assets/demo-scenario.png";
-import heroVideo from "@/assets/Linjevideo4.0.mp4";
+
 export const HeroNew = () => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Video Background */}
-      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover object-center scale-105">
-        <source src={heroVideo} type="video/mp4" />
-      </video>
-      
-      {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/20" />
-      <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-background/90 via-background/50 to-transparent" />
-      <div className="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-background/60 via-background/30 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60" />
-      
+  return (
+    <section className="relative overflow-hidden bg-background">
+      {/* Ambient glow behind the product frame */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[600px]">
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-[-260px] w-[1100px] h-[520px] rounded-full bg-primary/25 blur-[140px]" />
+        <div className="absolute bottom-[-120px] left-[8%] w-[380px] h-[380px] rounded-full bg-primary/10 blur-[110px]" />
+        <div className="absolute bottom-[-120px] right-[8%] w-[380px] h-[380px] rounded-full bg-primary/10 blur-[110px]" />
+      </div>
+
       {/* Content */}
-      <div className="container relative z-10 mx-auto px-6 py-20 md:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Text and Buttons */}
-          <div className="max-w-2xl animate-fade-in-up">
-            {/* Hook Question */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-[1.15] tracking-tight">
-              <span className="block whitespace-nowrap">Real-time awareness for mining</span>
-              <span className="block whitespace-nowrap mt-3">and critical infrastructure</span>
-            </h1>
-            
-            {/* Key Message */}
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              <span className="text-foreground font-bold">Mobilaris Site™</span> provides a shared real-time view of people, vehicles and assets – supporting safer coordination in safety-critical environments.
-            </p>
-
-            {/* Visual Tags */}
-
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button size="lg" className="text-base px-6 shadow-lg hover:shadow-xl transition-all duration-300" asChild>
-                <a href="https://mobilarisindustrialsolutions.se/contact/" target="_blank" rel="noopener noreferrer">
-                  Book a Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-            </div>
+      <div className="container relative z-10 mx-auto px-6 pt-36 md:pt-44 pb-0">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
+          {/* Pill badge with gradient lines */}
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <span className="hidden sm:block h-px w-24 bg-gradient-to-r from-transparent to-primary/60" />
+            <span className="inline-flex items-center rounded-full border border-primary/40 bg-primary/10 px-5 py-2 text-sm font-semibold text-foreground">
+              Mobilaris Site™
+            </span>
+            <span className="hidden sm:block h-px w-24 bg-gradient-to-l from-transparent to-primary/60" />
           </div>
 
-          {/* Right: Image - Linear Style */}
-          <div className="relative lg:pl-8 animate-fade-in perspective-1000" style={{
-          animationDelay: '0.2s'
-        }}>
-            
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-[1.08] tracking-tight">
+            Real-time awareness for mining and critical infrastructure
+          </h1>
+
+          <p className="text-lg sm:text-xl text-muted-foreground mb-9 max-w-2xl mx-auto leading-relaxed">
+            A shared real-time view of people, vehicles and assets – supporting
+            safer coordination in safety-critical environments.
+          </p>
+
+          <div className="flex justify-center">
+            <Button
+              size="lg"
+              className="text-base px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              asChild
+            >
+              <a
+                href="https://mobilarisindustrialsolutions.se/contact/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book a Demo
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+          </div>
+        </div>
+
+        {/* Framed product screenshot */}
+        <div
+          className="relative max-w-5xl mx-auto mt-16 md:mt-20 animate-fade-in"
+          style={{ animationDelay: "0.2s" }}
+        >
+          <div className="rounded-t-3xl border border-b-0 border-border bg-card/80 p-2 sm:p-3 shadow-elegant overflow-hidden">
+            <img
+              src={demoImage}
+              alt="Mobilaris Site™ real-time map showing people, vehicles and assets"
+              className="w-full h-auto rounded-t-2xl"
+            />
           </div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-border rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-muted-foreground rounded-full" />
-        </div>
-      </div>
-    </section>;
+    </section>
+  );
 };
