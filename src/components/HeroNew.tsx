@@ -38,7 +38,7 @@ export const HeroNew = () => {
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground mb-9 max-w-xl mx-auto leading-relaxed">
-            See people, equipment and critical events. Above ground, underground and indoors.
+            See people, equipment and critical events.{"\u00a0\n"}Above ground, underground and indoors.
           </p>
 
           <div className="flex justify-center">
