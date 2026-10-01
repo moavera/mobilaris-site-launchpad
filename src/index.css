@@ -197,7 +197,7 @@ All colors MUST be HSL.
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-one 16s ease-in-out -0s infinite alternate;
+    animation: mesh-snake 28s linear 0s infinite;
   }
 
   .hero-mesh__smoke--two {
@@ -211,7 +211,7 @@ All colors MUST be HSL.
     background-size: 230% 260%;
     /* Negative delays stagger the three curtains so they are never all at
        the same side at once — at least one is always mid-sweep. */
-    animation: mesh-smoke-two 16s ease-in-out -5.4s infinite alternate;
+    animation: mesh-snake 28s linear 0.9s infinite; opacity: 0.85;
   }
 
   .hero-mesh__smoke--three {
@@ -222,7 +222,7 @@ All colors MUST be HSL.
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-three 16s ease-in-out -10.8s infinite alternate;
+    animation: mesh-snake 28s linear 1.8s infinite; opacity: 0.75;
   }
 
   .hero-mesh__fade {
@@ -230,51 +230,20 @@ All colors MUST be HSL.
   }
 }
 
-/* All three curtains travel the same left-to-right path at the same speed,
-   only vertically offset, so they read as one undulating sheet of light. */
-@keyframes mesh-smoke-one {
-  0% {
-    background-position: 100% 18%;
-    opacity: 0.9;
-  }
-  50% {
-    background-position: 50% 55%;
-    opacity: 1;
-  }
-  100% {
-    background-position: 6% 30%;
-    opacity: 0.85;
-  }
-}
-
-@keyframes mesh-smoke-two {
-  0% {
-    background-position: 98% 46%;
-    opacity: 0.8;
-  }
-  50% {
-    background-position: 52% 22%;
-    opacity: 0.9;
-  }
-  100% {
-    background-position: 8% 62%;
-    opacity: 0.82;
-  }
-}
-
-@keyframes mesh-smoke-three {
-  0% {
-    background-position: 96% 72%;
-    opacity: 0.78;
-  }
-  50% {
-    background-position: 48% 78%;
-    opacity: 0.88;
-  }
-  100% {
-    background-position: 4% 44%;
-    opacity: 0.72;
-  }
+/* Snake path: all three layers follow the same winding route; staggered
+   delays make them trail each other like a snake's head, body and tail. */
+@keyframes mesh-snake {
+  0%   { background-position: 90% 70%; }
+  10%  { background-position: 70% 40%; }
+  20%  { background-position: 55% 72%; }
+  30%  { background-position: 40% 35%; }
+  40%  { background-position: 22% 60%; }
+  50%  { background-position: 10% 30%; }
+  60%  { background-position: 30% 22%; }
+  70%  { background-position: 50% 50%; }
+  80%  { background-position: 68% 25%; }
+  90%  { background-position: 85% 45%; }
+  100% { background-position: 90% 70%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
