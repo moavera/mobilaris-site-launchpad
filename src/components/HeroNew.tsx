@@ -19,7 +19,7 @@ export const HeroNew = () => {
           {/* Pill badge with white lines */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className="hidden sm:block h-px w-24 bg-gradient-to-r from-transparent to-white/70" />
-            <span className="inline-flex items-center rounded-full border border-white/25 bg-white/5 px-5 py-2 text-sm font-medium text-foreground">
+            <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-medium text-foreground shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15),0_8px_32px_0_rgba(0,0,0,0.25)] backdrop-blur-xl">
               Mobilaris Site™
             </span>
             <span className="hidden sm:block h-px w-24 bg-gradient-to-l from-transparent to-white/70" />
@@ -37,7 +37,7 @@ export const HeroNew = () => {
           <div className="flex justify-center">
             <Button
               size="lg"
-              className="text-base px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              className="text-base px-8 rounded-full border border-white/25 bg-white/10 text-foreground shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_8px_32px_0_rgba(0,0,0,0.3)] backdrop-blur-xl transition-all duration-300 hover:bg-white/20 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_12px_40px_0_rgba(0,0,0,0.35)]"
               asChild
             >
               <a
@@ -52,16 +52,26 @@ export const HeroNew = () => {
           </div>
         </div>
 
-        {/* Framed product screenshot – transparent frame, no glow shadow */}
+        {/* Framed product screenshot – glassmorphism frame */}
         <div
           className="relative max-w-5xl mx-auto mt-16 md:mt-20 animate-fade-in"
           style={{ animationDelay: "0.2s" }}
         >
-          <div className="rounded-t-3xl border border-b-0 border-white/15 bg-white/5 backdrop-blur-sm p-2 sm:p-3 overflow-hidden">
+          {/* Gloss highlight along the top edge of the glass frame */}
+          <div
+            className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent"
+            aria-hidden="true"
+          />
+          <div className="relative overflow-hidden rounded-t-3xl border border-white/20 bg-white/10 p-2 sm:p-3 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-2xl">
+            {/* Soft sheen across the glass frame */}
+            <div
+              className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-white/10 via-transparent to-transparent"
+              aria-hidden="true"
+            />
             <img
               src={demoImage}
               alt="Mobilaris Site™ real-time map showing people, vehicles and assets"
-              className="w-full h-auto rounded-t-2xl"
+              className="relative z-0 w-full h-auto rounded-t-2xl"
             />
           </div>
         </div>
