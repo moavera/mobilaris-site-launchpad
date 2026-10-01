@@ -44,7 +44,7 @@ export const HeroNew = () => {
           <div className="flex justify-center">
             <Button
               size="lg"
-              className="text-base px-8 rounded-full border border-white/25 bg-white/10 text-foreground shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_8px_32px_0_rgba(0,0,0,0.3)] backdrop-blur-xl transition-all duration-300 hover:bg-white/20 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_12px_40px_0_rgba(0,0,0,0.35)]"
+              className="text-base px-8 rounded-full bg-[#974FF4] text-white shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] transition-all duration-300 hover:bg-[#8640de] hover:shadow-[0_12px_40px_0_rgba(0,0,0,0.35)]"
               asChild
             >
               <a
