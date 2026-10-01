@@ -181,6 +181,10 @@ All colors MUST be HSL.
   }
 
   /* Aurora-like light fields drifting slowly over the crisp grid */
+  .hero-mesh__smoke {
+    will-change: background-position, opacity;
+  }
+
   /* One coherent aurora sheet: three softly layered curtains that drift
      together at the same tempo, with fully transparent edges so the light
      fades smoothly into the dark grid. */
