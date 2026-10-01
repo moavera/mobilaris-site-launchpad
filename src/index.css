@@ -190,10 +190,10 @@ All colors MUST be HSL.
   .hero-mesh__smoke::before {
     content: "";
     position: absolute;
-    left: 6%;
+    left: 4%;
     top: 2%;
-    width: 64%;
-    height: 26%;
+    width: 76%;
+    height: 32%;
     will-change: transform, translate;
     backface-visibility: hidden;
     /* Two independent sine-eased axes form a smooth figure-eight snake
@@ -232,14 +232,14 @@ All colors MUST be HSL.
   }
 }
 
-/* Horizontal sweep: same travel as before — the band is now 64% wide,
-   so ±62% of its own width ≈ ±40% of the hero width. */
+/* Horizontal sweep: the band is 76% wide, ±48% of its own width ≈ ±37%
+   of the hero width — same on-screen sweep as before. */
 @keyframes mesh-snake-x {
-  from { translate: -62% 0; }
-  to   { translate: 62% 0; }
+  from { translate: -48% 0; }
+  to   { translate: 48% 0; }
 }
 
-/* Vertical weave: the band is 26% tall, ±115% of its own height ≈ ±30%
+/* Vertical weave: the band is 32% tall, ±115% of its own height ≈ ±37%
    of the hero height — same travel as before. */
 @keyframes mesh-snake-y {
   from { transform: translate3d(0, -115%, 0); }
