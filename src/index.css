@@ -187,21 +187,23 @@ All colors MUST be HSL.
     background-image: none;
   }
 
-  .hero-mesh__smoke::before {
+  .hero-mesh__smoke::before,
+  .hero-mesh__smoke::after {
     content: "";
     position: absolute;
-    left: 4%;
-    top: 6%;
-    width: 76%;
-    height: 34%;
+    left: 2%;
+    top: 14%;
+    width: 92%;
+    height: 22%;
     will-change: transform, translate, rotate;
     backface-visibility: hidden;
-    /* Three independent sine-eased axes form a winding snake path:
-       x sweeps side to side (30s), y weaves on an off-beat 18.75s
-       rhythm (8:5 ratio with x = a snirklig Lissajous curve that
-       never traces the same loop), and a slow tilt makes the band
-       lean into its turns. The y travel is capped so part of the
-       band ALWAYS stays on-screen — no more long black moments. */
+    /* A long, thin ribbon instead of a round blob — the shape itself
+       reads as a path across the screen. Three independent sine-eased
+       axes form a winding snake path: x sweeps side to side (30s),
+       y weaves on an off-beat 18.75s rhythm (8:5 ratio with x = a
+       snirklig Lissajous curve), and a slow tilt makes the ribbon
+       lean into its turns. The y travel is capped so the ribbon
+       ALWAYS stays on-screen — no more long black moments. */
     animation:
       mesh-snake-x 30s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-x, 0s) infinite alternate,
       mesh-snake-y 18.75s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-y, -7.5s) infinite alternate,
@@ -212,10 +214,15 @@ All colors MUST be HSL.
     --snake-delay-x: -3.8s;
     --snake-delay-y: -11.3s;
     --snake-delay-r: -6s;
+    /* The tail follows the exact same path, slightly delayed —
+       together head + tail trace the winding route. */
+    --tail-delay-x: -2.6s;
+    --tail-delay-y: -10.1s;
+    --tail-delay-r: -4.8s;
   }
   /* One single connected shape: all three tones live in the same
-     ::before so the light always reads as one unit, never as
-     separate blobs. Layers two and three are hidden. */
+     ::before so the light always reads as one unit. The ::after is
+     the dimmer trailing body of the snake. */
   .hero-mesh__smoke--one::before {
     background: radial-gradient(
       closest-side,
@@ -223,6 +230,21 @@ All colors MUST be HSL.
       hsl(var(--mesh-warm) / 0.6) 26%,
       hsl(var(--mesh-dim) / 0.35) 48%,
       hsl(var(--mesh-dim) / 0.12) 66%,
+      transparent 100%
+    );
+  }
+
+  .hero-mesh__smoke--one::after {
+    opacity: 0.45;
+    animation-delay:
+      var(--tail-delay-x, -2.6s),
+      var(--tail-delay-y, -10.1s),
+      var(--tail-delay-r, -4.8s);
+    background: radial-gradient(
+      closest-side,
+      hsl(var(--mesh-warm) / 0.7) 0%,
+      hsl(var(--mesh-dim) / 0.3) 40%,
+      hsl(var(--mesh-dim) / 0.1) 62%,
       transparent 100%
     );
   }
@@ -248,9 +270,13 @@ All colors MUST be HSL.
    height ≈ ±27% of the hero height — at the highest point its lower
    edge still sits ~13% down the hero, so the light never leaves the
    screen. */
+/* Vertical weave, kept shallow: the ribbon is 22% tall, ±60% of its own
+   height ≈ ±13% of the hero height — at the highest point its top edge
+   still sits at the very top of the hero, so the light never leaves the
+   screen. */
 @keyframes mesh-snake-y {
-  from { transform: translate3d(0, -80%, 0); }
-  to   { transform: translate3d(0, 80%, 0); }
+  from { transform: translate3d(0, -60%, 0); }
+  to   { transform: translate3d(0, 60%, 0); }
 }
 
 /* Slow tilt: the band leans into its turns for a more organic,
@@ -261,7 +287,8 @@ All colors MUST be HSL.
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-mesh__smoke::before {
+  .hero-mesh__smoke::before,
+  .hero-mesh__smoke::after {
     animation: none;
   }
 }
