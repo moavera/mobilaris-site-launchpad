@@ -15,7 +15,7 @@ export const HeroNew = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 mx-auto px-6 pt-36 md:pt-44 pb-0">
+      <div className="container relative z-10 mx-auto px-6 pt-36 md:pt-44 pb-16 md:pb-24">
         <div className="relative max-w-4xl mx-auto text-center animate-fade-in-up">
           {/* Soft dark scrim behind the text so it stays readable when the light sweeps past */}
           <div
@@ -67,7 +67,7 @@ export const HeroNew = () => {
             className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent"
             aria-hidden="true"
           />
-          <div className="relative overflow-hidden rounded-t-3xl border border-white/20 bg-white/10 p-2 sm:p-3 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-2xl">
+          <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 p-2 sm:p-3 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-2xl">
             {/* Soft sheen across the glass frame */}
             <div
               className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-white/10 via-transparent to-transparent"
@@ -76,7 +76,7 @@ export const HeroNew = () => {
             <img
               src={demoImage.url}
               alt="Mobilaris Site™ real-time map showing people, vehicles and assets"
-              className="relative z-0 w-full h-auto rounded-t-2xl"
+              className="relative z-0 w-full h-auto rounded-2xl"
             />
           </div>
         </div>
