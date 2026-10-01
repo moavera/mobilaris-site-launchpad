@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { Reveal } from "@/components/Reveal";
 import { HeroNew } from "@/components/HeroNew";
 import { useSectionShare } from "@/hooks/use-section-share";
 import { RiskSection } from "@/components/RiskSection";
@@ -29,9 +30,9 @@ const SiteProduct = () => {
       
       
       
-      <GettingStarted />
+      <Reveal><GettingStarted /></Reveal>
       
-      <ContactSection />
+      <Reveal><ContactSection /></Reveal>
       <Footer />
     </main>;
 };
