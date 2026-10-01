@@ -191,21 +191,22 @@ All colors MUST be HSL.
     content: "";
     position: absolute;
     left: -10%;
-    top: 24%;
+    top: 2%;
     width: 120%;
-    height: 52%;
+    height: 42%;
     will-change: transform, translate;
     backface-visibility: hidden;
     /* Two independent sine-eased axes form a smooth figure-eight snake
-       path (x: one full sweep per 14s, y: twice as fast). */
+       path (x: one full sweep per 22s, y: twice as fast). The band sits
+       high so the top of the hero always has light when scrolled up. */
     animation:
-      mesh-snake-x 14s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-x, 0s) infinite alternate,
-      mesh-snake-y 7s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-y, -3.5s) infinite alternate;
+      mesh-snake-x 22s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-x, 0s) infinite alternate,
+      mesh-snake-y 11s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-y, -5.5s) infinite alternate;
   }
 
   .hero-mesh__smoke--one {
-    --snake-delay-x: -1.8s;
-    --snake-delay-y: -5.3s;
+    --snake-delay-x: -2.8s;
+    --snake-delay-y: -8.3s;
   }
   .hero-mesh__smoke--one::before {
     background: radial-gradient(
@@ -218,8 +219,8 @@ All colors MUST be HSL.
   }
 
   .hero-mesh__smoke--two {
-    --snake-delay-x: -0.9s;
-    --snake-delay-y: -4.4s;
+    --snake-delay-x: -1.4s;
+    --snake-delay-y: -6.9s;
     opacity: 0.85;
   }
   .hero-mesh__smoke--two::before {
@@ -234,7 +235,7 @@ All colors MUST be HSL.
 
   .hero-mesh__smoke--three {
     --snake-delay-x: 0s;
-    --snake-delay-y: -3.5s;
+    --snake-delay-y: -5.5s;
     opacity: 0.75;
   }
   .hero-mesh__smoke--three::before {
@@ -257,10 +258,10 @@ All colors MUST be HSL.
   to   { translate: 33% 0; }
 }
 
-/* Vertical weave: ±30% of the hero height (element is 52% tall). */
+/* Vertical weave: ±30% of the hero height (element is 42% tall). */
 @keyframes mesh-snake-y {
-  from { transform: translate3d(0, -58%, 0); }
-  to   { transform: translate3d(0, 58%, 0); }
+  from { transform: translate3d(0, -72%, 0); }
+  to   { transform: translate3d(0, 72%, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
