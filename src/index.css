@@ -190,14 +190,14 @@ All colors MUST be HSL.
   .hero-mesh__smoke::before {
     content: "";
     position: absolute;
-    left: -10%;
+    left: 6%;
     top: 2%;
-    width: 120%;
-    height: 42%;
+    width: 64%;
+    height: 26%;
     will-change: transform, translate;
     backface-visibility: hidden;
     /* Two independent sine-eased axes form a smooth figure-eight snake
-       path (x: one full sweep per 22s, y: twice as fast). The band sits
+       path (x: one full sweep per 30s, y: twice as fast). The band sits
        high so the top of the hero always has light when scrolled up. */
     animation:
       mesh-snake-x 30s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-x, 0s) infinite alternate,
@@ -252,16 +252,18 @@ All colors MUST be HSL.
   }
 }
 
-/* Horizontal sweep: ±40% of the hero width (element is 120% wide). */
+/* Horizontal sweep: same travel as before — the band is now 64% wide,
+   so ±62% of its own width ≈ ±40% of the hero width. */
 @keyframes mesh-snake-x {
-  from { translate: -33% 0; }
-  to   { translate: 33% 0; }
+  from { translate: -62% 0; }
+  to   { translate: 62% 0; }
 }
 
-/* Vertical weave: ±30% of the hero height (element is 42% tall). */
+/* Vertical weave: the band is 26% tall, ±115% of its own height ≈ ±30%
+   of the hero height — same travel as before. */
 @keyframes mesh-snake-y {
-  from { transform: translate3d(0, -72%, 0); }
-  to   { transform: translate3d(0, 72%, 0); }
+  from { transform: translate3d(0, -115%, 0); }
+  to   { transform: translate3d(0, 115%, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
