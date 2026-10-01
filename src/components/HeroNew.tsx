@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import demoImage from "@/assets/hero-map-emergency.png.asset.json";
@@ -6,6 +6,9 @@ import demoImage from "@/assets/hero-map-emergency.png.asset.json";
 export const HeroNew = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const meshRef = useRef<HTMLDivElement>(null);
+  // When the cursor rests over the headline/text block the light dims
+  // so the copy stays readable; everywhere else it is full strength.
+  const [textHovered, setTextHovered] = useState(false);
 
   // The mesh light follows the mouse pointer on devices that can hover.
   // On touch devices (no hover) the light instead wanders slowly on its
@@ -108,7 +111,11 @@ export const HeroNew = () => {
 
   return (
     <section ref={sectionRef} className="relative overflow-hidden bg-background">
-      <div ref={meshRef} className="hero-mesh pointer-events-none absolute inset-0" aria-hidden="true">
+      <div
+        ref={meshRef}
+        className={`hero-mesh pointer-events-none absolute inset-0${textHovered ? " hero-mesh--dim" : ""}`}
+        aria-hidden="true"
+      >
         <div className="hero-mesh__base absolute inset-0" />
         <div className="hero-mesh__smoke hero-mesh__smoke--one absolute inset-0" />
         <div className="hero-mesh__smoke hero-mesh__smoke--two absolute inset-0" />
@@ -119,7 +126,11 @@ export const HeroNew = () => {
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 pt-48 sm:pt-52 md:pt-60 pb-16 md:pb-24">
-        <div className="relative max-w-4xl mx-auto text-center animate-fade-in-up">
+        <div
+          className="relative max-w-4xl mx-auto text-center animate-fade-in-up"
+          onMouseEnter={() => setTextHovered(true)}
+          onMouseLeave={() => setTextHovered(false)}
+        >
           {/* Soft dark scrim behind the text so it stays readable when the light sweeps past */}
           <div
             className="pointer-events-none absolute -inset-x-16 -top-24 -bottom-10 -z-10 bg-[radial-gradient(ellipse_60%_55%_at_50%_45%,hsl(var(--background)/0.85)_0%,hsl(var(--background)/0.5)_45%,transparent_75%)]"
