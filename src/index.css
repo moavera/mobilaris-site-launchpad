@@ -191,16 +191,17 @@ All colors MUST be HSL.
     content: "";
     position: absolute;
     left: -10%;
-    top: 24%;
+    top: 2%;
     width: 120%;
-    height: 52%;
+    height: 42%;
     will-change: transform, translate;
     backface-visibility: hidden;
     /* Two independent sine-eased axes form a smooth figure-eight snake
-       path (x: one full sweep per 14s, y: twice as fast). */
+       path (x: one full sweep per 22s, y: twice as fast). The band sits
+       high so the top of the hero always has light when scrolled up. */
     animation:
-      mesh-snake-x 14s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-x, 0s) infinite alternate,
-      mesh-snake-y 7s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-y, -3.5s) infinite alternate;
+      mesh-snake-x 22s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-x, 0s) infinite alternate,
+      mesh-snake-y 11s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-y, -5.5s) infinite alternate;
   }
 
   .hero-mesh__smoke--one {
