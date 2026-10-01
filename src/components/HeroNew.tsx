@@ -10,6 +10,12 @@ export const HeroNew = () => {
         <div className="hero-mesh__smoke hero-mesh__smoke--one absolute inset-0" />
         <div className="hero-mesh__smoke hero-mesh__smoke--two absolute inset-0" />
         <div className="hero-mesh__smoke hero-mesh__smoke--three absolute inset-0" />
+
+        {/* Frosted glass panels floating over the background */}
+        <div className="hero-glass hero-glass--one absolute" aria-hidden="true" />
+        <div className="hero-glass hero-glass--two absolute" aria-hidden="true" />
+        <div className="hero-glass hero-glass--three absolute" aria-hidden="true" />
+
         <div className="hero-mesh__fade absolute inset-x-0 bottom-0 h-40" />
       </div>
 
