@@ -270,9 +270,13 @@ All colors MUST be HSL.
    height ≈ ±27% of the hero height — at the highest point its lower
    edge still sits ~13% down the hero, so the light never leaves the
    screen. */
+/* Vertical weave, kept shallow: the ribbon is 22% tall, ±60% of its own
+   height ≈ ±13% of the hero height — at the highest point its top edge
+   still sits at the very top of the hero, so the light never leaves the
+   screen. */
 @keyframes mesh-snake-y {
-  from { transform: translate3d(0, -80%, 0); }
-  to   { transform: translate3d(0, 80%, 0); }
+  from { transform: translate3d(0, -60%, 0); }
+  to   { transform: translate3d(0, 60%, 0); }
 }
 
 /* Slow tilt: the band leans into its turns for a more organic,
@@ -283,7 +287,8 @@ All colors MUST be HSL.
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-mesh__smoke::before {
+  .hero-mesh__smoke::before,
+  .hero-mesh__smoke::after {
     animation: none;
   }
 }
