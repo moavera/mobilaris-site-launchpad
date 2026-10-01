@@ -30,7 +30,7 @@ export const HeroNew = () => {
           </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground mb-9 max-w-xl mx-auto leading-relaxed">
-            See people, equipment and critical events.{"\u00A0"}
+            People, equipment and critical events.{"\u00A0"}
             <br />
             Above ground, underground and indoors.
           </p>
