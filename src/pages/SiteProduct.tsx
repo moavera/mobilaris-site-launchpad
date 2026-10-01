@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { Reveal } from "@/components/Reveal";
 import { HeroNew } from "@/components/HeroNew";
 import { useSectionShare } from "@/hooks/use-section-share";
 import { RiskSection } from "@/components/RiskSection";
@@ -20,18 +21,18 @@ const SiteProduct = () => {
       <Navigation />
       <HeroNew />
       
-      <RiskSection />
-      <ChallengesSection />
-      <KeyProblems />
-      <ValueProposition />
-      <Environments />
-      <WhyMobilaris />
+      <Reveal><RiskSection /></Reveal>
+      <Reveal><ChallengesSection /></Reveal>
+      <Reveal><KeyProblems /></Reveal>
+      <Reveal><ValueProposition /></Reveal>
+      <Reveal><Environments /></Reveal>
+      <Reveal><WhyMobilaris /></Reveal>
       
       
       
-      <GettingStarted />
+      <Reveal><GettingStarted /></Reveal>
       
-      <ContactSection />
+      <Reveal><ContactSection /></Reveal>
       <Footer />
     </main>;
 };
