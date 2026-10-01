@@ -34,9 +34,9 @@ export const HeroNew = () => {
 
     const onPointerMove = (e: PointerEvent) => {
       const rect = section.getBoundingClientRect();
-      // Center the ribbon (92% wide, 38% tall) on the cursor.
+      // Center the ribbon (92% wide, 50% tall) on the cursor.
       targetX = e.clientX - rect.left - rect.width * 0.46;
-      targetY = e.clientY - rect.top - rect.height * 0.19;
+      targetY = e.clientY - rect.top - rect.height * 0.25;
       if (!initialized) {
         headX = tailX = targetX;
         headY = tailY = targetY;
