@@ -62,7 +62,7 @@ export const HeroNew = () => {
           className="relative max-w-5xl mx-auto mt-16 md:mt-20 animate-fade-in"
           style={{ animationDelay: "0.2s" }}
         >
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]">
+          <div className="relative overflow-hidden rounded-lg border border-white/15 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]">
             <img
               src={demoImage.url}
               alt="Mobilaris Site™ real-time map showing people, vehicles and assets"
