@@ -164,6 +164,7 @@ All colors MUST be HSL.
   .hero-mesh__smoke {
     background-image: radial-gradient(circle, hsl(var(--mesh-dim) / 0.32) 1.35px, transparent 1.7px);
     background-size: 12px 12px;
+    background-position: 0 0;
   }
 
   .hero-mesh__base {
@@ -172,25 +173,31 @@ All colors MUST be HSL.
   }
 
   .hero-mesh__smoke {
-    inset: -18% !important;
-    will-change: transform, opacity;
+    will-change: mask-position, opacity;
+    mask-repeat: no-repeat;
+    mask-size: 180% 180%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 180% 180%;
   }
 
   .hero-mesh__smoke--one {
-    background-image: radial-gradient(circle, hsl(var(--mesh-bright) / 0.96) 1.55px, transparent 1.9px);
+    background-image: radial-gradient(circle, hsl(var(--mesh-bright) / 0.96) 1.35px, transparent 1.7px);
     mask-image: radial-gradient(ellipse 31% 37% at 69% 68%, black 18%, transparent 72%);
+    -webkit-mask-image: radial-gradient(ellipse 31% 37% at 69% 68%, black 18%, transparent 72%);
     animation: mesh-smoke-one 15s ease-in-out infinite alternate;
   }
 
   .hero-mesh__smoke--two {
-    background-image: radial-gradient(circle, hsl(var(--mesh-warm) / 0.78) 1.45px, transparent 1.85px);
+    background-image: radial-gradient(circle, hsl(var(--mesh-warm) / 0.78) 1.35px, transparent 1.7px);
     mask-image: radial-gradient(ellipse 27% 32% at 35% 77%, black 14%, transparent 73%);
+    -webkit-mask-image: radial-gradient(ellipse 27% 32% at 35% 77%, black 14%, transparent 73%);
     animation: mesh-smoke-two 19s ease-in-out infinite alternate;
   }
 
   .hero-mesh__smoke--three {
-    background-image: radial-gradient(circle, hsl(var(--mesh-dim) / 0.7) 1.45px, transparent 1.85px);
+    background-image: radial-gradient(circle, hsl(var(--mesh-dim) / 0.7) 1.35px, transparent 1.7px);
     mask-image: radial-gradient(ellipse 36% 31% at 28% 24%, black 10%, transparent 74%);
+    -webkit-mask-image: radial-gradient(ellipse 36% 31% at 28% 24%, black 10%, transparent 74%);
     animation: mesh-smoke-three 23s ease-in-out infinite alternate;
   }
 
@@ -200,21 +207,21 @@ All colors MUST be HSL.
 }
 
 @keyframes mesh-smoke-one {
-  0% { transform: translate3d(-3%, 4%, 0) scale(1); opacity: 0.78; }
-  45% { transform: translate3d(5%, -3%, 0) scale(1.08); opacity: 1; }
-  100% { transform: translate3d(-1%, -7%, 0) scale(1.14); opacity: 0.84; }
+  0% { mask-position: 10% 65%; -webkit-mask-position: 10% 65%; opacity: 0.7; }
+  45% { mask-position: 62% 38%; -webkit-mask-position: 62% 38%; opacity: 1; }
+  100% { mask-position: 88% 72%; -webkit-mask-position: 88% 72%; opacity: 0.78; }
 }
 
 @keyframes mesh-smoke-two {
-  0% { transform: translate3d(5%, -2%, 0) scale(1.08); opacity: 0.72; }
-  55% { transform: translate3d(-5%, -7%, 0) scale(1.16); opacity: 0.94; }
-  100% { transform: translate3d(3%, 5%, 0) scale(1.03); opacity: 0.78; }
+  0% { mask-position: 82% 22%; -webkit-mask-position: 82% 22%; opacity: 0.62; }
+  55% { mask-position: 34% 78%; -webkit-mask-position: 34% 78%; opacity: 0.9; }
+  100% { mask-position: 12% 42%; -webkit-mask-position: 12% 42%; opacity: 0.7; }
 }
 
 @keyframes mesh-smoke-three {
-  0% { transform: translate3d(-4%, -5%, 0) scale(1.02); opacity: 0.58; }
-  50% { transform: translate3d(4%, 4%, 0) scale(1.13); opacity: 0.82; }
-  100% { transform: translate3d(7%, -2%, 0) scale(1.07); opacity: 0.62; }
+  0% { mask-position: 18% 18%; -webkit-mask-position: 18% 18%; opacity: 0.5; }
+  50% { mask-position: 72% 62%; -webkit-mask-position: 72% 62%; opacity: 0.8; }
+  100% { mask-position: 46% 86%; -webkit-mask-position: 46% 86%; opacity: 0.58; }
 }
 
 @media (prefers-reduced-motion: reduce) {
