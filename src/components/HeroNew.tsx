@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import demoImage from "@/assets/demo-scenario.png";
+import demoImage from "@/assets/hero-map-emergency.png.asset.json";
 
 export const HeroNew = () => {
   return (
@@ -74,7 +74,7 @@ export const HeroNew = () => {
               aria-hidden="true"
             />
             <img
-              src={demoImage}
+              src={demoImage.url}
               alt="Mobilaris Site™ real-time map showing people, vehicles and assets"
               className="relative z-0 w-full h-auto rounded-t-2xl"
             />
