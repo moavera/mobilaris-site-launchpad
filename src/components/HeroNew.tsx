@@ -11,11 +11,6 @@ export const HeroNew = () => {
         <div className="hero-mesh__smoke hero-mesh__smoke--two absolute inset-0" />
         <div className="hero-mesh__smoke hero-mesh__smoke--three absolute inset-0" />
 
-        {/* Frosted-glass haze over the lit mesh */}
-        <div className="hero-mesh__glow hero-mesh__glow--one absolute inset-0" aria-hidden="true" />
-        <div className="hero-mesh__glow hero-mesh__glow--two absolute inset-0" aria-hidden="true" />
-        <div className="hero-mesh__glow hero-mesh__glow--three absolute inset-0" aria-hidden="true" />
-
         <div className="hero-mesh__fade absolute inset-x-0 bottom-0 h-40" />
       </div>
 
