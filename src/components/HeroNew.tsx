@@ -16,7 +16,12 @@ export const HeroNew = () => {
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 pt-36 md:pt-44 pb-0">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
+        <div className="relative max-w-4xl mx-auto text-center animate-fade-in-up">
+          {/* Soft dark scrim behind the text so it stays readable when the light sweeps past */}
+          <div
+            className="pointer-events-none absolute -inset-x-16 -top-24 -bottom-10 -z-10 bg-[radial-gradient(ellipse_60%_55%_at_50%_45%,hsl(var(--background)/0.85)_0%,hsl(var(--background)/0.5)_45%,transparent_75%)]"
+            aria-hidden="true"
+          />
           {/* Pill badge with white lines */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className="hidden sm:block h-px w-24 bg-gradient-to-r from-transparent to-white/70" />
