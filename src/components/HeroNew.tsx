@@ -25,7 +25,9 @@ export const HeroNew = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-6 leading-[1.1] tracking-tight">
             See your entire site
             <br />
-            in real time with <span className="text-foreground">Mobilaris Site™</span>
+            in real time
+            <br />
+            with <span className="text-foreground">Mobilaris Site™</span>
           </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground mb-9 max-w-xl mx-auto leading-relaxed">
