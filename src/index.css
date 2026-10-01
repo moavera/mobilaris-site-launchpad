@@ -175,9 +175,9 @@ All colors MUST be HSL.
 
   .hero-mesh__base {
     background-image:
-      linear-gradient(to bottom, hsl(var(--foreground) / 0.13), hsl(var(--foreground) / 0.05)),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
-    opacity: 0.12;
+      linear-gradient(to bottom, hsl(var(--foreground) / 0.09), hsl(var(--foreground) / 0.03)),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0));
+    opacity: 0.07;
   }
 
   /* The smoke layer itself is a static, masked container (the square grid).
