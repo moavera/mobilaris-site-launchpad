@@ -6,6 +6,9 @@ import demoImage from "@/assets/hero-map-emergency.png.asset.json";
 export const HeroNew = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const meshRef = useRef<HTMLDivElement>(null);
+  // When the cursor rests over the headline/text block the light dims
+  // so the copy stays readable; everywhere else it is full strength.
+  const [textHovered, setTextHovered] = useState(false);
 
   // The mesh light follows the mouse pointer on devices that can hover.
   // On touch devices (no hover) the light instead wanders slowly on its
@@ -108,7 +111,11 @@ export const HeroNew = () => {
 
   return (
     <section ref={sectionRef} className="relative overflow-hidden bg-background">
-      <div ref={meshRef} className="hero-mesh pointer-events-none absolute inset-0" aria-hidden="true">
+      <div
+        ref={meshRef}
+        className={`hero-mesh pointer-events-none absolute inset-0${textHovered ? " hero-mesh--dim" : ""}`}
+        aria-hidden="true"
+      >
         <div className="hero-mesh__base absolute inset-0" />
         <div className="hero-mesh__smoke hero-mesh__smoke--one absolute inset-0" />
         <div className="hero-mesh__smoke hero-mesh__smoke--two absolute inset-0" />
