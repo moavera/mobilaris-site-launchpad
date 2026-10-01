@@ -74,10 +74,12 @@ export const HeroNew = () => {
 
     seed();
     section.addEventListener("pointermove", onPointerMove);
+    window.addEventListener("scroll", onScroll, { passive: true });
     rafId = requestAnimationFrame(tick);
 
     return () => {
       section.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("scroll", onScroll);
       cancelAnimationFrame(rafId);
     };
   }, []);
