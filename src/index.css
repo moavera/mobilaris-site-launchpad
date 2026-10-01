@@ -230,20 +230,36 @@ All colors MUST be HSL.
   }
 }
 
-/* Snake path: all three layers follow the same winding route; staggered
-   delays make them trail each other like a snake's head, body and tail. */
+/* Snake path: a smooth Lissajous-style winding curve sampled at many
+   points, so the light glides without any visible corners. All three
+   layers follow the same route; staggered delays make them trail each
+   other like a snake's head, body and tail. */
 @keyframes mesh-snake {
-  0%   { background-position: 90% 70%; }
-  10%  { background-position: 70% 40%; }
-  20%  { background-position: 55% 72%; }
-  30%  { background-position: 40% 35%; }
-  40%  { background-position: 22% 60%; }
-  50%  { background-position: 10% 30%; }
-  60%  { background-position: 30% 22%; }
-  70%  { background-position: 50% 50%; }
-  80%  { background-position: 68% 25%; }
-  90%  { background-position: 85% 45%; }
-  100% { background-position: 90% 70%; }
+  0%     { background-position: 50% 50%; }
+  4.17%  { background-position: 60.4% 62.5%; }
+  8.33%  { background-position: 70% 71.7%; }
+  12.5%  { background-position: 78.3% 75%; }
+  16.67% { background-position: 84.6% 71.7%; }
+  20.83% { background-position: 88.6% 62.5%; }
+  25%    { background-position: 90% 50%; }
+  29.17% { background-position: 88.6% 37.5%; }
+  33.33% { background-position: 84.6% 28.3%; }
+  37.5%  { background-position: 78.3% 25%; }
+  41.67% { background-position: 70% 28.3%; }
+  45.83% { background-position: 60.4% 37.5%; }
+  50%    { background-position: 50% 50%; }
+  54.17% { background-position: 39.6% 62.5%; }
+  58.33% { background-position: 30% 71.7%; }
+  62.5%  { background-position: 21.7% 75%; }
+  66.67% { background-position: 15.4% 71.7%; }
+  70.83% { background-position: 11.4% 62.5%; }
+  75%    { background-position: 10% 50%; }
+  79.17% { background-position: 11.4% 37.5%; }
+  83.33% { background-position: 15.4% 28.3%; }
+  87.5%  { background-position: 21.7% 25%; }
+  91.67% { background-position: 30% 28.3%; }
+  95.83% { background-position: 39.6% 37.5%; }
+  100%   { background-position: 50% 50%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
