@@ -31,8 +31,7 @@ export const HeroNew = () => {
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground mb-9 max-w-xl mx-auto leading-relaxed">
-            Real-time awareness of people, vehicles and assets – in one shared
-            view.
+            See people, equipment and critical events. Above ground, underground and indoors.
           </p>
 
           <div className="flex justify-center">
