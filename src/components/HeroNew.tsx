@@ -27,7 +27,6 @@ export const HeroNew = () => {
             <br />
             in real time
             <br />
-            with <span className="text-foreground">Mobilaris Site™</span>
           </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground mb-9 max-w-xl mx-auto leading-relaxed">
