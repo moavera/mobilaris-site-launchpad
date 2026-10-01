@@ -197,7 +197,7 @@ All colors MUST be HSL.
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-one 38s ease-in-out infinite alternate;
+    animation: mesh-smoke-one 26s ease-in-out infinite alternate;
   }
 
   .hero-mesh__smoke--two {
@@ -209,7 +209,7 @@ All colors MUST be HSL.
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-two 38s ease-in-out infinite alternate;
+    animation: mesh-smoke-two 26s ease-in-out infinite alternate;
   }
 
   .hero-mesh__smoke--three {
@@ -220,7 +220,7 @@ All colors MUST be HSL.
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-three 38s ease-in-out infinite alternate;
+    animation: mesh-smoke-three 26s ease-in-out infinite alternate;
   }
 
   .hero-mesh__fade {
