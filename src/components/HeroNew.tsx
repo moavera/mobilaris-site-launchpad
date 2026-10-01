@@ -32,17 +32,33 @@ export const HeroNew = () => {
       initialized = true;
     };
 
-    const onPointerMove = (e: PointerEvent) => {
+    let clientX = 0;
+    let clientY = 0;
+    let hasPointer = false;
+
+    const updateTarget = () => {
+      if (!hasPointer) return;
       const rect = section.getBoundingClientRect();
       // Center the ribbon (92% wide, 50% tall) on the cursor.
-      targetX = e.clientX - rect.left - rect.width * 0.46;
-      targetY = e.clientY - rect.top - rect.height * 0.25;
+      targetX = clientX - rect.left - rect.width * 0.46;
+      targetY = clientY - rect.top - rect.height * 0.25;
       if (!initialized) {
         headX = tailX = targetX;
         headY = tailY = targetY;
         initialized = true;
       }
     };
+
+    const onPointerMove = (e: PointerEvent) => {
+      clientX = e.clientX;
+      clientY = e.clientY;
+      hasPointer = true;
+      updateTarget();
+    };
+
+    // pointermove doesn't fire while scrolling — recompute the target
+    // from the last known cursor position so the light follows along.
+    const onScroll = () => updateTarget();
 
     const tick = () => {
       headX += (targetX - headX) * 0.08;
@@ -58,10 +74,12 @@ export const HeroNew = () => {
 
     seed();
     section.addEventListener("pointermove", onPointerMove);
+    window.addEventListener("scroll", onScroll, { passive: true });
     rafId = requestAnimationFrame(tick);
 
     return () => {
       section.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("scroll", onScroll);
       cancelAnimationFrame(rafId);
     };
   }, []);
