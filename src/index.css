@@ -208,43 +208,23 @@ All colors MUST be HSL.
     --snake-delay-x: -3.8s;
     --snake-delay-y: -11.3s;
   }
+  /* One single connected shape: all three tones live in the same
+     ::before so the light always reads as one unit, never as
+     separate blobs. Layers two and three are hidden. */
   .hero-mesh__smoke--one::before {
     background: radial-gradient(
       closest-side,
       hsl(var(--mesh-bright) / 1) 0%,
-      hsl(var(--mesh-bright) / 0.45) 32%,
-      hsl(var(--mesh-bright) / 0.14) 56%,
+      hsl(var(--mesh-warm) / 0.6) 26%,
+      hsl(var(--mesh-dim) / 0.35) 48%,
+      hsl(var(--mesh-dim) / 0.12) 66%,
       transparent 100%
     );
   }
 
-  .hero-mesh__smoke--two {
-    --snake-delay-x: -1.9s;
-    --snake-delay-y: -9.4s;
-    opacity: 0.85;
-  }
-  .hero-mesh__smoke--two::before {
-    background: radial-gradient(
-      closest-side,
-      hsl(var(--mesh-warm) / 0.8) 0%,
-      hsl(var(--mesh-warm) / 0.3) 34%,
-      hsl(var(--mesh-warm) / 0.09) 58%,
-      transparent 100%
-    );
-  }
-
+  .hero-mesh__smoke--two,
   .hero-mesh__smoke--three {
-    --snake-delay-x: 0s;
-    --snake-delay-y: -7.5s;
-    opacity: 0.75;
-  }
-  .hero-mesh__smoke--three::before {
-    background: radial-gradient(
-      closest-side,
-      hsl(var(--mesh-dim) / 0.6) 0%,
-      hsl(var(--mesh-dim) / 0.22) 36%,
-      transparent 100%
-    );
+    display: none;
   }
 
   .hero-mesh__fade {
