@@ -20,12 +20,12 @@ const SiteProduct = () => {
       <Navigation />
       <HeroNew />
       
-      <RiskSection />
-      <ChallengesSection />
-      <KeyProblems />
-      <ValueProposition />
-      <Environments />
-      <WhyMobilaris />
+      <Reveal><RiskSection /></Reveal>
+      <Reveal><ChallengesSection /></Reveal>
+      <Reveal><KeyProblems /></Reveal>
+      <Reveal><ValueProposition /></Reveal>
+      <Reveal><Environments /></Reveal>
+      <Reveal><WhyMobilaris /></Reveal>
       
       
       
