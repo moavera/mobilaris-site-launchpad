@@ -230,7 +230,6 @@ All colors MUST be HSL.
       hsl(var(--mesh-warm) / 0.09) 58%,
       transparent 100%
     );
-    transform: scale(0.82);
   }
 
   .hero-mesh__smoke--three {
@@ -265,7 +264,7 @@ All colors MUST be HSL.
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-mesh__smoke {
+  .hero-mesh__smoke::before {
     animation: none;
   }
 }
