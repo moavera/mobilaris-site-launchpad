@@ -200,13 +200,13 @@ All colors MUST be HSL.
        path (x: one full sweep per 22s, y: twice as fast). The band sits
        high so the top of the hero always has light when scrolled up. */
     animation:
-      mesh-snake-x 22s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-x, 0s) infinite alternate,
-      mesh-snake-y 11s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-y, -5.5s) infinite alternate;
+      mesh-snake-x 30s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-x, 0s) infinite alternate,
+      mesh-snake-y 15s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-y, -7.5s) infinite alternate;
   }
 
   .hero-mesh__smoke--one {
-    --snake-delay-x: -2.8s;
-    --snake-delay-y: -8.3s;
+    --snake-delay-x: -3.8s;
+    --snake-delay-y: -11.3s;
   }
   .hero-mesh__smoke--one::before {
     background: radial-gradient(
@@ -219,8 +219,8 @@ All colors MUST be HSL.
   }
 
   .hero-mesh__smoke--two {
-    --snake-delay-x: -1.4s;
-    --snake-delay-y: -6.9s;
+    --snake-delay-x: -1.9s;
+    --snake-delay-y: -9.4s;
     opacity: 0.85;
   }
   .hero-mesh__smoke--two::before {
@@ -235,7 +235,7 @@ All colors MUST be HSL.
 
   .hero-mesh__smoke--three {
     --snake-delay-x: 0s;
-    --snake-delay-y: -5.5s;
+    --snake-delay-y: -7.5s;
     opacity: 0.75;
   }
   .hero-mesh__smoke--three::before {
