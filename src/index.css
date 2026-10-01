@@ -201,6 +201,7 @@ All colors MUST be HSL.
     height: 50%;
     will-change: transform;
     backface-visibility: hidden;
+    transition: opacity 0.4s ease;
   }
 
   /* One single connected shape: all three tones live in the same
@@ -229,6 +230,17 @@ All colors MUST be HSL.
       hsl(var(--mesh-dim) / 0.1) 62%,
       transparent 100%
     );
+  }
+
+  /* While the cursor rests over the headline/text block the light
+     dims so the copy stays readable — everywhere else it is full
+     strength. HeroNew toggles this class on pointer enter/leave. */
+  .hero-mesh--dim .hero-mesh__smoke--one::before {
+    opacity: 0.18;
+  }
+
+  .hero-mesh--dim .hero-mesh__smoke--one::after {
+    opacity: 0.08;
   }
 
   .hero-mesh__smoke--two,
