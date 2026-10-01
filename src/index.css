@@ -190,37 +190,37 @@ All colors MUST be HSL.
      fades smoothly into the dark grid. */
   .hero-mesh__smoke--one {
     background-image: radial-gradient(
-      ellipse 36% 14% at center,
+      ellipse 26% 10% at center,
       hsl(var(--mesh-bright) / 0.7) 0%,
-      hsl(var(--mesh-bright) / 0.3) 38%,
-      hsl(var(--mesh-bright) / 0.1) 62%,
+      hsl(var(--mesh-bright) / 0.3) 32%,
+      hsl(var(--mesh-bright) / 0.1) 56%,
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-one 26s ease-in-out infinite alternate;
+    animation: mesh-smoke-one 16s ease-in-out infinite alternate;
   }
 
   .hero-mesh__smoke--two {
     background-image: radial-gradient(
-      ellipse 30% 11% at center,
+      ellipse 21% 8% at center,
       hsl(var(--mesh-warm) / 0.5) 0%,
-      hsl(var(--mesh-warm) / 0.2) 40%,
-      hsl(var(--mesh-warm) / 0.06) 64%,
+      hsl(var(--mesh-warm) / 0.2) 34%,
+      hsl(var(--mesh-warm) / 0.06) 58%,
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-two 26s ease-in-out infinite alternate;
+    animation: mesh-smoke-two 16s ease-in-out infinite alternate;
   }
 
   .hero-mesh__smoke--three {
     background-image: radial-gradient(
-      ellipse 26% 10% at center,
+      ellipse 19% 7% at center,
       hsl(var(--mesh-dim) / 0.38) 0%,
-      hsl(var(--mesh-dim) / 0.15) 42%,
+      hsl(var(--mesh-dim) / 0.15) 36%,
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-three 26s ease-in-out infinite alternate;
+    animation: mesh-smoke-three 16s ease-in-out infinite alternate;
   }
 
   .hero-mesh__fade {
