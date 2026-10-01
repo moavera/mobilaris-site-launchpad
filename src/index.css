@@ -191,22 +191,27 @@ All colors MUST be HSL.
     content: "";
     position: absolute;
     left: 4%;
-    top: 2%;
+    top: 6%;
     width: 76%;
-    height: 32%;
-    will-change: transform, translate;
+    height: 34%;
+    will-change: transform, translate, rotate;
     backface-visibility: hidden;
-    /* Two independent sine-eased axes form a smooth figure-eight snake
-       path (x: one full sweep per 30s, y: twice as fast). The band sits
-       high so the top of the hero always has light when scrolled up. */
+    /* Three independent sine-eased axes form a winding snake path:
+       x sweeps side to side (30s), y weaves on an off-beat 18.75s
+       rhythm (8:5 ratio with x = a snirklig Lissajous curve that
+       never traces the same loop), and a slow tilt makes the band
+       lean into its turns. The y travel is capped so part of the
+       band ALWAYS stays on-screen — no more long black moments. */
     animation:
       mesh-snake-x 30s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-x, 0s) infinite alternate,
-      mesh-snake-y 15s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-y, -7.5s) infinite alternate;
+      mesh-snake-y 18.75s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-y, -7.5s) infinite alternate,
+      mesh-snake-r 24s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-r, -12s) infinite alternate;
   }
 
   .hero-mesh__smoke--one {
     --snake-delay-x: -3.8s;
     --snake-delay-y: -11.3s;
+    --snake-delay-r: -6s;
   }
   /* One single connected shape: all three tones live in the same
      ::before so the light always reads as one unit, never as
@@ -233,17 +238,26 @@ All colors MUST be HSL.
 }
 
 /* Horizontal sweep: the band is 76% wide, ±48% of its own width ≈ ±37%
-   of the hero width — same on-screen sweep as before. */
+   of the hero width. */
 @keyframes mesh-snake-x {
   from { translate: -48% 0; }
   to   { translate: 48% 0; }
 }
 
-/* Vertical weave: the band is 32% tall, ±115% of its own height ≈ ±37%
-   of the hero height — same travel as before. */
+/* Vertical weave, kept shallow: the band is 34% tall, ±80% of its own
+   height ≈ ±27% of the hero height — at the highest point its lower
+   edge still sits ~13% down the hero, so the light never leaves the
+   screen. */
 @keyframes mesh-snake-y {
-  from { transform: translate3d(0, -115%, 0); }
-  to   { transform: translate3d(0, 115%, 0); }
+  from { transform: translate3d(0, -80%, 0); }
+  to   { transform: translate3d(0, 80%, 0); }
+}
+
+/* Slow tilt: the band leans into its turns for a more organic,
+   winding feel. */
+@keyframes mesh-snake-r {
+  from { rotate: -9deg; }
+  to   { rotate: 9deg; }
 }
 
 @media (prefers-reduced-motion: reduce) {
