@@ -1,11 +1,74 @@
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import demoImage from "@/assets/hero-map-emergency.png.asset.json";
 
 export const HeroNew = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const meshRef = useRef<HTMLDivElement>(null);
+
+  // The mesh light follows the mouse pointer. The head (--mx/--my)
+  // lerps quickly toward the cursor; the tail (--tx/--ty) lerps
+  // slower, so it trails behind like a snake body. All motion is
+  // GPU-composited transforms written via requestAnimationFrame.
+  useEffect(() => {
+    const section = sectionRef.current;
+    const mesh = meshRef.current;
+    if (!section || !mesh) return;
+
+    let targetX = 0;
+    let targetY = 0;
+    let headX = 0;
+    let headY = 0;
+    let tailX = 0;
+    let tailY = 0;
+    let rafId = 0;
+    let initialized = false;
+
+    const seed = () => {
+      const rect = section.getBoundingClientRect();
+      targetX = headX = tailX = rect.width * 0.04;
+      targetY = headY = tailY = rect.height * 0.14;
+      initialized = true;
+    };
+
+    const onPointerMove = (e: PointerEvent) => {
+      const rect = section.getBoundingClientRect();
+      // Center the ribbon (92% wide, 22% tall) on the cursor.
+      targetX = e.clientX - rect.left - rect.width * 0.46;
+      targetY = e.clientY - rect.top - rect.height * 0.11;
+      if (!initialized) {
+        headX = tailX = targetX;
+        headY = tailY = targetY;
+        initialized = true;
+      }
+    };
+
+    const tick = () => {
+      headX += (targetX - headX) * 0.08;
+      headY += (targetY - headY) * 0.08;
+      tailX += (targetX - tailX) * 0.03;
+      tailY += (targetY - tailY) * 0.03;
+      mesh.style.setProperty("--mx", `${headX.toFixed(1)}px`);
+      mesh.style.setProperty("--my", `${headY.toFixed(1)}px`);
+      mesh.style.setProperty("--tx", `${tailX.toFixed(1)}px`);
+      mesh.style.setProperty("--ty", `${tailY.toFixed(1)}px`);
+      rafId = requestAnimationFrame(tick);
+    };
+
+    seed();
+    section.addEventListener("pointermove", onPointerMove);
+    rafId = requestAnimationFrame(tick);
+
+    return () => {
+      section.removeEventListener("pointermove", onPointerMove);
+      cancelAnimationFrame(rafId);
+    };
+  }, []);
+
   return (
-    <section className="relative overflow-hidden bg-background">
-      <div className="hero-mesh pointer-events-none absolute inset-0" aria-hidden="true">
+    <section ref={sectionRef} className="relative overflow-hidden bg-background">
+      <div ref={meshRef} className="hero-mesh pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="hero-mesh__base absolute inset-0" />
         <div className="hero-mesh__smoke hero-mesh__smoke--one absolute inset-0" />
         <div className="hero-mesh__smoke hero-mesh__smoke--two absolute inset-0" />
@@ -30,7 +93,7 @@ export const HeroNew = () => {
           </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground mb-9 max-w-xl mx-auto leading-relaxed">
-            People, equipment and critical events.{"\u00A0"}
+            People, equipment and critical events.{" "}
             <br />
             Above ground, underground and indoors.
           </p>
