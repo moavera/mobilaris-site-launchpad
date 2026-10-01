@@ -176,6 +176,8 @@ export const HeroNew = () => {
               src={demoImage.url}
               alt="Mobilaris Site™ real-time map showing people, vehicles and assets"
               className="relative z-0 w-full h-auto"
+              decoding="async"
+              fetchPriority="high"
             />
           </div>
         </div>
