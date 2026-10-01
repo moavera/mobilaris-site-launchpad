@@ -197,7 +197,7 @@ All colors MUST be HSL.
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-one 16s ease-in-out infinite alternate;
+    animation: mesh-smoke-one 16s ease-in-out -0s infinite alternate;
   }
 
   .hero-mesh__smoke--two {
@@ -209,7 +209,9 @@ All colors MUST be HSL.
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-two 16s ease-in-out infinite alternate;
+    /* Negative delays stagger the three curtains so they are never all at
+       the same side at once — at least one is always mid-sweep. */
+    animation: mesh-smoke-two 16s ease-in-out -5.4s infinite alternate;
   }
 
   .hero-mesh__smoke--three {
@@ -220,7 +222,7 @@ All colors MUST be HSL.
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-three 16s ease-in-out infinite alternate;
+    animation: mesh-smoke-three 16s ease-in-out -10.8s infinite alternate;
   }
 
   .hero-mesh__fade {
@@ -256,22 +258,22 @@ All colors MUST be HSL.
   }
   100% {
     background-position: 8% 62%;
-    opacity: 0.75;
+    opacity: 0.82;
   }
 }
 
 @keyframes mesh-smoke-three {
   0% {
     background-position: 96% 72%;
-    opacity: 0.7;
+    opacity: 0.78;
   }
   50% {
     background-position: 48% 78%;
-    opacity: 0.8;
+    opacity: 0.88;
   }
   100% {
     background-position: 4% 44%;
-    opacity: 0.65;
+    opacity: 0.72;
   }
 }
 
