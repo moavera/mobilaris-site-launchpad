@@ -126,7 +126,11 @@ export const HeroNew = () => {
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 pt-48 sm:pt-52 md:pt-60 pb-16 md:pb-24">
-        <div className="relative max-w-4xl mx-auto text-center animate-fade-in-up">
+        <div
+          className="relative max-w-4xl mx-auto text-center animate-fade-in-up"
+          onMouseEnter={() => setTextHovered(true)}
+          onMouseLeave={() => setTextHovered(false)}
+        >
           {/* Soft dark scrim behind the text so it stays readable when the light sweeps past */}
           <div
             className="pointer-events-none absolute -inset-x-16 -top-24 -bottom-10 -z-10 bg-[radial-gradient(ellipse_60%_55%_at_50%_45%,hsl(var(--background)/0.85)_0%,hsl(var(--background)/0.5)_45%,transparent_75%)]"
