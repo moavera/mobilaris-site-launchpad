@@ -74,7 +74,7 @@ export const HeroNew = () => {
               aria-hidden="true"
             />
             <img
-              src={demoImage}
+              src={demoImage.url}
               alt="Mobilaris Site™ real-time map showing people, vehicles and assets"
               className="relative z-0 w-full h-auto rounded-t-2xl"
             />
