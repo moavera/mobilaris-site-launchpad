@@ -7,14 +7,19 @@ export const HeroNew = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const meshRef = useRef<HTMLDivElement>(null);
 
-  // The mesh light follows the mouse pointer. The head (--mx/--my)
-  // lerps quickly toward the cursor; the tail (--tx/--ty) lerps
-  // slower, so it trails behind like a snake body. All motion is
-  // GPU-composited transforms written via requestAnimationFrame.
+  // The mesh light follows the mouse pointer on devices that can hover.
+  // On touch devices (no hover) the light instead wanders slowly on its
+  // own along a gently winding path. The head (--mx/--my) lerps quickly
+  // toward its target; the tail (--tx/--ty) lerps slower, so it trails
+  // behind like a snake body. All motion is GPU-composited transforms
+  // written via requestAnimationFrame.
   useEffect(() => {
     const section = sectionRef.current;
     const mesh = meshRef.current;
     if (!section || !mesh) return;
+
+    const isTouch = window.matchMedia("(hover: none), (pointer: coarse)").matches;
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     let targetX = 0;
     let targetY = 0;
@@ -60,7 +65,22 @@ export const HeroNew = () => {
     // from the last known cursor position so the light follows along.
     const onScroll = () => updateTarget();
 
+    const startTime = performance.now();
+    const phase = Math.random() * Math.PI * 2;
+
     const tick = () => {
+      if (isTouch && !prefersReduced) {
+        // Subtle self-driven drift: two blended sine waves per axis
+        // give a slow, winding path that never leaves the screen.
+        const rect = section.getBoundingClientRect();
+        const t = (performance.now() - startTime) / 1000 + phase;
+        targetX =
+          rect.width * 0.04 +
+          rect.width * 0.05 * (0.6 * Math.sin(t * 0.32) + 0.4 * Math.sin(t * 0.13 + 1.7));
+        targetY =
+          rect.height * 0.2 +
+          rect.height * 0.13 * (0.6 * Math.sin(t * 0.21 + 0.9) + 0.4 * Math.sin(t * 0.09 + 2.6));
+      }
       headX += (targetX - headX) * 0.08;
       headY += (targetY - headY) * 0.08;
       tailX += (targetX - tailX) * 0.03;
@@ -73,8 +93,10 @@ export const HeroNew = () => {
     };
 
     seed();
-    section.addEventListener("pointermove", onPointerMove);
-    window.addEventListener("scroll", onScroll, { passive: true });
+    if (!isTouch) {
+      section.addEventListener("pointermove", onPointerMove);
+      window.addEventListener("scroll", onScroll, { passive: true });
+    }
     rafId = requestAnimationFrame(tick);
 
     return () => {
