@@ -5,31 +5,12 @@ import demoImage from "@/assets/demo-scenario.png";
 export const HeroNew = () => {
   return (
     <section className="relative overflow-hidden bg-background">
-      {/* Soft multi-color gradient wash fading out towards the bottom */}
-      <div className="pointer-events-none absolute inset-0">
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 90% 55% at 50% 108%, hsl(262 90% 78% / 0.55) 0%, hsl(280 85% 72% / 0.35) 35%, hsl(300 80% 75% / 0.18) 60%, transparent 80%)",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 45% 30% at 18% 105%, hsl(320 85% 75% / 0.30) 0%, transparent 70%)",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 45% 30% at 82% 105%, hsl(250 90% 78% / 0.30) 0%, transparent 70%)",
-          }}
-        />
-        {/* Fade the wash into the page background so the very bottom is clean */}
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background" />
+      <div className="hero-mesh pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="hero-mesh__base absolute inset-0" />
+        <div className="hero-mesh__smoke hero-mesh__smoke--one absolute inset-0" />
+        <div className="hero-mesh__smoke hero-mesh__smoke--two absolute inset-0" />
+        <div className="hero-mesh__smoke hero-mesh__smoke--three absolute inset-0" />
+        <div className="hero-mesh__fade absolute inset-x-0 bottom-0 h-40" />
       </div>
 
       {/* Content */}
