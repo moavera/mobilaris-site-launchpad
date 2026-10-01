@@ -191,9 +191,9 @@ All colors MUST be HSL.
   .hero-mesh__smoke--one {
     background-image: radial-gradient(
       ellipse 26% 10% at center,
-      hsl(var(--mesh-bright) / 0.7) 0%,
-      hsl(var(--mesh-bright) / 0.3) 32%,
-      hsl(var(--mesh-bright) / 0.1) 56%,
+      hsl(var(--mesh-bright) / 1) 0%,
+      hsl(var(--mesh-bright) / 0.45) 32%,
+      hsl(var(--mesh-bright) / 0.14) 56%,
       transparent 100%
     );
     background-size: 230% 260%;
@@ -203,9 +203,9 @@ All colors MUST be HSL.
   .hero-mesh__smoke--two {
     background-image: radial-gradient(
       ellipse 21% 8% at center,
-      hsl(var(--mesh-warm) / 0.5) 0%,
-      hsl(var(--mesh-warm) / 0.2) 34%,
-      hsl(var(--mesh-warm) / 0.06) 58%,
+      hsl(var(--mesh-warm) / 0.8) 0%,
+      hsl(var(--mesh-warm) / 0.3) 34%,
+      hsl(var(--mesh-warm) / 0.09) 58%,
       transparent 100%
     );
     background-size: 230% 260%;
@@ -215,8 +215,8 @@ All colors MUST be HSL.
   .hero-mesh__smoke--three {
     background-image: radial-gradient(
       ellipse 19% 7% at center,
-      hsl(var(--mesh-dim) / 0.38) 0%,
-      hsl(var(--mesh-dim) / 0.15) 36%,
+      hsl(var(--mesh-dim) / 0.6) 0%,
+      hsl(var(--mesh-dim) / 0.22) 36%,
       transparent 100%
     );
     background-size: 230% 260%;
