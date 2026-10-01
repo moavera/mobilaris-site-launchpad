@@ -127,7 +127,7 @@ export const HeroNew = () => {
       {/* Content */}
       <div className="container relative z-10 mx-auto px-6 pt-48 sm:pt-52 md:pt-60 pb-16 md:pb-24">
         <div
-          className="relative max-w-4xl mx-auto text-center animate-fade-in-up"
+          className="relative max-w-4xl mx-auto text-center"
           onMouseEnter={() => setTextHovered(true)}
           onMouseLeave={() => setTextHovered(false)}
         >
@@ -137,19 +137,18 @@ export const HeroNew = () => {
             aria-hidden="true"
           />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-6 leading-[1.1] tracking-tight">
-            See your entire site
+            <span className="intro inline-block" style={{ animationDelay: "0.05s" }}>See your entire site</span>
             <br />
-            in real time
-            <br />
+            <span className="intro inline-block" style={{ animationDelay: "0.15s" }}>in real time</span>
           </h1>
 
-            <p className="text-lg sm:text-xl text-muted-foreground mb-9 max-w-xl mx-auto leading-relaxed">
-            People, equipment and critical events.{" "}
+            <p className="intro text-lg sm:text-xl text-muted-foreground mb-9 max-w-xl mx-auto leading-relaxed" style={{ animationDelay: "0.3s" }}>
+            People, equipment and critical events.{" "}
             <br />
             Above ground, underground and indoors.
           </p>
 
-          <div className="flex justify-center">
+          <div className="intro flex justify-center" style={{ animationDelay: "0.42s" }}>
             <Button
               size="lg"
               className="text-base px-8 rounded-full bg-[#974FF4] text-white shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] transition-all duration-300 hover:bg-[#8640de] hover:shadow-[0_12px_40px_0_rgba(0,0,0,0.35)]"
@@ -169,8 +168,8 @@ export const HeroNew = () => {
 
         {/* Product screenshot – clean frame */}
         <div
-          className="relative max-w-5xl mx-auto mt-20 md:mt-28 animate-fade-in"
-          style={{ animationDelay: "0.2s" }}
+          className="intro-image relative max-w-5xl mx-auto mt-20 md:mt-28"
+          style={{ animationDelay: "0.55s" }}
         >
           <div className="relative overflow-hidden rounded-lg border border-white/15 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]">
             <img
