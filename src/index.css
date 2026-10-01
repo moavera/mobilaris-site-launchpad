@@ -190,37 +190,37 @@ All colors MUST be HSL.
      fades smoothly into the dark grid. */
   .hero-mesh__smoke--one {
     background-image: radial-gradient(
-      ellipse 36% 14% at center,
+      ellipse 26% 10% at center,
       hsl(var(--mesh-bright) / 0.7) 0%,
-      hsl(var(--mesh-bright) / 0.3) 38%,
-      hsl(var(--mesh-bright) / 0.1) 62%,
+      hsl(var(--mesh-bright) / 0.3) 32%,
+      hsl(var(--mesh-bright) / 0.1) 56%,
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-one 26s ease-in-out infinite alternate;
+    animation: mesh-smoke-one 16s ease-in-out infinite alternate;
   }
 
   .hero-mesh__smoke--two {
     background-image: radial-gradient(
-      ellipse 30% 11% at center,
+      ellipse 21% 8% at center,
       hsl(var(--mesh-warm) / 0.5) 0%,
-      hsl(var(--mesh-warm) / 0.2) 40%,
-      hsl(var(--mesh-warm) / 0.06) 64%,
+      hsl(var(--mesh-warm) / 0.2) 34%,
+      hsl(var(--mesh-warm) / 0.06) 58%,
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-two 26s ease-in-out infinite alternate;
+    animation: mesh-smoke-two 16s ease-in-out infinite alternate;
   }
 
   .hero-mesh__smoke--three {
     background-image: radial-gradient(
-      ellipse 26% 10% at center,
+      ellipse 19% 7% at center,
       hsl(var(--mesh-dim) / 0.38) 0%,
-      hsl(var(--mesh-dim) / 0.15) 42%,
+      hsl(var(--mesh-dim) / 0.15) 36%,
       transparent 100%
     );
     background-size: 230% 260%;
-    animation: mesh-smoke-three 26s ease-in-out infinite alternate;
+    animation: mesh-smoke-three 16s ease-in-out infinite alternate;
   }
 
   .hero-mesh__fade {
@@ -232,45 +232,45 @@ All colors MUST be HSL.
    only vertically offset, so they read as one undulating sheet of light. */
 @keyframes mesh-smoke-one {
   0% {
-    background-position: 112% 18%;
+    background-position: 100% 18%;
     opacity: 0.9;
   }
   50% {
-    background-position: 55% 55%;
+    background-position: 50% 55%;
     opacity: 1;
   }
   100% {
-    background-position: 0% 30%;
+    background-position: 6% 30%;
     opacity: 0.85;
   }
 }
 
 @keyframes mesh-smoke-two {
   0% {
-    background-position: 110% 46%;
+    background-position: 98% 46%;
     opacity: 0.8;
   }
   50% {
-    background-position: 57% 22%;
+    background-position: 52% 22%;
     opacity: 0.9;
   }
   100% {
-    background-position: 2% 62%;
+    background-position: 8% 62%;
     opacity: 0.75;
   }
 }
 
 @keyframes mesh-smoke-three {
   0% {
-    background-position: 108% 72%;
+    background-position: 96% 72%;
     opacity: 0.7;
   }
   50% {
-    background-position: 53% 78%;
+    background-position: 48% 78%;
     opacity: 0.8;
   }
   100% {
-    background-position: -2% 44%;
+    background-position: 4% 44%;
     opacity: 0.65;
   }
 }
