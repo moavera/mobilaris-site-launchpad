@@ -180,49 +180,71 @@ All colors MUST be HSL.
     opacity: 0.3;
   }
 
-  /* Aurora-like light fields drifting slowly over the crisp grid */
+  /* The smoke layer itself is a static, masked container (the square grid).
+     The light lives in a ::before that moves with GPU-composited
+     transforms only — no repaint per frame, so the motion stays fluid. */
   .hero-mesh__smoke {
-    will-change: background-position, opacity;
+    background-image: none;
   }
 
-  /* One coherent aurora sheet: three softly layered curtains that drift
-     together at the same tempo, with fully transparent edges so the light
-     fades smoothly into the dark grid. */
+  .hero-mesh__smoke::before {
+    content: "";
+    position: absolute;
+    left: -10%;
+    top: 24%;
+    width: 120%;
+    height: 52%;
+    will-change: transform, translate;
+    backface-visibility: hidden;
+    /* Two independent sine-eased axes form a smooth figure-eight snake
+       path (x: one full sweep per 14s, y: twice as fast). */
+    animation:
+      mesh-snake-x 14s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-x, 0s) infinite alternate,
+      mesh-snake-y 7s cubic-bezier(0.37, 0, 0.63, 1) var(--snake-delay-y, -3.5s) infinite alternate;
+  }
+
   .hero-mesh__smoke--one {
-    background-image: radial-gradient(
-      ellipse 26% 10% at center,
+    --snake-delay-x: -1.8s;
+    --snake-delay-y: -5.3s;
+  }
+  .hero-mesh__smoke--one::before {
+    background: radial-gradient(
+      closest-side,
       hsl(var(--mesh-bright) / 1) 0%,
       hsl(var(--mesh-bright) / 0.45) 32%,
       hsl(var(--mesh-bright) / 0.14) 56%,
       transparent 100%
     );
-    background-size: 230% 260%;
-    animation: mesh-snake 28s linear 0s infinite;
   }
 
   .hero-mesh__smoke--two {
-    background-image: radial-gradient(
-      ellipse 21% 8% at center,
+    --snake-delay-x: -0.9s;
+    --snake-delay-y: -4.4s;
+    opacity: 0.85;
+  }
+  .hero-mesh__smoke--two::before {
+    background: radial-gradient(
+      closest-side,
       hsl(var(--mesh-warm) / 0.8) 0%,
       hsl(var(--mesh-warm) / 0.3) 34%,
       hsl(var(--mesh-warm) / 0.09) 58%,
       transparent 100%
     );
-    background-size: 230% 260%;
-    /* Negative delays stagger the three curtains so they are never all at
-       the same side at once — at least one is always mid-sweep. */
-    animation: mesh-snake 28s linear 0.9s infinite; opacity: 0.85;
+    transform: scale(0.82);
   }
 
   .hero-mesh__smoke--three {
-    background-image: radial-gradient(
-      ellipse 19% 7% at center,
+    --snake-delay-x: 0s;
+    --snake-delay-y: -3.5s;
+    opacity: 0.75;
+  }
+  .hero-mesh__smoke--three::before {
+    background: radial-gradient(
+      closest-side,
       hsl(var(--mesh-dim) / 0.6) 0%,
       hsl(var(--mesh-dim) / 0.22) 36%,
       transparent 100%
     );
-    background-size: 230% 260%;
-    animation: mesh-snake 28s linear 1.8s infinite; opacity: 0.75;
   }
 
   .hero-mesh__fade {
@@ -230,36 +252,16 @@ All colors MUST be HSL.
   }
 }
 
-/* Snake path: a smooth Lissajous-style winding curve sampled at many
-   points, so the light glides without any visible corners. All three
-   layers follow the same route; staggered delays make them trail each
-   other like a snake's head, body and tail. */
-@keyframes mesh-snake {
-  0%     { background-position: 50% 50%; }
-  4.17%  { background-position: 60.4% 62.5%; }
-  8.33%  { background-position: 70% 71.7%; }
-  12.5%  { background-position: 78.3% 75%; }
-  16.67% { background-position: 84.6% 71.7%; }
-  20.83% { background-position: 88.6% 62.5%; }
-  25%    { background-position: 90% 50%; }
-  29.17% { background-position: 88.6% 37.5%; }
-  33.33% { background-position: 84.6% 28.3%; }
-  37.5%  { background-position: 78.3% 25%; }
-  41.67% { background-position: 70% 28.3%; }
-  45.83% { background-position: 60.4% 37.5%; }
-  50%    { background-position: 50% 50%; }
-  54.17% { background-position: 39.6% 62.5%; }
-  58.33% { background-position: 30% 71.7%; }
-  62.5%  { background-position: 21.7% 75%; }
-  66.67% { background-position: 15.4% 71.7%; }
-  70.83% { background-position: 11.4% 62.5%; }
-  75%    { background-position: 10% 50%; }
-  79.17% { background-position: 11.4% 37.5%; }
-  83.33% { background-position: 15.4% 28.3%; }
-  87.5%  { background-position: 21.7% 25%; }
-  91.67% { background-position: 30% 28.3%; }
-  95.83% { background-position: 39.6% 37.5%; }
-  100%   { background-position: 50% 50%; }
+/* Horizontal sweep: ±40% of the hero width (element is 120% wide). */
+@keyframes mesh-snake-x {
+  from { translate: -33% 0; }
+  to   { translate: 33% 0; }
+}
+
+/* Vertical weave: ±30% of the hero height (element is 52% tall). */
+@keyframes mesh-snake-y {
+  from { transform: translate3d(0, -58%, 0); }
+  to   { transform: translate3d(0, 58%, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
