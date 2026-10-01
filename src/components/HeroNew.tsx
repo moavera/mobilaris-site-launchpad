@@ -33,7 +33,6 @@ export const HeroNew = () => {
     const seed = () => {
       const rect = section.getBoundingClientRect();
       targetX = headX = tailX = rect.width * 0.04;
-      targetY = headX === 0 ? rect.height * 0.14 : targetY;
       targetY = headY = tailY = rect.height * 0.14;
       initialized = true;
     };
