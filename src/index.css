@@ -73,6 +73,10 @@ All colors MUST be HSL.
     --input: 220 15% 16%;
     --ring: 273 100% 58%;
 
+    --mesh-dim: 270 76% 59%;
+    --mesh-bright: 281 100% 76%;
+    --mesh-warm: 315 88% 72%;
+
     --radius: 0.75rem;
 
     /* Tech-inspired gradients */
@@ -145,5 +149,76 @@ All colors MUST be HSL.
 
   h2 {
     @apply text-5xl font-semibold;
+  }
+}
+
+@layer components {
+  .hero-mesh {
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse 72% 62% at 78% 78%, hsl(var(--mesh-dim) / 0.2), transparent 70%),
+      radial-gradient(ellipse 54% 48% at 16% 22%, hsl(var(--mesh-dim) / 0.1), transparent 72%);
+  }
+
+  .hero-mesh__base,
+  .hero-mesh__smoke {
+    background-image: radial-gradient(circle, hsl(var(--mesh-dim) / 0.32) 1.35px, transparent 1.7px);
+    background-size: 12px 12px;
+  }
+
+  .hero-mesh__base {
+    opacity: 0.42;
+    mask-image: linear-gradient(to bottom, black, black 82%, transparent 100%);
+  }
+
+  .hero-mesh__smoke {
+    inset: -18% !important;
+    will-change: transform, opacity;
+  }
+
+  .hero-mesh__smoke--one {
+    background-image: radial-gradient(circle, hsl(var(--mesh-bright) / 0.96) 1.55px, transparent 1.9px);
+    mask-image: radial-gradient(ellipse 31% 37% at 69% 68%, black 18%, transparent 72%);
+    animation: mesh-smoke-one 15s ease-in-out infinite alternate;
+  }
+
+  .hero-mesh__smoke--two {
+    background-image: radial-gradient(circle, hsl(var(--mesh-warm) / 0.78) 1.45px, transparent 1.85px);
+    mask-image: radial-gradient(ellipse 27% 32% at 35% 77%, black 14%, transparent 73%);
+    animation: mesh-smoke-two 19s ease-in-out infinite alternate;
+  }
+
+  .hero-mesh__smoke--three {
+    background-image: radial-gradient(circle, hsl(var(--mesh-dim) / 0.7) 1.45px, transparent 1.85px);
+    mask-image: radial-gradient(ellipse 36% 31% at 28% 24%, black 10%, transparent 74%);
+    animation: mesh-smoke-three 23s ease-in-out infinite alternate;
+  }
+
+  .hero-mesh__fade {
+    background: linear-gradient(to bottom, transparent, hsl(var(--background)));
+  }
+}
+
+@keyframes mesh-smoke-one {
+  0% { transform: translate3d(-3%, 4%, 0) scale(1); opacity: 0.78; }
+  45% { transform: translate3d(5%, -3%, 0) scale(1.08); opacity: 1; }
+  100% { transform: translate3d(-1%, -7%, 0) scale(1.14); opacity: 0.84; }
+}
+
+@keyframes mesh-smoke-two {
+  0% { transform: translate3d(5%, -2%, 0) scale(1.08); opacity: 0.72; }
+  55% { transform: translate3d(-5%, -7%, 0) scale(1.16); opacity: 0.94; }
+  100% { transform: translate3d(3%, 5%, 0) scale(1.03); opacity: 0.78; }
+}
+
+@keyframes mesh-smoke-three {
+  0% { transform: translate3d(-4%, -5%, 0) scale(1.02); opacity: 0.58; }
+  50% { transform: translate3d(4%, 4%, 0) scale(1.13); opacity: 0.82; }
+  100% { transform: translate3d(7%, -2%, 0) scale(1.07); opacity: 0.62; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-mesh__smoke {
+    animation: none;
   }
 }
