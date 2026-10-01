@@ -174,8 +174,8 @@ All colors MUST be HSL.
   }
 
   .hero-mesh__base {
-    background-image: linear-gradient(hsl(var(--foreground) / 0.12), hsl(var(--foreground) / 0.12));
-    opacity: 0.24;
+    background-image: linear-gradient(hsl(var(--foreground) / 0.1), hsl(var(--foreground) / 0.1));
+    opacity: 0.3;
   }
 
   .hero-mesh__smoke {
@@ -191,21 +191,21 @@ All colors MUST be HSL.
   }
 
   .hero-mesh__smoke--one {
-    background-image: radial-gradient(ellipse 34% 48% at center, hsl(var(--mesh-bright) / 0.95) 0%, hsl(var(--mesh-bright) / 0.62) 24%, hsl(var(--mesh-bright) / 0.2) 48%, transparent 68%);
-    background-size: 125% 145%;
-    animation: mesh-smoke-one 22s ease-in-out infinite alternate;
+    background-image: radial-gradient(ellipse 30% 42% at center, hsl(var(--mesh-bright) / 1) 0%, hsl(var(--mesh-bright) / 0.75) 22%, hsl(var(--mesh-bright) / 0.3) 46%, transparent 65%);
+    background-size: 150% 170%;
+    animation: mesh-smoke-one 20s ease-in-out infinite alternate;
   }
 
   .hero-mesh__smoke--two {
-    background-image: radial-gradient(ellipse 30% 40% at center, hsl(var(--mesh-warm) / 0.58) 0%, hsl(var(--mesh-warm) / 0.24) 34%, transparent 68%);
-    background-size: 135% 150%;
-    animation: mesh-smoke-two 28s ease-in-out infinite alternate;
+    background-image: radial-gradient(ellipse 26% 36% at center, hsl(var(--mesh-warm) / 0.85) 0%, hsl(var(--mesh-warm) / 0.4) 32%, transparent 65%);
+    background-size: 155% 170%;
+    animation: mesh-smoke-two 27s ease-in-out infinite alternate;
   }
 
   .hero-mesh__smoke--three {
-    background-image: radial-gradient(ellipse 28% 44% at center, hsl(var(--mesh-dim) / 0.5) 0%, hsl(var(--mesh-dim) / 0.18) 38%, transparent 70%);
-    background-size: 140% 160%;
-    animation: mesh-smoke-three 34s ease-in-out infinite alternate;
+    background-image: radial-gradient(ellipse 24% 40% at center, hsl(var(--mesh-dim) / 0.75) 0%, hsl(var(--mesh-dim) / 0.3) 36%, transparent 68%);
+    background-size: 160% 180%;
+    animation: mesh-smoke-three 33s ease-in-out infinite alternate;
   }
 
   .hero-mesh__fade {
@@ -215,42 +215,42 @@ All colors MUST be HSL.
 
 @keyframes mesh-smoke-one {
   0% {
-    background-position: 112% 92%;
-    opacity: 0.7;
+    background-position: 118% 96%;
+    opacity: 0.95;
   }
   50% {
-    background-position: 62% 36%;
+    background-position: 60% 30%;
     opacity: 1;
   }
   100% {
-    background-position: 18% 72%;
-    opacity: 0.78;
+    background-position: 10% 78%;
+    opacity: 0.9;
   }
 }
 
 @keyframes mesh-smoke-two {
   0% {
-    background-position: -18% 26%;
-    opacity: 0.28;
+    background-position: -22% 22%;
+    opacity: 0.5;
   }
   100% {
-    background-position: 78% 62%;
-    opacity: 0.48;
+    background-position: 84% 66%;
+    opacity: 0.75;
   }
 }
 
 @keyframes mesh-smoke-three {
   0% {
-    background-position: 42% -22%;
-    opacity: 0.2;
+    background-position: 38% -26%;
+    opacity: 0.42;
   }
   50% {
-    background-position: 92% 20%;
-    opacity: 0.38;
+    background-position: 96% 22%;
+    opacity: 0.62;
   }
   100% {
-    background-position: 58% 74%;
-    opacity: 0.26;
+    background-position: 54% 80%;
+    opacity: 0.48;
   }
 }
 
