@@ -22,15 +22,6 @@ export const HeroNew = () => {
             className="pointer-events-none absolute -inset-x-16 -top-24 -bottom-10 -z-10 bg-[radial-gradient(ellipse_60%_55%_at_50%_45%,hsl(var(--background)/0.85)_0%,hsl(var(--background)/0.5)_45%,transparent_75%)]"
             aria-hidden="true"
           />
-          {/* Pill badge with white lines */}
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <span className="hidden sm:block h-px w-24 bg-gradient-to-r from-transparent to-white/70" />
-            <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-medium text-foreground shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15),0_8px_32px_0_rgba(0,0,0,0.25)] backdrop-blur-xl">
-              Mobilaris Site™
-            </span>
-            <span className="hidden sm:block h-px w-24 bg-gradient-to-l from-transparent to-white/70" />
-          </div>
-
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-6 leading-[1.1] tracking-tight">
             See your entire site
             <br />
