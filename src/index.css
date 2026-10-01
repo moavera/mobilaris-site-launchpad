@@ -73,9 +73,9 @@ All colors MUST be HSL.
     --input: 220 15% 16%;
     --ring: 273 100% 58%;
 
-    --mesh-dim: 0 0% 72%;
-    --mesh-bright: 0 0% 100%;
-    --mesh-warm: 0 0% 88%;
+    --mesh-dim: 270 76% 59%;
+    --mesh-bright: 281 100% 76%;
+    --mesh-warm: 315 88% 72%;
 
     --radius: 0.75rem;
 
