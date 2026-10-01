@@ -205,8 +205,8 @@ All colors MUST be HSL.
   }
 
   .hero-mesh__smoke--one {
-    --snake-delay-x: -1.8s;
-    --snake-delay-y: -5.3s;
+    --snake-delay-x: -2.8s;
+    --snake-delay-y: -8.3s;
   }
   .hero-mesh__smoke--one::before {
     background: radial-gradient(
@@ -219,8 +219,8 @@ All colors MUST be HSL.
   }
 
   .hero-mesh__smoke--two {
-    --snake-delay-x: -0.9s;
-    --snake-delay-y: -4.4s;
+    --snake-delay-x: -1.4s;
+    --snake-delay-y: -6.9s;
     opacity: 0.85;
   }
   .hero-mesh__smoke--two::before {
@@ -235,7 +235,7 @@ All colors MUST be HSL.
 
   .hero-mesh__smoke--three {
     --snake-delay-x: 0s;
-    --snake-delay-y: -3.5s;
+    --snake-delay-y: -5.5s;
     opacity: 0.75;
   }
   .hero-mesh__smoke--three::before {
