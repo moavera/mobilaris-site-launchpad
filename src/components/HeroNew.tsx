@@ -118,7 +118,7 @@ export const HeroNew = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 mx-auto px-6 pt-36 md:pt-44 pb-16 md:pb-24">
+      <div className="container relative z-10 mx-auto px-6 pt-48 sm:pt-52 md:pt-60 pb-16 md:pb-24">
         <div className="relative max-w-4xl mx-auto text-center animate-fade-in-up">
           {/* Soft dark scrim behind the text so it stays readable when the light sweeps past */}
           <div
@@ -158,7 +158,7 @@ export const HeroNew = () => {
 
         {/* Product screenshot – clean frame */}
         <div
-          className="relative max-w-5xl mx-auto mt-16 md:mt-20 animate-fade-in"
+          className="relative max-w-5xl mx-auto mt-20 md:mt-28 animate-fade-in"
           style={{ animationDelay: "0.2s" }}
         >
           <div className="relative overflow-hidden rounded-lg border border-white/15 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]">
