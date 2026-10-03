@@ -86,10 +86,10 @@ export const HeroNew = () => {
       }
       // Lerp speeds are deliberately low so the light feels like it
       // trails behind the cursor with a slight delay.
-      headX += (targetX - headX) * 0.03;
-      headY += (targetY - headY) * 0.03;
-      tailX += (targetX - tailX) * 0.015;
-      tailY += (targetY - tailY) * 0.015;
+      headX += (targetX - headX) * 0.014;
+      headY += (targetY - headY) * 0.014;
+      tailX += (targetX - tailX) * 0.006;
+      tailY += (targetY - tailY) * 0.006;
       mesh.style.setProperty("--mx", `${headX.toFixed(1)}px`);
       mesh.style.setProperty("--my", `${headY.toFixed(1)}px`);
       mesh.style.setProperty("--tx", `${tailX.toFixed(1)}px`);
