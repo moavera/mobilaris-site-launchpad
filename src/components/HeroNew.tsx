@@ -84,10 +84,12 @@ export const HeroNew = () => {
           rect.height * 0.2 +
           rect.height * 0.13 * (0.6 * Math.sin(t * 0.21 + 0.9) + 0.4 * Math.sin(t * 0.09 + 2.6));
       }
-      headX += (targetX - headX) * 0.08;
-      headY += (targetY - headY) * 0.08;
-      tailX += (targetX - tailX) * 0.03;
-      tailY += (targetY - tailY) * 0.03;
+      // Lerp speeds are deliberately low so the light feels like it
+      // trails behind the cursor with a slight delay.
+      headX += (targetX - headX) * 0.03;
+      headY += (targetY - headY) * 0.03;
+      tailX += (targetX - tailX) * 0.015;
+      tailY += (targetY - tailY) * 0.015;
       mesh.style.setProperty("--mx", `${headX.toFixed(1)}px`);
       mesh.style.setProperty("--my", `${headY.toFixed(1)}px`);
       mesh.style.setProperty("--tx", `${tailX.toFixed(1)}px`);
