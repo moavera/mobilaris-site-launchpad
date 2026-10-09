@@ -1,6 +1,7 @@
 import { SectionShareButton } from "@/components/SectionShareButton";
 import miningImage from "@/assets/mining-illustration.png";
 import infrastructureImage from "@/assets/infrastructure-illustration.png";
+import { cn } from "@/lib/utils";
 
 const industries = [
   {
@@ -31,28 +32,34 @@ export const KeyProblems = () => {
           <SectionShareButton sectionId="challenges" sectionName="Challenges" />
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2">
-          {industries.map((industry) => (
-            <div
-              key={industry.n}
-              className="flex flex-col overflow-hidden rounded-[28px] bg-surface"
-            >
-              <div className="flex flex-col gap-[10px] px-6 pt-6 md:px-8 md:pt-8">
-                <p className="text-[13px] font-medium text-foreground/40">{industry.n}</p>
-                <h3 className="text-[22px] font-medium tracking-[-0.24px] text-foreground md:text-[24px]">
-                  {industry.label}
-                </h3>
-                <p className="text-[15px] leading-[1.55] text-foreground/60">{industry.copy}</p>
+        <div className="flex flex-col gap-16 md:gap-28">
+          {industries.map((industry, i) => {
+            const flipped = i % 2 === 1;
+            return (
+              <div
+                key={industry.n}
+                className="grid items-center gap-8 md:grid-cols-2 md:gap-12 xl:gap-20"
+              >
+                <div className={cn("flex flex-col gap-4", flipped && "md:order-2")}>
+                  <h3 className="text-[26px] font-medium tracking-[-0.4px] text-ink md:text-[32px]">
+                    {industry.label}
+                  </h3>
+                  <p className="max-w-[460px] text-[16px] leading-[1.6] text-ink/[0.62]">
+                    {industry.copy}
+                  </p>
+                </div>
+                <div className={cn(flipped && "md:order-1")}>
+                  <img
+                    src={industry.image}
+                    alt={industry.label}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-auto w-full"
+                  />
+                </div>
               </div>
-              <img
-                src={industry.image}
-                alt={industry.label}
-                loading="lazy"
-                decoding="async"
-                className="mt-8 h-auto w-full md:mt-10"
-              />
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
