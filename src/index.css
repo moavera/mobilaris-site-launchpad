@@ -50,6 +50,14 @@ All colors MUST be HSL.
     /* Full-bleed section band surface (Figma: #0E0D11) */
     --surface: 255 13% 6%;
 
+    /* Light section palette (Figma: white paper, #f2f2f3 cards, #141317 ink, #8e47f0 accent) */
+    --paper: 0 0% 100%;
+    --card-light: 236 6% 95%;
+    --ink: 255 10% 8%;
+    --brand: 265 85% 61%;
+    --brand-foreground: 0 0% 100%;
+
+
     --card: 220 18% 10%;
     --card-foreground: 0 0% 98%;
 
@@ -105,6 +113,13 @@ All colors MUST be HSL.
     --background: 220 20% 8%;
     --foreground: 0 0% 98%;
     --surface: 255 13% 6%;
+
+    --paper: 0 0% 100%;
+    --card-light: 236 6% 95%;
+    --ink: 255 10% 8%;
+    --brand: 265 85% 61%;
+    --brand-foreground: 0 0% 100%;
+
 
     --card: 220 18% 10%;
     --card-foreground: 0 0% 98%;

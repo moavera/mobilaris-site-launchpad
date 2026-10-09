@@ -52,6 +52,14 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         surface: "hsl(var(--surface))",
+        paper: "hsl(var(--paper))",
+        "card-light": "hsl(var(--card-light))",
+        ink: "hsl(var(--ink) / <alpha-value>)",
+        brand: {
+          DEFAULT: "hsl(var(--brand) / <alpha-value>)",
+          foreground: "hsl(var(--brand-foreground))",
+        },
+
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

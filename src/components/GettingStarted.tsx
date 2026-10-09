@@ -1,63 +1,63 @@
-import { Card } from "@/components/ui/card";
-import { Wifi, Tag, Map, Radio } from "lucide-react";
+import { Tag, Map, Radio } from "lucide-react";
 import { SectionShareButton } from "@/components/SectionShareButton";
-const steps = [{
-  icon: Radio,
-  number: "1",
-  title: "Leverage what you already have",
-  description: "Start fast by using your current Wi-Fi network or other available signals for positioning."
-}, {
-  icon: Tag,
-  number: "2",
-  title: "Add precision where needed",
-  description: "Extend coverage with BLE, UWB, GPS, or hybrid options for higher accuracy in critical zones."
-}, {
-  icon: Map,
-  number: "3",
-  title: "Import your site map",
-  description: "Upload your layout and begin visualizing people, vehicles, and assets in real time."
-}];
+
+const steps = [
+  {
+    n: "01",
+    icon: Radio,
+    title: "Leverage what you already have",
+    description:
+      "Start fast by using your current Wi-Fi network or other available signals for positioning.",
+  },
+  {
+    n: "02",
+    icon: Tag,
+    title: "Add precision where needed",
+    description:
+      "Extend coverage with BLE, UWB, GPS, or hybrid options for higher accuracy in critical zones.",
+  },
+  {
+    n: "03",
+    icon: Map,
+    title: "Import your site map",
+    description:
+      "Upload your layout and begin visualizing people, vehicles, and assets in real time.",
+  },
+];
+
 export const GettingStarted = () => {
-  return <section id="getting-started" className="py-24 md:py-32 bg-background scroll-mt-20 group">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <h2>
-              What do I need?
-            </h2>
-            <SectionShareButton sectionId="getting-started" sectionName="Getting Started" />
-          </div>
-          <p className="text-xl text-muted-foreground mb-2">
-            Ready to get started? Only 3 simple steps:
-          </p>
+  return (
+    <section
+      id="getting-started"
+      className="group scroll-mt-20 bg-paper px-4 py-24 md:px-12 md:pb-[120px] md:pt-[160px] xl:px-[120px]"
+    >
+      <div className="mx-auto flex max-w-[1200px] flex-col gap-12 md:gap-16">
+        <div className="flex items-start gap-3">
+          <h2 className="max-w-[900px] text-[34px] font-medium leading-[1.08] tracking-[-1.3px] text-ink md:text-[52px]">
+            What do I need?{" "}
+            <span className="text-ink/[0.42]">Ready to get started? Only 3 simple steps:</span>
+          </h2>
+          <SectionShareButton sectionId="getting-started" sectionName="Getting Started" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-8 md:mb-12">
-          {steps.map((step, index) => <Card key={index} className="p-8 text-center hover:shadow-elegant transition-all duration-300 animate-fade-in-up border-border/50 relative" style={{
-          animationDelay: `${index * 0.15}s`
-        }}>
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-2xl font-bold text-white">{step.number}</span>
-                </div>
+        <div className="grid gap-5 md:grid-cols-3">
+          {steps.map((step) => (
+            <div
+              key={step.n}
+              className="flex flex-col gap-[10px] rounded-[20px] border border-ink/5 bg-card-light p-6 md:p-8"
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-[13px] font-medium text-ink/40">{step.n}</p>
+                <step.icon className="h-[18px] w-[18px] text-brand" strokeWidth={1.75} />
               </div>
-              <div className="mt-8 mb-4">
-                <step.icon className="w-12 h-12 text-primary mx-auto" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {step.description}
-              </p>
-            </Card>)}
+              <h3 className="text-[20px] font-medium tracking-[-0.24px] text-ink md:text-[22px]">
+                {step.title}
+              </h3>
+              <p className="text-[15px] leading-[1.55] text-ink/[0.62]">{step.description}</p>
+            </div>
+          ))}
         </div>
-
-        {/* Technology Note */}
-        <div className="text-center animate-fade-in-up" style={{
-        animationDelay: '0.6s'
-      }}>
-          
-        </div>
-
       </div>
-    </section>;
+    </section>
+  );
 };
