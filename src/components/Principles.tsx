@@ -9,7 +9,7 @@ const steps = [
   { title: "Technology-agnostic", description: "Works with the Wi‑Fi, LTE, BLE, GPS and UWB you already have. No rip-and-replace." },
   { title: "Value from day one", description: "Up and running fast – no big upfront project and no dedicated control room required." },
   { title: "Modular by design", description: "Start with the features you need and add more as your operation evolves." },
-  { title: "Anywhere you work", description: "In the control room, on a tablet or in your pocket – the Companion GO™ app brings the live map to people on the move." },
+  { title: "Anywhere you work", description: "In the control room, on a tablet or in your pocket – Mobilaris Site™ brings the live map to people on the move." },
   { title: "Privacy on your terms", description: "Adapts to your company’s privacy policy – show who is where at all times, or keep everyone anonymous until an emergency." },
 ];
 
