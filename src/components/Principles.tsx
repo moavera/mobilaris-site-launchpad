@@ -12,6 +12,10 @@ const steps = [
   { title: "Privacy on your terms", description: "Adapts to your company’s privacy policy – show who is where at all times, or keep everyone anonymous until an emergency." },
 ];
 
+const cardBase = "relative w-full overflow-hidden rounded-[20px] border border-foreground/[0.08] bg-[#131216] min-h-[440px] md:h-[520px]";
+const imageCard = "relative w-full overflow-hidden rounded-[20px] border border-foreground/[0.08] bg-[#131216] aspect-[15/13] md:aspect-auto md:h-[520px]";
+const caption = "text-[14px] text-foreground/45 text-center";
+
 // Card 1 & 2: the Figma artwork already contains its own frame and rounded
 // corners — render the image as the card itself so no second frame appears.
 const CardTech = () => (
