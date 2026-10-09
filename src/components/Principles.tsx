@@ -12,8 +12,11 @@ const steps = [
   { title: "Privacy on your terms", description: "Adapts to your company’s privacy policy – show who is where at all times, or keep everyone anonymous until an emergency." },
 ];
 
-const cardBase = "relative w-full overflow-hidden rounded-[20px] border border-foreground/[0.08] bg-[#131216] min-h-[440px] md:h-[520px]";
-const imageCard = "relative w-full overflow-hidden rounded-[20px] border border-foreground/[0.08] bg-[#131216] aspect-[15/13] md:aspect-auto md:h-[520px]";
+const cardFrame = "relative w-full overflow-hidden rounded-[20px] border border-foreground/[0.08] bg-[#131216]";
+// The two artwork cards are 1520×1026 and 1520×1040, so their height is always
+// about 0.68× their width. Every other card uses the same ratio, which keeps all
+// five cards the same height at any screen width.
+const cardHeight = "aspect-[1520/1033]";
 const caption = "text-[14px] text-foreground/45 text-center";
 
 // Card 1 & 2: the Figma artwork already contains its own frame and rounded
@@ -35,11 +38,11 @@ const modules = [
 ];
 
 const CardModular = () => (
-  <div className={`${cardBase} flex flex-col items-center justify-center gap-8 px-6 md:px-12 py-12`}>
-    <div className="flex flex-wrap justify-center gap-3 max-w-[534px]">
+  <div className={`${cardFrame} ${cardHeight} flex min-h-[390px] flex-col items-center justify-center gap-5 px-5 py-8 sm:min-h-0 md:px-8 md:py-10`}>
+    <div className="flex w-full max-w-[680px] shrink-0 flex-wrap justify-center gap-3">
       {modules.map((m) =>
         m.active ? (
-          <div key={m.label} className="flex h-[96px] w-[calc(50%-6px)] sm:h-[108px] sm:w-[170px] flex-col justify-between rounded-[14px] border border-foreground/50 bg-foreground/[0.08] p-4">
+          <div key={m.label} className="flex h-[88px] min-w-[130px] max-w-[220px] grow basis-[130px] flex-col justify-between rounded-[14px] border border-foreground/50 bg-foreground/[0.08] p-3.5">
             <div className="flex items-center gap-[7px]">
               <span className="size-2.5 rounded-full bg-[#4ade80]" />
               <span className="text-[12px] font-medium text-foreground/50">Active</span>
@@ -47,7 +50,7 @@ const CardModular = () => (
             <p className="text-[15px] font-medium leading-[1.25] text-foreground">{m.label}</p>
           </div>
         ) : (
-          <div key={m.label} className="flex h-[96px] w-[calc(50%-6px)] sm:h-[108px] sm:w-[170px] flex-col justify-between rounded-[14px] border border-dashed border-foreground/[0.18] bg-foreground/[0.02] p-4">
+          <div key={m.label} className="flex h-[88px] min-w-[130px] max-w-[220px] grow basis-[130px] flex-col justify-between rounded-[14px] border border-dashed border-foreground/[0.18] bg-foreground/[0.02] p-3.5">
             <div className="flex items-center justify-between">
               <span className="size-2.5 rounded-full border border-foreground/30" />
               <span className="text-[12px] font-medium text-foreground/50">+ Add</span>
@@ -57,12 +60,12 @@ const CardModular = () => (
         ),
       )}
     </div>
-    <p className={caption}>Start with what you need – add modules as your operation grows.</p>
+    <p className={`${caption} shrink-0`}>Start with what you need – add modules as your operation grows.</p>
   </div>
 );
 
 const CardAnywhere = () => (
-  <div className={imageCard}>
+  <div className={`${cardFrame} ${cardHeight}`}>
     <img src={anywhereAsset.url} alt="Mobilaris Site on desktop and the Companion GO™ app" loading="lazy" decoding="async" className="absolute right-0 top-1/2 w-[92%] max-w-full max-h-full -translate-y-1/2 object-contain object-right md:w-[78%]" />
   </div>
 );
@@ -75,10 +78,10 @@ const people = [
 ];
 
 const CardPrivacy = () => (
-  <div className={`${cardBase} flex flex-col items-center justify-center gap-6 px-4 md:px-12 py-12`}>
-    <div className="w-full max-w-[480px] overflow-hidden rounded-[14px] border border-foreground/[0.08] bg-[rgba(14,13,17,0.6)]">
+  <div className={`${cardFrame} ${cardHeight} flex min-h-[390px] flex-col items-center justify-center gap-5 px-4 py-8 sm:min-h-0 md:px-8 md:py-10`}>
+    <div className="w-full max-w-[480px] shrink-0 overflow-hidden rounded-[14px] border border-foreground/[0.08] bg-[rgba(14,13,17,0.6)]">
       {people.map((p, i) => (
-        <div key={p.name} className={`flex items-center gap-[14px] px-[18px] py-4 ${i ? "border-t border-foreground/[0.06]" : ""} ${p.alarm ? "bg-foreground/[0.05]" : ""}`}>
+        <div key={p.name} className={`flex items-center gap-[14px] px-[18px] py-3 ${i ? "border-t border-foreground/[0.06]" : ""} ${p.alarm ? "bg-foreground/[0.05]" : ""}`}>
           <div className={`flex size-8 shrink-0 items-center justify-center rounded-full text-[12px] font-medium ${p.alarm ? "bg-[rgba(151,79,244,0.5)] text-foreground" : "bg-foreground/[0.06] text-foreground/50"}`}>
             {p.alarm ? "MS" : "?"}
           </div>
@@ -94,7 +97,7 @@ const CardPrivacy = () => (
         </div>
       ))}
     </div>
-    <p className={`${caption} max-w-[480px]`}>Set visibility to match your privacy policy. Here: anonymous by default, identified only in an emergency.</p>
+    <p className={`${caption} max-w-[480px] shrink-0`}>Set visibility to match your privacy policy. Here: anonymous by default, identified only in an emergency.</p>
   </div>
 );
 
@@ -143,8 +146,8 @@ export const Principles = () => {
 
   return (
     <section id="principles" className="bg-white p-3 md:p-6">
-      <div className="rounded-[28px] bg-surface px-6 pt-16 pb-16 md:pl-[96px] md:pr-[56px] md:pt-[120px] md:pb-[120px] flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-        <div className="w-full lg:w-[400px] lg:shrink-0 lg:sticky lg:top-[120px]">
+      <div className="rounded-[28px] bg-surface px-6 pt-16 pb-16 md:pl-[96px] md:pr-[56px] md:pt-[120px] md:pb-[120px] flex flex-col gap-12 items-start lg:flex-row xl:gap-20">
+        <div className="w-full lg:w-[300px] xl:w-[400px] lg:shrink-0 lg:sticky lg:top-[120px]">
           <h2 className="text-[36px] md:text-[46px] font-medium leading-[1.05] tracking-[-1.15px] text-foreground">
             Simple to deploy.
             <br />
