@@ -7,6 +7,7 @@ import { MobileFirst } from "@/components/MobileFirst";
 import { Environments } from "@/components/Environments";
 import { Principles } from "@/components/Principles";
 import { KeyFeatures } from "@/components/KeyFeatures";
+import { Stats } from "@/components/Stats";
 import { GettingStarted } from "@/components/GettingStarted";
 
 
@@ -21,6 +22,7 @@ const SiteProduct = () => {
       <Reveal bg="bg-surface"><Environments /></Reveal>
       <Principles />
       <Reveal bg="bg-white"><KeyFeatures /></Reveal>
+      <Reveal bg="bg-white"><Stats /></Reveal>
       
       <Reveal bg="bg-paper"><KeyProblems /></Reveal>
       
