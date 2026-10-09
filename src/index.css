@@ -47,6 +47,8 @@ All colors MUST be HSL.
   :root {
     --background: 220 20% 8%;
     --foreground: 0 0% 98%;
+    /* Full-bleed section band surface (Figma: #0E0D11) */
+    --surface: 255 13% 6%;
 
     --card: 220 18% 10%;
     --card-foreground: 0 0% 98%;
@@ -100,6 +102,7 @@ All colors MUST be HSL.
   .dark {
     --background: 220 20% 8%;
     --foreground: 0 0% 98%;
+    --surface: 255 13% 6%;
 
     --card: 220 18% 10%;
     --card-foreground: 0 0% 98%;

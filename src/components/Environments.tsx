@@ -28,7 +28,7 @@ const pillars = [
 
 export const Environments = () => {
   return (
-    <section id="environments" className="relative py-24 md:py-40 px-4">
+    <section id="environments" className="relative bg-surface py-24 md:py-40 px-4">
       <div className="container mx-auto flex flex-col gap-16 md:gap-24">
         <h2 className="max-w-[912px] text-3xl md:text-[44px] font-medium leading-[1.18] tracking-[-0.02em] text-foreground">
           One live picture of the entire operation.
