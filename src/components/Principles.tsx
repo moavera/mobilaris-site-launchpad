@@ -3,6 +3,8 @@ import { Lock } from "lucide-react";
 import techAsset from "@/assets/card-technology-agnostic.png.asset.json";
 import valueAsset from "@/assets/card-value-from-day-one.png.asset.json";
 import anywhereAsset from "@/assets/card-anywhere-you-work.png.asset.json";
+import modularAsset from "@/assets/card-modular.png.asset.json";
+import privacyAsset from "@/assets/card-privacy.png.asset.json";
 
 const steps = [
   { title: "Technology-agnostic", description: "Works with the Wi‑Fi, LTE, BLE, GPS and UWB you already have. No rip-and-replace." },
@@ -29,39 +31,8 @@ const CardValue = () => (
   <img src={valueAsset.url} alt="Live map in Mobilaris Site" loading="lazy" decoding="async" className="block h-auto w-full" />
 );
 
-const modules = [
-  { label: "People & Workgroup", active: true },
-  { label: "Messaging", active: true },
-  { label: "Emergency Support", active: true },
-  { label: "Asset Tracking" },
-  { label: "Sensor Integration" },
-];
-
 const CardModular = () => (
-  <div className={`${cardFrame} ${cardHeight} flex min-h-[390px] flex-col items-center justify-center gap-5 px-5 py-8 sm:min-h-0 md:px-8 md:py-10`}>
-    <div className="flex w-full max-w-[680px] shrink-0 flex-wrap justify-center gap-3">
-      {modules.map((m) =>
-        m.active ? (
-          <div key={m.label} className="flex h-[88px] min-w-[130px] max-w-[220px] grow basis-[130px] flex-col justify-between rounded-[14px] border border-foreground/50 bg-foreground/[0.08] p-3.5">
-            <div className="flex items-center gap-[7px]">
-              <span className="size-2.5 rounded-full bg-[#4ade80]" />
-              <span className="text-[12px] font-medium text-foreground/50">Active</span>
-            </div>
-            <p className="text-[15px] font-medium leading-[1.25] text-foreground">{m.label}</p>
-          </div>
-        ) : (
-          <div key={m.label} className="flex h-[88px] min-w-[130px] max-w-[220px] grow basis-[130px] flex-col justify-between rounded-[14px] border border-dashed border-foreground/[0.18] bg-foreground/[0.02] p-3.5">
-            <div className="flex items-center justify-between">
-              <span className="size-2.5 rounded-full border border-foreground/30" />
-              <span className="text-[12px] font-medium text-foreground/50">+ Add</span>
-            </div>
-            <p className="text-[15px] font-medium leading-[1.25] text-foreground/55">{m.label}</p>
-          </div>
-        ),
-      )}
-    </div>
-    <p className={`${caption} shrink-0`}>Start with what you need – add modules as your operation grows.</p>
-  </div>
+  <img src={modularAsset.url} alt="Modular by design: start with what you need – add modules as your operation grows" loading="lazy" decoding="async" className="block h-auto w-full" />
 );
 
 const CardAnywhere = () => (
