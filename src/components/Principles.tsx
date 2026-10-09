@@ -191,7 +191,11 @@ export const Principles = () => {
 
         <div className="flex w-full min-w-0 flex-1 flex-col gap-4">
           {cards.map((Card, i) => (
-            <div key={i} ref={(el) => (cardRefs.current[i] = el)}>
+            <div key={i} ref={(el) => (cardRefs.current[i] = el)} className="flex flex-col gap-4">
+              <div className="lg:hidden">
+                <p className="text-[17px] font-medium text-foreground">{steps[i].title}</p>
+                <p className="mt-2 text-[15px] leading-[1.55] text-foreground/60">{steps[i].description}</p>
+              </div>
               <Card />
             </div>
           ))}
