@@ -93,7 +93,6 @@ export const KeyFeatures = () => (
   <section id="key-features" className="bg-white px-4 py-24 md:px-12 md:pt-[160px] md:pb-[120px] xl:px-[120px]">
     <div className="mx-auto flex max-w-[1200px] flex-col gap-12 md:gap-16">
       <div className="flex flex-col gap-5">
-        <p className="text-[14px] font-medium text-[#8e47f0]">Key features</p>
         <h2 className="max-w-[900px] text-[34px] md:text-[52px] font-medium leading-[1.08] tracking-[-1.3px] text-[#141317]">
           Modular by design.{" "}
           <span className="text-[rgba(20,19,23,0.42)]">
