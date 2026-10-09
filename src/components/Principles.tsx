@@ -41,7 +41,7 @@ const CardModular = () => (
     <div className="flex flex-wrap justify-center gap-3 max-w-[534px]">
       {modules.map((m) =>
         m.active ? (
-          <div key={m.label} className="flex h-[108px] w-[150px] sm:w-[170px] flex-col justify-between rounded-[14px] border border-foreground/50 bg-foreground/[0.08] p-4">
+          <div key={m.label} className="flex h-[96px] w-[calc(50%-6px)] sm:h-[108px] sm:w-[170px] flex-col justify-between rounded-[14px] border border-foreground/50 bg-foreground/[0.08] p-4">
             <div className="flex items-center gap-[7px]">
               <span className="size-2.5 rounded-full bg-[#4ade80]" />
               <span className="text-[12px] font-medium text-foreground/50">Active</span>
@@ -49,7 +49,7 @@ const CardModular = () => (
             <p className="text-[15px] font-medium leading-[1.25] text-foreground">{m.label}</p>
           </div>
         ) : (
-          <div key={m.label} className="flex h-[108px] w-[150px] sm:w-[170px] flex-col justify-between rounded-[14px] border border-dashed border-foreground/[0.18] bg-foreground/[0.02] p-4">
+          <div key={m.label} className="flex h-[96px] w-[calc(50%-6px)] sm:h-[108px] sm:w-[170px] flex-col justify-between rounded-[14px] border border-dashed border-foreground/[0.18] bg-foreground/[0.02] p-4">
             <div className="flex items-center justify-between">
               <span className="size-2.5 rounded-full border border-foreground/30" />
               <span className="text-[12px] font-medium text-foreground/50">+ Add</span>
