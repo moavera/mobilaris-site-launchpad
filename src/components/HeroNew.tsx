@@ -27,7 +27,7 @@ export const HeroNew = () => {
           </h1>
 
             <p className="intro text-lg sm:text-xl text-muted-foreground mb-9 max-w-xl mx-auto leading-relaxed" style={{ animationDelay: "0.3s" }}>
-            People, equipment and critical events.{" "}
+              People, equipment and critical events.{" "}
             <br />
             Above ground, underground and indoors.
           </p>
@@ -55,7 +55,7 @@ export const HeroNew = () => {
           className="intro-image relative max-w-5xl mx-auto mt-20 md:mt-28"
           style={{ animationDelay: "0.55s" }}
         >
-          <div className="relative overflow-hidden rounded-lg border border-white/15 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]">
+          <div className="relative isolate overflow-hidden rounded-lg border border-white/15 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]">
             <img
               src={demoImage.url}
               alt="Mobilaris Site™ real-time map showing people, vehicles and assets"
@@ -63,6 +63,8 @@ export const HeroNew = () => {
               decoding="async"
               fetchPriority="high"
             />
+            {/* Subtle cool cast so the screenshot sits with the purple background */}
+            <div className="hero-shot__tint" aria-hidden="true" />
           </div>
         </div>
       </div>
