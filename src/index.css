@@ -163,21 +163,45 @@ All colors MUST be HSL.
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: 0 0;
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Crect width='4' height='4' fill='white'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Crect width='6' height='6' fill='white'/%3E%3C/svg%3E");
     mask-repeat: repeat;
-    mask-size: 12px 12px;
+    mask-size: 8px 8px;
     mask-position: 0 0;
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Crect width='4' height='4' fill='white'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Crect width='6' height='6' fill='white'/%3E%3C/svg%3E");
     -webkit-mask-repeat: repeat;
-    -webkit-mask-size: 12px 12px;
+    -webkit-mask-size: 8px 8px;
     -webkit-mask-position: 0 0;
   }
 
   .hero-mesh__base {
-    background-image:
-      linear-gradient(to bottom, hsl(var(--foreground) / 0.09), hsl(var(--foreground) / 0.03)),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0));
-    opacity: 0.07;
+    background-image: none;
+    filter: blur(0.6px);
+  }
+
+  /* A continuous illuminated arch leaves the middle dark for the copy.
+     Only its transform animates; the small square lattice stays still. */
+  .hero-mesh__base::before {
+    content: "";
+    position: absolute;
+    inset: -10%;
+    background: radial-gradient(
+      ellipse 72% 88% at 50% 82%,
+      transparent 38%,
+      hsl(var(--mesh-dim) / 0.035) 48%,
+      hsl(var(--mesh-dim) / 0.3) 65%,
+      hsl(var(--mesh-bright) / 0.5) 79%,
+      hsl(var(--mesh-dim) / 0.3) 92%,
+      hsl(var(--mesh-dim) / 0.12) 110%
+    );
+    animation: hero-arch-drift 28s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+
+  .hero-mesh__base::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(hsl(var(--foreground) / 0.005), transparent 75%);
   }
 
   /* The smoke layer itself is a static, masked container (the square grid).
@@ -207,6 +231,7 @@ All colors MUST be HSL.
   /* One single connected shape: all three tones live in the same
      ::before so the light always reads as one unit. */
   .hero-mesh__smoke--one::before {
+    opacity: 0.42;
     transform: translate3d(var(--mx, 4vw), var(--my, 12vh), 0);
     background: radial-gradient(
       closest-side,
@@ -221,7 +246,7 @@ All colors MUST be HSL.
   /* The dimmer trailing body: follows the same pointer with a slower
      lerp, so it trails behind the head like a snake tail. */
   .hero-mesh__smoke--one::after {
-    opacity: 0.45;
+    opacity: 0.2;
     transform: translate3d(var(--tx, 4vw), var(--ty, 12vh), 0);
     background: radial-gradient(
       closest-side,
@@ -236,11 +261,11 @@ All colors MUST be HSL.
      dims so the copy stays readable — everywhere else it is full
      strength. HeroNew toggles this class on pointer enter/leave. */
   .hero-mesh--dim .hero-mesh__smoke--one::before {
-    opacity: 0.18;
+    opacity: 0.12;
   }
 
   .hero-mesh--dim .hero-mesh__smoke--one::after {
-    opacity: 0.08;
+    opacity: 0.05;
   }
 
   .hero-mesh__smoke--two,
@@ -253,6 +278,21 @@ All colors MUST be HSL.
   }
 }
 
+@keyframes hero-arch-drift {
+  from { transform: translate3d(-2%, -1%, 0) scale(1); }
+  to { transform: translate3d(2%, 2%, 0) scale(1.045); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-mesh__base::before {
+    animation: none;
+    will-change: auto;
+  }
+  .hero-mesh__smoke::before,
+  .hero-mesh__smoke::after {
+    transition: none;
+  }
+}
 
 /* Scroll reveal (Linear-style) */
 .reveal {
