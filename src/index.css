@@ -73,10 +73,10 @@ All colors MUST be HSL.
     --input: 220 15% 16%;
     --ring: 273 100% 58%;
 
-    --mesh-dim: 260 52% 35%;
-    --mesh-bright: 269 68% 65%;
-    --mesh-warm: 266 61% 52%;
-    --mesh-shadow: 250 24% 6%;
+    --mesh-dim: 260 50% 29%;
+    --mesh-bright: 268 82% 67%;
+    --mesh-warm: 266 68% 50%;
+    --mesh-shadow: 250 26% 4%;
 
     --radius: 0.75rem;
 
@@ -176,9 +176,10 @@ All colors MUST be HSL.
     position: absolute;
     inset: -25%;
     background:
-      radial-gradient(ellipse 65% 24% at 38% 24%, hsl(var(--mesh-bright) / 0.9), hsl(var(--mesh-warm) / 0.64) 36%, hsl(var(--mesh-dim) / 0.24) 65%, transparent 90%),
-      radial-gradient(ellipse 35% 48% at 78% 45%, hsl(var(--mesh-bright) / 0.8), hsl(var(--mesh-warm) / 0.58) 32%, hsl(var(--mesh-dim) / 0.22) 64%, transparent 90%),
-      linear-gradient(145deg, hsl(var(--mesh-dim) / 0.16), transparent 65%);
+      radial-gradient(ellipse 65% 24% at 38% 24%, hsl(var(--mesh-bright) / 1), hsl(var(--mesh-warm) / 0.7) 34%, hsl(var(--mesh-dim) / 0.26) 62%, transparent 88%),
+      radial-gradient(ellipse 35% 48% at 78% 45%, hsl(var(--mesh-bright) / 0.92), hsl(var(--mesh-warm) / 0.62) 32%, hsl(var(--mesh-dim) / 0.22) 62%, transparent 88%),
+      radial-gradient(ellipse 16% 12% at 56% 38%, hsl(var(--mesh-bright) / 0.85), transparent 72%),
+      linear-gradient(145deg, hsl(var(--mesh-dim) / 0.18), transparent 65%);
     animation: hero-field-flow 23s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
     will-change: transform;
   }
@@ -188,8 +189,9 @@ All colors MUST be HSL.
     position: absolute;
     inset: -30%;
     background:
-      radial-gradient(ellipse 42% 37% at 36% 51%, hsl(var(--mesh-shadow) / 0.95) 12%, hsl(var(--mesh-shadow) / 0.7) 38%, transparent 76%),
-      radial-gradient(ellipse 36% 24% at 80% 13%, hsl(var(--mesh-shadow) / 0.88), transparent 80%);
+      radial-gradient(ellipse 42% 37% at 36% 51%, hsl(var(--mesh-shadow) / 1) 14%, hsl(var(--mesh-shadow) / 0.82) 40%, transparent 78%),
+      radial-gradient(ellipse 38% 26% at 80% 13%, hsl(var(--mesh-shadow) / 0.96), hsl(var(--mesh-shadow) / 0.55) 46%, transparent 82%),
+      radial-gradient(ellipse 30% 30% at 62% 82%, hsl(var(--mesh-shadow) / 0.85), transparent 80%);
     animation: hero-shadow-flow 31s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
     will-change: transform;
   }
