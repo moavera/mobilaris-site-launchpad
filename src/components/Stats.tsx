@@ -19,38 +19,38 @@ const stats = [
  * contain one, so the browser picks an arbitrary fallback whose weight varies
  * between machines. A stroked lemniscate keeps the stroke exactly as thin as
  * the digits next to it (stroke = 0.107em, ink height = 0.70em, matching the
- * cap height of "50+" and "2012") everywhere. The lobes are true circles that
- * overlap slightly at the middle, giving the classic round ∞ silhouette
- * instead of a flat, ribbon-like lemniscate.
+ * cap height of "50+" and "2012") everywhere. The silhouette is two round
+ * lobes that cross at the middle — the classic ∞ shape — not a flat
+ * ribbon-like lemniscate.
  */
-const SW = 7.45; // stroke width in viewBox units
-const R = 21.27; // lobe radius — fills the full cap-height band
-const C = 20.55; // lobe centre offset from the middle; R > C => the lobes cross
-const CY = R + SW / 2;
-const VB_W = (C + R) * 2 + SW;
-const VB_H = R * 2 + SW;
+const SW = 7.45; // stroke width in viewBox units (matches the digit stems)
+const SX = 42; // lobe half-width from the centre crossing
+const P = 6; // pinch: how far the crossing control point sits from the centre
+const SY = 31.55; // control-point rise; sized so the ink fills the full cap band
+const CX = SX + SW / 2;
+const W = SX * 2 + SW;
+const H = 50;
+
+const infinityPath = () =>
+  `M ${CX} 25 ` +
+  `C ${CX - P} ${25 - SY} ${CX - SX} 0 ${CX - SX} 25 ` +
+  `C ${CX - SX} 50 ${CX - P} ${25 + SY} ${CX} 25 ` +
+  `C ${CX + P} ${25 - SY} ${CX + SX} 0 ${CX + SX} 25 ` +
+  `C ${CX + SX} 50 ${CX + P} ${25 + SY} ${CX} 25 Z`;
 
 const InfinityMark = ({ className }: { className?: string }) => (
   <svg
-    viewBox={`0 0 ${VB_W.toFixed(2)} ${VB_H.toFixed(2)}`}
+    viewBox={`0 0 ${W.toFixed(2)} ${H}`}
     className={className}
     fill="none"
     aria-hidden="true"
     focusable="false"
   >
-    <circle
-      cx={(VB_W / 2 - C).toFixed(2)}
-      cy={CY}
-      r={R}
+    <path
+      d={infinityPath()}
       stroke="currentColor"
       strokeWidth={SW}
-    />
-    <circle
-      cx={(VB_W / 2 + C).toFixed(2)}
-      cy={CY}
-      r={R}
-      stroke="currentColor"
-      strokeWidth={SW}
+      strokeLinejoin="round"
     />
   </svg>
 );
