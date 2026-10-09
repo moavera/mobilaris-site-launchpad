@@ -259,17 +259,24 @@ All colors MUST be HSL.
   }
 }
 
-/* Scroll reveal (Linear-style).
-   NOTE: transform-only on purpose — opacity/blur would make light sections
-   fade in over the dark body background and read as dark → light. */
+/* Scroll reveal (Linear-style). The outer Reveal wrapper carries the
+   section's opaque background; only this inner layer fades, so light
+   sections never read as dark over the page background. */
 .reveal {
+  opacity: 0;
   transform: translateY(24px);
-  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform;
+  filter: blur(8px);
+  transition:
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
 }
 
 .reveal--visible {
+  opacity: 1;
   transform: translateY(0);
+  filter: blur(0);
 }
 
 /* Hero intro on page load (Linear-style staggered blur-in) */
