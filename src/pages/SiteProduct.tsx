@@ -20,12 +20,12 @@ const SiteProduct = () => {
   return <main className="min-h-screen">
       <Navigation />
       <HeroNew />
+      <Reveal><Environments /></Reveal>
       
       <Reveal><RiskSection /></Reveal>
       <Reveal><ChallengesSection /></Reveal>
       <Reveal><KeyProblems /></Reveal>
       <Reveal><ValueProposition /></Reveal>
-      <Reveal><Environments /></Reveal>
       <Reveal><WhyMobilaris /></Reveal>
       
       
