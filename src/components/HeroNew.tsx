@@ -3,13 +3,6 @@ import { ArrowRight } from "lucide-react";
 import demoImage from "@/assets/hero-map-emergency.png.asset.json";
 
 export const HeroNew = () => {
-  return () => {
-      section.removeEventListener("pointermove", onPointerMove);
-      window.removeEventListener("scroll", onScroll);
-      cancelAnimationFrame(rafId);
-    };
-  }, []);
-
   return (
     <section className="relative overflow-hidden bg-background">
       <div className="hero-mesh pointer-events-none absolute inset-0" aria-hidden="true">
