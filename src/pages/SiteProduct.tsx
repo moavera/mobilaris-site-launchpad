@@ -22,7 +22,6 @@ const SiteProduct = () => {
       <Principles />
       <Reveal><KeyFeatures /></Reveal>
       
-      <Reveal><ChallengesSection /></Reveal>
       <Reveal><KeyProblems /></Reveal>
       
       
