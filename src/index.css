@@ -200,17 +200,18 @@ All colors MUST be HSL.
     background: linear-gradient(to bottom, transparent, hsl(var(--background)));
   }
 
-  /* Product screenshot: a very slight cool cast so it sits with the purple field */
+  /* Product screenshot: a whisper of cool blue so it sits with the purple field */
   .hero-shot__tint {
     position: absolute;
     inset: 0;
     z-index: 1;
     pointer-events: none;
     background:
-      radial-gradient(ellipse 90% 80% at 50% 45%, hsl(258 58% 42%), hsl(246 50% 28%) 58%, hsl(236 46% 20%) 100%);
+      radial-gradient(ellipse 90% 80% at 50% 45%, hsl(230 40% 40%), hsl(224 34% 26%) 58%, hsl(220 30% 18%) 100%);
     mix-blend-mode: color;
-    opacity: 0.085;
+    opacity: 0.05;
   }
+
 
 }
 
