@@ -25,7 +25,7 @@ const stats = [
  */
 const SW = 7.45; // stroke width in viewBox units (matches the digit stems)
 const SX = 42; // lobe half-width from the centre crossing
-const P = 6; // pinch: how far the crossing control point sits from the centre
+const P = 18; // pinch: how far the crossing control point sits from the centre
 const SY = 31.55; // control-point rise; sized so the ink fills the full cap band
 const CX = SX + SW / 2;
 const W = SX * 2 + SW;
