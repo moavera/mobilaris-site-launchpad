@@ -35,14 +35,14 @@ export const Stats = () => {
               key={stat.copy}
               className="flex flex-col gap-3 border-t border-ink/[0.12] pt-7"
             >
-              <p
-                className={
-                  stat.infinity
-                    ? "text-[64px] font-medium leading-none tracking-[-2.16px] text-ink md:text-[80px]"
-                    : "text-[56px] font-medium leading-none tracking-[-2.16px] text-ink md:text-[72px]"
-                }
-              >
-                {stat.value}
+              <p className="h-[56px] text-[56px] font-medium leading-none tracking-[-2.16px] text-ink md:h-[72px] md:text-[72px]">
+                {stat.infinity ? (
+                  <span className="inline-block text-[101px] leading-none md:text-[130px]">
+                    {stat.value}
+                  </span>
+                ) : (
+                  stat.value
+                )}
               </p>
               <p className="max-w-[320px] text-[15px] leading-[1.5] text-ink/[0.6]">
                 {stat.copy}
