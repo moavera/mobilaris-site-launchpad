@@ -18,17 +18,17 @@ const SiteProduct = () => {
   return <main className="min-h-screen">
       <Navigation />
       <HeroNew />
-      <Reveal><Environments /></Reveal>
+      <Reveal bg="bg-surface"><Environments /></Reveal>
       <Principles />
-      <Reveal><KeyFeatures /></Reveal>
+      <Reveal bg="bg-white"><KeyFeatures /></Reveal>
       
-      <Reveal><KeyProblems /></Reveal>
+      <Reveal bg="bg-paper"><KeyProblems /></Reveal>
       
       
       
-      <Reveal><GettingStarted /></Reveal>
+      <Reveal bg="bg-paper"><GettingStarted /></Reveal>
       
-      <Reveal><ContactSection /></Reveal>
+      <Reveal bg="bg-white"><ContactSection /></Reveal>
       <Footer />
     </main>;
 };

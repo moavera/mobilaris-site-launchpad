@@ -4,6 +4,10 @@ interface RevealProps {
   children: ReactNode;
   /** Extra delay in ms before the reveal starts */
   delay?: number;
+  /** Background class for the outer (never-fading) wrapper, e.g. "bg-paper".
+   *  Keeps the section's own background opaque during the fade-in so light
+   *  sections never read as dark over the page background. */
+  bg?: string;
   className?: string;
 }
 
@@ -11,7 +15,7 @@ interface RevealProps {
  * Fades and slides content in when it scrolls into view (Linear-style).
  * Respects prefers-reduced-motion via CSS.
  */
-export const Reveal = ({ children, delay = 0, className = "" }: RevealProps) => {
+export const Reveal = ({ children, delay = 0, bg, className = "" }: RevealProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -34,12 +38,13 @@ export const Reveal = ({ children, delay = 0, className = "" }: RevealProps) => 
   }, []);
 
   return (
-    <div
-      ref={ref}
-      className={`reveal ${visible ? "reveal--visible" : ""} ${className}`}
-      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
-    >
-      {children}
+    <div ref={ref} className={bg || undefined}>
+      <div
+        className={`reveal ${visible ? "reveal--visible" : ""} ${className}`}
+        style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+      >
+        {children}
+      </div>
     </div>
   );
 };
