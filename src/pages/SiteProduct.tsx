@@ -24,11 +24,8 @@ const SiteProduct = () => {
       <Reveal><Environments /></Reveal>
       <Principles />
       
-      <Reveal><RiskSection /></Reveal>
       <Reveal><ChallengesSection /></Reveal>
       <Reveal><KeyProblems /></Reveal>
-      <Reveal><ValueProposition /></Reveal>
-      <Reveal><WhyMobilaris /></Reveal>
       
       
       
