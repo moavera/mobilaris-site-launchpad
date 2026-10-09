@@ -41,35 +41,8 @@ const CardAnywhere = () => (
   </div>
 );
 
-const people = [
-  { name: "Anonymous · Tag 4F21", place: "Level 420 · Area 22" },
-  { name: "Anonymous · Tag 7A03", place: "Workshop" },
-  { name: "Michael S. – Tag 3E02", place: "Level 380 · Refuge chamber", alarm: true },
-  { name: "Anonymous · Tag 91B4", place: "Above ground · Building 2" },
-];
-
 const CardPrivacy = () => (
-  <div className={`${cardFrame} ${cardHeight} flex min-h-[390px] flex-col items-center justify-center gap-5 px-4 py-8 sm:min-h-0 md:px-8 md:py-10`}>
-    <div className="w-full max-w-[480px] shrink-0 overflow-hidden rounded-[14px] border border-foreground/[0.08] bg-[rgba(14,13,17,0.6)]">
-      {people.map((p, i) => (
-        <div key={p.name} className={`flex items-center gap-[14px] px-[18px] py-3 ${i ? "border-t border-foreground/[0.06]" : ""} ${p.alarm ? "bg-foreground/[0.05]" : ""}`}>
-          <div className={`flex size-8 shrink-0 items-center justify-center rounded-full text-[12px] font-medium ${p.alarm ? "bg-[rgba(151,79,244,0.5)] text-foreground" : "bg-foreground/[0.06] text-foreground/50"}`}>
-            {p.alarm ? "MS" : "?"}
-          </div>
-          <div className="flex min-w-0 flex-1 flex-col gap-[3px]">
-            <p className={`text-[14px] font-medium ${p.alarm ? "text-foreground" : "text-foreground/85"}`}>{p.name}</p>
-            <p className="text-[12px] text-foreground/45">{p.place}</p>
-          </div>
-          {p.alarm ? (
-            <span className="rounded-full bg-[#f04763] px-2.5 py-[5px] text-[12px] font-medium text-foreground">Alarm</span>
-          ) : (
-            <Lock className="size-4 text-foreground/40" />
-          )}
-        </div>
-      ))}
-    </div>
-    <p className={`${caption} max-w-[480px] shrink-0`}>Set visibility to match your privacy policy. Here: anonymous by default, identified only in an emergency.</p>
-  </div>
+  <img src={privacyAsset.url} alt="Privacy on your terms: anonymous by default, identified only in an emergency" loading="lazy" decoding="async" className="block h-auto w-full" />
 );
 
 const cards = [CardTech, CardValue, CardModular, CardAnywhere, CardPrivacy];
