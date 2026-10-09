@@ -99,7 +99,7 @@ export const Stats = () => {
             >
               <p className="h-[56px] text-[56px] font-medium leading-none tracking-[-2.16px] text-ink md:h-[72px] md:text-[72px]">
                 {stat.infinity ? (
-                  <InfinityMark className="inline-block h-[0.72em] w-auto align-baseline" />
+                  <InfinityMark className="inline-block h-[0.72em] w-auto translate-y-[0.026em] align-baseline" />
                 ) : (
                   stat.value
                 )}
