@@ -199,7 +199,20 @@ All colors MUST be HSL.
   .hero-mesh__fade {
     background: linear-gradient(to bottom, transparent, hsl(var(--background)));
   }
+
+  /* Product screenshot: a very slight cool cast so it sits with the purple field */
+  .hero-shot__tint {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 90% 80% at 50% 45%, hsl(258 58% 42%), hsl(246 50% 28%) 58%, hsl(236 46% 20%) 100%);
+    mix-blend-mode: color;
+    opacity: 0.2;
+  }
 }
+
 
 @keyframes hero-field-flow {
   0% { transform: translate3d(-8%, -6%, 0) rotate(-12deg) scale(1.04, 1); }
