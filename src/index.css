@@ -77,9 +77,9 @@ All colors MUST be HSL.
 
     /* Field tones sit on the #0E0D11 floor (--surface): cooler, less saturated
        violet, and the shadow tone IS the floor so nothing goes below it. */
-    --mesh-dim: 256 38% 22%;
-    --mesh-bright: 262 62% 58%;
-    --mesh-warm: 258 50% 40%;
+    --mesh-dim: 257 40% 19%;
+    --mesh-bright: 266 78% 64%;
+    --mesh-warm: 263 62% 46%;
     --mesh-shadow: 255 13% 6%;
 
     --radius: 0.75rem;
@@ -167,7 +167,7 @@ All colors MUST be HSL.
   /* Soft squares sample a flowing light field; independent shadow motion
      reshapes it continuously instead of moving a fixed ring. */
   .hero-mesh__base {
-    background: hsl(var(--mesh-dim) / 0.035);
+    background: hsl(var(--mesh-dim) / 0.025);
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='5'%3E%3Crect x='.4' y='.4' width='3.6' height='3.6' rx='.3' fill='white'/%3E%3C/svg%3E");
     mask-size: 5px 5px;
     mask-repeat: repeat;
@@ -181,10 +181,10 @@ All colors MUST be HSL.
     position: absolute;
     inset: -25%;
     background:
-      radial-gradient(ellipse 65% 24% at 38% 24%, hsl(var(--mesh-bright) / 0.88), hsl(var(--mesh-warm) / 0.6) 34%, hsl(var(--mesh-dim) / 0.22) 62%, transparent 88%),
-      radial-gradient(ellipse 35% 48% at 78% 45%, hsl(var(--mesh-bright) / 0.8), hsl(var(--mesh-warm) / 0.55) 32%, hsl(var(--mesh-dim) / 0.18) 62%, transparent 88%),
-      radial-gradient(ellipse 16% 12% at 56% 38%, hsl(var(--mesh-bright) / 0.72), transparent 72%),
-      linear-gradient(145deg, hsl(var(--mesh-dim) / 0.14), transparent 65%);
+      radial-gradient(ellipse 52% 20% at 38% 24%, hsl(var(--mesh-bright) / 0.95), hsl(var(--mesh-warm) / 0.68) 30%, hsl(var(--mesh-dim) / 0.18) 58%, transparent 86%),
+      radial-gradient(ellipse 28% 40% at 78% 45%, hsl(var(--mesh-bright) / 0.86), hsl(var(--mesh-warm) / 0.58) 28%, hsl(var(--mesh-dim) / 0.15) 58%, transparent 86%),
+      radial-gradient(ellipse 13% 10% at 56% 38%, hsl(var(--mesh-bright) / 0.9), transparent 70%),
+      linear-gradient(145deg, hsl(var(--mesh-dim) / 0.1), transparent 62%);
     animation: hero-field-flow 23s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
     will-change: transform;
   }
@@ -194,9 +194,10 @@ All colors MUST be HSL.
     position: absolute;
     inset: -30%;
     background:
-      radial-gradient(ellipse 42% 37% at 36% 51%, hsl(var(--mesh-shadow) / 1) 14%, hsl(var(--mesh-shadow) / 0.82) 40%, transparent 78%),
-      radial-gradient(ellipse 38% 26% at 80% 13%, hsl(var(--mesh-shadow) / 0.96), hsl(var(--mesh-shadow) / 0.55) 46%, transparent 82%),
-      radial-gradient(ellipse 30% 30% at 62% 82%, hsl(var(--mesh-shadow) / 0.85), transparent 80%);
+      radial-gradient(ellipse 52% 44% at 34% 54%, hsl(var(--mesh-shadow) / 1) 18%, hsl(var(--mesh-shadow) / 0.9) 46%, transparent 80%),
+      radial-gradient(ellipse 46% 32% at 80% 12%, hsl(var(--mesh-shadow) / 0.98), hsl(var(--mesh-shadow) / 0.7) 50%, transparent 84%),
+      radial-gradient(ellipse 38% 36% at 62% 84%, hsl(var(--mesh-shadow) / 0.92), transparent 82%),
+      radial-gradient(ellipse 30% 26% at 12% 88%, hsl(var(--mesh-shadow) / 0.88), transparent 80%);
     animation: hero-shadow-flow 31s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
     will-change: transform;
   }
