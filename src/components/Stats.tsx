@@ -19,59 +19,38 @@ const stats = [
  * contain one, so the browser picks an arbitrary fallback whose weight varies
  * between machines. A stroked lemniscate keeps the stroke exactly as thin as
  * the digits next to it (stroke = 0.107em, ink height = 0.70em, matching the
- * cap height of "50+" and "2012") everywhere.
+ * cap height of "50+" and "2012") everywhere. The silhouette is two round
+ * lobes that cross at the middle — the classic ∞ shape — not a flat
+ * ribbon-like lemniscate.
  */
-const SW = 7.45; // stroke width in viewBox units
-const SCL = 50 - SW; // (ink height - stroke), lemniscate scale
-const CX = SCL + SW / 2;
-const CY = (SCL + SW) / 2;
+const SW = 7.45; // stroke width in viewBox units (matches the digit stems)
+const SX = 42; // lobe half-width from the centre crossing
+const P = 18; // pinch: how far the crossing control point sits from the centre
+const SY = 31.55; // control-point rise; sized so the ink fills the full cap band
+const CX = SX + SW / 2;
+const W = SX * 2 + SW;
+const H = 50;
 
-function lemniscatePath(segments = 12) {
-  const pt = (t: number): [number, number] => [
-    CX + SCL * Math.cos(t),
-    CY + SCL * Math.sin(t) * Math.cos(t),
-  ];
-  const dPt = (t: number): [number, number] => [
-    -SCL * Math.sin(t),
-    SCL * Math.cos(2 * t),
-  ];
-  const step = (Math.PI * 2) / segments;
-  let d = "";
-  for (let i = 0; i < segments; i++) {
-    const t0 = i * step;
-    const t1 = (i + 1) * step;
-    const [x0, y0] = pt(t0);
-    const [x1, y1] = pt(t1);
-    const [dx0, dy0] = dPt(t0);
-    const [dx1, dy1] = dPt(t1);
-    const c1x = x0 + (dx0 * step) / 3;
-    const c1y = y0 + (dy0 * step) / 3;
-    const c2x = x1 - (dx1 * step) / 3;
-    const c2y = y1 - (dy1 * step) / 3;
-    if (i === 0) d += `M ${x0.toFixed(2)} ${y0.toFixed(2)} `;
-    d += `C ${c1x.toFixed(2)} ${c1y.toFixed(2)} ${c2x.toFixed(2)} ${c2y.toFixed(
-      2,
-    )} ${x1.toFixed(2)} ${y1.toFixed(2)} `;
-  }
-  return `${d}Z`;
-}
-
-const INFINITY_D = lemniscatePath();
+const infinityPath = () =>
+  `M ${CX} 25 ` +
+  `C ${CX - P} ${25 - SY} ${CX - SX} 0 ${CX - SX} 25 ` +
+  `C ${CX - SX} 50 ${CX - P} ${25 + SY} ${CX} 25 ` +
+  `C ${CX + P} ${25 - SY} ${CX + SX} 0 ${CX + SX} 25 ` +
+  `C ${CX + SX} 50 ${CX + P} ${25 + SY} ${CX} 25 Z`;
 
 const InfinityMark = ({ className }: { className?: string }) => (
   <svg
-    viewBox={`0 0 ${(SCL * 2 + SW).toFixed(2)} ${(SCL + SW).toFixed(2)}`}
+    viewBox={`0 0 ${W.toFixed(2)} ${H}`}
     className={className}
     fill="none"
     aria-hidden="true"
     focusable="false"
   >
     <path
-      d={INFINITY_D}
+      d={infinityPath()}
       stroke="currentColor"
       strokeWidth={SW}
       strokeLinejoin="round"
-      strokeLinecap="round"
     />
   </svg>
 );
