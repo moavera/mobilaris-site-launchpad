@@ -1,64 +1,61 @@
-import { Building2, Mountain, Layers } from "lucide-react";
-import { SectionShareButton } from "./SectionShareButton";
-import environmentPreview from "@/assets/environment-preview.png";
-import environmentIndoor from "@/assets/environment-indoor.png";
-import environmentUnderground from "@/assets/environment-underground.png";
-const environments = [{
-  icon: Layers,
-  title: "Underground",
-  description: "",
-  gradient: "from-purple-500/20 to-blue-500/20",
-  image: environmentUnderground
-}, {
-  icon: Mountain,
-  title: "Outdoor",
-  description: "",
-  gradient: "from-blue-500/20 to-cyan-500/20",
-  image: environmentPreview
-}, {
-  icon: Building2,
-  title: "Indoor",
-  description: "",
-  gradient: "from-cyan-500/20 to-teal-500/20",
-  image: environmentIndoor
-}];
+import isoOutdoor from "@/assets/iso-outdoor.svg";
+import isoIndoor from "@/assets/iso-indoor.svg";
+import isoUnderground from "@/assets/iso-underground.svg";
+
+const pillars = [
+  {
+    title: "Outdoor",
+    description: "Track assets and personnel across large outdoor sites with GPS integration and geofencing.",
+    image: isoOutdoor,
+    w: 310,
+    h: 209.334,
+  },
+  {
+    title: "Indoor",
+    description: "Follow movement through warehouses, workshops and facilities using BLE, Wi‑Fi and UWB.",
+    image: isoIndoor,
+    w: 208.562,
+    h: 320,
+  },
+  {
+    title: "Underground",
+    description: "Precise positioning in complex tunnel systems – even where GPS can’t reach.",
+    image: isoUnderground,
+    w: 330,
+    h: 297.514,
+  },
+];
+
 export const Environments = () => {
-  return <section id="environments" className="relative py-24 md:py-32 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-      
-      <div className="container mx-auto relative z-10">
-        {/* Two-column header layout */}
-        <div className="mb-16">
-          <div className="flex items-start gap-4 mb-6">
-            <h2 className="leading-tight">Positioning Everywhere</h2>
-            <SectionShareButton sectionId="environments" sectionName="Environments" />
-          </div>
-          <p className="text-xl text-muted-foreground max-w-3xl">
-            Our system is built for every environment, from deep underground tunnels to open outdoor sites and complex indoor facilities. It automatically adapts the positioning technology to ensure accurate, continuous tracking wherever your operations happen.
-          </p>
-        </div>
+  return (
+    <section id="environments" className="relative py-24 md:py-40 px-4">
+      <div className="container mx-auto flex flex-col gap-16 md:gap-24">
+        <h2 className="max-w-[912px] text-3xl md:text-[44px] font-medium leading-[1.18] tracking-[-0.02em] text-foreground">
+          One live picture of the entire operation.
+          <span className="text-foreground/45"> From the surface down to the deepest tunnel – in the same view.</span>
+        </h2>
 
-        {/* Grid of environment cards */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {environments.map((env, index) => <div key={env.title} className="group relative rounded-2xl border border-border bg-card/30 backdrop-blur-sm overflow-hidden transition-all duration-300" style={{
-          animation: `fade-in 0.6s ease-out ${index * 0.1}s both`
-        }}>
-              {/* Visual preview area */}
-              <div className="relative h-64 bg-gradient-to-br from-background via-muted/30 to-background flex items-center justify-center border-b border-border overflow-hidden">
-                <img src={env.image} alt={`${env.title} environment visualization with 3D mapping`} className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-500" style={{
-              boxShadow: '0 20px 60px -10px rgba(0, 0, 0, 0.4), 0 10px 30px -15px rgba(0, 0, 0, 0.3)'
-            }} />
-                {/* Shadow overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300" />
+        <div className="grid md:grid-cols-3 border-y border-foreground/[0.08]">
+          {pillars.map((p, i) => (
+            <div
+              key={p.title}
+              className={`flex flex-col px-8 pt-10 pb-12 ${i > 0 ? "border-t md:border-t-0 md:border-l border-foreground/[0.08]" : ""}`}
+            >
+              <div className="flex h-[260px] md:h-[330px] items-center justify-center">
+                <img
+                  src={p.image}
+                  alt={`${p.title} environment illustration`}
+                  loading="lazy"
+                  className="max-h-full max-w-full"
+                  style={{ width: p.w, aspectRatio: `${p.w} / ${p.h}` }}
+                />
               </div>
-
-              <div className="p-6">
-                <h3 className="text-2xl font-bold">
-                  {env.title}
-                </h3>
-              </div>
-            </div>)}
+              <h3 className="text-[17px] font-medium text-foreground">{p.title}</h3>
+              <p className="mt-2.5 text-[15px] leading-[1.55] text-foreground/50">{p.description}</p>
+            </div>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
