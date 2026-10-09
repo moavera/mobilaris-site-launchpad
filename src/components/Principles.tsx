@@ -12,8 +12,11 @@ const steps = [
   { title: "Privacy on your terms", description: "Adapts to your company’s privacy policy – show who is where at all times, or keep everyone anonymous until an emergency." },
 ];
 
-const cardBase = "relative w-full overflow-hidden rounded-[20px] border border-foreground/[0.08] bg-[#131216] min-h-[440px] md:h-[520px]";
-const imageCard = "relative w-full overflow-hidden rounded-[20px] border border-foreground/[0.08] bg-[#131216] aspect-[15/13] md:aspect-auto md:h-[520px]";
+const cardFrame = "relative w-full overflow-hidden rounded-[20px] border border-foreground/[0.08] bg-[#131216]";
+// The two artwork cards are 1520×1026 and 1520×1040, so their height is always
+// about 0.68× their width. Every other card uses the same ratio, which keeps all
+// five cards the same height at any screen width.
+const cardHeight = "aspect-[1520/1033]";
 const caption = "text-[14px] text-foreground/45 text-center";
 
 // Card 1 & 2: the Figma artwork already contains its own frame and rounded
