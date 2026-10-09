@@ -4,7 +4,7 @@ import demoImage from "@/assets/hero-map-emergency.png.asset.json";
 
 export const HeroNew = () => {
   return (
-    <section className="relative overflow-hidden bg-background">
+    <section className="relative overflow-hidden bg-surface">
       <div className="hero-mesh pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="hero-mesh__base absolute inset-0" />
         <div className="hero-mesh__fade absolute inset-x-0 bottom-0 h-40" />
@@ -17,7 +17,7 @@ export const HeroNew = () => {
         >
           {/* Soft dark scrim behind the text so it stays readable when the light sweeps past */}
           <div
-            className="pointer-events-none absolute -inset-x-16 -top-24 -bottom-10 -z-10 bg-[radial-gradient(ellipse_60%_55%_at_50%_45%,hsl(var(--background)/0.85)_0%,hsl(var(--background)/0.5)_45%,transparent_75%)]"
+            className="pointer-events-none absolute -inset-x-16 -top-24 -bottom-10 -z-10 bg-[radial-gradient(ellipse_60%_55%_at_50%_45%,hsl(var(--surface)/0.85)_0%,hsl(var(--surface)/0.5)_45%,transparent_75%)]"
             aria-hidden="true"
           />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-6 leading-[1.1] tracking-tight">

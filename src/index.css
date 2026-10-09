@@ -75,10 +75,12 @@ All colors MUST be HSL.
     --input: 220 15% 16%;
     --ring: 273 100% 58%;
 
-    --mesh-dim: 260 50% 29%;
-    --mesh-bright: 268 82% 67%;
-    --mesh-warm: 266 68% 50%;
-    --mesh-shadow: 250 26% 4%;
+    /* Field tones sit on the #0E0D11 floor (--surface): cooler, less saturated
+       violet, and the shadow tone IS the floor so nothing goes below it. */
+    --mesh-dim: 256 38% 22%;
+    --mesh-bright: 262 62% 58%;
+    --mesh-warm: 258 50% 40%;
+    --mesh-shadow: 255 13% 6%;
 
     --radius: 0.75rem;
 
@@ -179,10 +181,10 @@ All colors MUST be HSL.
     position: absolute;
     inset: -25%;
     background:
-      radial-gradient(ellipse 65% 24% at 38% 24%, hsl(var(--mesh-bright) / 1), hsl(var(--mesh-warm) / 0.7) 34%, hsl(var(--mesh-dim) / 0.26) 62%, transparent 88%),
-      radial-gradient(ellipse 35% 48% at 78% 45%, hsl(var(--mesh-bright) / 0.92), hsl(var(--mesh-warm) / 0.62) 32%, hsl(var(--mesh-dim) / 0.22) 62%, transparent 88%),
-      radial-gradient(ellipse 16% 12% at 56% 38%, hsl(var(--mesh-bright) / 0.85), transparent 72%),
-      linear-gradient(145deg, hsl(var(--mesh-dim) / 0.18), transparent 65%);
+      radial-gradient(ellipse 65% 24% at 38% 24%, hsl(var(--mesh-bright) / 0.88), hsl(var(--mesh-warm) / 0.6) 34%, hsl(var(--mesh-dim) / 0.22) 62%, transparent 88%),
+      radial-gradient(ellipse 35% 48% at 78% 45%, hsl(var(--mesh-bright) / 0.8), hsl(var(--mesh-warm) / 0.55) 32%, hsl(var(--mesh-dim) / 0.18) 62%, transparent 88%),
+      radial-gradient(ellipse 16% 12% at 56% 38%, hsl(var(--mesh-bright) / 0.72), transparent 72%),
+      linear-gradient(145deg, hsl(var(--mesh-dim) / 0.14), transparent 65%);
     animation: hero-field-flow 23s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
     will-change: transform;
   }
@@ -200,7 +202,7 @@ All colors MUST be HSL.
   }
 
   .hero-mesh__fade {
-    background: linear-gradient(to bottom, transparent, hsl(var(--background)));
+    background: linear-gradient(to bottom, transparent, hsl(var(--surface)));
   }
 
   /* Product screenshot: a whisper of cool blue so it sits with the purple field */
