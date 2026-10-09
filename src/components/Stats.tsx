@@ -21,8 +21,8 @@ const stats = [
  * the digits next to it (stroke = 0.107em, ink height = 0.70em, matching the
  * cap height of "50+" and "2012") everywhere.
  */
-const SW = 7.7; // stroke width in viewBox units
-const SCL = 42.3; // (ink height - stroke) / 1, lemniscate scale
+const SW = 7.45; // stroke width in viewBox units
+const SCL = 50 - SW; // (ink height - stroke), lemniscate scale
 const CX = SCL + SW / 2;
 const CY = (SCL + SW) / 2;
 
@@ -99,7 +99,7 @@ export const Stats = () => {
             >
               <p className="h-[56px] text-[56px] font-medium leading-none tracking-[-2.16px] text-ink md:h-[72px] md:text-[72px]">
                 {stat.infinity ? (
-                  <InfinityMark className="inline-block h-[0.7em] w-auto align-baseline" />
+                  <InfinityMark className="inline-block h-[0.72em] w-auto align-baseline" />
                 ) : (
                   stat.value
                 )}
