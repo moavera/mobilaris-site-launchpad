@@ -64,7 +64,7 @@ const CardModular = () => (
 
 const CardAnywhere = () => (
   <div className={cardBase}>
-    <img src={anywhereAsset.url} alt="Mobilaris Site on desktop and the Companion GO™ app" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />
+    <img src={anywhereAsset.url} alt="Mobilaris Site on desktop and the Companion GO™ app" loading="lazy" decoding="async" className="absolute right-0 top-1/2 w-[92%] max-w-full max-h-full -translate-y-1/2 object-contain object-right md:w-[78%]" />
   </div>
 );
 
