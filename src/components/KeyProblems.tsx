@@ -55,7 +55,7 @@ export const KeyProblems = () => {
                     alt={industry.label}
                     loading="lazy"
                     decoding="async"
-                    className="h-auto w-full rounded-[20px]"
+                    className="h-auto w-full"
                   />
                 </div>
               </div>
