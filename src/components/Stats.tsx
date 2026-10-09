@@ -1,5 +1,3 @@
-import { SectionShareButton } from "@/components/SectionShareButton";
-
 const stats = [
   {
     value: "50+",
@@ -23,16 +21,13 @@ export const Stats = () => {
       className="group scroll-mt-20 bg-white px-4 py-24 md:px-12 md:pb-[140px] md:pt-[80px] xl:px-[120px]"
     >
       <div className="mx-auto flex max-w-[1200px] flex-col gap-12 md:gap-14">
-        <div className="flex items-start gap-3">
-          <p className="max-w-[900px] text-[28px] font-medium leading-[1.15] tracking-[-0.8px] text-ink md:text-[40px]">
-            Built on more than a decade underground.
-            <span className="text-ink/[0.42]">
-              {" "}
-              Proven in some of the most demanding workplaces in the world.
-            </span>
-          </p>
-          <SectionShareButton sectionId="stats" sectionName="Stats" />
-        </div>
+        <p className="max-w-[900px] text-[28px] font-medium leading-[1.15] tracking-[-0.8px] text-ink md:text-[40px]">
+          Built on more than a decade underground.
+          <span className="text-ink/[0.42]">
+            {" "}
+            Proven in some of the most demanding workplaces in the world.
+          </span>
+        </p>
 
         <div className="grid gap-8 md:grid-cols-3 md:gap-6">
           {stats.map((stat) => (
