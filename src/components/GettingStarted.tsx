@@ -35,7 +35,7 @@ export const GettingStarted = () => {
         <div className="flex items-start gap-3">
           <h2 className="max-w-[900px] text-[34px] font-medium leading-[1.08] tracking-[-1.3px] text-ink md:text-[52px]">
             What do I need?{" "}
-            <span className="text-ink/42">Ready to get started? Only 3 simple steps:</span>
+            <span className="text-ink/[0.42]">Ready to get started? Only 3 simple steps:</span>
           </h2>
           <SectionShareButton sectionId="getting-started" sectionName="Getting Started" />
         </div>
@@ -53,7 +53,7 @@ export const GettingStarted = () => {
               <h3 className="text-[20px] font-medium tracking-[-0.24px] text-ink md:text-[22px]">
                 {step.title}
               </h3>
-              <p className="text-[15px] leading-[1.55] text-ink/62">{step.description}</p>
+              <p className="text-[15px] leading-[1.55] text-ink/[0.62]">{step.description}</p>
             </div>
           ))}
         </div>

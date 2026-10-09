@@ -12,7 +12,7 @@ export const ContactSection = () => {
         <div className="flex items-start gap-3">
           <h2 className="max-w-[900px] text-[34px] font-medium leading-[1.08] tracking-[-1.3px] text-ink md:text-[52px]">
             Want to know more?{" "}
-            <span className="text-ink/42">
+            <span className="text-ink/[0.42]">
               Get in touch with our experts and learn how Mobilaris Site™ can transform your
               operations.
             </span>
