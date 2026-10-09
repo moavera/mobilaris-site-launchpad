@@ -7,7 +7,6 @@ import { MobileFirst } from "@/components/MobileFirst";
 import { Environments } from "@/components/Environments";
 import { Principles } from "@/components/Principles";
 import { KeyFeatures } from "@/components/KeyFeatures";
-import { ChallengesSection } from "@/components/ChallengesSection";
 import { GettingStarted } from "@/components/GettingStarted";
 
 
