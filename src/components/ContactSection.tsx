@@ -1,7 +1,34 @@
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { SectionShareButton } from "@/components/SectionShareButton";
+import brochureAsset from "@/assets/broschyr.pdf.asset.json";
+
+const BROCHURE_FILENAME = "Mobilaris Site™.pdf";
 
 export const ContactSection = () => {
+  const [preparing, setPreparing] = useState(false);
+
+  const downloadBrochure = async () => {
+    setPreparing(true);
+    try {
+      const response = await fetch(brochureAsset.url);
+      if (!response.ok) throw new Error("Could not load the brochure");
+      const blob = await response.blob();
+      const objectUrl = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = objectUrl;
+      link.download = BROCHURE_FILENAME;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(objectUrl), 60_000);
+    } catch {
+      window.open(brochureAsset.url, "_blank", "noopener,noreferrer");
+    } finally {
+      setPreparing(false);
+    }
+  };
+
   return (
     <section id="contact" className="group scroll-mt-20 bg-white px-3 pb-3 md:px-6 md:pb-6">
       <div
@@ -36,10 +63,16 @@ export const ContactSection = () => {
             <ArrowRight className="h-5 w-5" />
           </a>
           <a
-            href="https://mobilarisindustrialsolutions.se/contact/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 rounded-full border border-white/35 px-7 py-[18px] text-[16px] font-medium text-white transition-colors hover:border-white/60"
+            href={brochureAsset.url}
+            download={BROCHURE_FILENAME}
+            aria-busy={preparing}
+            onClick={(event) => {
+              event.preventDefault();
+              void downloadBrochure();
+            }}
+            className={`flex items-center gap-3 rounded-full border border-white/35 px-7 py-[18px] text-[16px] font-medium text-white transition-colors hover:border-white/60 ${
+              preparing ? "opacity-60" : ""
+            }`}
           >
             Download brochure
           </a>
