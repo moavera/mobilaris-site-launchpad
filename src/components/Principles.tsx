@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Lock } from "lucide-react";
-import logo from "@/assets/mobilaris-industrial-logga.svg";
-import mapAsset from "@/assets/hero-map-emergency.png.asset.json";
-import mobileMockup from "@/assets/mobildesktop.png";
+import techAsset from "@/assets/card-technology-agnostic.png.asset.json";
+import valueAsset from "@/assets/card-value-from-day-one.png.asset.json";
+import anywhereAsset from "@/assets/card-anywhere-you-work.png.asset.json";
 
 const steps = [
   { title: "Technology-agnostic", description: "Works with the Wi‑Fi, LTE, BLE, GPS and UWB you already have. No rip-and-replace." },
@@ -12,39 +12,18 @@ const steps = [
   { title: "Privacy on your terms", description: "Adapts to your company’s privacy policy – show who is where at all times, or keep everyone anonymous until an emergency." },
 ];
 
-const tiles: { label: string; dim?: boolean; brand?: boolean }[] = [
-  { label: "Access control", dim: true }, { label: "Wi‑Fi" }, { label: "LTE" }, { label: "Gas detection" }, { label: "Vehicles", dim: true },
-  { label: "Ventilation" }, { label: "BLE" }, { label: "", brand: true }, { label: "GPS" }, { label: "Tools" },
-  { label: "Fleet systems", dim: true }, { label: "UWB" }, { label: "Personnel tags" }, { label: "Companion GO™" }, { label: "Alarms", dim: true },
-];
-
 const cardBase = "relative w-full overflow-hidden rounded-[20px] border border-foreground/[0.08] bg-[#131216] min-h-[440px] md:h-[520px]";
 const caption = "text-[14px] text-foreground/45 text-center";
 
 const CardTech = () => (
-  <div className={`${cardBase} flex flex-col items-center justify-center gap-10 py-14 px-4`}>
-    <div className="grid grid-cols-5 gap-2 sm:gap-[14px] max-w-[576px] w-full">
-      {tiles.map((t, i) =>
-        t.brand ? (
-          <div key={i} className="aspect-square rounded-[22px] bg-gradient-to-b from-[#b07aff] to-[#8e47f0] flex items-center justify-center px-2 shadow-[0_0_40px_-6px_rgba(142,71,240,0.7)]">
-            <img src={logo} alt="Mobilaris" className="w-full" />
-          </div>
-        ) : (
-          <div key={i} className={`aspect-square rounded-[22px] border border-foreground/[0.08] bg-foreground/[0.04] flex items-center justify-center px-2 ${t.dim ? "opacity-35" : ""}`}>
-            <p className="text-[11px] sm:text-[13px] font-medium leading-[1.25] text-foreground/75 text-center">{t.label}</p>
-          </div>
-        ),
-      )}
-    </div>
-    <p className={`${caption} max-w-[500px]`}>Technology-agnostic: connect what you have, add what you need.</p>
+  <div className={cardBase}>
+    <img src={techAsset.url} alt="Technology-agnostic: connect what you have, add what you need" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />
   </div>
 );
 
 const CardValue = () => (
-  <div className={`${cardBase} bg-[#1c1b21]`}>
-    <img src={mapAsset.url} alt="Live map in Mobilaris Site" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />
-    <div className="absolute inset-0 bg-[rgba(79,74,168,0.15)] mix-blend-color" />
-    <div className="absolute inset-0 bg-[rgba(13,13,36,0.4)] mix-blend-multiply" />
+  <div className={cardBase}>
+    <img src={valueAsset.url} alt="Live map in Mobilaris Site" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />
   </div>
 );
 
