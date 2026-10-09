@@ -37,7 +37,7 @@ export const Stats = () => {
             >
               <p className="h-[56px] text-[56px] font-medium leading-none tracking-[-2.16px] text-ink md:h-[72px] md:text-[72px]">
                 {stat.infinity ? (
-                  <span className="inline-block text-[101px] leading-none md:text-[130px]">
+                  <span className="inline-block -translate-y-[28px] text-[101px] leading-none md:-translate-y-[34px] md:text-[130px]">
                     {stat.value}
                   </span>
                 ) : (
