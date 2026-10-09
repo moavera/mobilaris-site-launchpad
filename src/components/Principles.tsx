@@ -13,16 +13,17 @@ const steps = [
 ];
 
 const cardBase = "relative w-full overflow-hidden rounded-[20px] border border-foreground/[0.08] bg-[#131216] min-h-[440px] md:h-[520px]";
+const imageCard = "relative w-full overflow-hidden rounded-[20px] border border-foreground/[0.08] bg-[#131216] aspect-[15/13] md:aspect-auto md:h-[520px]";
 const caption = "text-[14px] text-foreground/45 text-center";
 
 const CardTech = () => (
-  <div className={cardBase}>
+  <div className={imageCard}>
     <img src={techAsset.url} alt="Technology-agnostic: connect what you have, add what you need" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />
   </div>
 );
 
 const CardValue = () => (
-  <div className={cardBase}>
+  <div className={imageCard}>
     <img src={valueAsset.url} alt="Live map in Mobilaris Site" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />
   </div>
 );
@@ -63,7 +64,7 @@ const CardModular = () => (
 );
 
 const CardAnywhere = () => (
-  <div className={cardBase}>
+  <div className={imageCard}>
     <img src={anywhereAsset.url} alt="Mobilaris Site on desktop and the Companion GO™ app" loading="lazy" decoding="async" className="absolute right-0 top-1/2 w-[92%] max-w-full max-h-full -translate-y-1/2 object-contain object-right md:w-[78%]" />
   </div>
 );
@@ -154,7 +155,7 @@ export const Principles = () => {
           <p className="mt-5 text-[17px] leading-[1.55] text-foreground/60">
             Built on more than a decade of mining experience. <strong className="font-bold text-foreground">Mobilaris Site™</strong> delivers value from day one, keeps complexity low and grows with your operation.
           </p>
-          <div className="mt-10">
+          <div className="mt-10 hidden lg:block">
             {steps.map((s, i) => {
               const isActive = i === active;
               return (
