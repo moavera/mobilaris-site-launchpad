@@ -41,7 +41,6 @@ export const KeyProblems = () => {
                 className="grid items-center gap-8 md:grid-cols-2 md:gap-12 xl:gap-20"
               >
                 <div className={cn("flex flex-col gap-4", flipped && "md:order-2")}>
-                  <p className="text-[13px] font-medium text-ink/40">{industry.n}</p>
                   <h3 className="text-[26px] font-medium tracking-[-0.4px] text-ink md:text-[32px]">
                     {industry.label}
                   </h3>
