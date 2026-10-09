@@ -6,6 +6,7 @@ import { KeyProblems } from "@/components/KeyProblems";
 import { MobileFirst } from "@/components/MobileFirst";
 import { Environments } from "@/components/Environments";
 import { Principles } from "@/components/Principles";
+import { KeyFeatures } from "@/components/KeyFeatures";
 import { ChallengesSection } from "@/components/ChallengesSection";
 import { GettingStarted } from "@/components/GettingStarted";
 
@@ -20,6 +21,7 @@ const SiteProduct = () => {
       <HeroNew />
       <Reveal><Environments /></Reveal>
       <Principles />
+      <Reveal><KeyFeatures /></Reveal>
       
       <Reveal><ChallengesSection /></Reveal>
       <Reveal><KeyProblems /></Reveal>
