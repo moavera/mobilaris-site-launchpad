@@ -209,8 +209,9 @@ All colors MUST be HSL.
     background:
       radial-gradient(ellipse 90% 80% at 50% 45%, hsl(258 58% 42%), hsl(246 50% 28%) 58%, hsl(236 46% 20%) 100%);
     mix-blend-mode: color;
-    opacity: 0.2;
+    opacity: 0.085;
   }
+
 }
 
 
