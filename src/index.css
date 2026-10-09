@@ -163,11 +163,11 @@ All colors MUST be HSL.
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: 0 0;
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Crect width='4' height='4' fill='white'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Crect width='6' height='6' fill='white'/%3E%3C/svg%3E");
     mask-repeat: repeat;
     mask-size: 8px 8px;
     mask-position: 0 0;
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Crect width='4' height='4' fill='white'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Crect width='6' height='6' fill='white'/%3E%3C/svg%3E");
     -webkit-mask-repeat: repeat;
     -webkit-mask-size: 8px 8px;
     -webkit-mask-position: 0 0;
@@ -175,7 +175,7 @@ All colors MUST be HSL.
 
   .hero-mesh__base {
     background-image: none;
-    filter: blur(0.35px);
+    filter: blur(0.6px);
   }
 
   /* A continuous illuminated arch leaves the middle dark for the copy.
