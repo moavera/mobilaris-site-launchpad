@@ -16,16 +16,14 @@ const cardBase = "relative w-full overflow-hidden rounded-[20px] border border-f
 const imageCard = "relative w-full overflow-hidden rounded-[20px] border border-foreground/[0.08] bg-[#131216] aspect-[15/13] md:aspect-auto md:h-[520px]";
 const caption = "text-[14px] text-foreground/45 text-center";
 
+// Card 1 & 2: the Figma artwork already contains its own frame and rounded
+// corners — render the image as the card itself so no second frame appears.
 const CardTech = () => (
-  <div className={imageCard}>
-    <img src={techAsset.url} alt="Technology-agnostic: connect what you have, add what you need" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-contain object-center" />
-  </div>
+  <img src={techAsset.url} alt="Technology-agnostic: connect what you have, add what you need" loading="lazy" decoding="async" className="block h-auto w-full" />
 );
 
 const CardValue = () => (
-  <div className={imageCard}>
-    <img src={valueAsset.url} alt="Live map in Mobilaris Site" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-contain object-center" />
-  </div>
+  <img src={valueAsset.url} alt="Live map in Mobilaris Site" loading="lazy" decoding="async" className="block h-auto w-full" />
 );
 
 const modules = [
