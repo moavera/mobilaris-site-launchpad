@@ -38,8 +38,8 @@ const modules = [
 ];
 
 const CardModular = () => (
-  <div className={`${cardFrame} ${cardHeight} flex flex-col items-center justify-center gap-5 px-5 py-8 md:px-8 md:py-10`}>
-    <div className="flex w-full max-w-[680px] flex-wrap justify-center gap-3">
+  <div className={`${cardFrame} ${cardHeight} flex min-h-[390px] flex-col items-center justify-center gap-5 px-5 py-8 sm:min-h-0 md:px-8 md:py-10`}>
+    <div className="flex w-full max-w-[680px] shrink-0 flex-wrap justify-center gap-3">
       {modules.map((m) =>
         m.active ? (
           <div key={m.label} className="flex h-[88px] min-w-[130px] max-w-[220px] grow basis-[130px] flex-col justify-between rounded-[14px] border border-foreground/50 bg-foreground/[0.08] p-3.5">
@@ -60,7 +60,7 @@ const CardModular = () => (
         ),
       )}
     </div>
-    <p className={caption}>Start with what you need – add modules as your operation grows.</p>
+    <p className={`${caption} shrink-0`}>Start with what you need – add modules as your operation grows.</p>
   </div>
 );
 
@@ -78,8 +78,8 @@ const people = [
 ];
 
 const CardPrivacy = () => (
-  <div className={`${cardFrame} ${cardHeight} flex flex-col items-center justify-center gap-5 px-4 py-8 md:px-8 md:py-10`}>
-    <div className="w-full max-w-[480px] overflow-hidden rounded-[14px] border border-foreground/[0.08] bg-[rgba(14,13,17,0.6)]">
+  <div className={`${cardFrame} ${cardHeight} flex min-h-[390px] flex-col items-center justify-center gap-5 px-4 py-8 sm:min-h-0 md:px-8 md:py-10`}>
+    <div className="w-full max-w-[480px] shrink-0 overflow-hidden rounded-[14px] border border-foreground/[0.08] bg-[rgba(14,13,17,0.6)]">
       {people.map((p, i) => (
         <div key={p.name} className={`flex items-center gap-[14px] px-[18px] py-3 ${i ? "border-t border-foreground/[0.06]" : ""} ${p.alarm ? "bg-foreground/[0.05]" : ""}`}>
           <div className={`flex size-8 shrink-0 items-center justify-center rounded-full text-[12px] font-medium ${p.alarm ? "bg-[rgba(151,79,244,0.5)] text-foreground" : "bg-foreground/[0.06] text-foreground/50"}`}>
@@ -97,7 +97,7 @@ const CardPrivacy = () => (
         </div>
       ))}
     </div>
-    <p className={`${caption} max-w-[480px]`}>Set visibility to match your privacy policy. Here: anonymous by default, identified only in an emergency.</p>
+    <p className={`${caption} max-w-[480px] shrink-0`}>Set visibility to match your privacy policy. Here: anonymous by default, identified only in an emergency.</p>
   </div>
 );
 
@@ -146,8 +146,8 @@ export const Principles = () => {
 
   return (
     <section id="principles" className="bg-white p-3 md:p-6">
-      <div className="rounded-[28px] bg-surface px-6 pt-16 pb-16 md:pl-[96px] md:pr-[56px] md:pt-[120px] md:pb-[120px] flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-        <div className="w-full lg:w-[400px] lg:shrink-0 lg:sticky lg:top-[120px]">
+      <div className="rounded-[28px] bg-surface px-6 pt-16 pb-16 md:pl-[96px] md:pr-[56px] md:pt-[120px] md:pb-[120px] flex flex-col gap-12 items-start lg:flex-row xl:gap-20">
+        <div className="w-full lg:w-[300px] xl:w-[400px] lg:shrink-0 lg:sticky lg:top-[120px]">
           <h2 className="text-[36px] md:text-[46px] font-medium leading-[1.05] tracking-[-1.15px] text-foreground">
             Simple to deploy.
             <br />
