@@ -38,11 +38,11 @@ const modules = [
 ];
 
 const CardModular = () => (
-  <div className={`${cardBase} flex flex-col items-center justify-center gap-8 px-6 md:px-12 py-12`}>
-    <div className="flex flex-wrap justify-center gap-3 max-w-[534px]">
+  <div className={`${cardFrame} ${cardHeight} flex flex-col items-center justify-center gap-5 px-5 py-8 md:px-8 md:py-10`}>
+    <div className="flex w-full max-w-[680px] flex-wrap justify-center gap-3">
       {modules.map((m) =>
         m.active ? (
-          <div key={m.label} className="flex h-[96px] w-[calc(50%-6px)] sm:h-[108px] sm:w-[170px] flex-col justify-between rounded-[14px] border border-foreground/50 bg-foreground/[0.08] p-4">
+          <div key={m.label} className="flex h-[88px] min-w-[130px] max-w-[220px] grow basis-[130px] flex-col justify-between rounded-[14px] border border-foreground/50 bg-foreground/[0.08] p-3.5">
             <div className="flex items-center gap-[7px]">
               <span className="size-2.5 rounded-full bg-[#4ade80]" />
               <span className="text-[12px] font-medium text-foreground/50">Active</span>
@@ -50,7 +50,7 @@ const CardModular = () => (
             <p className="text-[15px] font-medium leading-[1.25] text-foreground">{m.label}</p>
           </div>
         ) : (
-          <div key={m.label} className="flex h-[96px] w-[calc(50%-6px)] sm:h-[108px] sm:w-[170px] flex-col justify-between rounded-[14px] border border-dashed border-foreground/[0.18] bg-foreground/[0.02] p-4">
+          <div key={m.label} className="flex h-[88px] min-w-[130px] max-w-[220px] grow basis-[130px] flex-col justify-between rounded-[14px] border border-dashed border-foreground/[0.18] bg-foreground/[0.02] p-3.5">
             <div className="flex items-center justify-between">
               <span className="size-2.5 rounded-full border border-foreground/30" />
               <span className="text-[12px] font-medium text-foreground/50">+ Add</span>
@@ -65,7 +65,7 @@ const CardModular = () => (
 );
 
 const CardAnywhere = () => (
-  <div className={imageCard}>
+  <div className={`${cardFrame} ${cardHeight}`}>
     <img src={anywhereAsset.url} alt="Mobilaris Site on desktop and the Companion GO™ app" loading="lazy" decoding="async" className="absolute right-0 top-1/2 w-[92%] max-w-full max-h-full -translate-y-1/2 object-contain object-right md:w-[78%]" />
   </div>
 );
@@ -78,10 +78,10 @@ const people = [
 ];
 
 const CardPrivacy = () => (
-  <div className={`${cardBase} flex flex-col items-center justify-center gap-6 px-4 md:px-12 py-12`}>
+  <div className={`${cardFrame} ${cardHeight} flex flex-col items-center justify-center gap-5 px-4 py-8 md:px-8 md:py-10`}>
     <div className="w-full max-w-[480px] overflow-hidden rounded-[14px] border border-foreground/[0.08] bg-[rgba(14,13,17,0.6)]">
       {people.map((p, i) => (
-        <div key={p.name} className={`flex items-center gap-[14px] px-[18px] py-4 ${i ? "border-t border-foreground/[0.06]" : ""} ${p.alarm ? "bg-foreground/[0.05]" : ""}`}>
+        <div key={p.name} className={`flex items-center gap-[14px] px-[18px] py-3 ${i ? "border-t border-foreground/[0.06]" : ""} ${p.alarm ? "bg-foreground/[0.05]" : ""}`}>
           <div className={`flex size-8 shrink-0 items-center justify-center rounded-full text-[12px] font-medium ${p.alarm ? "bg-[rgba(151,79,244,0.5)] text-foreground" : "bg-foreground/[0.06] text-foreground/50"}`}>
             {p.alarm ? "MS" : "?"}
           </div>
