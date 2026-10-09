@@ -73,9 +73,10 @@ All colors MUST be HSL.
     --input: 220 15% 16%;
     --ring: 273 100% 58%;
 
-    --mesh-dim: 269 67% 52%;
-    --mesh-bright: 274 76% 67%;
-    --mesh-warm: 276 68% 60%;
+    --mesh-dim: 260 52% 35%;
+    --mesh-bright: 269 68% 65%;
+    --mesh-warm: 266 61% 52%;
+    --mesh-shadow: 250 24% 6%;
 
     --radius: 0.75rem;
 
@@ -155,34 +156,41 @@ All colors MUST be HSL.
 @layer components {
   .hero-mesh {
     overflow: hidden;
+    filter: blur(0.85px);
   }
 
-  /* A fixed, softened lattice reveals a continuously drifting light field. */
+  /* Soft squares sample a flowing light field; independent shadow motion
+     reshapes it continuously instead of moving a fixed ring. */
   .hero-mesh__base {
-    filter: blur(0.75px);
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6'%3E%3Crect width='4.5' height='4.5' fill='white'/%3E%3C/svg%3E");
-    mask-size: 6px 6px;
+    background: hsl(var(--mesh-dim) / 0.035);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='5'%3E%3Crect x='.4' y='.4' width='3.6' height='3.6' rx='.3' fill='white'/%3E%3C/svg%3E");
+    mask-size: 5px 5px;
     mask-repeat: repeat;
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6'%3E%3Crect width='4.5' height='4.5' fill='white'/%3E%3C/svg%3E");
-    -webkit-mask-size: 6px 6px;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='5'%3E%3Crect x='.4' y='.4' width='3.6' height='3.6' rx='.3' fill='white'/%3E%3C/svg%3E");
+    -webkit-mask-size: 5px 5px;
     -webkit-mask-repeat: repeat;
   }
 
   .hero-mesh__base::before {
     content: "";
     position: absolute;
-    inset: -22%;
-    background: radial-gradient(
-      ellipse 62% 80% at 50% 78%,
-      transparent 30%,
-      hsl(var(--mesh-dim) / 0.025) 40%,
-      hsl(var(--mesh-dim) / 0.12) 50%,
-      hsl(var(--mesh-dim) / 0.32) 62%,
-      hsl(var(--mesh-bright) / 0.48) 76%,
-      hsl(var(--mesh-dim) / 0.42) 90%,
-      hsl(var(--mesh-dim) / 0.18) 112%
-    );
-    animation: hero-arch-drift 16s ease-in-out infinite alternate;
+    inset: -25%;
+    background:
+      radial-gradient(ellipse 65% 24% at 38% 24%, hsl(var(--mesh-bright) / 0.9), hsl(var(--mesh-warm) / 0.64) 36%, hsl(var(--mesh-dim) / 0.24) 65%, transparent 90%),
+      radial-gradient(ellipse 35% 48% at 78% 45%, hsl(var(--mesh-bright) / 0.8), hsl(var(--mesh-warm) / 0.58) 32%, hsl(var(--mesh-dim) / 0.22) 64%, transparent 90%),
+      linear-gradient(145deg, hsl(var(--mesh-dim) / 0.16), transparent 65%);
+    animation: hero-field-flow 23s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+    will-change: transform;
+  }
+
+  .hero-mesh__base::after {
+    content: "";
+    position: absolute;
+    inset: -30%;
+    background:
+      radial-gradient(ellipse 42% 37% at 36% 51%, hsl(var(--mesh-shadow) / 0.95) 12%, hsl(var(--mesh-shadow) / 0.7) 38%, transparent 76%),
+      radial-gradient(ellipse 36% 24% at 80% 13%, hsl(var(--mesh-shadow) / 0.88), transparent 80%);
+    animation: hero-shadow-flow 31s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
     will-change: transform;
   }
 
@@ -191,14 +199,23 @@ All colors MUST be HSL.
   }
 }
 
-@keyframes hero-arch-drift {
-  0% { transform: translate3d(-7%, -4%, 0) rotate(-5deg) scale(1); }
-  50% { transform: translate3d(3%, 2%, 0) rotate(2deg) scale(1.07); }
-  100% { transform: translate3d(7%, -2%, 0) rotate(6deg) scale(1.03); }
+@keyframes hero-field-flow {
+  0% { transform: translate3d(-8%, -6%, 0) rotate(-12deg) scale(1.04, 1); }
+  27% { transform: translate3d(3%, 4%, 0) rotate(4deg) scale(0.96, 1.14); }
+  61% { transform: translate3d(-3%, 9%, 0) rotate(-5deg) scale(1.16, 0.96); }
+  100% { transform: translate3d(9%, -3%, 0) rotate(11deg) scale(1.02, 1.1); }
+}
+
+@keyframes hero-shadow-flow {
+  0% { transform: translate3d(8%, 4%, 0) rotate(8deg) scale(1.1, 0.94); }
+  38% { transform: translate3d(-8%, -4%, 0) rotate(-14deg) scale(0.9, 1.16); }
+  72% { transform: translate3d(4%, -8%, 0) rotate(3deg) scale(1.14, 1); }
+  100% { transform: translate3d(-4%, 7%, 0) rotate(-7deg) scale(0.98, 1.12); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-mesh__base::before {
+  .hero-mesh__base::before,
+  .hero-mesh__base::after {
     animation: none;
     will-change: auto;
   }
