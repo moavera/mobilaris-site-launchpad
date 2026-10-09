@@ -6,6 +6,7 @@ import { RiskSection } from "@/components/RiskSection";
 import { KeyProblems } from "@/components/KeyProblems";
 import { MobileFirst } from "@/components/MobileFirst";
 import { Environments } from "@/components/Environments";
+import { Principles } from "@/components/Principles";
 import { ValueProposition } from "@/components/ValueProposition";
 import { ChallengesSection } from "@/components/ChallengesSection";
 import { WhyMobilaris } from "@/components/WhyMobilaris";
@@ -21,6 +22,7 @@ const SiteProduct = () => {
       <Navigation />
       <HeroNew />
       <Reveal><Environments /></Reveal>
+      <Principles />
       
       <Reveal><RiskSection /></Reveal>
       <Reveal><ChallengesSection /></Reveal>
