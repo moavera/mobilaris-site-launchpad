@@ -18,13 +18,13 @@ const caption = "text-[14px] text-foreground/45 text-center";
 
 const CardTech = () => (
   <div className={imageCard}>
-    <img src={techAsset.url} alt="Technology-agnostic: connect what you have, add what you need" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />
+    <img src={techAsset.url} alt="Technology-agnostic: connect what you have, add what you need" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-contain object-center" />
   </div>
 );
 
 const CardValue = () => (
   <div className={imageCard}>
-    <img src={valueAsset.url} alt="Live map in Mobilaris Site" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />
+    <img src={valueAsset.url} alt="Live map in Mobilaris Site" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-contain object-center" />
   </div>
 );
 
