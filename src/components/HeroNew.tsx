@@ -1,128 +1,12 @@
-import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import demoImage from "@/assets/hero-map-emergency.png.asset.json";
 
 export const HeroNew = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const meshRef = useRef<HTMLDivElement>(null);
-  // When the cursor rests over the headline/text block the light dims
-  // so the copy stays readable; everywhere else it is full strength.
-  const [textHovered, setTextHovered] = useState(false);
-
-  // The mesh light follows the mouse pointer on devices that can hover.
-  // On touch devices (no hover) the light instead wanders slowly on its
-  // own along a gently winding path. The head (--mx/--my) lerps quickly
-  // toward its target; the tail (--tx/--ty) lerps slower, so it trails
-  // behind like a snake body. All motion is GPU-composited transforms
-  // written via requestAnimationFrame.
-  useEffect(() => {
-    const section = sectionRef.current;
-    const mesh = meshRef.current;
-    if (!section || !mesh) return;
-
-    const isTouch = window.matchMedia("(hover: none), (pointer: coarse)").matches;
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    let targetX = 0;
-    let targetY = 0;
-    let headX = 0;
-    let headY = 0;
-    let tailX = 0;
-    let tailY = 0;
-    let rafId = 0;
-    let initialized = false;
-
-    const seed = () => {
-      const rect = section.getBoundingClientRect();
-      targetX = headX = tailX = rect.width * 0.04;
-      targetY = headY = tailY = rect.height * 0.14;
-      initialized = true;
-    };
-
-    let clientX = 0;
-    let clientY = 0;
-    let hasPointer = false;
-
-    const updateTarget = () => {
-      if (!hasPointer) return;
-      const rect = section.getBoundingClientRect();
-      // Center the ribbon (92% wide, 50% tall) on the cursor.
-      targetX = clientX - rect.left - rect.width * 0.46;
-      targetY = clientY - rect.top - rect.height * 0.25;
-      if (!initialized) {
-        headX = tailX = targetX;
-        headY = tailY = targetY;
-        initialized = true;
-      }
-    };
-
-    const onPointerMove = (e: PointerEvent) => {
-      clientX = e.clientX;
-      clientY = e.clientY;
-      hasPointer = true;
-      updateTarget();
-    };
-
-    // pointermove doesn't fire while scrolling — recompute the target
-    // from the last known cursor position so the light follows along.
-    const onScroll = () => updateTarget();
-
-    const startTime = performance.now();
-    const phase = Math.random() * Math.PI * 2;
-
-    const tick = () => {
-      if (isTouch && !prefersReduced) {
-        // Subtle self-driven drift: two blended sine waves per axis
-        // give a slow, winding path that never leaves the screen.
-        const rect = section.getBoundingClientRect();
-        const t = (performance.now() - startTime) / 1000 + phase;
-        targetX =
-          rect.width * 0.04 +
-          rect.width * 0.05 * (0.6 * Math.sin(t * 0.32) + 0.4 * Math.sin(t * 0.13 + 1.7));
-        targetY =
-          rect.height * 0.2 +
-          rect.height * 0.13 * (0.6 * Math.sin(t * 0.21 + 0.9) + 0.4 * Math.sin(t * 0.09 + 2.6));
-      }
-      // Lerp speeds are deliberately low so the light feels like it
-      // trails behind the cursor with a slight delay.
-      headX += (targetX - headX) * 0.014;
-      headY += (targetY - headY) * 0.014;
-      tailX += (targetX - tailX) * 0.006;
-      tailY += (targetY - tailY) * 0.006;
-      mesh.style.setProperty("--mx", `${headX.toFixed(1)}px`);
-      mesh.style.setProperty("--my", `${headY.toFixed(1)}px`);
-      mesh.style.setProperty("--tx", `${tailX.toFixed(1)}px`);
-      mesh.style.setProperty("--ty", `${tailY.toFixed(1)}px`);
-      rafId = requestAnimationFrame(tick);
-    };
-
-    seed();
-    if (!isTouch) {
-      section.addEventListener("pointermove", onPointerMove);
-      window.addEventListener("scroll", onScroll, { passive: true });
-    }
-    rafId = requestAnimationFrame(tick);
-
-    return () => {
-      section.removeEventListener("pointermove", onPointerMove);
-      window.removeEventListener("scroll", onScroll);
-      cancelAnimationFrame(rafId);
-    };
-  }, []);
-
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-background">
-      <div
-        ref={meshRef}
-        className={`hero-mesh pointer-events-none absolute inset-0${textHovered ? " hero-mesh--dim" : ""}`}
-        aria-hidden="true"
-      >
+    <section className="relative overflow-hidden bg-background">
+      <div className="hero-mesh pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="hero-mesh__base absolute inset-0" />
-        <div className="hero-mesh__smoke hero-mesh__smoke--one absolute inset-0" />
-        <div className="hero-mesh__smoke hero-mesh__smoke--two absolute inset-0" />
-        <div className="hero-mesh__smoke hero-mesh__smoke--three absolute inset-0" />
-
         <div className="hero-mesh__fade absolute inset-x-0 bottom-0 h-40" />
       </div>
 
@@ -130,8 +14,6 @@ export const HeroNew = () => {
       <div className="container relative z-10 mx-auto px-6 pt-48 sm:pt-52 md:pt-60 pb-16 md:pb-24">
         <div
           className="relative max-w-4xl mx-auto text-center"
-          onMouseEnter={() => setTextHovered(true)}
-          onMouseLeave={() => setTextHovered(false)}
         >
           {/* Soft dark scrim behind the text so it stays readable when the light sweeps past */}
           <div
