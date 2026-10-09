@@ -97,7 +97,7 @@ export const Principles = () => {
             <span className="text-foreground/45">Built to scale.</span>
           </h2>
           <p className="mt-5 text-[17px] leading-[1.55] text-foreground/60">
-            Built on more than a decade of mining experience. <strong className="font-bold text-foreground">Mobilaris Site™</strong> delivers value from day one, keeps complexity low and grows with your operation.
+            Built on more than a decade of mining experience. Mobilaris Site™ delivers value from day one, keeps complexity low and grows with your operation.
           </p>
           <div className="mt-10 hidden lg:block">
             {steps.map((s, i) => {
