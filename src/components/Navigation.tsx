@@ -40,16 +40,16 @@ export const Navigation = () => {
         </a>
       </div>
       <div className="site-header-main">
-        <nav aria-label="Main navigation" className="flex h-20 items-center justify-between gap-5 px-5 md:h-24 md:px-7 xl:px-8">
+        <nav aria-label="Main navigation" className="flex h-20 items-center gap-5 px-5 md:h-24 md:px-7 xl:px-8">
           <a href={corporateUrl} target="_blank" rel="noopener noreferrer" className="shrink-0 transition-opacity hover:opacity-80">
             <img src={siteLogo.url} alt="Mobilaris Site™" className="h-9 w-auto md:h-10" />
           </a>
-          <div className="hidden items-center gap-6 lg:flex xl:gap-9 2xl:gap-12">
+          <div className="ml-10 hidden items-center gap-6 lg:flex xl:gap-9 2xl:gap-12">
             {navLinks.map((link) => (
               <a key={link.label} href={link.href} target={link.href.startsWith("https") ? "_blank" : undefined} rel={link.href.startsWith("https") ? "noopener noreferrer" : undefined} className="whitespace-nowrap text-sm font-normal text-foreground/60 transition-colors hover:text-foreground xl:text-base">{link.label}</a>
             ))}
           </div>
-          <div className="flex shrink-0 items-center gap-3 xl:gap-6">
+          <div className="ml-auto flex shrink-0 items-center gap-3 xl:gap-6">
             <a href={contactUrl} target="_blank" rel="noopener noreferrer" className="hidden whitespace-nowrap text-sm text-foreground/60 transition-colors hover:text-foreground lg:block xl:text-base">Contact sales</a>
             <Button asChild className="h-10 rounded-full bg-paper px-5 text-sm font-medium text-ink hover:bg-paper/90 md:h-11 xl:px-6 xl:text-base">
               <a href={contactUrl} target="_blank" rel="noopener noreferrer">Book a demo</a>
