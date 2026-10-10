@@ -7,11 +7,10 @@ import { Button } from "@/components/ui/button";
 const corporateUrl = "https://mobilarisindustrialsolutions.se/";
 const contactUrl = `${corporateUrl}contact/`;
 const navLinks = [
-  { label: "Platform", href: "/platform" },
-  { label: "Features", href: "/#key-features" },
-  { label: "How it works", href: "/#getting-started" },
-  { label: "Customers", href: `${corporateUrl}stories/` },
-  { label: "Pricing", href: contactUrl },
+  { label: "Product", href: "/product" },
+  { label: "Help center", href: corporateUrl },
+  { label: "About", href: `${corporateUrl}about-us/` },
+  { label: "Contact", href: contactUrl },
 ];
 
 export const Navigation = () => {
@@ -47,11 +46,11 @@ export const Navigation = () => {
           </a>
           <div className="hidden items-center gap-6 lg:flex xl:gap-9 2xl:gap-12">
             {navLinks.map((link) => (
-              <a key={link.label} href={link.href} target={link.href.startsWith("https") ? "_blank" : undefined} rel={link.href.startsWith("https") ? "noopener noreferrer" : undefined} className="whitespace-nowrap text-base font-normal text-foreground/60 transition-colors hover:text-foreground xl:text-lg">{link.label}</a>
+              <a key={link.label} href={link.href} target={link.href.startsWith("https") ? "_blank" : undefined} rel={link.href.startsWith("https") ? "noopener noreferrer" : undefined} className="whitespace-nowrap text-sm font-normal text-foreground/60 transition-colors hover:text-foreground xl:text-base">{link.label}</a>
             ))}
           </div>
           <div className="flex shrink-0 items-center gap-3 xl:gap-6">
-            <a href={contactUrl} target="_blank" rel="noopener noreferrer" className="hidden whitespace-nowrap text-base text-foreground/60 transition-colors hover:text-foreground lg:block xl:text-lg">Contact sales</a>
+            <a href={contactUrl} target="_blank" rel="noopener noreferrer" className="hidden whitespace-nowrap text-sm text-foreground/60 transition-colors hover:text-foreground lg:block xl:text-base">Contact sales</a>
             <Button asChild className="h-10 rounded-full bg-paper px-5 text-sm font-medium text-ink hover:bg-paper/90 md:h-11 xl:px-6 xl:text-base">
               <a href={contactUrl} target="_blank" rel="noopener noreferrer">Book a demo</a>
             </Button>
