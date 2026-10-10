@@ -61,7 +61,7 @@ export const Navigation = () => {
           </div>
         </nav>
         {isMobileMenuOpen && (
-          <nav id="mobile-navigation" aria-label="Mobile navigation" className="max-h-[calc(100dvh-116px)] overflow-y-auto border-t border-foreground/10 px-5 py-5 lg:hidden">
+          <nav id="mobile-navigation" aria-label="Mobile navigation" className="max-h-[calc(100dvh-116px)] overflow-y-auto border-t border-foreground/10 bg-surface px-5 py-5 lg:hidden">
             {[...navLinks, { label: "Contact sales", href: contactUrl }].map((link) => (
               <a key={link.label} href={link.href} target={link.href.startsWith("https") ? "_blank" : undefined} rel={link.href.startsWith("https") ? "noopener noreferrer" : undefined} onClick={() => setIsMobileMenuOpen(false)} className="block py-3 text-base text-foreground/70 transition-colors hover:text-foreground">{link.label}</a>
             ))}
