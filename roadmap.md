@@ -1,7 +1,7 @@
 # Roadmap
 
 ## Open
-- (none)
+- Update header to the supplied two-tier design and verify logo, links and menu.
 
 ## Waiting on user
 - Instagram icon in the footer is white on the light footer and invisible — awaiting go-ahead to darken it.
