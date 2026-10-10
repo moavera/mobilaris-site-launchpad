@@ -2,7 +2,7 @@ import heroImage from "@/assets/hero-mine-landscape.webp.asset.json";
 
 export const HeroNew = () => {
   return (
-    <section className="relative overflow-hidden bg-surface min-h-[1000px] sm:min-h-[1100px] md:min-h-0 md:aspect-[1920/1493]">
+    <section className="relative overflow-hidden bg-surface min-h-[1000px] sm:min-h-[1100px] md:min-h-0 md:aspect-[1920/1700]">
       <img
         src={heroImage.url}
         alt="Mobilaris Site™ live map in front of a mine landscape at dusk"
