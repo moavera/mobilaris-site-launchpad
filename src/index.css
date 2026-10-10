@@ -49,6 +49,7 @@ All colors MUST be HSL.
     --foreground: 0 0% 98%;
     /* Full-bleed section band surface (Figma: #0E0D11) */
     --surface: 255 13% 6%;
+    --header-surface: 240 10% 17%;
 
     /* Light section palette (Figma: white paper, #f2f2f3 cards, #141317 ink, #8e47f0 accent) */
     --paper: 0 0% 100%;
@@ -174,6 +175,10 @@ All colors MUST be HSL.
 }
 
 @layer components {
+  .site-header-main {
+    background: hsl(var(--header-surface));
+  }
+
   .hero-mesh {
     overflow: hidden;
     filter: blur(0.85px);
