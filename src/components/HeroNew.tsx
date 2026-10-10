@@ -1,71 +1,61 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import demoImage from "@/assets/hero-map-emergency.png.asset.json";
+import heroImage from "@/assets/hero-mine-landscape.webp.asset.json";
 
 export const HeroNew = () => {
   return (
-    <section className="relative overflow-hidden bg-surface">
-      <div className="hero-mesh pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="hero-mesh__base absolute inset-0" />
-        <div className="hero-mesh__fade absolute inset-x-0 bottom-0 h-40" />
-      </div>
+    <section className="relative overflow-hidden bg-surface min-h-[820px] sm:min-h-[900px] md:min-h-0 md:aspect-[1920/1493]">
+      <img
+        src={heroImage.url}
+        alt="Mobilaris Site™ live map in front of a mine landscape at dusk"
+        className="intro-image absolute inset-0 h-full w-full object-cover object-bottom"
+        style={{ animationDelay: "0.1s" }}
+        decoding="async"
+        fetchPriority="high"
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-[hsl(var(--surface))]"
+        aria-hidden="true"
+      />
 
-      {/* Content */}
-      <div className="container relative z-10 mx-auto px-6 pt-48 sm:pt-52 md:pt-60 pb-16 md:pb-24">
+      <div className="relative z-10 mx-auto max-w-4xl px-6 pt-36 text-center md:pt-[8.5%]">
         <div
-          className="relative max-w-4xl mx-auto text-center"
+          className="intro mb-6 inline-flex rounded-full border border-white/20 bg-white/[0.06] px-4 py-1.5 text-sm text-white/80 backdrop-blur-sm md:text-[15px]"
+          style={{ animationDelay: "0.05s" }}
         >
-          {/* Soft dark scrim behind the text so it stays readable when the light sweeps past */}
-          <div
-            className="pointer-events-none absolute -inset-x-16 -top-24 -bottom-10 -z-10 bg-[radial-gradient(ellipse_60%_55%_at_50%_45%,hsl(var(--surface)/0.85)_0%,hsl(var(--surface)/0.5)_45%,transparent_75%)]"
-            aria-hidden="true"
-          />
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-6 leading-[1.1] tracking-tight">
-            <span className="intro inline-block" style={{ animationDelay: "0.05s" }}>See your entire site</span>
-            <br />
-            <span className="intro inline-block" style={{ animationDelay: "0.15s" }}>in real time</span>
-          </h1>
-
-            <p className="intro text-lg sm:text-xl text-muted-foreground mb-9 max-w-xl mx-auto leading-relaxed" style={{ animationDelay: "0.3s" }}>
-              People, equipment and critical events.{" "}
-            <br />
-            Above ground, underground and indoors.
-          </p>
-
-          <div className="intro flex justify-center" style={{ animationDelay: "0.42s" }}>
-            <Button
-              size="lg"
-              className="text-base px-8 rounded-full bg-[#974FF4] text-white shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] transition-all duration-300 hover:bg-[#8640de] hover:shadow-[0_12px_40px_0_rgba(0,0,0,0.35)]"
-              asChild
-            >
-              <a
-                href="https://mobilarisindustrialsolutions.se/contact/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Book a Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-          </div>
+          Real-time positioning for mines and industry
         </div>
 
-        {/* Product screenshot – clean frame */}
-        <div
-          className="intro-image relative max-w-5xl mx-auto mt-20 md:mt-28"
-          style={{ animationDelay: "0.55s" }}
+        <h1 className="mb-6 text-[40px] font-semibold leading-[1.05] tracking-[-0.02em] text-white sm:text-6xl md:text-[72px] lg:text-[80px]">
+          <span className="intro inline-block" style={{ animationDelay: "0.15s" }}>Site-wide visibility,</span>
+          <br />
+          <span className="intro inline-block" style={{ animationDelay: "0.22s" }}>in real-time.</span>
+        </h1>
+
+        <p
+          className="intro mx-auto mb-8 max-w-[680px] text-lg leading-relaxed text-white/70 md:text-[21px]"
+          style={{ animationDelay: "0.3s" }}
         >
-          <div className="relative isolate overflow-hidden rounded-lg border border-white/15 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]">
-            <img
-              src={demoImage.url}
-              alt="Mobilaris Site™ real-time map showing people, vehicles and assets"
-              className="relative z-0 w-full h-auto"
-              decoding="async"
-              fetchPriority="high"
-            />
-            {/* Subtle cool cast so the screenshot sits with the purple background */}
-            <div className="hero-shot__tint" aria-hidden="true" />
-          </div>
+          Mobilaris Site™ puts people, vehicles and assets in one live map – indoors, outdoors and underground.
+        </p>
+
+        <div className="intro flex flex-wrap justify-center gap-3" style={{ animationDelay: "0.42s" }}>
+          <a
+            href="https://mobilarisindustrialsolutions.se/contact/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-12 items-center rounded-full bg-white px-7 text-base font-medium text-[hsl(var(--ink))] transition-colors hover:bg-white/90 md:h-14 md:px-8 md:text-lg"
+          >
+            Book a demo
+          </a>
+          <a
+            href="#environments"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("environments")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="inline-flex h-12 items-center rounded-full border border-white/25 bg-white/[0.04] px-7 text-base font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/10 md:h-14 md:px-8 md:text-lg"
+          >
+            See how it works
+          </a>
         </div>
       </div>
     </section>
