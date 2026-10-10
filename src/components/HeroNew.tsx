@@ -1,4 +1,5 @@
-import heroImageUrl from "@/assets/hero-mine-landscape.png";
+import heroAsset from "@/assets/hero-mine-landscape-hd.webp.asset.json";
+const heroImageUrl = heroAsset.url;
 
 export const HeroNew = () => {
   return (
