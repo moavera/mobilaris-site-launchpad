@@ -176,7 +176,7 @@ All colors MUST be HSL.
 
 @layer components {
   .site-header-main {
-    background: hsl(var(--header-surface));
+    background: transparent;
   }
 
   .hero-mesh {
