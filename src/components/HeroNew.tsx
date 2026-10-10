@@ -16,14 +16,7 @@ export const HeroNew = () => {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto max-w-4xl px-6 pt-44 text-center sm:pt-52 md:pt-[11.5%]">
-        <div
-          className="intro mb-6 inline-flex rounded-full border border-white/20 bg-white/[0.06] px-4 py-1.5 text-sm text-white/80 backdrop-blur-sm md:text-[15px]"
-          style={{ animationDelay: "0.05s" }}
-        >
-          Real-time positioning for mines and industry
-        </div>
-
+      <div className="relative z-10 mx-auto max-w-4xl px-6 pt-40 text-center sm:pt-48 md:pt-[10%]">
         <h1 className="mb-6 text-[40px] font-medium leading-[1.05] tracking-[-0.02em] text-white sm:text-6xl md:text-[72px] lg:text-[80px]">
           <span className="intro inline-block" style={{ animationDelay: "0.15s" }}>Site-wide visibility,</span>
           <br />
