@@ -2,11 +2,11 @@ import heroImage from "@/assets/hero-mine-landscape.webp.asset.json";
 
 export const HeroNew = () => {
   return (
-    <section className="relative overflow-hidden bg-surface min-h-[820px] sm:min-h-[900px] md:min-h-0 md:aspect-[1920/1493]">
+    <section className="relative overflow-hidden bg-surface min-h-[1000px] sm:min-h-[1100px] md:min-h-0 md:aspect-[1920/1493]">
       <img
         src={heroImage.url}
         alt="Mobilaris Site™ live map in front of a mine landscape at dusk"
-        className="intro-image absolute inset-0 h-full w-full object-cover object-bottom"
+        className="intro-image absolute inset-x-0 bottom-0 h-[600px] w-full object-cover object-bottom sm:h-[760px] md:inset-0 md:h-full"
         style={{ animationDelay: "0.1s" }}
         decoding="async"
         fetchPriority="high"
@@ -24,7 +24,7 @@ export const HeroNew = () => {
           Real-time positioning for mines and industry
         </div>
 
-        <h1 className="mb-6 text-[40px] font-semibold leading-[1.05] tracking-[-0.02em] text-white sm:text-6xl md:text-[72px] lg:text-[80px]">
+        <h1 className="mb-6 text-[40px] font-medium leading-[1.05] tracking-[-0.02em] text-white sm:text-6xl md:text-[72px] lg:text-[80px]">
           <span className="intro inline-block" style={{ animationDelay: "0.15s" }}>Site-wide visibility,</span>
           <br />
           <span className="intro inline-block" style={{ animationDelay: "0.22s" }}>in real-time.</span>
