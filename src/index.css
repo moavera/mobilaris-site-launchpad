@@ -56,7 +56,6 @@
 .message-severity-alarm { color: hsl(var(--message-alarm)); }
 .message-severity-warning { color: hsl(var(--message-warning)); }
 .message-severity-info { color: hsl(var(--muted-foreground)); }
-@keyframes message-drift { to { transform: translate3d(-12px, -4px, 0); } }
 .message-showcase { position: relative; isolation: isolate; width: 100%; max-width: 1400px; aspect-ratio: 1400 / 760; margin-inline: auto; overflow: hidden; border-radius: 24px; background: linear-gradient(hsl(var(--message-showcase-top)), hsl(var(--message-showcase-bottom))); }
 .message-app-backdrop { position: absolute; inset: 10.5% 5.7% -9%; display: flex; border-radius: 14px; background: hsl(var(--message-panel)); filter: blur(3px); color: hsl(var(--foreground) / .35); font-size: 16px; }
 .message-showcase::after { content: ''; position: absolute; inset: 10.5% 5.7% -9%; z-index: 1; border-radius: 14px; background: hsl(var(--ink) / .8); }
@@ -146,7 +145,6 @@
   .message-step-visual { max-width: 420px; margin-inline: auto; }
 }
 @media (max-width: 639px) {
-  .message-row-field { top: 60px; width: 850px; left: -170px; transform: scale(.7); transform-origin: left top; }
   .message-showcase { aspect-ratio: auto; height: 530px; }
   .message-app-backdrop { width: 900px; }
   .message-composer { width: calc(125% - 55px); max-width: 462px; top: 45px; }
