@@ -22,6 +22,7 @@ export const MessageShowcase = () => <div className="message-showcase" role="img
     <div className="message-composer-heading"><strong>New message</strong><small>Everyone inside the selected zones will be notified.</small><X /></div>
     <div className="message-composer-body"><label>Severity</label><SeverityOptions /><label>Subject</label><div className="message-display-field">What is this about?</div><label>Message</label><div className="message-display-field message-display-textarea">Write the message people will receive…<small>0 / 160</small></div><div className="message-composer-settings"><div><label>Recipients <span>Change</span></label><div className="message-display-field"><span>Floor 1</span><span>Zone 4</span><span>Zone 24</span></div></div><div><label>Active period</label><div className="message-display-field"><Clock /><div>Today, 15:24 – 16:24<small>Sends now, active for 1 hour</small></div></div></div></div>
     <div className="message-composer-footer"><span>Cancel</span><span><Send /> Send message</span></div>
+    </div>
   </div>
 </div>;
 

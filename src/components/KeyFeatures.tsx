@@ -21,11 +21,13 @@ type Feature = {
   wide?: boolean;
   narrow?: boolean;
   href?: string;
+  id?: string;
 };
 
 const features: Feature[] = [
   {
     n: "01",
+    id: "feature-people",
     title: "People & Workgroup Location",
     text: "Know who is where – and whether they are authorized. Connect a check-in station to personnel tags or your existing access control.",
     img: peopleAsset.url,
@@ -44,6 +46,7 @@ const features: Feature[] = [
   },
   {
     n: "03",
+    id: "feature-emergency",
     title: "Emergency Support",
     text: "A live overview of people in hazardous areas and refuge chambers when every second counts.",
     img: emergencyAsset.url,
@@ -51,6 +54,7 @@ const features: Feature[] = [
   },
   {
     n: "04",
+    id: "feature-assets",
     title: "Asset Tracking",
     text: "Locate vehicles, tools and machinery in seconds – and turn search time into production.",
     img: assetAsset.url,
@@ -58,6 +62,7 @@ const features: Feature[] = [
   },
   {
     n: "05",
+    id: "feature-sensors",
     title: "Sensor Integration",
     text: "Ventilation and gas alarms shown where they happen, together with who is nearby.",
     img: sensorAsset.url,
@@ -67,6 +72,7 @@ const features: Feature[] = [
 
 const FeatureCard = ({ f }: { f: Feature }) => (
   <div
+    id={f.id}
     className={`relative w-full overflow-hidden rounded-[20px] border border-[rgba(20,19,23,0.05)] bg-[#f2f2f3] aspect-[386.67/540] ${
       f.wide ? "xl:aspect-auto xl:h-[600px] xl:col-span-4" : ""
     } ${f.narrow ? "xl:aspect-auto xl:h-[600px] xl:col-span-2" : ""} ${

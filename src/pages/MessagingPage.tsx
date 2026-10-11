@@ -9,7 +9,7 @@ import phones from "@/assets/companion-go-phones.png.asset.json";
 import siteLogo from "@/assets/mobilaris-site-header-logo.png.asset.json";
 
 const corporateUrl = "https://mobilarisindustrialsolutions.se/";
-const companionUrl = `${corporateUrl}companion-go/`;
+const companionUrl = `${corporateUrl}companion/`;
 const benefits = [
   ["Target one zone, several or the whole site", "Choose exactly which zones a message applies to – nobody else is disturbed."],
   ["Set how long a message is active", "Messages expire automatically when they are no longer relevant."],
@@ -22,10 +22,10 @@ const steps = [
   { title: "Track acknowledgements", text: "See in real time who has received and confirmed the emergency-message.", Visual: AcknowledgementVisual },
 ];
 const otherFeatures = [
-  { n: "01", title: "People & Workgroup Location", text: "Who is where – and are they authorized.", href: `${corporateUrl}people-workgroup-location/` },
-  { n: "03", title: "Emergency Support", text: "Faster, safer evacuations.", href: `${corporateUrl}evacuation-support/` },
-  { n: "04", title: "Asset Tracking", text: "Locate critical equipment in seconds.", href: `${corporateUrl}asset-tracking/` },
-  { n: "05", title: "Sensor Integration", text: "Sensor alarms, shown in the map.", href: "/platform#sensor-integration" },
+  { n: "01", title: "People & Workgroup Location", text: "Who is where – and are they authorized.", href: "/#feature-people" },
+  { n: "03", title: "Emergency Support", text: "Faster, safer evacuations.", href: "/#feature-emergency" },
+  { n: "04", title: "Asset Tracking", text: "Locate critical equipment in seconds.", href: "/#feature-assets" },
+  { n: "05", title: "Sensor Integration", text: "Sensor alarms, shown in the map.", href: "/#feature-sensors" },
 ];
 
 const MessagingFooter = () => <footer className="bg-surface text-foreground"><div className="message-content grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[1.7fr_repeat(4,1fr)]"><a href={corporateUrl} target="_blank" rel="noopener noreferrer"><img src={siteLogo.url} alt="Mobilaris Site™" className="h-8 w-auto" /></a>{[
