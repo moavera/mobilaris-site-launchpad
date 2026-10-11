@@ -8,8 +8,8 @@ import { ZoneVisual, DurationVisual, AcknowledgementVisual } from "@/components/
 import phones from "@/assets/companion-go-phones.png.asset.json";
 import siteLogo from "@/assets/mobilaris-site-header-logo.png.asset.json";
 import heroStage from "@/assets/messaging-hero-stage.webp.asset.json";
-import newMessage from "@/assets/messaging-new-message.webp.asset.json";
-import newMessageMobile from "@/assets/messaging-new-message-mobile.webp.asset.json";
+import newMessage from "@/assets/messaging-composer-transparent.webp.asset.json";
+import newMessageMobile from "@/assets/messaging-composer-transparent-mobile.webp.asset.json";
 
 const corporateUrl = "https://mobilarisindustrialsolutions.se/";
 const companionUrl = `${corporateUrl}companion/`;
