@@ -53,6 +53,10 @@
 .message-content { width: calc(100% - 48px); max-width: 1200px; margin-inline: auto; }
 .message-benefits { background: hsl(var(--surface)); }
 .message-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; pointer-events: none; }
+.message-stage::before,
+.message-stage::after { content: ''; position: absolute; left: 0; right: 0; height: 180px; z-index: 1; pointer-events: none; }
+.message-stage::before { top: 0; background: linear-gradient(to bottom, hsl(var(--surface)) 0%, hsl(var(--surface) / 0) 100%); }
+.message-stage::after { bottom: 0; background: linear-gradient(to top, hsl(var(--surface)) 0%, hsl(var(--surface) / 0) 100%); }
 .message-severity-alarm { color: hsl(var(--message-alarm)); }
 .message-severity-warning { color: hsl(var(--message-warning)); }
 .message-severity-info { color: hsl(var(--muted-foreground)); }
