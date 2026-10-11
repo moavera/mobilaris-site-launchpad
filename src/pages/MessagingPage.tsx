@@ -1,0 +1,62 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import { Navigation } from "@/components/Navigation";
+import { Button } from "@/components/ui/button";
+import { ContactSection } from "@/components/ContactSection";
+import { MessageShowcase, ZoneVisual, DurationVisual, AcknowledgementVisual, messageRows } from "@/components/messaging/MessagingVisuals";
+import phones from "@/assets/companion-go-phones.png.asset.json";
+import siteLogo from "@/assets/mobilaris-site-header-logo.png.asset.json";
+
+const corporateUrl = "https://mobilarisindustrialsolutions.se/";
+const companionUrl = `${corporateUrl}companion-go/`;
+const benefits = [
+  ["Target one zone, several or the whole site", "Choose exactly which zones a message applies to – nobody else is disturbed."],
+  ["Set how long a message is active", "Messages expire automatically when they are no longer relevant."],
+  ["Severity from info to emergency", "From a shift update to an evacuation – everyone sees how urgent it is."],
+  ["See who has received and acknowledged", "Follow up emergencies in real time on who has read and confirmed the message."],
+];
+const steps = [
+  { title: "Choose the zones", text: "Pick one zone, several or the whole site – the message only reaches people there.", Visual: ZoneVisual },
+  { title: "Set severity and duration", text: "From info to emergency, active for as long as it matters.", Visual: DurationVisual },
+  { title: "Track acknowledgements", text: "See in real time who has received and confirmed the emergency-message.", Visual: AcknowledgementVisual },
+];
+const otherFeatures = [
+  { n: "01", title: "People & Workgroup Location", text: "Who is where – and are they authorized.", href: `${corporateUrl}people-workgroup-location/` },
+  { n: "03", title: "Emergency Support", text: "Faster, safer evacuations.", href: `${corporateUrl}evacuation-support/` },
+  { n: "04", title: "Asset Tracking", text: "Locate critical equipment in seconds.", href: `${corporateUrl}asset-tracking/` },
+  { n: "05", title: "Sensor Integration", text: "Sensor alarms, shown in the map.", href: "/platform#sensor-integration" },
+];
+
+const MessagingFooter = () => <footer className="bg-surface text-foreground"><div className="message-content grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[1.7fr_repeat(4,1fr)]"><a href={corporateUrl} target="_blank" rel="noopener noreferrer"><img src={siteLogo.url} alt="Mobilaris Site™" className="h-8 w-auto" /></a>{[
+  { title: "Product", links: [["Mobilaris Site™", "/product"], ["Companion GO™", companionUrl], ["How it works", "/#getting-started"], ["Features", "/#key-features"]] },
+  { title: "Features", links: [["People & Workgroup", otherFeatures[0].href], ["Messaging", "/messaging"], ["Emergency Support", otherFeatures[1].href], ["Asset Tracking", otherFeatures[2].href], ["Sensor Integration", otherFeatures[3].href]] },
+  { title: "Company", links: [["About", `${corporateUrl}about-us/`], ["Careers", `${corporateUrl}careers/`], ["News", `${corporateUrl}news/`], ["Contact", `${corporateUrl}contact/`]] },
+  { title: "Connect", links: [["info@mobilaris.se", "mailto:info@mobilaris.se"], ["www.mobilaris.se", "https://mobilaris.se/"], ["LinkedIn", "https://www.linkedin.com/company/mobilaris/"]] },
+].map(group => <nav key={group.title} aria-label={`${group.title} footer links`}><h3 className="mb-4 text-sm font-medium">{group.title}</h3><ul className="space-y-3">{group.links.map(([label,href]) => <li key={label}><a className="text-sm text-foreground/45 transition-colors hover:text-foreground" href={href} target={href.startsWith("https") ? "_blank" : undefined} rel={href.startsWith("https") ? "noopener noreferrer" : undefined}>{label}</a></li>)}</ul></nav>)}</div><div className="message-content flex flex-wrap justify-between gap-4 border-t border-foreground/10 py-8 text-xs text-foreground/40"><span>© 2026 Mobilaris</span><a href={`${corporateUrl}privacy-policy/`} target="_blank" rel="noopener noreferrer">Privacy</a></div></footer>;
+
+export default function MessagingPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const originalTitle = document.title;
+    document.title = "Messaging | Mobilaris Site™";
+    return () => { document.title = originalTitle; };
+  }, []);
+  return <main className="messaging-page bg-surface text-foreground">
+    <Navigation />
+    <section className="message-hero relative overflow-hidden pt-[116px] md:pt-[136px]">
+      <div className="message-stage relative h-[620px] md:h-[720px]">
+        <div className="message-row-field" aria-hidden="true">{messageRows.map((row,index) => <div className={`message-floating-row message-floating-row-${index+1}`} key={row[0]}>{row.map((cell,i) => <span key={i} className={i===2 ? `message-severity-${cell.toLowerCase()}` : ""}>{i===2 && <i />}{cell}</span>)}</div>)}</div>
+        <div className="message-content relative z-10 flex h-full flex-col justify-end pb-20"><p className="mb-6 text-base text-foreground/45">Messaging</p><h1 className="max-w-[800px] text-[42px] font-medium leading-[1.08] md:text-[64px]">Reach the right people<br className="hidden sm:block" /> on site, in seconds</h1></div>
+      </div>
+      <div className="message-content grid gap-8 py-20 md:grid-cols-2 md:gap-24 md:py-[120px]"><h2 className="text-[32px] font-medium leading-[1.12] md:text-[40px]">Target any zone.<br /><span className="text-foreground/45">Track acknowledgements.</span></h2><p className="max-w-[560px] text-base leading-relaxed text-foreground/60 md:text-lg">From the control room, messages go straight to people on site – a fire, a closed road or an update before the next shift. Choose which zones a message applies to and how long it stays active.</p></div>
+      <div className="px-3 pb-20 md:px-5 md:pb-[120px]"><MessageShowcase /></div>
+    </section>
+    <section className="message-benefits py-20 md:py-[120px]"><div className="message-content"><h2 className="max-w-[900px] text-[32px] font-medium leading-[1.17] md:text-[40px]">Key benefits. <span className="text-foreground/45">Everything you need to reach people underground – and know that they got the message.</span></h2><div className="mt-16 grid border-y border-foreground/10 sm:grid-cols-2 lg:grid-cols-4">{benefits.map(([title,text],index) => <div key={title} className="border-foreground/10 py-8 sm:px-7 sm:odd:border-r lg:border-r lg:first:pl-0 lg:last:border-r-0"><p className="mb-5 text-xs text-foreground/40">0{index+1}</p><h3 className="mb-4 text-xl font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-foreground/50">{text}</p></div>)}</div></div></section>
+    <section className="bg-paper py-24 text-ink md:pb-[120px] md:pt-[160px]"><div className="message-content"><h2 className="max-w-[900px] text-[34px] font-medium leading-[1.12] md:text-[48px]">From the control room to every phone. <span className="text-ink/45">Three steps in a few seconds.</span></h2><div className="mt-16 grid gap-5 lg:grid-cols-3">{steps.map(({title,text,Visual},index) => <article key={title} className="rounded-[20px] border border-ink/5 bg-card-light p-7"><Visual /><p className="mb-3 mt-8 text-sm text-brand">Step {index+1}</p><h3 className="mb-3 text-[22px] font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-ink/60">{text}</p></article>)}</div></div></section>
+    <section className="bg-paper px-3 pb-6 md:px-6"><div className="rounded-[28px] bg-background"><div className="message-content grid items-center gap-10 py-16 lg:min-h-[601px] lg:grid-cols-2 lg:py-16"><div className="max-w-[470px]"><p className="mb-6 text-sm text-brand">Companion GO™</p><h2 className="text-[36px] font-medium leading-[1.14] md:text-[48px]">Your phone becomes the tag. <span className="text-foreground/45">No extra hardware – even underground.</span></h2><p className="mb-6 mt-6 text-base leading-relaxed text-foreground/60">Messages are received in the Companion GO™ app, which also works as a virtual tag – so people can be positioned and reached without carrying a physical tag.</p><Button asChild variant="link" className="h-auto p-0 text-brand"><a href={companionUrl} target="_blank" rel="noopener noreferrer">Learn about Companion GO™ <ArrowRight /></a></Button></div><img src={phones.url} alt="Companion GO™ showing positioning, an evacuation message and the message inbox" loading="lazy" className="mx-auto h-auto max-h-[487px] w-full max-w-[403px] object-contain lg:mr-0" /></div></div></section>
+    <section className="bg-paper py-24 text-ink md:py-[140px]"><div className="message-content"><div className="flex flex-wrap items-end justify-between gap-6"><h2 className="text-[30px] font-medium leading-tight md:text-[40px]">More features. <span className="text-ink/45">One platform, one live map.</span></h2><Button asChild variant="link" className="h-auto p-0 text-brand"><Link to="/#key-features">All features <ArrowRight /></Link></Button></div><div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{otherFeatures.map(feature => <a key={feature.n} href={feature.href} target={feature.href.startsWith("https") ? "_blank" : undefined} rel={feature.href.startsWith("https") ? "noopener noreferrer" : undefined} className="group flex min-h-[256px] flex-col rounded-[20px] border border-ink/5 bg-card-light p-7 transition-colors hover:bg-ink/10"><div className="mb-14 flex items-center justify-between"><span className="text-sm text-ink/40">{feature.n}</span><span className="flex h-8 w-8 items-center justify-center rounded-full bg-paper"><ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" /></span></div><h3 className="mb-3 text-xl font-medium leading-snug">{feature.title}</h3><p className="text-base leading-relaxed text-ink/60">{feature.text}</p></a>)}</div></div></section>
+    <ContactSection />
+    <MessagingFooter />
+  </main>;
+}
