@@ -7,6 +7,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { MessageShowcase, ZoneVisual, DurationVisual, AcknowledgementVisual, messageRows } from "@/components/messaging/MessagingVisuals";
 import phones from "@/assets/companion-go-phones.png.asset.json";
 import siteLogo from "@/assets/mobilaris-site-header-logo.png.asset.json";
+import heroStage from "@/assets/messaging-hero-stage.webp.asset.json";
 
 const corporateUrl = "https://mobilarisindustrialsolutions.se/";
 const companionUrl = `${corporateUrl}companion/`;
@@ -46,7 +47,7 @@ export default function MessagingPage() {
     <Navigation />
     <section className="message-hero relative overflow-hidden pt-[116px] md:pt-[136px]">
       <div className="message-stage relative h-[620px] md:h-[720px]">
-        <div className="message-row-field" aria-hidden="true">{messageRows.map((row,index) => <div className={`message-floating-row message-floating-row-${index+1}`} key={row[0]}>{row.map((cell,i) => <span key={i} className={i===2 ? `message-severity-${cell.toLowerCase()}` : ""}>{i===2 && <i />}{cell}</span>)}</div>)}</div>
+        <img src={heroStage.url} alt="" aria-hidden="true" className="message-hero-bg" loading="eager" />
         <div className="message-content relative z-10 flex h-full flex-col justify-end pb-20"><p className="mb-6 text-base text-foreground/45">Messaging</p><h1 className="max-w-[800px] text-[42px] font-medium leading-[1.08] md:text-[64px]">Reach the right people<br className="hidden sm:block" /> on site, in seconds</h1></div>
       </div>
       <div className="message-content grid gap-8 py-20 md:grid-cols-2 md:gap-24 md:py-[120px]"><h2 className="text-[32px] font-medium leading-[1.12] md:text-[40px]">Target any zone.<br /><span className="text-foreground/45">Track acknowledgements.</span></h2><p className="max-w-[560px] text-base leading-relaxed text-foreground/60 md:text-lg">From the control room, messages go straight to people on site – a fire, a closed road or an update before the next shift. Choose which zones a message applies to and how long it stays active.</p></div>
