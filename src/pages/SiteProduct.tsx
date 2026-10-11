@@ -2,7 +2,6 @@ import { Navigation } from "@/components/Navigation";
 import { Reveal } from "@/components/Reveal";
 import { HeroNew } from "@/components/HeroNew";
 import { useSectionShare } from "@/hooks/use-section-share";
-import { KeyProblems } from "@/components/KeyProblems";
 import { MobileFirst } from "@/components/MobileFirst";
 import { Environments } from "@/components/Environments";
 import { Principles } from "@/components/Principles";
@@ -24,7 +23,6 @@ const SiteProduct = () => {
       <Reveal bg="bg-white"><KeyFeatures /></Reveal>
       <Reveal bg="bg-white"><Stats /></Reveal>
       
-      <Reveal bg="bg-paper"><KeyProblems /></Reveal>
       
       
       
