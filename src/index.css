@@ -151,7 +151,6 @@
   .message-composer-heading small { max-width: 85%; }
   .message-display-textarea { height: 95px; }
 }
-@media (prefers-reduced-motion: reduce) { .message-floating-row { animation: none; } }
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
