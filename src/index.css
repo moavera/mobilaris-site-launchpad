@@ -106,9 +106,6 @@
 @media (max-width: 1023px) {
   .message-step-visual { max-width: 420px; margin-inline: auto; }
 }
-@media (max-width: 639px) {
-  .message-showcase-img { height: 420px; object-fit: cover; object-position: center; }
-}
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
