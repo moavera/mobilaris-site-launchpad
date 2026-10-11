@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import corporateLogo from "@/assets/mobilaris-industrial-logga.svg";
 import siteLogo from "@/assets/mobilaris-site-header-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
@@ -41,9 +42,9 @@ export const Navigation = () => {
       </div>
       <div className="site-header-main">
         <nav aria-label="Main navigation" className="flex h-20 items-center gap-5 px-5 md:h-24 md:px-7 xl:px-8">
-          <a href={corporateUrl} target="_blank" rel="noopener noreferrer" className="shrink-0 transition-opacity hover:opacity-80">
+          <Link to="/" className="shrink-0 transition-opacity hover:opacity-80" aria-label="Go to Mobilaris Site home">
             <img src={siteLogo.url} alt="Mobilaris Site™" className="h-9 w-auto md:h-10" />
-          </a>
+          </Link>
           <div className="ml-10 hidden items-center gap-6 lg:flex xl:gap-9 2xl:gap-12">
             {navLinks.map((link) => (
               <a key={link.label} href={link.href} target={link.href.startsWith("https") ? "_blank" : undefined} rel={link.href.startsWith("https") ? "noopener noreferrer" : undefined} className="whitespace-nowrap text-sm font-normal text-foreground/60 transition-colors hover:text-foreground xl:text-base">{link.label}</a>
