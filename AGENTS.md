@@ -1,5 +1,7 @@
 # Architecture rules
 
+- Feature detail pages have dedicated routes, reuse Navigation, and keep non-interactive product illustrations in a separate visuals component so illustrated controls cannot be mistaken for live product actions.
+
 - Keep the corporate strip and product navigation in the shared Navigation component, with one link list for desktop and mobile, so all pages stay consistent.
 
 - Implement the hero's decorative motion with transform-only CSS animations and respect reduced-motion preferences; this avoids per-frame React updates and pointer-dependent behavior.

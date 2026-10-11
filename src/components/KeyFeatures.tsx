@@ -1,4 +1,6 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import peopleAsset from "@/assets/people_workgroup_location_bild.png.asset.json";
 import messagingAsset from "@/assets/Messaging_bild.png.asset.json";
 import emergencyAsset from "@/assets/Emergency_bild.png.asset.json";
@@ -18,11 +20,14 @@ type Feature = {
   imgClass: string;
   wide?: boolean;
   narrow?: boolean;
+  href?: string;
+  id?: string;
 };
 
 const features: Feature[] = [
   {
     n: "01",
+    id: "feature-people",
     title: "People & Workgroup Location",
     text: "Know who is where – and whether they are authorized. Connect a check-in station to personnel tags or your existing access control.",
     img: peopleAsset.url,
@@ -31,6 +36,7 @@ const features: Feature[] = [
   },
   {
     n: "02",
+    href: "/messaging",
     title: "Messaging",
     text: "Reach the right people in the right zones – straight from the control room to the Companion GO™ app.",
     img: messagingAsset.url,
@@ -40,6 +46,7 @@ const features: Feature[] = [
   },
   {
     n: "03",
+    id: "feature-emergency",
     title: "Emergency Support",
     text: "A live overview of people in hazardous areas and refuge chambers when every second counts.",
     img: emergencyAsset.url,
@@ -47,6 +54,7 @@ const features: Feature[] = [
   },
   {
     n: "04",
+    id: "feature-assets",
     title: "Asset Tracking",
     text: "Locate vehicles, tools and machinery in seconds – and turn search time into production.",
     img: assetAsset.url,
@@ -54,6 +62,7 @@ const features: Feature[] = [
   },
   {
     n: "05",
+    id: "feature-sensors",
     title: "Sensor Integration",
     text: "Ventilation and gas alarms shown where they happen, together with who is nearby.",
     img: sensorAsset.url,
@@ -63,6 +72,7 @@ const features: Feature[] = [
 
 const FeatureCard = ({ f }: { f: Feature }) => (
   <div
+    id={f.id}
     className={`relative w-full overflow-hidden rounded-[20px] border border-[rgba(20,19,23,0.05)] bg-[#f2f2f3] aspect-[386.67/540] ${
       f.wide ? "xl:aspect-auto xl:h-[600px] xl:col-span-4" : ""
     } ${f.narrow ? "xl:aspect-auto xl:h-[600px] xl:col-span-2" : ""} ${
@@ -75,9 +85,7 @@ const FeatureCard = ({ f }: { f: Feature }) => (
         {f.title}
       </h3>
       <p className="text-[15px] leading-[1.55] text-[rgba(20,19,23,0.62)]">{f.text}</p>
-      <span className="inline-flex items-center gap-[6px] pt-[6px] text-[14px] font-medium text-[#8e47f0]">
-        Learn more <ArrowRight className="h-[14px] w-[14px]" />
-      </span>
+      {f.href ? <Button asChild variant="link" className="h-auto self-start p-0 pt-[6px] text-[14px] font-medium text-brand"><Link to={f.href}>Learn more <ArrowRight className="h-[14px] w-[14px]" /></Link></Button> : <span className="inline-flex items-center gap-[6px] pt-[6px] text-[14px] font-medium text-brand">Learn more <ArrowRight className="h-[14px] w-[14px]" /></span>}
     </div>
     <img
       src={f.img}

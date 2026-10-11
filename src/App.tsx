@@ -8,6 +8,7 @@ import DemoStart from "./pages/DemoStart";
 import WhyMobilarisSite from "./pages/WhyMobilarisSite";
 import ProductPage from "./pages/ProductPage";
 import NotFound from "./pages/NotFound";
+import MessagingPage from "./pages/MessagingPage";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/demo-start" element={<DemoStart />} />
           <Route path="/platform" element={<WhyMobilarisSite />} />
           <Route path="/product" element={<ProductPage />} />
+          <Route path="/messaging" element={<MessagingPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
