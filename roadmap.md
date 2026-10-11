@@ -1,12 +1,13 @@
 # Roadmap
 
 ## Open
-- Build the Messaging feature page from Figma node 340:149 and link the landing-page Messaging card to it.
+- None.
 
 ## Waiting on user
 - Instagram icon in the footer is white on the light footer and invisible — awaiting go-ahead to darken it.
 
 ## Done
+- Messaging feature page added at /messaging from Figma node 340:149, with the landing-page Messaging link, shared navigation, product visuals, benefits, steps, Companion GO™, related features, contact and footer.
 - Header updated to supplied two-tier reference with uploaded Site logo; desktop links and mobile menu verified.
 - "Built for complex industrial sites" restructured into two stacked sub-sections (Mining text-left/image-right, Critical infrastructure text-right/image-left) on a white background.
 - "01" / "02" numbering removed from that section.
