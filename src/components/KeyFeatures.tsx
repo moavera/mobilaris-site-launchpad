@@ -85,7 +85,7 @@ const FeatureCard = ({ f }: { f: Feature }) => (
         {f.title}
       </h3>
       <p className="text-[15px] leading-[1.55] text-[rgba(20,19,23,0.62)]">{f.text}</p>
-      {f.href ? <Button asChild variant="link" className="h-auto self-start p-0 pt-[6px] text-[14px] font-medium text-brand"><Link to={f.href}>Learn more <ArrowRight className="h-[14px] w-[14px]" /></Link></Button> : <span className="inline-flex items-center gap-[6px] pt-[6px] text-[14px] font-medium text-brand">Learn more <ArrowRight className="h-[14px] w-[14px]" /></span>}
+      <span className="inline-flex items-center gap-[6px] pt-[6px] text-[14px] font-medium text-brand">Learn more <ArrowRight className="h-[14px] w-[14px]" /></span>
     </div>
     <img
       src={f.img}
@@ -94,6 +94,7 @@ const FeatureCard = ({ f }: { f: Feature }) => (
       decoding="async"
       className={`pointer-events-none absolute bottom-0 h-auto max-w-none ${f.imgClass}`}
     />
+    {f.href && <Button asChild variant="link" className="absolute inset-0 z-20 h-auto w-full rounded-[20px] p-0 focus-visible:ring-inset"><Link to={f.href} aria-label={`Learn more about ${f.title}`}><span className="sr-only">Learn more about {f.title}</span></Link></Button>}
   </div>
 );
 
