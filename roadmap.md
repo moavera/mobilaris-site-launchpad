@@ -12,3 +12,4 @@
 - "01" / "02" numbering removed from that section.
 - Stats section added after "Modular by design." (Figma node 295:135): 50+, 2012 and an infinity symbol.
 - Infinity symbol redrawn as an inline SVG so its stroke matches the digits exactly (previously a font-fallback glyph whose weight varied by machine).
+- "Built for complex industrial sites" (Mining / Critical infrastructure) section removed from the landing page; no leftover links to it.
