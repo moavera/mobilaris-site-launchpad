@@ -4,10 +4,12 @@ import { ArrowRight } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ContactSection } from "@/components/ContactSection";
-import { MessageShowcase, ZoneVisual, DurationVisual, AcknowledgementVisual } from "@/components/messaging/MessagingVisuals";
+import { ZoneVisual, DurationVisual, AcknowledgementVisual } from "@/components/messaging/MessagingVisuals";
 import phones from "@/assets/companion-go-phones.png.asset.json";
 import siteLogo from "@/assets/mobilaris-site-header-logo.png.asset.json";
 import heroStage from "@/assets/messaging-hero-stage.webp.asset.json";
+import newMessage from "@/assets/messaging-new-message.webp.asset.json";
+import newMessageMobile from "@/assets/messaging-new-message-mobile.webp.asset.json";
 
 const corporateUrl = "https://mobilarisindustrialsolutions.se/";
 const companionUrl = `${corporateUrl}companion/`;
@@ -51,7 +53,7 @@ export default function MessagingPage() {
         <div className="message-content relative z-10 flex h-full flex-col justify-end pb-20"><p className="mb-6 text-base text-foreground/45">Messaging</p><h1 className="max-w-[800px] text-[42px] font-medium leading-[1.08] md:text-[64px]">Reach the right people<br className="hidden sm:block" /> on site, in seconds</h1></div>
       </div>
       <div className="message-content grid gap-8 py-20 md:grid-cols-2 md:gap-24 md:py-[120px]"><h2 className="text-[32px] font-medium leading-[1.12] md:text-[40px]">Target any zone.<br /><span className="text-foreground/45">Track acknowledgements.</span></h2><p className="max-w-[560px] text-base leading-relaxed text-foreground/60 md:text-lg">From the control room, messages go straight to people on site – a fire, a closed road or an update before the next shift. Choose which zones a message applies to and how long it stays active.</p></div>
-      <div className="px-3 pb-20 md:px-5 md:pb-[120px]"><MessageShowcase /></div>
+      <div className="px-3 pb-20 md:px-5 md:pb-[120px]"><div className="message-showcase-frame"><picture><source media="(max-width: 767px)" srcSet={newMessageMobile.url} /><img src={newMessage.url} alt="Message composer in the Mobilaris Site app: severity, subject, message, recipients and active period" loading="lazy" className="message-showcase-img" /></picture></div></div>
     </section>
     <section className="message-benefits py-20 md:py-[120px]"><div className="message-content"><h2 className="max-w-[900px] text-[32px] font-medium leading-[1.17] md:text-[40px]">Key benefits. <span className="text-foreground/45">Everything you need to reach people underground – and know that they got the message.</span></h2><div className="mt-16 grid border-y border-foreground/10 sm:grid-cols-2 lg:grid-cols-4">{benefits.map(([title,text],index) => <div key={title} className="border-foreground/10 py-8 sm:px-7 sm:odd:border-r lg:border-r lg:first:pl-0 lg:last:border-r-0"><p className="mb-5 text-xs text-foreground/40">0{index+1}</p><h3 className="mb-4 text-xl font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-foreground/50">{text}</p></div>)}</div></div></section>
     <section className="bg-paper py-24 text-ink md:pb-[120px] md:pt-[160px]"><div className="message-content"><h2 className="max-w-[900px] text-[34px] font-medium leading-[1.12] md:text-[48px]">From the control room to every phone. <span className="text-ink/45">Three steps in a few seconds.</span></h2><div className="mt-16 grid gap-5 lg:grid-cols-3">{steps.map(({title,text,Visual},index) => <article key={title} className="rounded-[20px] border border-ink/5 bg-card-light p-7"><Visual /><p className="mb-3 mt-8 text-sm text-brand">Step {index+1}</p><h3 className="mb-3 text-[22px] font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-ink/60">{text}</p></article>)}</div></div></section>
