@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ContactSection } from "@/components/ContactSection";
-import { MessageShowcase, ZoneVisual, DurationVisual, AcknowledgementVisual, messageRows } from "@/components/messaging/MessagingVisuals";
+import { MessageShowcase, ZoneVisual, DurationVisual, AcknowledgementVisual } from "@/components/messaging/MessagingVisuals";
 import phones from "@/assets/companion-go-phones.png.asset.json";
 import siteLogo from "@/assets/mobilaris-site-header-logo.png.asset.json";
 import heroStage from "@/assets/messaging-hero-stage.webp.asset.json";
