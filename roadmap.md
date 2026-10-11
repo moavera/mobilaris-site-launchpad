@@ -1,7 +1,7 @@
 # Roadmap
 
 ## Open
-- (none)
+- Build the Messaging feature page from Figma node 340:149 and link the landing-page Messaging card to it.
 
 ## Waiting on user
 - Instagram icon in the footer is white on the light footer and invisible — awaiting go-ahead to darken it.
