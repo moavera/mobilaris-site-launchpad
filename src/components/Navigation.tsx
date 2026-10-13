@@ -50,7 +50,6 @@ export const Navigation = () => {
             ))}
           </div>
           <div className="ml-auto flex shrink-0 items-center gap-3 xl:gap-6">
-            <a href={contactUrl} target="_blank" rel="noopener noreferrer" className="hidden whitespace-nowrap text-sm text-foreground/60 transition-colors hover:text-foreground lg:block xl:text-base">Contact sales</a>
             <Button asChild className="h-10 rounded-full bg-paper px-5 text-sm font-medium text-ink hover:bg-paper/90 md:h-11 xl:px-6 xl:text-base">
               <a href={contactUrl} target="_blank" rel="noopener noreferrer">Book a demo</a>
             </Button>
@@ -61,7 +60,7 @@ export const Navigation = () => {
         </nav>
         {isMobileMenuOpen && (
           <nav id="mobile-navigation" aria-label="Mobile navigation" className="max-h-[calc(100dvh-116px)] overflow-y-auto border-t border-foreground/10 bg-surface px-5 py-5 lg:hidden">
-            {[...navLinks, { label: "Contact sales", href: contactUrl }].map((link) => (
+            {navLinks.map((link) => (
               <a key={link.label} href={link.href} target={link.href.startsWith("https") ? "_blank" : undefined} rel={link.href.startsWith("https") ? "noopener noreferrer" : undefined} onClick={() => setIsMobileMenuOpen(false)} className="block py-3 text-base text-foreground/70 transition-colors hover:text-foreground">{link.label}</a>
             ))}
           </nav>
