@@ -32,7 +32,6 @@ export const Navigation = () => {
           <a href={corporateUrl} target="_blank" rel="noopener noreferrer" className="shrink-0 transition-opacity hover:opacity-80">
             <img src={corporateLogo} alt="Mobilaris Industrial Solutions" className="h-5 w-auto" />
           </a>
-          <span aria-hidden="true" className="hidden text-foreground/30 md:block">·</span>
           <p className="hidden truncate text-xs font-normal text-foreground/50 md:block xl:text-sm">Mobilaris Site™ is a product by Mobilaris Industrial Solutions</p>
         </div>
         <a href={corporateUrl} target="_blank" rel="noopener noreferrer" className="flex shrink-0 items-center gap-2 text-xs text-foreground/50 transition-colors hover:text-foreground xl:text-sm" aria-label="Visit Mobilaris Industrial Solutions">
