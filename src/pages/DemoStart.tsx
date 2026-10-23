@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import videoBackground from "@/assets/snurren_blur.mp4";
 import logoImage from "@/assets/site-logo-2.png";
+import { Footer } from "@/components/Footer";
 
 const DemoStart = () => {
   const [showEmailModal, setShowEmailModal] = useState(false);
@@ -199,6 +200,7 @@ const DemoStart = () => {
           }
         }
       `}</style>
+      <Footer />
     </main>
   );
 };
