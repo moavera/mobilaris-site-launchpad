@@ -9,6 +9,7 @@ import WhyMobilarisSite from "./pages/WhyMobilarisSite";
 import ProductPage from "./pages/ProductPage";
 import NotFound from "./pages/NotFound";
 import MessagingPage from "./pages/MessagingPage";
+import FeaturePage, { features } from "./pages/FeaturePage";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,10 @@ const App = () => (
           <Route path="/platform" element={<WhyMobilarisSite />} />
           <Route path="/product" element={<ProductPage />} />
           <Route path="/messaging" element={<MessagingPage />} />
+          <Route path="/people-workgroup-location" element={<FeaturePage feature={features.people} />} />
+          <Route path="/emergency-support" element={<FeaturePage feature={features.emergency} />} />
+          <Route path="/asset-tracking" element={<FeaturePage feature={features.assets} />} />
+          <Route path="/sensor-integration" element={<FeaturePage feature={features.sensors} />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
