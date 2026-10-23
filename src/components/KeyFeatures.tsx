@@ -28,6 +28,7 @@ const features: Feature[] = [
   {
     n: "01",
     id: "feature-people",
+    href: "/people-workgroup-location",
     title: "People & Workgroup Location",
     text: "Know who is where – and whether they are authorized. Connect a check-in station to personnel tags or your existing access control.",
     img: peopleAsset.url,
@@ -47,6 +48,7 @@ const features: Feature[] = [
   {
     n: "03",
     id: "feature-emergency",
+    href: "/emergency-support",
     title: "Emergency Support",
     text: "A live overview of people in hazardous areas and refuge chambers when every second counts.",
     img: emergencyAsset.url,
@@ -55,6 +57,7 @@ const features: Feature[] = [
   {
     n: "04",
     id: "feature-assets",
+    href: "/asset-tracking",
     title: "Asset Tracking",
     text: "Locate vehicles, tools and machinery in seconds – and turn search time into production.",
     img: assetAsset.url,
@@ -63,6 +66,7 @@ const features: Feature[] = [
   {
     n: "05",
     id: "feature-sensors",
+    href: "/sensor-integration",
     title: "Sensor Integration",
     text: "Ventilation and gas alarms shown where they happen, together with who is nearby.",
     img: sensorAsset.url,

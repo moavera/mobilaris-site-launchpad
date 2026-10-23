@@ -1,0 +1,97 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, ImageIcon } from "lucide-react";
+import { Navigation } from "@/components/Navigation";
+import { Reveal } from "@/components/Reveal";
+import { Button } from "@/components/ui/button";
+import { ContactSection } from "@/components/ContactSection";
+import { MessagingFooter } from "@/pages/MessagingPage";
+import heroBg from "@/assets/hero-mine-landscape-hd.webp.asset.json";
+import peopleAsset from "@/assets/people_workgroup_location_bild.png.asset.json";
+import emergencyAsset from "@/assets/Emergency_bild.png.asset.json";
+import assetAsset from "@/assets/asset_tracking_bild.png.asset.json";
+import sensorAsset from "@/assets/sensor_integration_bild.png.asset.json";
+
+type FeatureConfig = {
+  slug: string; label: string; h1: [string, string]; introTitle: [string, string]; intro: string;
+  image: string; imageAlt: string; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
+};
+
+export const featureLinks = [
+  { n: "01", title: "People & Workgroup Location", text: "Who is where – and are they authorized.", href: "/people-workgroup-location" },
+  { n: "02", title: "Messaging", text: "Reach the right people, in the right zones.", href: "/messaging" },
+  { n: "03", title: "Emergency Support", text: "Faster, safer evacuations.", href: "/emergency-support" },
+  { n: "04", title: "Asset Tracking", text: "Locate critical equipment in seconds.", href: "/asset-tracking" },
+  { n: "05", title: "Sensor Integration", text: "Sensor alarms, shown in the map.", href: "/sensor-integration" },
+];
+
+export const features: Record<string, FeatureConfig> = {
+  people: {
+    slug: "/people-workgroup-location", label: "People & Workgroup Location",
+    h1: ["Know who is where", "and whether they are authorized"],
+    introTitle: ["Every person on the map.", "Every workgroup in view."],
+    intro: "See where people and workgroups are across the site in real time. Connect a check-in station to personnel tags or your existing access control, and know who is in hazardous areas.",
+    image: peopleAsset.url, imageAlt: "People and workgroups shown in the Mobilaris Site map",
+    benefits: [["Live position of every person", "Tags or the Companion GO™ app show where people are, above and below ground."], ["Workgroups at a glance", "See how teams are distributed and where each crew is working."], ["Authorized access only", "Check-in stations and access control show who is allowed in each zone."], ["Hazardous area awareness", "Know who is in restricted or dangerous areas before you send people in."]],
+    stepsTitle: ["From check-in to live map.", "Three steps to full overview."],
+    steps: [["Check in", "People check in with a tag, the app or your existing access control."], ["Get positioned", "Positions update in the map as people move across the site."], ["Follow up", "Filter by workgroup, zone or authorization to see who is where."]],
+  },
+  emergency: {
+    slug: "/emergency-support", label: "Emergency Support",
+    h1: ["A live overview", "when every second counts"],
+    introTitle: ["See who is in danger.", "Follow the evacuation live."],
+    intro: "During an emergency, get instant visibility of people in hazardous areas and refuge chambers. Follow the evacuation in real time and see who needs urgent assistance.",
+    image: emergencyAsset.url, imageAlt: "Emergency overview in Mobilaris Site showing people in refuge chambers",
+    benefits: [["People in hazardous areas", "See instantly who is in the affected zones when an alarm is raised."], ["Refuge chamber status", "Know how many people have reached each refuge chamber."], ["Live evacuation progress", "Follow the evacuation as it happens, not after the fact."], ["Find people who need help", "Locate the people who have not yet reached safety."]],
+    stepsTitle: ["From alarm to everyone safe.", "Three steps under pressure."],
+    steps: [["Raise the alarm", "Start an emergency from the control room and alert affected zones."], ["Follow the evacuation", "See people move towards exits and refuge chambers in the map."], ["Verify everyone is safe", "Confirm that all people are accounted for, and act on those who are not."]],
+  },
+  assets: {
+    slug: "/asset-tracking", label: "Asset Tracking",
+    h1: ["Locate equipment", "in seconds, not hours"],
+    introTitle: ["Less searching.", "More production."],
+    intro: "Track the location and status of vehicles, tools and machinery across your operation. Reduce search time, support planning and make sure critical equipment is available when needed.",
+    image: assetAsset.url, imageAlt: "Vehicles and equipment shown in the Mobilaris Site map",
+    benefits: [["Vehicles, tools and machinery", "Tag anything you need to find, from loaders to hand tools."], ["Last known position", "See where an asset is, or where it was last seen."], ["Status and usage", "Know which equipment is available and which is in use."], ["Better planning", "Use location history to plan shifts and maintenance."]],
+    stepsTitle: ["From tag to found.", "Three steps to find any asset."],
+    steps: [["Tag your assets", "Attach a tag to vehicles, tools or machinery."], ["Search the site", "Search by name or type and see the asset in the map."], ["Go and get it", "Go straight to the right place instead of searching."]],
+  },
+  sensors: {
+    slug: "/sensor-integration", label: "Sensor Integration",
+    h1: ["Sensor alarms", "shown where they happen"],
+    introTitle: ["Alarms in the map.", "Together with who is nearby."],
+    intro: "Ventilation, gas and environmental sensors are shown in the same map as people and assets. When an alarm goes off, you see where it is and who is close to it.",
+    image: sensorAsset.url, imageAlt: "Sensor values and alarms shown in the Mobilaris Site map",
+    benefits: [["Gas and air quality", "O₂, CO, NO₂, methane and dust levels shown in place."], ["Ventilation status", "See airflow and fan status alongside the people in each zone."], ["People near an alarm", "Know instantly who is close to a sensor in alarm."], ["Open integrations", "Connect via SCADA, OPC UA or MQTT, or bring your own sensors."]],
+    stepsTitle: ["From sensor to action.", "Three steps to a complete view."],
+    steps: [["Connect sensors", "Integrate your existing sensors and control systems."], ["See values in the map", "Sensor values and alarms appear where the sensors are."], ["Act on alarms", "See who is nearby and reach them directly."]],
+  },
+};
+
+const StepPlaceholder = () => <div className="flex aspect-[4/3] items-center justify-center rounded-[14px] bg-paper text-ink/30" aria-hidden="true"><ImageIcon className="h-8 w-8" /></div>;
+
+export default function FeaturePage({ feature }: { feature: FeatureConfig }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const originalTitle = document.title;
+    document.title = `${feature.label} | Mobilaris Site™`;
+    return () => { document.title = originalTitle; };
+  }, [feature]);
+  const others = featureLinks.filter(f => f.href !== feature.slug);
+  return <main className="messaging-page bg-surface text-foreground">
+    <Navigation />
+    <section className="message-hero relative overflow-hidden pt-[116px] md:pt-[136px]">
+      <div className="message-stage relative h-[620px] md:h-[720px]">
+        <img src={heroBg.url} alt="" aria-hidden="true" className="message-hero-bg intro-image" loading="eager" style={{ animationDelay: "0.1s" }} />
+        <div className="message-content relative z-10 flex h-full flex-col justify-end pb-20"><p className="intro mb-6 text-base text-foreground/45" style={{ animationDelay: "0.15s" }}>{feature.label}</p><h1 className="max-w-[800px] text-[42px] font-medium leading-[1.08] md:text-[64px]"><span className="intro inline-block" style={{ animationDelay: "0.22s" }}>{feature.h1[0]}</span><br className="hidden sm:block" /> <span className="intro inline-block" style={{ animationDelay: "0.3s" }}>{feature.h1[1]}</span></h1></div>
+      </div>
+      <Reveal bg="bg-surface"><div className="message-content grid gap-8 py-20 md:grid-cols-2 md:gap-24 md:py-[120px]"><h2 className="text-[32px] font-medium leading-[1.12] md:text-[40px]">{feature.introTitle[0]}<br /><span className="text-foreground/45">{feature.introTitle[1]}</span></h2><p className="max-w-[560px] text-base leading-relaxed text-foreground/60 md:text-lg">{feature.intro}</p></div></Reveal>
+      <Reveal bg="bg-surface"><div className="px-3 pb-20 md:px-5 md:pb-[120px]"><div className="message-showcase-frame flex justify-center"><img src={feature.image} alt={feature.imageAlt} loading="lazy" className="h-auto w-full max-w-[720px]" /></div></div></Reveal>
+    </section>
+    <Reveal bg="bg-surface"><section className="message-benefits py-20 md:py-[120px]"><div className="message-content"><h2 className="max-w-[900px] text-[32px] font-medium leading-[1.17] md:text-[40px]">Key benefits. <span className="text-foreground/45">What {feature.label} gives you on site.</span></h2><div className="mt-16 grid border-y border-foreground/10 sm:grid-cols-2 lg:grid-cols-4">{feature.benefits.map(([title,text],index) => <div key={title} className="border-foreground/10 py-8 sm:px-7 sm:odd:border-r lg:border-r lg:first:pl-0 lg:last:border-r-0"><p className="mb-5 text-xs text-foreground/40">0{index+1}</p><h3 className="mb-4 text-xl font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-foreground/50">{text}</p></div>)}</div></div></section></Reveal>
+    <Reveal bg="bg-paper"><section className="bg-paper py-24 text-ink md:pb-[120px] md:pt-[160px]"><div className="message-content"><h2 className="max-w-[900px] text-[34px] font-medium leading-[1.12] md:text-[48px]">{feature.stepsTitle[0]} <span className="text-ink/45">{feature.stepsTitle[1]}</span></h2><div className="mt-16 grid gap-5 lg:grid-cols-3">{feature.steps.map(([title,text],index) => <article key={title} className="rounded-[20px] border border-ink/5 bg-card-light p-7"><StepPlaceholder /><p className="mb-3 mt-8 text-sm text-brand">Step {index+1}</p><h3 className="mb-3 text-[22px] font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-ink/60">{text}</p></article>)}</div></div></section></Reveal>
+    <Reveal bg="bg-paper"><section className="bg-paper py-24 text-ink md:py-[140px]"><div className="message-content"><div className="flex flex-wrap items-end justify-between gap-6"><h2 className="text-[30px] font-medium leading-tight md:text-[40px]">More features. <span className="text-ink/45">One platform, one live map.</span></h2><Button asChild variant="link" className="h-auto p-0 text-brand"><Link to="/#key-features">All features <ArrowRight /></Link></Button></div><div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{others.map(f => <Link key={f.n} to={f.href} className="group flex min-h-[256px] flex-col rounded-[20px] border border-ink/5 bg-card-light p-7 transition-colors hover:bg-ink/10"><div className="mb-14 flex items-center justify-between"><span className="text-sm text-ink/40">{f.n}</span><span className="flex h-8 w-8 items-center justify-center rounded-full bg-paper"><ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" /></span></div><h3 className="mb-3 text-xl font-medium leading-snug">{f.title}</h3><p className="text-base leading-relaxed text-ink/60">{f.text}</p></Link>)}</div></div></section></Reveal>
+    <Reveal bg="bg-white"><ContactSection /></Reveal>
+    <MessagingFooter />
+  </main>;
+}

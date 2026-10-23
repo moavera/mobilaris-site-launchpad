@@ -26,13 +26,13 @@ const steps = [
   { title: "Track acknowledgements", text: "See in real time who has received and confirmed the emergency-message.", Visual: AcknowledgementVisual },
 ];
 const otherFeatures = [
-  { n: "01", title: "People & Workgroup Location", text: "Who is where – and are they authorized.", href: "/#feature-people" },
-  { n: "03", title: "Emergency Support", text: "Faster, safer evacuations.", href: "/#feature-emergency" },
-  { n: "04", title: "Asset Tracking", text: "Locate critical equipment in seconds.", href: "/#feature-assets" },
-  { n: "05", title: "Sensor Integration", text: "Sensor alarms, shown in the map.", href: "/#feature-sensors" },
+  { n: "01", title: "People & Workgroup Location", text: "Who is where – and are they authorized.", href: "/people-workgroup-location" },
+  { n: "03", title: "Emergency Support", text: "Faster, safer evacuations.", href: "/emergency-support" },
+  { n: "04", title: "Asset Tracking", text: "Locate critical equipment in seconds.", href: "/asset-tracking" },
+  { n: "05", title: "Sensor Integration", text: "Sensor alarms, shown in the map.", href: "/sensor-integration" },
 ];
 
-const MessagingFooter = () => <footer className="bg-surface text-foreground"><div className="message-content grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[1.7fr_repeat(4,1fr)]"><a href={corporateUrl} target="_blank" rel="noopener noreferrer"><img src={siteLogo.url} alt="Mobilaris Site™" className="h-8 w-auto" /></a>{[
+export const MessagingFooter = () => <footer className="bg-surface text-foreground"><div className="message-content grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[1.7fr_repeat(4,1fr)]"><a href={corporateUrl} target="_blank" rel="noopener noreferrer"><img src={siteLogo.url} alt="Mobilaris Site™" className="h-8 w-auto" /></a>{[
   { title: "Product", links: [["Mobilaris Site™", "/product"], ["Companion GO™", companionUrl], ["How it works", "/#getting-started"], ["Features", "/#key-features"]] },
   { title: "Features", links: [["People & Workgroup", otherFeatures[0].href], ["Messaging", "/messaging"], ["Emergency Support", otherFeatures[1].href], ["Asset Tracking", otherFeatures[2].href], ["Sensor Integration", otherFeatures[3].href]] },
   { title: "Company", links: [["About", `${corporateUrl}about-us/`], ["Careers", `${corporateUrl}careers/`], ["News", `${corporateUrl}news/`], ["Contact", `${corporateUrl}contact/`]] },
