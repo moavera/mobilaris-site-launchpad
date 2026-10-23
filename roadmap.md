@@ -7,6 +7,8 @@
 - Instagram icon in the footer is white on the light footer and invisible — awaiting go-ahead to darken it.
 
 ## Done
+- Homepage footer now renders on every page (messaging, the four feature pages, demo-start, platform, product and the 404 page); the dark messaging-only footer was deleted.
+- Landing page order changed to "Modular by design." before "Simple to deploy. Built to scale."
 - Messaging feature page added at /messaging from Figma node 340:149, with the landing-page Messaging link, shared navigation, product visuals, benefits, steps, Companion GO™, related features, contact and footer.
 - Header updated to supplied two-tier reference with uploaded Site logo; desktop links and mobile menu verified.
 - "Built for complex industrial sites" restructured into two stacked sub-sections (Mining text-left/image-right, Critical infrastructure text-right/image-left) on a white background.
