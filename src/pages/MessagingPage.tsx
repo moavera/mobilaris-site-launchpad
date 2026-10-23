@@ -32,12 +32,6 @@ const otherFeatures = [
   { n: "05", title: "Sensor Integration", text: "Sensor alarms, shown in the map.", href: "/sensor-integration" },
 ];
 
-  { title: "Product", links: [["Mobilaris Site™", "/product"], ["Companion GO™", companionUrl], ["How it works", "/#getting-started"], ["Features", "/#key-features"]] },
-  { title: "Features", links: [["People & Workgroup", otherFeatures[0].href], ["Messaging", "/messaging"], ["Emergency Support", otherFeatures[1].href], ["Asset Tracking", otherFeatures[2].href], ["Sensor Integration", otherFeatures[3].href]] },
-  { title: "Company", links: [["About", `${corporateUrl}about-us/`], ["Careers", `${corporateUrl}careers/`], ["News", `${corporateUrl}news/`], ["Contact", `${corporateUrl}contact/`]] },
-  { title: "Connect", links: [["info@mobilaris.se", "mailto:info@mobilaris.se"], ["www.mobilaris.se", "https://mobilaris.se/"], ["LinkedIn", "https://www.linkedin.com/company/mobilaris/"]] },
-].map(group => <nav key={group.title} aria-label={`${group.title} footer links`}><h3 className="mb-4 text-sm font-medium">{group.title}</h3><ul className="space-y-3">{group.links.map(([label,href]) => <li key={label}><a className="text-sm text-foreground/45 transition-colors hover:text-foreground" href={href} target={href.startsWith("https") ? "_blank" : undefined} rel={href.startsWith("https") ? "noopener noreferrer" : undefined}>{label}</a></li>)}</ul></nav>)}</div><div className="message-content flex flex-wrap justify-between gap-4 border-t border-foreground/10 py-8 text-xs text-foreground/40"><span>© 2026 Mobilaris</span><a href={`${corporateUrl}privacy-policy/`} target="_blank" rel="noopener noreferrer">Privacy</a></div></footer>;
-
 export default function MessagingPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
