@@ -19,8 +19,8 @@ const SiteProduct = () => {
       <Navigation />
       <HeroNew />
       <Reveal bg="bg-surface"><Environments /></Reveal>
-      <Principles />
       <Reveal bg="bg-white"><KeyFeatures /></Reveal>
+      <Principles />
       <Reveal bg="bg-white"><Stats /></Reveal>
       
       

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ContactSection } from "@/components/ContactSection";
 import { ZoneVisual, DurationVisual, AcknowledgementVisual } from "@/components/messaging/MessagingVisuals";
 import phones from "@/assets/companion-go-phones.png.asset.json";
-import siteLogo from "@/assets/mobilaris-site-header-logo.png.asset.json";
+import { Footer } from "@/components/Footer";
 import heroStage from "@/assets/messaging-hero-stage.webp.asset.json";
 import newMessage from "@/assets/messaging-composer-transparent.webp.asset.json";
 import newMessageMobile from "@/assets/messaging-composer-transparent-mobile.webp.asset.json";
@@ -32,13 +32,6 @@ const otherFeatures = [
   { n: "05", title: "Sensor Integration", text: "Sensor alarms, shown in the map.", href: "/sensor-integration" },
 ];
 
-export const MessagingFooter = () => <footer className="bg-surface text-foreground"><div className="message-content grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[1.7fr_repeat(4,1fr)]"><a href={corporateUrl} target="_blank" rel="noopener noreferrer"><img src={siteLogo.url} alt="Mobilaris Site™" className="h-8 w-auto" /></a>{[
-  { title: "Product", links: [["Mobilaris Site™", "/product"], ["Companion GO™", companionUrl], ["How it works", "/#getting-started"], ["Features", "/#key-features"]] },
-  { title: "Features", links: [["People & Workgroup", otherFeatures[0].href], ["Messaging", "/messaging"], ["Emergency Support", otherFeatures[1].href], ["Asset Tracking", otherFeatures[2].href], ["Sensor Integration", otherFeatures[3].href]] },
-  { title: "Company", links: [["About", `${corporateUrl}about-us/`], ["Careers", `${corporateUrl}careers/`], ["News", `${corporateUrl}news/`], ["Contact", `${corporateUrl}contact/`]] },
-  { title: "Connect", links: [["info@mobilaris.se", "mailto:info@mobilaris.se"], ["www.mobilaris.se", "https://mobilaris.se/"], ["LinkedIn", "https://www.linkedin.com/company/mobilaris/"]] },
-].map(group => <nav key={group.title} aria-label={`${group.title} footer links`}><h3 className="mb-4 text-sm font-medium">{group.title}</h3><ul className="space-y-3">{group.links.map(([label,href]) => <li key={label}><a className="text-sm text-foreground/45 transition-colors hover:text-foreground" href={href} target={href.startsWith("https") ? "_blank" : undefined} rel={href.startsWith("https") ? "noopener noreferrer" : undefined}>{label}</a></li>)}</ul></nav>)}</div><div className="message-content flex flex-wrap justify-between gap-4 border-t border-foreground/10 py-8 text-xs text-foreground/40"><span>© 2026 Mobilaris</span><a href={`${corporateUrl}privacy-policy/`} target="_blank" rel="noopener noreferrer">Privacy</a></div></footer>;
-
 export default function MessagingPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -61,6 +54,6 @@ export default function MessagingPage() {
     <Reveal bg="bg-paper"><section className="bg-paper px-3 pb-6 md:px-6"><div className="rounded-[28px] bg-background"><div className="message-content grid items-center gap-10 py-16 lg:min-h-[601px] lg:grid-cols-2 lg:py-16"><div className="max-w-[470px]"><p className="mb-6 text-sm text-brand">Companion GO™</p><h2 className="text-[36px] font-medium leading-[1.14] md:text-[48px]">Your phone becomes the tag. <span className="text-foreground/45">No extra hardware – even underground.</span></h2><p className="mb-6 mt-6 text-base leading-relaxed text-foreground/60">Messages are received in the Companion GO™ app, which also works as a virtual tag – so people can be positioned and reached without carrying a physical tag.</p><Button asChild variant="link" className="h-auto p-0 text-brand"><a href={companionUrl} target="_blank" rel="noopener noreferrer">Learn about Companion GO™ <ArrowRight /></a></Button></div><img src={phones.url} alt="Companion GO™ showing positioning, an evacuation message and the message inbox" loading="lazy" className="mx-auto h-auto max-h-[487px] w-full max-w-[403px] object-contain lg:mr-0" /></div></div></section></Reveal>
     <Reveal bg="bg-paper"><section className="bg-paper py-24 text-ink md:py-[140px]"><div className="message-content"><div className="flex flex-wrap items-end justify-between gap-6"><h2 className="text-[30px] font-medium leading-tight md:text-[40px]">More features. <span className="text-ink/45">One platform, one live map.</span></h2><Button asChild variant="link" className="h-auto p-0 text-brand"><Link to="/#key-features">All features <ArrowRight /></Link></Button></div><div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{otherFeatures.map(feature => <a key={feature.n} href={feature.href} target={feature.href.startsWith("https") ? "_blank" : undefined} rel={feature.href.startsWith("https") ? "noopener noreferrer" : undefined} className="group flex min-h-[256px] flex-col rounded-[20px] border border-ink/5 bg-card-light p-7 transition-colors hover:bg-ink/10"><div className="mb-14 flex items-center justify-between"><span className="text-sm text-ink/40">{feature.n}</span><span className="flex h-8 w-8 items-center justify-center rounded-full bg-paper"><ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" /></span></div><h3 className="mb-3 text-xl font-medium leading-snug">{feature.title}</h3><p className="text-base leading-relaxed text-ink/60">{feature.text}</p></a>)}</div></div></section></Reveal>
     <Reveal bg="bg-white"><ContactSection /></Reveal>
-    <MessagingFooter />
+    <Footer />
   </main>;
 }
