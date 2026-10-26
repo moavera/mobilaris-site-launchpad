@@ -85,6 +85,7 @@ export default function FeaturePage({ feature }: { feature: FeatureConfig }) {
     <section className="message-hero relative overflow-hidden pt-[116px] md:pt-[136px]">
       <div className="message-stage relative h-[620px] md:h-[720px]">
         <img src={feature.heroImage ?? heroBg.url} alt="" aria-hidden="true" className="message-hero-bg intro-image" loading="eager" style={{ animationDelay: "0.1s" }} />
+        {feature.heroImage && <div className="message-hero-depth" aria-hidden="true" />}
         <div className="message-content relative z-10 flex h-full flex-col justify-end pb-20"><p className="intro mb-6 text-base text-foreground/45" style={{ animationDelay: "0.15s" }}>{feature.label}</p><h1 className="max-w-[800px] text-[42px] font-medium leading-[1.08] md:text-[64px]"><span className="intro inline-block" style={{ animationDelay: "0.22s" }}>{feature.h1[0]}</span><br className="hidden sm:block" /> <span className="intro inline-block" style={{ animationDelay: "0.3s" }}>{feature.h1[1]}</span></h1></div>
       </div>
       <Reveal bg="bg-surface"><div className="message-content grid gap-8 py-20 md:grid-cols-2 md:gap-24 md:py-[120px]"><h2 className="text-[32px] font-medium leading-[1.12] md:text-[40px]">{feature.introTitle[0]}<br /><span className="text-foreground/45">{feature.introTitle[1]}</span></h2><p className="max-w-[560px] text-base leading-relaxed text-foreground/60 md:text-lg">{feature.intro}</p></div></Reveal>
