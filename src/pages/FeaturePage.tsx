@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import heroBg from "@/assets/hero-mine-landscape-hd.webp.asset.json";
+import peopleHero from "@/assets/people-workgroup-hero.jpg";
 import peopleAsset from "@/assets/people_workgroup_location_bild.png.asset.json";
 import emergencyAsset from "@/assets/Emergency_bild.png.asset.json";
 import assetAsset from "@/assets/asset_tracking_bild.png.asset.json";
@@ -14,7 +15,7 @@ import sensorAsset from "@/assets/sensor_integration_bild.png.asset.json";
 
 type FeatureConfig = {
   slug: string; label: string; h1: [string, string]; introTitle: [string, string]; intro: string;
-  image: string; imageAlt: string; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
+  heroImage?: string; image: string; imageAlt: string; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
 };
 
 export const featureLinks = [
@@ -28,6 +29,7 @@ export const featureLinks = [
 export const features: Record<string, FeatureConfig> = {
   people: {
     slug: "/people-workgroup-location", label: "People & Workgroup Location",
+    heroImage: peopleHero,
     h1: ["Know who is where", "and whether they are authorized"],
     introTitle: ["Every person on the map.", "Every workgroup in view."],
     intro: "See where people and workgroups are across the site in real time. Connect a check-in station to personnel tags or your existing access control, and know who is in hazardous areas.",
@@ -82,7 +84,7 @@ export default function FeaturePage({ feature }: { feature: FeatureConfig }) {
     <Navigation />
     <section className="message-hero relative overflow-hidden pt-[116px] md:pt-[136px]">
       <div className="message-stage relative h-[620px] md:h-[720px]">
-        <img src={heroBg.url} alt="" aria-hidden="true" className="message-hero-bg intro-image" loading="eager" style={{ animationDelay: "0.1s" }} />
+        <img src={feature.heroImage ?? heroBg.url} alt="" aria-hidden="true" className="message-hero-bg intro-image" loading="eager" style={{ animationDelay: "0.1s" }} />
         <div className="message-content relative z-10 flex h-full flex-col justify-end pb-20"><p className="intro mb-6 text-base text-foreground/45" style={{ animationDelay: "0.15s" }}>{feature.label}</p><h1 className="max-w-[800px] text-[42px] font-medium leading-[1.08] md:text-[64px]"><span className="intro inline-block" style={{ animationDelay: "0.22s" }}>{feature.h1[0]}</span><br className="hidden sm:block" /> <span className="intro inline-block" style={{ animationDelay: "0.3s" }}>{feature.h1[1]}</span></h1></div>
       </div>
       <Reveal bg="bg-surface"><div className="message-content grid gap-8 py-20 md:grid-cols-2 md:gap-24 md:py-[120px]"><h2 className="text-[32px] font-medium leading-[1.12] md:text-[40px]">{feature.introTitle[0]}<br /><span className="text-foreground/45">{feature.introTitle[1]}</span></h2><p className="max-w-[560px] text-base leading-relaxed text-foreground/60 md:text-lg">{feature.intro}</p></div></Reveal>
