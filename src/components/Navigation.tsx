@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoImage from "@/assets/mobilaris-industrial-logga.svg";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,8 +16,15 @@ export const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const siteMenu = [
+    { label: "People & Workgroup Location", href: "/people-workgroup-location" },
+    { label: "Messaging", href: "/messaging" },
+    { label: "Emergency Support", href: "/emergency-support" },
+    { label: "Asset Tracking", href: "/asset-tracking" },
+    { label: "Sensor Integration", href: "/sensor-integration" },
+  ];
+
   const navLinks = [
-    { label: "Solutions", href: "https://mobilarisindustrialsolutions.se/", hasDropdown: true },
     { label: "About", href: "https://mobilarisindustrialsolutions.se/about-us/" },
     { label: "Careers", href: "https://mobilarisindustrialsolutions.se/careers/" },
     { label: "Stories", href: "https://mobilarisindustrialsolutions.se/stories/" },
