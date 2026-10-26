@@ -115,6 +115,7 @@ export const Navigation = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-white/20 bg-background/95 backdrop-blur-md">
+            <div className="flex flex-col space-y-4">
             <p className="py-2 text-xs font-semibold uppercase tracking-wider text-foreground/50">Mobilaris Site</p>
             {siteMenu.map((item) => (
               <Link key={item.href} to={item.href} onClick={() => setIsMobileMenuOpen(false)} className="py-2 pl-3 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">
