@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoImage from "@/assets/mobilaris-industrial-logga.svg";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,8 +16,15 @@ export const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const siteMenu = [
+    { label: "People & Workgroup Location", href: "/people-workgroup-location" },
+    { label: "Messaging", href: "/messaging" },
+    { label: "Emergency Support", href: "/emergency-support" },
+    { label: "Asset Tracking", href: "/asset-tracking" },
+    { label: "Sensor Integration", href: "/sensor-integration" },
+  ];
+
   const navLinks = [
-    { label: "Solutions", href: "https://mobilarisindustrialsolutions.se/", hasDropdown: true },
     { label: "About", href: "https://mobilarisindustrialsolutions.se/about-us/" },
     { label: "Careers", href: "https://mobilarisindustrialsolutions.se/careers/" },
     { label: "Stories", href: "https://mobilarisindustrialsolutions.se/stories/" },
@@ -61,6 +69,21 @@ export const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-12 mr-[250px]">
+            <div className="group relative flex items-center">
+              <Link to="/" className="text-white text-lg font-semibold transition-opacity hover:opacity-80 flex items-center gap-1">
+                Mobilaris Site
+                <ChevronDown className="h-4 w-4" />
+              </Link>
+              <div className="invisible absolute left-0 top-full pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                <div className="flex min-w-[280px] flex-col rounded-xl bg-background/95 p-2 shadow-xl ring-1 ring-white/10 backdrop-blur-md">
+                  {siteMenu.map((item) => (
+                    <Link key={item.href} to={item.href} className="rounded-lg px-4 py-2.5 text-sm font-medium text-foreground/80 transition-colors hover:bg-white/10 hover:text-foreground">
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -70,7 +93,6 @@ export const Navigation = () => {
                 className="text-white text-lg font-semibold transition-opacity hover:opacity-80 flex items-center gap-1"
               >
                 {link.label}
-                {link.hasDropdown && <ChevronDown className="h-4 w-4" />}
               </a>
             ))}
           </div>
@@ -93,7 +115,14 @@ export const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-white/20 bg-background/95 backdrop-blur-md">
             <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
+            <p className="py-2 text-xs font-semibold uppercase tracking-wider text-foreground/50">Mobilaris Site</p>
+            {siteMenu.map((item) => (
+              <Link key={item.href} to={item.href} onClick={() => setIsMobileMenuOpen(false)} className="py-2 pl-3 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">
+                {item.label}
+              </Link>
+            ))}
+            <p className="py-2 text-xs font-semibold uppercase tracking-wider text-foreground/50">Mobilaris Industrial Solutions</p>
+            {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
@@ -103,7 +132,6 @@ export const Navigation = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
-                  {link.hasDropdown && <ChevronDown className="h-4 w-4" />}
                 </a>
               ))}
               <a
