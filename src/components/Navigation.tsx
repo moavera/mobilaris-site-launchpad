@@ -93,7 +93,6 @@ export const Navigation = () => {
                 className="text-white text-lg font-semibold transition-opacity hover:opacity-80 flex items-center gap-1"
               >
                 {link.label}
-                {link.hasDropdown && <ChevronDown className="h-4 w-4" />}
               </a>
             ))}
           </div>
@@ -133,7 +132,6 @@ export const Navigation = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
-                  {link.hasDropdown && <ChevronDown className="h-4 w-4" />}
                 </a>
               ))}
               <a
