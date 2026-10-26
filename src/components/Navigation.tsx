@@ -69,6 +69,21 @@ export const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-12 mr-[250px]">
+            <div className="group relative flex items-center">
+              <Link to="/" className="text-white text-lg font-semibold transition-opacity hover:opacity-80 flex items-center gap-1">
+                Mobilaris Site
+                <ChevronDown className="h-4 w-4" />
+              </Link>
+              <div className="invisible absolute left-0 top-full pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                <div className="flex min-w-[280px] flex-col rounded-xl bg-background/95 p-2 shadow-xl ring-1 ring-white/10 backdrop-blur-md">
+                  {siteMenu.map((item) => (
+                    <Link key={item.href} to={item.href} className="rounded-lg px-4 py-2.5 text-sm font-medium text-foreground/80 transition-colors hover:bg-white/10 hover:text-foreground">
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             {navLinks.map((link) => (
               <a
                 key={link.label}
