@@ -1,7 +1,7 @@
 # Architecture rules
 
 - Feature detail pages have dedicated routes, reuse Navigation, and keep non-interactive product illustrations in a separate visuals component so illustrated controls cannot be mistaken for live product actions.
-- Feature configurations may override the shared hero image independently so changing one feature's illustration does not affect sibling pages.
+- Feature configurations may override the shared hero image independently; custom conceptual heroes use separate image and heading rows so text cannot overlap the illustration at any viewport width, without changing sibling pages.
 
 - Keep the corporate strip and product navigation in the shared Navigation component, with one link list for desktop and mobile, so all pages stay consistent.
 
