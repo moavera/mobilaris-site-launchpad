@@ -15,34 +15,38 @@ import FeaturePage, { features } from "./pages/FeaturePage";
 const queryClient = new QueryClient();
 
 // Client-side navigation does not follow URL fragments on its own, and the page
-// is still growing while images load, so a link to /#key-features has to put
-// that section at the top and then re-check the spot until it stops moving.
+// is still growing while the new route paints, so a link to /#key-features has
+// to place that section at the top and repeat the placement a few times until
+// the page has reached its full height.
 const HashScroll = () => {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
     if (!hash) return;
     const id = decodeURIComponent(hash.slice(1));
-    let raf = 0;
-    let checks = 0;
-    const place = () => {
-      checks += 1;
+    const delays = [0, 60, 150, 300, 600, 1000];
+    const timers: number[] = [];
+    let settled = 0;
+    const place = (index: number) => {
       const target = document.getElementById(id);
-      if (!target) {
-        if (checks < 120) raf = window.requestAnimationFrame(place);
-        return;
+      if (target) {
+        target.scrollIntoView();
+        if (Math.abs(target.getBoundingClientRect().top) <= 2) {
+          settled += 1;
+          if (settled >= 2) {
+            timers.forEach(window.clearTimeout);
+            return;
+          }
+        } else {
+          settled = 0;
+        }
       }
-      target.scrollIntoView();
-      const settled = Math.abs(target.getBoundingClientRect().top) <= 2;
-      const atBottom =
-        window.scrollY >= document.documentElement.scrollHeight - window.innerHeight - 1;
-      if (!settled && !atBottom && checks < 120) raf = window.requestAnimationFrame(place);
+      if (index + 1 < delays.length) {
+        timers.push(window.setTimeout(() => place(index + 1), delays[index + 1] - delays[index]));
+      }
     };
-    const timer = window.setTimeout(place, 40);
-    return () => {
-      window.clearTimeout(timer);
-      window.cancelAnimationFrame(raf);
-    };
+    place(0);
+    return () => timers.forEach(window.clearTimeout);
   }, [pathname, hash]);
 
   return null;
