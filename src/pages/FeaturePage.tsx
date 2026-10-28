@@ -20,7 +20,7 @@ import { PeopleStepVisual } from "@/components/people/PeopleStepVisuals";
 
 type FeatureConfig = {
   slug: string; label: string; h1: [string, string]; introTitle: [string, string]; intro: string;
-  heroImage?: string; image: string; imageAlt: string; showcaseWide?: boolean; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
+  heroImage?: string; peopleExtras?: boolean; image: string; imageAlt: string; showcaseWide?: boolean; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
 };
 
 export const featureLinks = [
