@@ -32,7 +32,7 @@ export const features: Record<string, FeatureConfig> = {
     slug: "/people-workgroup-location", label: "People & Workgroup Location",
     heroImage: peopleHeroMap.url,
     h1: ["Locate personnel and ensure authorized access", ""],
-    introTitle: ["Every person on the map.", "Every workgroup in view."],
+    introTitle: ["Locate, track and understand your workforce", ""],
     intro: "See where people and workgroups are across the site in real time. Connect a check-in station to personnel tags or your existing access control, and know who is in hazardous areas.",
     image: peopleShowcase.url, imageAlt: "Mobilaris Site map showing people and vehicles across the site, with a warning on one person", showcaseWide: true,
     benefits: [["Live position of every person", "Tags or the Companion GO™ app show where people are, above and below ground."], ["Workgroups at a glance", "See how teams are distributed and where each crew is working."], ["Authorized access only", "Check-in stations and access control show who is allowed in each zone."], ["Hazardous area awareness", "Know who is in restricted or dangerous areas before you send people in."]],
@@ -92,7 +92,7 @@ export default function FeaturePage({ feature }: { feature: FeatureConfig }) {
       </div>
 
 
-      <Reveal bg="bg-surface"><div className="message-content grid gap-8 py-20 md:grid-cols-2 md:gap-24 md:py-[120px]"><h2 className="text-[32px] font-medium leading-[1.12] md:text-[40px]">{feature.introTitle[0]}<br /><span className="text-foreground/45">{feature.introTitle[1]}</span></h2><p className="max-w-[560px] text-base leading-relaxed text-foreground/60 md:text-lg">{feature.intro}</p></div></Reveal>
+      <Reveal bg="bg-surface"><div className="message-content grid gap-8 py-20 md:grid-cols-2 md:gap-24 md:py-[120px]"><h2 className="text-[32px] font-medium leading-[1.12] md:text-[40px]">{feature.introTitle[0]}{feature.introTitle[1] && <><br /><span className="text-foreground/45">{feature.introTitle[1]}</span></>}</h2><p className="max-w-[560px] text-base leading-relaxed text-foreground/60 md:text-lg">{feature.intro}</p></div></Reveal>
       <Reveal bg="bg-surface"><div className="px-3 pb-20 md:px-5 md:pb-[120px]"><div className={`message-showcase-frame ${feature.showcaseWide ? "message-showcase-frame--shot" : "flex justify-center"}`}><img src={feature.image} alt={feature.imageAlt} loading="lazy" className={feature.showcaseWide ? "message-showcase-img" : "h-auto w-full max-w-[720px]"} /></div></div></Reveal>
     </section>
     <Reveal bg="bg-surface"><section className="message-benefits py-20 md:py-[120px]"><div className="message-content"><h2 className="max-w-[900px] text-[32px] font-medium leading-[1.17] md:text-[40px]">Key benefits. <span className="text-foreground/45">Better visibility, safer operations and improved coordination.</span></h2><div className="mt-16 grid border-y border-foreground/10 sm:grid-cols-2 lg:grid-cols-4">{feature.benefits.map(([title,text],index) => <div key={title} className="border-foreground/10 py-8 sm:px-7 sm:odd:border-r lg:border-r lg:first:pl-0 lg:last:border-r-0"><p className="mb-5 text-xs text-foreground/40">0{index+1}</p><h3 className="mb-4 text-xl font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-foreground/50">{text}</p></div>)}</div></div></section></Reveal>
