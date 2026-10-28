@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import heroBg from "@/assets/hero-mine-landscape-hd.webp.asset.json";
-import peopleAsset from "@/assets/people_workgroup_location_bild.png.asset.json";
+import peopleShowcase from "@/assets/people-showcase-map.webp.asset.json";
 import peopleHeroMap from "@/assets/hero-people-map.webp.asset.json";
 import emergencyAsset from "@/assets/Emergency_bild.png.asset.json";
 import assetAsset from "@/assets/asset_tracking_bild.png.asset.json";
@@ -15,7 +15,7 @@ import sensorAsset from "@/assets/sensor_integration_bild.png.asset.json";
 
 type FeatureConfig = {
   slug: string; label: string; h1: [string, string]; introTitle: [string, string]; intro: string;
-  heroImage?: string; image: string; imageAlt: string; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
+  heroImage?: string; image: string; imageAlt: string; showcaseWide?: boolean; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
 };
 
 export const featureLinks = [
@@ -33,7 +33,7 @@ export const features: Record<string, FeatureConfig> = {
     h1: ["Locate personnel and ensure authorized access", ""],
     introTitle: ["Every person on the map.", "Every workgroup in view."],
     intro: "See where people and workgroups are across the site in real time. Connect a check-in station to personnel tags or your existing access control, and know who is in hazardous areas.",
-    image: peopleAsset.url, imageAlt: "People and workgroups shown in the Mobilaris Site map",
+    image: peopleShowcase.url, imageAlt: "Mobilaris Site map showing people and vehicles across the site, with a warning on one person", showcaseWide: true,
     benefits: [["Live position of every person", "Tags or the Companion GO™ app show where people are, above and below ground."], ["Workgroups at a glance", "See how teams are distributed and where each crew is working."], ["Authorized access only", "Check-in stations and access control show who is allowed in each zone."], ["Hazardous area awareness", "Know who is in restricted or dangerous areas before you send people in."]],
     stepsTitle: ["From check-in to live map.", "Three steps to full overview."],
     steps: [["Check in", "People check in with a tag, the app or your existing access control."], ["Get positioned", "Positions update in the map as people move across the site."], ["Follow up", "Filter by workgroup, zone or authorization to see who is where."]],
@@ -92,7 +92,7 @@ export default function FeaturePage({ feature }: { feature: FeatureConfig }) {
 
 
       <Reveal bg="bg-surface"><div className="message-content grid gap-8 py-20 md:grid-cols-2 md:gap-24 md:py-[120px]"><h2 className="text-[32px] font-medium leading-[1.12] md:text-[40px]">{feature.introTitle[0]}<br /><span className="text-foreground/45">{feature.introTitle[1]}</span></h2><p className="max-w-[560px] text-base leading-relaxed text-foreground/60 md:text-lg">{feature.intro}</p></div></Reveal>
-      <Reveal bg="bg-surface"><div className="px-3 pb-20 md:px-5 md:pb-[120px]"><div className="message-showcase-frame flex justify-center"><img src={feature.image} alt={feature.imageAlt} loading="lazy" className="h-auto w-full max-w-[720px]" /></div></div></Reveal>
+      <Reveal bg="bg-surface"><div className="px-3 pb-20 md:px-5 md:pb-[120px]"><div className={`message-showcase-frame ${feature.showcaseWide ? "message-showcase-frame--shot" : "flex justify-center"}`}><img src={feature.image} alt={feature.imageAlt} loading="lazy" className={feature.showcaseWide ? "message-showcase-img" : "h-auto w-full max-w-[720px]"} /></div></div></Reveal>
     </section>
     <Reveal bg="bg-surface"><section className="message-benefits py-20 md:py-[120px]"><div className="message-content"><h2 className="max-w-[900px] text-[32px] font-medium leading-[1.17] md:text-[40px]">Key benefits. <span className="text-foreground/45">What {feature.label} gives you on site.</span></h2><div className="mt-16 grid border-y border-foreground/10 sm:grid-cols-2 lg:grid-cols-4">{feature.benefits.map(([title,text],index) => <div key={title} className="border-foreground/10 py-8 sm:px-7 sm:odd:border-r lg:border-r lg:first:pl-0 lg:last:border-r-0"><p className="mb-5 text-xs text-foreground/40">0{index+1}</p><h3 className="mb-4 text-xl font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-foreground/50">{text}</p></div>)}</div></div></section></Reveal>
     <Reveal bg="bg-paper"><section className="bg-paper py-24 text-ink md:pb-[120px] md:pt-[160px]"><div className="message-content"><h2 className="max-w-[900px] text-[34px] font-medium leading-[1.12] md:text-[48px]">{feature.stepsTitle[0]} <span className="text-ink/45">{feature.stepsTitle[1]}</span></h2><div className="mt-16 grid gap-5 lg:grid-cols-3">{feature.steps.map(([title,text],index) => <article key={title} className="rounded-[20px] border border-ink/5 bg-card-light p-7"><StepPlaceholder /><p className="mb-3 mt-8 text-sm text-brand">Step {index+1}</p><h3 className="mb-3 text-[22px] font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-ink/60">{text}</p></article>)}</div></div></section></Reveal>
