@@ -83,7 +83,7 @@
 /* On phones the desktop map stops reading at full width, so the picture shows a portrait
    strip of the map around the marked person instead of the whole screenshot shrunk down. */
 @media (max-width: 767px) {
-  .message-showcase-frame--shot { padding: 5% 5% 13%; }
+  .message-showcase-frame--shot { padding: 5.7% 5.7% 15%; }
   .message-showcase-frame--shot .message-showcase-img { aspect-ratio: 3 / 4; object-fit: cover; object-position: 44% 50%; border-radius: 10px; }
 }
 .message-severity-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
