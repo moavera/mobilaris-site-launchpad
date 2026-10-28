@@ -33,7 +33,7 @@ export const features: Record<string, FeatureConfig> = {
     heroImage: peopleHeroMap.url,
     h1: ["Locate personnel and ensure authorized access", ""],
     introTitle: ["Locate, track and understand your workforce", ""],
-    intro: "See where people and workgroups are across the site in real time. Connect a check-in station to personnel tags or your existing access control, and know who is in hazardous areas.",
+    intro: "See where people and workgroups are across your site in real time. Connect check-in stations to personnel tags or your existing access control system to improve workforce visibility, identify personnel in hazardous areas and support safer operations.",
     image: peopleShowcase.url, imageAlt: "Mobilaris Site map showing people and vehicles across the site, with a warning on one person", showcaseWide: true,
     benefits: [["Live position of every person", "Tags or the Companion GO™ app show where people are, above and below ground."], ["Workgroups at a glance", "See how teams are distributed and where each crew is working."], ["Authorized access only", "Check-in stations and access control show who is allowed in each zone."], ["Hazardous area awareness", "Know who is in restricted or dangerous areas before you send people in."]],
     stepsTitle: ["From check-in to a live overview.", "In three simple steps."],
