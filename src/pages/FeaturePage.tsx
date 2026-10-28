@@ -12,6 +12,7 @@ import heroBg from "@/assets/hero-mine-landscape-hd.webp.asset.json";
 import peopleShowcase from "@/assets/people-showcase-map.webp.asset.json";
 import peopleHeroMap from "@/assets/hero-people-map.webp.asset.json";
 import emergencyAsset from "@/assets/Emergency_bild.png.asset.json";
+import emergencyShowcase from "@/assets/emergency-showcase-map.webp.asset.json";
 import assetAsset from "@/assets/asset_tracking_bild.png.asset.json";
 import sensorAsset from "@/assets/sensor_integration_bild.png.asset.json";
 import { PeopleStepVisual } from "@/components/people/PeopleStepVisuals";
@@ -46,7 +47,7 @@ export const features: Record<string, FeatureConfig> = {
     h1: ["A live overview", "when every second counts"],
     introTitle: ["See who is in danger.", "Follow the evacuation live."],
     intro: "During an emergency, get instant visibility of people in hazardous areas and refuge chambers. Follow the evacuation in real time and see who needs urgent assistance.",
-    image: emergencyAsset.url, imageAlt: "Emergency overview in Mobilaris Site showing people in refuge chambers",
+    image: emergencyShowcase.url, imageAlt: "Emergency overview in Mobilaris Site showing a fire in zone 24, personnel positions and refuge chamber status", showcaseWide: true,
     benefits: [["People in hazardous areas", "See instantly who is in the affected zones when an alarm is raised."], ["Refuge chamber status", "Know how many people have reached each refuge chamber."], ["Live evacuation progress", "Follow the evacuation as it happens, not after the fact."], ["Find people who need help", "Locate the people who have not yet reached safety."]],
     stepsTitle: ["From alarm to everyone safe.", "Three steps under pressure."],
     steps: [["Raise the alarm", "Start an emergency from the control room and alert affected zones."], ["Follow the evacuation", "See people move towards exits and refuge chambers in the map."], ["Verify everyone is safe", "Confirm that all people are accounted for, and act on those who are not."]],
