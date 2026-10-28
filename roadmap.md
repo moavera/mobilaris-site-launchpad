@@ -7,7 +7,7 @@
 - Instagram icon in the footer is white on the light footer and invisible — awaiting go-ahead to darken it.
 
 ## Done
-- People & Workgroup Location: stronger directional map shadows and separate image/heading rows on desktop and mobile; sibling feature heroes untouched.
+- People & Workgroup Location hero replaced with the user's own mine-map artwork (Hero_people.png), shown unmodified with no extra darkening layer; heading on its own row, square crop of the marked workgroup and alert on phones; sibling feature heroes untouched.
 - Homepage footer now renders on every page (messaging, the four feature pages, demo-start, platform, product and the 404 page); the dark messaging-only footer was deleted.
 - Landing page order changed to "Modular by design." before "Simple to deploy. Built to scale."
 - Messaging feature page added at /messaging from Figma node 340:149, with the landing-page Messaging link, shared navigation, product visuals, benefits, steps, Companion GO™, related features, contact and footer.
