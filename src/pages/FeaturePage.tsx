@@ -82,7 +82,7 @@ export default function FeaturePage({ feature }: { feature: FeatureConfig }) {
   const others = featureLinks.filter(f => f.href !== feature.slug);
   return <main className="messaging-page bg-surface text-foreground">
     <Navigation />
-    <section className="message-hero relative overflow-hidden pt-[116px] md:pt-[136px]">
+    <section className={`message-hero relative overflow-hidden pt-[116px] ${feature.heroImage ? "md:pt-0" : "md:pt-[136px]"}`}>
       <div className={feature.heroImage ? "feature-map-stage" : "message-stage relative h-[620px] md:h-[720px]"}>
         <div className={feature.heroImage ? "feature-map-visual message-stage relative" : "absolute inset-0"}>
           <img src={feature.heroImage ?? heroBg.url} alt="" aria-hidden="true" className="message-hero-bg intro-image" loading="eager" style={{ animationDelay: "0.1s" }} />
