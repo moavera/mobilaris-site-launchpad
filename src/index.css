@@ -59,11 +59,12 @@
 .feature-map-visual::after { height: 90px; }
 
 .feature-map-copy { background: hsl(var(--surface)); }
-/* On phones the wide artwork stops reading at full width, so it shows a square crop of the
-   marked workgroup and the alert, at roughly twice the pixel density. */
+/* On phones the wide artwork stops reading at full width, so it shows a square crop taken from
+   the artwork's right edge, at roughly twice the pixel density. Every hero keeps its markers and
+   tooltip card in the right-hand 45% of the frame, so the right-aligned crop shows all of them. */
 @media (max-width: 767px) {
   .feature-map-visual { height: auto; aspect-ratio: 1 / 1; }
-  .feature-map-visual .message-hero-bg { object-position: 80% 50%; }
+  .feature-map-visual .message-hero-bg { object-position: 100% 50%; }
 }
 
 
