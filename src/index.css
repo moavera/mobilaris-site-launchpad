@@ -80,11 +80,10 @@
    at the sides only, square bottom corners, and the shadow falls on the top and sides. */
 .message-showcase-frame--shot { padding: 5.7% 5.7% 0; }
 .message-showcase-frame--shot .message-showcase-img { border: 1px solid hsl(var(--foreground) / .2); border-bottom: none; border-radius: 14px 14px 0 0; box-shadow: 0 -14px 40px -10px rgb(0 0 0 / .6), 0 0 46px -12px rgb(0 0 0 / .5); }
-/* On phones the desktop map stops reading at full width, so the picture shows a portrait
-   strip of the map around the marked person instead of the whole screenshot shrunk down. */
+/* On phones the whole screenshot stays visible — it simply renders smaller — so only the
+   corner radius is tightened there, never a crop. */
 @media (max-width: 767px) {
-  .message-showcase-frame--shot { padding: 5.7% 5.7% 0; }
-  .message-showcase-frame--shot .message-showcase-img { aspect-ratio: 3 / 4; object-fit: cover; object-position: 44% 50%; border-radius: 10px 10px 0 0; }
+  .message-showcase-frame--shot .message-showcase-img { border-radius: 10px 10px 0 0; }
 }
 .message-severity-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .people-steps { --people-position: 234 82% 60%; --people-safe: 151 79% 35%; --people-unsafe: 356 74% 49%; }
