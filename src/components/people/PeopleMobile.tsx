@@ -55,7 +55,7 @@ function PhoneMap() {
           </span>
         </div>
         <div className="mobile-map">
-          <svg viewBox="0 0 100 210" preserveAspectRatio="none" aria-hidden="true">
+          <svg viewBox="0 0 100 210" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <polygon className="mobile-zone" points="46,16 92,10 96,54 58,62 40,40" />
             <g className="mobile-tunnels">
               <path d="M-4 34 26 26 58 34 104 24" />

@@ -468,3 +468,79 @@ All colors MUST be HSL.
 .privacy-body { font-size:17px; line-height:1.55; color:rgba(255,255,255,0.62); }
 .privacy-illustration { flex:1 1 0; min-width:0; }
 .privacy-illustration__img { display:block; width:100%; height:auto; }
+
+/* Mobile app section (People & Workgroup Location): two tilted phones drawn in
+   HTML/SVG. Their surfaces live in local tokens so the illustration palette
+   stays in one place. */
+.mobile-card { display:flex; flex-direction:column; gap:44px; padding:56px 24px; }
+@media (min-width:1024px){ .mobile-card { flex-direction:row; align-items:center; gap:112px; padding:72px 56px 72px 96px; } .mobile-text { width:378px; flex-shrink:0; } }
+.mobile-text { display:flex; flex-direction:column; gap:24px; }
+.mobile-eyebrow { color:hsl(var(--brand)); font-size:14px; font-weight:500; }
+.mobile-title { font-size:34px; font-weight:500; line-height:1.1; letter-spacing:-0.02em; color:hsl(var(--ink)); }
+@media (min-width:768px){ .mobile-title { font-size:44px; } }
+.mobile-title span { color:hsl(var(--ink) / .42); }
+.mobile-body { font-size:17px; line-height:1.55; color:hsl(var(--ink) / .62); }
+
+.mobile-visual {
+  --phone-frame: 0 0% 8%;
+  --phone-screen: 240 6% 10%;
+  --phone-sheet: 240 5% 11%;
+  --phone-field: 240 5% 17%;
+  --phone-line: 240 5% 20%;
+  --phone-muted: 240 3% 57%;
+  --phone-alarm: 356 76% 55%;
+  position:relative; flex:1 1 0; min-width:0; height:380px;
+}
+@media (min-width:768px){ .mobile-visual { height:520px; } }
+@media (min-width:1024px){ .mobile-visual { height:560px; } }
+.mobile-phone {
+  position:absolute; padding:4px; border-radius:24px;
+  background:linear-gradient(150deg, hsl(var(--phone-line)), hsl(var(--phone-frame)) 55%);
+  box-shadow:0 24px 48px -24px rgb(0 0 0 / .35);
+}
+.mobile-screen { height:100%; border-radius:20px; background:hsl(var(--phone-screen)); overflow:hidden; display:flex; flex-direction:column; }
+.mobile-phone--map { left:0; top:0; height:76%; aspect-ratio:9/19.5; transform:perspective(1400px) rotateY(-22deg) rotateZ(-4deg); }
+.mobile-phone--person { right:0; bottom:0; height:100%; aspect-ratio:9/19.5; z-index:2; transform:perspective(1400px) rotateY(-15deg) rotateZ(-4deg); }
+
+.mobile-topbar { display:flex; align-items:center; gap:5px; padding:9px 7px 6px; }
+.mobile-search { flex:1 1 0; height:17px; border-radius:9px; background:hsl(var(--phone-field)); color:hsl(var(--phone-muted)); font-size:7px; display:flex; align-items:center; padding:0 7px; }
+.mobile-chip { display:flex; align-items:center; gap:3px; height:17px; border-radius:9px; background:hsl(var(--phone-field)); color:hsl(0 0% 100%); font-size:7px; padding:0 6px; }
+.mobile-chevron { width:5px; height:5px; color:hsl(var(--phone-muted)); }
+.mobile-map { position:relative; flex:1 1 0; overflow:hidden; background:hsl(240 4% 24%); }
+.mobile-map > svg { position:absolute; inset:0; width:100%; height:100%; }
+.mobile-tunnels path { fill:none; stroke:hsl(240 8% 86%); stroke-width:1.4; opacity:.75; }
+.mobile-zone { fill:hsl(222 74% 47%); opacity:.55; stroke:hsl(222 85% 65%); stroke-width:1.2; }
+.mobile-tag { position:absolute; font-size:6px; font-weight:600; line-height:1; padding:2px 4px; border-radius:3px; background:hsl(var(--phone-alarm)); color:hsl(0 0% 100%); }
+.mobile-tag--a { left:20%; top:16%; }
+.mobile-tag--b { left:56%; top:44%; }
+.mobile-marker { position:absolute; width:11px; height:11px; border-radius:50%; background:hsl(var(--phone-sheet)); border:1.5px solid hsl(0 0% 100%); }
+.mobile-marker--a { left:22%; top:21%; }
+.mobile-marker--b { left:58%; top:49%; width:15px; height:15px; }
+
+.mobile-sheet { padding:9px 9px 11px; background:hsl(var(--phone-sheet)); border-radius:12px 12px 0 0; }
+.mobile-sheet-title { font-size:10px; font-weight:600; color:hsl(0 0% 100%); }
+.mobile-sheet-sub { margin-top:1px; font-size:7px; color:hsl(var(--phone-muted)); }
+.mobile-status { display:flex; align-items:center; gap:4px; margin-top:6px; font-size:7px; color:hsl(var(--phone-muted)); }
+.mobile-status em { font-style:normal; font-weight:600; color:hsl(var(--phone-alarm)); }
+.mobile-dot { width:2px; height:2px; border-radius:50%; background:hsl(var(--phone-muted)); }
+.mobile-pills { display:flex; gap:4px; margin-top:7px; }
+.mobile-pill { display:inline-flex; align-items:center; gap:3px; height:15px; padding:0 6px; border-radius:8px; background:hsl(var(--phone-line)); color:hsl(0 0% 100%); font-size:6px; font-weight:600; }
+.mobile-pill > svg { width:6px; height:6px; flex-shrink:0; }
+.mobile-pill--light { background:hsl(0 0% 100%); color:hsl(0 0% 0%); }
+
+.mobile-sheet--top { border-radius:0; }
+.mobile-photos { display:grid; grid-template-columns:1.6fr 1fr; grid-template-rows:1fr 1fr; gap:4px; padding:8px 9px; }
+.mobile-photo { display:grid; place-items:center; min-height:30px; border-radius:7px; background:hsl(var(--phone-line)); color:hsl(0 0% 100%); font-size:6px; overflow:hidden; }
+.mobile-photo--worker { grid-row:span 2; }
+.mobile-photo--worker > svg { width:100%; height:100%; display:block; }
+.mobile-tabs { display:flex; gap:7px; padding:2px 9px 7px; }
+.mobile-tabs span { position:relative; font-size:6px; color:hsl(var(--phone-muted)); }
+.mobile-tabs span.is-active { color:hsl(0 0% 100%); }
+.mobile-tabs span.is-active::after { content:""; position:absolute; left:0; right:0; bottom:-4px; height:1.5px; border-radius:1px; background:hsl(0 0% 100%); }
+.mobile-rows { display:flex; flex-direction:column; gap:4px; margin-top:auto; padding:0 9px 11px; }
+.mobile-row { padding:6px 7px; border-radius:7px; background:hsl(var(--phone-line)); }
+.mobile-row-title { font-size:7px; font-weight:600; color:hsl(0 0% 100%); }
+.mobile-row-value { font-size:7px; font-weight:600; color:hsl(0 0% 100%); }
+.mobile-row-label { margin-top:4px; font-size:6px; color:hsl(var(--phone-muted)); }
+.mobile-row-sub { font-size:6px; color:hsl(var(--phone-muted)); }
+@media (max-width:767px){ .mobile-visual { height:340px; } .mobile-phone--map { height:70%; } }
