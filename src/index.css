@@ -466,10 +466,10 @@ All colors MUST be HSL.
 @media (min-width:768px){ .privacy-title { font-size:44px; } }
 .privacy-title span { color:rgba(255,255,255,0.45); }
 .privacy-body { font-size:17px; line-height:1.55; color:rgba(255,255,255,0.62); }
-.privacy-illustration { position:relative; flex:1 1 0; min-width:0; height:380px; background:#1c1b21; border:1px solid rgba(255,255,255,0.08); border-radius:18px; overflow:hidden; }
+.privacy-illustration { position:relative; flex:1 1 0; min-width:0; height:380px; background:#151418; border-radius:18px; overflow:hidden; }
 @media (max-width:640px){ .privacy-illustration { height:300px; } .privacy-status { font-size:10px !important; } }
-.privacy-map { position:absolute; inset:0; width:100%; height:100%; background:#2a2930; }
-.privacy-dot { position:absolute; width:20px; height:20px; margin:-10px 0 0 -10px; border-radius:999px; background:#8d8c94; border:3px solid #2a2930; box-shadow:0 0 0 1.5px rgba(255,255,255,0.35); }
+.privacy-map { position:absolute; inset:0; width:100%; height:100%; background:#151418; }
+.privacy-dot { position:absolute; width:20px; height:20px; margin:-10px 0 0 -10px; border-radius:999px; background:#8d8c94; border:3px solid #151418; box-shadow:0 0 0 1.5px rgba(255,255,255,0.35); }
 .privacy-dot--alert { background:#ef4444; box-shadow:0 0 0 1.5px rgba(255,255,255,0.5); }
 .privacy-glow { position:absolute; width:90px; height:90px; margin:-45px 0 0 -45px; border-radius:999px; background:radial-gradient(circle, rgba(239,68,68,0.55), rgba(239,68,68,0) 70%); }
 .privacy-pill { position:absolute; display:flex; align-items:center; gap:7px; padding:8px 14px 8px 12px; background:#3a3942; border:1px solid rgba(255,255,255,0.16); border-radius:999px; box-shadow:0 4px 14px rgba(0,0,0,0.35); white-space:nowrap; }
