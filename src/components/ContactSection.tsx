@@ -42,7 +42,7 @@ export const ContactSection = () => {
           <SectionShareButton sectionId="contact" sectionName="Contact" />
         </div>
 
-        <h2 className="text-center text-[40px] font-medium leading-[1.02] tracking-[-1.2px] text-white md:text-[72px] md:tracking-[-2.16px]">
+        <h2 className="text-center text-[min(34px,calc(10.6vw-7.6px))] font-medium leading-[1.02] tracking-[-0.03em] text-white md:text-[72px]">
           See your entire site.
           <br />
           Live, from day one.
