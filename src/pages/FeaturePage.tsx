@@ -17,6 +17,7 @@ import emergencyHeroMap from "@/assets/hero-emergency-map.webp.asset.json";
 import assetAsset from "@/assets/asset_tracking_bild.png.asset.json";
 import assetHeroMap from "@/assets/hero-asset-map.webp.asset.json";
 import sensorAsset from "@/assets/sensor_integration_bild.png.asset.json";
+import sensorHeroMap from "@/assets/hero-sensor-map.webp.asset.json";
 import { PeopleStepVisual } from "@/components/people/PeopleStepVisuals";
 import { EmergencyStepVisual } from "@/components/emergency/EmergencyStepVisuals";
 
@@ -69,6 +70,7 @@ export const features: Record<string, FeatureConfig> = {
   },
   sensors: {
     slug: "/sensor-integration", label: "Sensor Integration",
+    heroImage: sensorHeroMap.url,
     h1: ["Sensor alarms", "shown where they happen"],
     introTitle: ["Alarms in the map.", "Together with who is nearby."],
     intro: "Ventilation, gas and environmental sensors are shown in the same map as people and assets. When an alarm goes off, you see where it is and who is close to it.",
