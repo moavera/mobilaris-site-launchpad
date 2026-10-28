@@ -34,7 +34,7 @@ const HashScroll = () => {
         if (Math.abs(target.getBoundingClientRect().top) <= 2) {
           settled += 1;
           if (settled >= 2) {
-            timers.forEach(window.clearTimeout);
+            timers.forEach((timer) => window.clearTimeout(timer));
             return;
           }
         } else {
@@ -46,7 +46,7 @@ const HashScroll = () => {
       }
     };
     place(0);
-    return () => timers.forEach(window.clearTimeout);
+    return () => timers.forEach((timer) => window.clearTimeout(timer));
   }, [pathname, hash]);
 
   return null;
