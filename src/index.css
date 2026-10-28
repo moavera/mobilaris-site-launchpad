@@ -543,4 +543,4 @@ All colors MUST be HSL.
 .mobile-row-value { font-size:7px; font-weight:600; color:hsl(0 0% 100%); }
 .mobile-row-label { margin-top:4px; font-size:6px; color:hsl(var(--phone-muted)); }
 .mobile-row-sub { font-size:6px; color:hsl(var(--phone-muted)); }
-@media (max-width:767px){ .mobile-visual { height:340px; } .mobile-phone--map { height:70%; } }
+@media (max-width:767px){ .mobile-phone--map { height:70%; } }
