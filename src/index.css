@@ -78,8 +78,8 @@
 .message-showcase-img { display: block; width: 100%; height: auto; }
 /* The map picture carries its own dark background, so it floats inside the same smoky
    container as the Messaging picture: matte all around, soft shadow underneath. */
-.message-showcase-frame--shot { padding: 2.2% 2.2% 9%; }
-.message-showcase-frame--shot .message-showcase-img { border: 1px solid hsl(var(--foreground) / .12); border-radius: 14px; box-shadow: 0 28px 50px -24px rgb(0 0 0 / .65), 0 10px 20px -12px rgb(0 0 0 / .5); }
+.message-showcase-frame--shot { padding: 5.7% 5.7% 11%; }
+.message-showcase-frame--shot .message-showcase-img { border: 1px solid hsl(var(--foreground) / .2); border-radius: 14px; box-shadow: 0 16px 40px -14px rgb(0 0 0 / .6), 0 40px 80px -28px rgb(0 0 0 / .65); }
 /* On phones the desktop map stops reading at full width, so the picture shows a portrait
    strip of the map around the marked person instead of the whole screenshot shrunk down. */
 @media (max-width: 767px) {
