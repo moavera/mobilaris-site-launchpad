@@ -52,17 +52,18 @@
 .message-content { width: calc(100% - 48px); max-width: 1200px; margin-inline: auto; }
 .message-benefits { background: hsl(var(--surface)); }
 .message-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; pointer-events: none; }
-/* The heading sits inside the picture at the bottom-left, exactly like the Messaging hero;
-   the artwork's own empty corner keeps the text clear of the tunnel lines. */
-.feature-map-stage { height: 620px; }
-@media (min-width: 768px) { .feature-map-stage { height: 720px; } }
-/* On phones the wide artwork stops reading at full width, so it becomes a square crop of the
-   marked workgroup and the alert, with the heading on its own solid row underneath. */
+/* The picture keeps its own row, capped in height so the heading lands at the same screen
+   height as the Messaging heading — inside the first screen, and never over the map.
+   The artwork's top and bottom drifts are empty, so the slight cover crop costs nothing. */
+.feature-map-visual { width: 100%; max-width: 1440px; margin-inline: auto; height: clamp(300px, 46vh, 520px); }
+.feature-map-copy { background: hsl(var(--surface)); }
+/* On phones the wide artwork stops reading at full width, so it shows a square crop of the
+   marked workgroup and the alert, at roughly twice the pixel density. */
 @media (max-width: 767px) {
-  .feature-map-stage { height: auto; }
-  .feature-map-stage .message-hero-bg { position: static; width: 100%; height: auto; aspect-ratio: 1 / 1; object-position: 80% 50%; }
-  .feature-map-copy { background: hsl(var(--surface)); }
+  .feature-map-visual { height: auto; aspect-ratio: 1 / 1; }
+  .feature-map-visual .message-hero-bg { object-position: 80% 50%; }
 }
+
 
 .message-stage::before,
 .message-stage::after { content: ''; position: absolute; left: 0; right: 0; height: 180px; z-index: 1; pointer-events: none; }
