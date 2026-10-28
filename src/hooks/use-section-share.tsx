@@ -6,13 +6,14 @@ export const useSectionShare = () => {
   useEffect(() => {
     if (window.location.hash) {
       const id = window.location.hash.slice(1);
-      const element = document.getElementById(id);
-      if (element) {
-        setTimeout(() => {
-          const top = element.offsetTop;
-          window.scrollTo({ top, behavior: "smooth" });
-        }, 100);
-      }
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (!element) return;
+        // offsetTop is measured against the nearest positioned ancestor, which is
+        // not the top of the page, so use the element's real distance from the top.
+        const top = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top, behavior: "smooth" });
+      }, 100);
     }
   }, []);
 
