@@ -21,6 +21,7 @@ const HashScroll = () => {
 
   useEffect(() => {
     if (!hash) return;
+    console.info("[hashscroll] hash=", hash, "id=", decodeURIComponent(hash.slice(1)));
     const id = decodeURIComponent(hash.slice(1));
     let raf = 0;
     const scrollToTarget = (attempt: number) => {
