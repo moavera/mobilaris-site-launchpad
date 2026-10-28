@@ -8,7 +8,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import heroBg from "@/assets/hero-mine-landscape-hd.webp.asset.json";
 import peopleAsset from "@/assets/people_workgroup_location_bild.png.asset.json";
-import peopleHeroMap from "@/assets/people-workgroup-hero-map.webp.asset.json";
+import peopleHeroMap from "@/assets/hero-people-map.webp.asset.json";
 import emergencyAsset from "@/assets/Emergency_bild.png.asset.json";
 import assetAsset from "@/assets/asset_tracking_bild.png.asset.json";
 import sensorAsset from "@/assets/sensor_integration_bild.png.asset.json";
