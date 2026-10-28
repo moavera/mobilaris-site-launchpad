@@ -14,25 +14,31 @@ import FeaturePage, { features } from "./pages/FeaturePage";
 
 const queryClient = new QueryClient();
 
-// Client-side navigation does not follow URL fragments on its own, so a link to
-// /#key-features has to scroll that section into view once the new page is up.
+// Client-side navigation does not follow URL fragments on its own, and the page
+// is still growing while images load, so a link to /#key-features has to put
+// that section at the top and then re-check the spot until it stops moving.
 const HashScroll = () => {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
     if (!hash) return;
-    console.info("[hashscroll] hash=", hash, "id=", decodeURIComponent(hash.slice(1)));
     const id = decodeURIComponent(hash.slice(1));
     let raf = 0;
-    const scrollToTarget = (attempt: number) => {
+    let checks = 0;
+    const place = () => {
+      checks += 1;
       const target = document.getElementById(id);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (!target) {
+        if (checks < 120) raf = window.requestAnimationFrame(place);
         return;
       }
-      if (attempt < 60) raf = window.requestAnimationFrame(() => scrollToTarget(attempt + 1));
+      target.scrollIntoView();
+      const settled = Math.abs(target.getBoundingClientRect().top) <= 2;
+      const atBottom =
+        window.scrollY >= document.documentElement.scrollHeight - window.innerHeight - 1;
+      if (!settled && !atBottom && checks < 120) raf = window.requestAnimationFrame(place);
     };
-    const timer = window.setTimeout(() => scrollToTarget(0), 50);
+    const timer = window.setTimeout(place, 40);
     return () => {
       window.clearTimeout(timer);
       window.cancelAnimationFrame(raf);
