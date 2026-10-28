@@ -47,9 +47,6 @@
   --message-success: 151 79% 35%;
   --message-showcase-light: 252 3% 37%;
   --message-showcase-dark: 252 6% 9%;
-  /* Tone of a product screenshot that carries its own background (the people map),
-     so the frame's matte around it reads as one piece with the picture. */
-  --message-showcase-shot: 240 2% 18%;
   letter-spacing: 0;
 }
 .message-content { width: calc(100% - 48px); max-width: 1200px; margin-inline: auto; }
@@ -79,12 +76,15 @@
 .message-severity-info { color: hsl(var(--muted-foreground)); }
 .message-showcase-frame { width: 100%; max-width: 1400px; margin-inline: auto; padding-top: 2.2%; border-radius: 20px; overflow: hidden; background: linear-gradient(to bottom, hsl(var(--message-showcase-light)), hsl(var(--message-showcase-dark))); }
 .message-showcase-img { display: block; width: 100%; height: auto; }
-.message-showcase-frame--shot { background: hsl(var(--message-showcase-shot)); }
+/* The map picture carries its own dark background, so it floats inside the same smoky
+   container as the Messaging picture: matte all around, soft shadow underneath. */
+.message-showcase-frame--shot { padding: 2.2% 2.2% 5.5%; }
+.message-showcase-frame--shot .message-showcase-img { border-radius: 14px; box-shadow: 0 42px 80px -34px rgb(0 0 0 / .75), 0 14px 32px -14px rgb(0 0 0 / .55); }
 /* On phones the desktop map stops reading at full width, so the picture shows a portrait
    strip of the map around the marked person instead of the whole screenshot shrunk down. */
 @media (max-width: 767px) {
-  .message-showcase-frame--shot { position: relative; padding-top: 0; aspect-ratio: 3 / 4; }
-  .message-showcase-frame--shot .message-showcase-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 44% 50%; }
+  .message-showcase-frame--shot { padding: 5% 5% 13%; }
+  .message-showcase-frame--shot .message-showcase-img { aspect-ratio: 3 / 4; object-fit: cover; object-position: 44% 50%; border-radius: 10px; }
 }
 .message-severity-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .message-severity-option { padding: 12px; border: 1px solid hsl(var(--foreground) / .08); border-radius: 7px; background: hsl(var(--message-field)); }
