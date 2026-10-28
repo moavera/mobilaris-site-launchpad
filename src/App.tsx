@@ -29,6 +29,7 @@ const HashScroll = () => {
     let settled = 0;
     const place = (index: number) => {
       const target = document.getElementById(id);
+      console.info("[place]", index, "found", !!target, "y", Math.round(window.scrollY), "docH", document.body.scrollHeight);
       if (target) {
         target.scrollIntoView();
         if (Math.abs(target.getBoundingClientRect().top) <= 2) {
