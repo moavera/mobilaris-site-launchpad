@@ -52,19 +52,21 @@
 .message-content { width: calc(100% - 48px); max-width: 1200px; margin-inline: auto; }
 .message-benefits { background: hsl(var(--surface)); }
 .message-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; pointer-events: none; }
-/* The conceptual map and heading occupy separate rows at every viewport width. */
-.feature-map-visual { width: 100%; max-width: 1440px; margin-inline: auto; aspect-ratio: 2 / 1; }
+/* The picture keeps its own row, capped in height so the heading lands at the same screen
+   height as the Messaging heading — inside the first screen, and never over the map.
+   It runs under the transparent header, whose own fade hides the cropped top drift. */
+.feature-map-visual { width: 100%; max-width: 1440px; margin-inline: auto; height: clamp(340px, 56vh, 560px); }
+.feature-map-visual::after { height: 90px; }
+
 .feature-map-copy { background: hsl(var(--surface)); }
-/* The picture carries its own shadow, so no extra darkening layer sits on top of it.
-   On phones the full 2:1 map shrinks below readability, so it shows a square crop of
-   the marked workgroup and the alert, at roughly twice the pixel density. */
+/* On phones the wide artwork stops reading at full width, so it shows a square crop of the
+   marked workgroup and the alert, at roughly twice the pixel density. */
 @media (max-width: 767px) {
-  .feature-map-visual { aspect-ratio: 1 / 1; }
+  .feature-map-visual { height: auto; aspect-ratio: 1 / 1; }
   .feature-map-visual .message-hero-bg { object-position: 80% 50%; }
 }
 
-.feature-map-visual::before,
-.feature-map-visual::after { height: 22%; }
+
 .message-stage::before,
 .message-stage::after { content: ''; position: absolute; left: 0; right: 0; height: 180px; z-index: 1; pointer-events: none; }
 .message-stage::before { top: 0; background: linear-gradient(to bottom, hsl(var(--surface)) 0%, hsl(var(--surface) / 0) 100%); }
