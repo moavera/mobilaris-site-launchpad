@@ -5,8 +5,11 @@
 
 ## Waiting on user
 - Instagram icon in the footer is white on the light footer and invisible — awaiting go-ahead to darken it.
+- On the narrowest phones (320 px) the page can slide sideways at the "how it works" step illustrations — pre-existing, awaiting go-ahead to fix.
 
 ## Done
+- "All features" link on every subpage now lands on "Modular by design." on the homepage (the homepage scroll targeted the wrong distance and landed at the top).
+- "Key benefits." items now separated by a line on every subpage (messaging, people, emergency, asset tracking, sensor integration): horizontal rules between stacked items on phones, vertical rules between columns on larger screens.
 - People & Workgroup Location hero replaced with the user's own mine-map artwork (Hero_people.png), shown unmodified with no extra darkening layer; square crop of the marked workgroup and alert on phones; sibling feature heroes untouched.
 - People & Workgroup Location heading now sits at the Messaging hero's height — visible in the first screen at 927x853, 1280x800 and on phones, with no map content behind the letters.
 
