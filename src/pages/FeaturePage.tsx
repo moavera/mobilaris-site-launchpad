@@ -30,7 +30,7 @@ export const features: Record<string, FeatureConfig> = {
   people: {
     slug: "/people-workgroup-location", label: "People & Workgroup Location",
     heroImage: peopleHeroMap.url,
-    h1: ["Know who is where", "and whether they are authorized"],
+    h1: ["Locate personnel and ensure authorized access", ""],
     introTitle: ["Every person on the map.", "Every workgroup in view."],
     intro: "See where people and workgroups are across the site in real time. Connect a check-in station to personnel tags or your existing access control, and know who is in hazardous areas.",
     image: peopleAsset.url, imageAlt: "People and workgroups shown in the Mobilaris Site map",
