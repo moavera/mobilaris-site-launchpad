@@ -52,7 +52,7 @@ export const features: Record<string, FeatureConfig> = {
     image: emergencyShowcase.url, imageAlt: "Emergency overview in Mobilaris Site showing a fire in zone 24, personnel positions and refuge chamber status", showcaseWide: true,
     benefits: [["Alert everyone affected", "Send evacuation or shelter-in-place messages to everyone in the affected zones."], ["People in hazardous areas", "See instantly who is in the affected zones when an alarm is raised."], ["Refuge chamber status", "Know how many people are in each chamber – and who they are."], ["Live evacuation progress", "Follow evacuation progress live and complete your site’s emergency checklist as you go."]],
     stepsTitle: ["From alarm to everyone safe.", "Three steps under pressure."],
-    steps: [["Raise the alarm", "Start an emergency from the control room and alert affected zones."], ["Follow the evacuation", "See people move towards exits and refuge chambers in the map."], ["Verify everyone is safe", "Confirm that all people are accounted for, and act on those who are not."]],
+    steps: [["Raise the alarm", "Trigger an emergency via sensors, people or authorized users in the control room or on the go."], ["Follow the evacuation", "See people move towards exits and refuge chambers in the map."], ["Verify everyone is safe", "Confirm that all people are accounted for, and act on those who are not."]],
   },
   assets: {
     slug: "/asset-tracking", label: "Asset Tracking",
