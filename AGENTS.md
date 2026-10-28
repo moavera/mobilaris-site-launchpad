@@ -1,7 +1,7 @@
 # Architecture rules
 
 - Feature detail pages have dedicated routes, reuse Navigation, and keep non-interactive product illustrations in a separate visuals component so illustrated controls cannot be mistaken for live product actions.
-- People-only sections (step illustrations, mobile-app and privacy blocks) key on a dedicated `peopleExtras` flag, never on `heroImage`, so a sibling page that only swaps its hero artwork does not inherit them; other feature pages keep their placeholders.
+- Which step illustration a feature page shows is decided by its own `stepsVisual` flag ("people" | "emergency"), and the people-only mobile-app and privacy blocks by `peopleExtras` — never by `heroImage` or by the presence of a step illustration, so a sibling page that only swaps its hero artwork or gains step cards does not inherit another page's sections; feature pages with neither flag keep the placeholder.
 - Feature configurations may override the shared hero image independently; custom conceptual heroes use separate image and heading rows so text cannot overlap the illustration at any viewport width, and a per-breakpoint crop (taller frame plus `object-position`) instead of a shrunk full view when the wide artwork stops reading on phones — all without changing sibling pages.
 
 - Keep the corporate strip and product navigation in the shared Navigation component, with one link list for desktop and mobile, so all pages stay consistent.
