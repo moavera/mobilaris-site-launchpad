@@ -14,12 +14,40 @@ import FeaturePage, { features } from "./pages/FeaturePage";
 
 const queryClient = new QueryClient();
 
+// Client-side navigation does not follow URL fragments on its own, so a link to
+// /#key-features has to scroll that section into view once the new page is up.
+const HashScroll = () => {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const id = decodeURIComponent(hash.slice(1));
+    let raf = 0;
+    const scrollToTarget = (attempt: number) => {
+      const target = document.getElementById(id);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      if (attempt < 60) raf = window.requestAnimationFrame(() => scrollToTarget(attempt + 1));
+    };
+    const timer = window.setTimeout(() => scrollToTarget(0), 50);
+    return () => {
+      window.clearTimeout(timer);
+      window.cancelAnimationFrame(raf);
+    };
+  }, [pathname, hash]);
+
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <HashScroll />
         <Routes>
           <Route path="/" element={<SiteProduct />} />
           <Route path="/demo-start" element={<DemoStart />} />
