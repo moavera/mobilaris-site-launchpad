@@ -12,6 +12,7 @@ import heroBg from "@/assets/hero-mine-landscape-hd.webp.asset.json";
 import peopleShowcase from "@/assets/people-showcase-map.webp.asset.json";
 import peopleHeroMap from "@/assets/hero-people-map.webp.asset.json";
 import emergencyAsset from "@/assets/Emergency_bild.png.asset.json";
+import emergencyShowcase from "@/assets/emergency-showcase-map.webp.asset.json";
 import assetAsset from "@/assets/asset_tracking_bild.png.asset.json";
 import sensorAsset from "@/assets/sensor_integration_bild.png.asset.json";
 import { PeopleStepVisual } from "@/components/people/PeopleStepVisuals";
