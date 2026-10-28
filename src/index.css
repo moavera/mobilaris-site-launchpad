@@ -133,6 +133,53 @@
   .people-member-safe, .people-member-unsafe { padding-inline: 5px; }
 }
 @media (max-width: 1023px) { .people-step-visual { max-width: 420px; margin-inline: auto; } }
+/* Emergency Support step cards: alarm, evacuation map and response checklist. */
+.emergency-steps { --emergency-alarm: 355 68% 54%; --emergency-safe: 146 67% 37%; --emergency-position: 229 66% 55%; }
+.emergency-step-visual { height: 268px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 18px 20px; border: 1px solid hsl(var(--ink) / .06); border-radius: 14px; background: hsl(var(--paper)); color: hsl(var(--ink)); font-size: 12px; line-height: 16px; }
+.emergency-mini-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; white-space: nowrap; color: hsl(var(--ink) / .55); }
+.emergency-alarm-text { color: hsl(var(--emergency-alarm)); font-weight: 500; }
+.emergency-checklist-count { color: hsl(var(--ink)); font-weight: 500; }
+.emergency-map { position: relative; height: 96px; overflow: hidden; border: 1px solid hsl(var(--ink) / .08); border-radius: 10px; background: hsl(var(--card-light)); }
+.emergency-map--tall { height: 150px; }
+.emergency-map-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+.emergency-map-lines path { fill: none; stroke: hsl(var(--ink) / .13); stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+.emergency-map-route { position: absolute; top: 48%; bottom: 26%; left: 3.5%; right: 3%; }
+.emergency-map-route path { fill: none; stroke: hsl(var(--ink) / .5); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.emergency-glow { position: absolute; left: 47.4%; top: 45px; width: 52px; height: 52px; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle, hsl(var(--emergency-alarm) / .4) 0%, hsl(var(--emergency-alarm) / 0) 70%); }
+.emergency-pin { position: absolute; left: 47.4%; top: 64px; width: 14px; height: 14px; transform: translateX(-50%); border-radius: 50%; background: hsl(var(--emergency-alarm)); box-shadow: 0 0 0 1.5px hsl(var(--paper)); }
+.emergency-dot { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: hsl(var(--emergency-position)); box-shadow: 0 0 0 1.5px hsl(var(--paper)); }
+.emergency-dot--person { width: 10px; height: 10px; background: hsl(var(--emergency-alarm)); }
+.emergency-dot--refuge { width: 12px; height: 12px; background: hsl(var(--emergency-safe)); }
+.emergency-chip { position: absolute; padding: 2px 6px; border-radius: 999px; font-size: 8.5px; font-weight: 500; line-height: 12px; white-space: nowrap; color: hsl(var(--paper)); background: hsl(var(--emergency-alarm)); }
+.emergency-chip--refuge { background: hsl(var(--emergency-safe)); }
+.emergency-sensor { display: flex; align-items: center; gap: 8px; padding: 8px 8px 8px 10px; border-radius: 10px; background: hsl(var(--card-light)); }
+.emergency-sensor-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; white-space: nowrap; }
+.emergency-sensor-text b { font-size: 12px; font-weight: 500; }
+.emergency-sensor-text small { font-size: 10.5px; line-height: 14px; color: hsl(var(--ink) / .5); }
+.emergency-start { display: flex; align-items: center; gap: 5px; padding: 7px 10px; border-radius: 999px; background: hsl(var(--emergency-alarm)); color: hsl(var(--paper)); font-size: 10.5px; font-weight: 500; white-space: nowrap; }
+.emergency-start svg { width: 10px; height: 10px; }
+.emergency-count-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 8px; }
+.emergency-count { display: flex; align-items: flex-end; gap: 4px; }
+.emergency-count b { font-size: 20px; font-weight: 500; line-height: 23px; }
+.emergency-count span { font-size: 12px; color: hsl(var(--ink) / .5); }
+.emergency-badge { display: flex; align-items: center; gap: 4px; padding: 3px 7px; border-radius: 999px; background: hsl(var(--emergency-alarm) / .1); color: hsl(var(--emergency-alarm)); font-size: 10.5px; font-weight: 500; }
+.emergency-badge i { width: 6px; height: 6px; border-radius: 50%; background: hsl(var(--emergency-alarm)); }
+.emergency-progress { display: flex; gap: 3px; height: 4px; border-radius: 2px; }
+.emergency-progress > i { height: 4px; border-radius: 2px; }
+.emergency-progress-safe { background: hsl(var(--emergency-safe)); }
+.emergency-progress-danger { background: hsl(var(--emergency-alarm) / .7); }
+.emergency-progress--check { position: relative; display: block; background: hsl(var(--ink) / .08); }
+.emergency-progress--check > i { position: absolute; left: 0; top: 0; background: hsl(var(--ink)); }
+.emergency-checklist { display: flex; flex-direction: column; gap: 4px; }
+.emergency-checklist > div { display: flex; align-items: center; gap: 9px; padding: 6px 10px; border-radius: 8px; background: hsl(var(--card-light)); }
+.emergency-check-box { display: grid; place-items: center; flex-shrink: 0; width: 14px; height: 14px; border-radius: 4px; background: hsl(var(--ink)); color: hsl(var(--paper)); }
+.emergency-check-box svg { width: 10px; height: 10px; }
+.emergency-check-box--open { background: hsl(var(--paper)); border: 1px solid hsl(var(--ink) / .25); }
+.emergency-checklist p { flex: 1; min-width: 0; overflow: hidden; font-size: 11.5px; font-weight: 500; white-space: nowrap; text-overflow: ellipsis; }
+.emergency-check-done { color: hsl(var(--ink) / .5); }
+.emergency-check-count { font-size: 11px; font-weight: 500; color: hsl(var(--emergency-alarm)); }
+@media (min-width: 1024px) and (max-width: 1199px) { .emergency-step-visual { padding-inline: 14px; } }
+@media (max-width: 1023px) { .emergency-step-visual { max-width: 420px; margin-inline: auto; } }
 .message-severity-option { padding: 12px; border: 1px solid hsl(var(--foreground) / .08); border-radius: 7px; background: hsl(var(--message-field)); }
 .message-severity-option:first-child { border-color: hsl(var(--foreground) / .8); background: hsl(var(--foreground) / .1); }
 .message-severity-option > span { display: flex; align-items: center; gap: 6px; color: hsl(var(--foreground)); }
