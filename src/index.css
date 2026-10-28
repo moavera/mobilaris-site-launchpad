@@ -55,8 +55,14 @@
 /* The conceptual map and heading occupy separate rows at every viewport width. */
 .feature-map-visual { width: 100%; max-width: 1440px; margin-inline: auto; aspect-ratio: 2 / 1; }
 .feature-map-copy { background: hsl(var(--surface)); }
-/* Broad directional shadows leave markers readable without a spotlight edge. */
-.message-hero-depth { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(110deg, hsl(var(--surface) / .85) 0%, hsl(var(--surface) / .5) 28%, hsl(var(--surface) / .08) 55%, hsl(var(--surface) / .3) 72%, hsl(var(--surface) / .8) 100%), linear-gradient(to bottom, hsl(var(--surface) / .35) 0%, hsl(var(--surface) / 0) 35%, hsl(var(--surface) / .25) 62%, hsl(var(--surface) / .9) 100%); }
+/* The picture carries its own shadow, so no extra darkening layer sits on top of it.
+   On phones the full 2:1 map shrinks below readability, so it shows a square crop of
+   the marked workgroup and the alert, at roughly twice the pixel density. */
+@media (max-width: 767px) {
+  .feature-map-visual { aspect-ratio: 1 / 1; }
+  .feature-map-visual .message-hero-bg { object-position: 80% 50%; }
+}
+
 .feature-map-visual::before,
 .feature-map-visual::after { height: 22%; }
 .message-stage::before,
