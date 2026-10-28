@@ -15,6 +15,7 @@ import emergencyAsset from "@/assets/Emergency_bild.png.asset.json";
 import emergencyShowcase from "@/assets/emergency-showcase-map.webp.asset.json";
 import emergencyHeroMap from "@/assets/hero-emergency-map.webp.asset.json";
 import assetAsset from "@/assets/asset_tracking_bild.png.asset.json";
+import assetHeroMap from "@/assets/hero-asset-map.webp.asset.json";
 import sensorAsset from "@/assets/sensor_integration_bild.png.asset.json";
 import { PeopleStepVisual } from "@/components/people/PeopleStepVisuals";
 import { EmergencyStepVisual } from "@/components/emergency/EmergencyStepVisuals";
@@ -57,6 +58,7 @@ export const features: Record<string, FeatureConfig> = {
   },
   assets: {
     slug: "/asset-tracking", label: "Asset Tracking",
+    heroImage: assetHeroMap.url,
     h1: ["Locate equipment", "in seconds, not hours"],
     introTitle: ["Less searching.", "More production."],
     intro: "Track the location and status of vehicles, tools and machinery across your operation. Reduce search time, support planning and make sure critical equipment is available when needed.",
