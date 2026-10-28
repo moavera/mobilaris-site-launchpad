@@ -5,6 +5,7 @@
 
 ## Waiting on user
 - Instagram icon in the footer is white on the light footer and invisible — awaiting go-ahead to darken it.
+- On the narrowest phones (320 px) the page can slide sideways at the "how it works" step illustrations — pre-existing, awaiting go-ahead to fix.
 
 ## Done
 - People & Workgroup Location hero replaced with the user's own mine-map artwork (Hero_people.png), shown unmodified with no extra darkening layer; square crop of the marked workgroup and alert on phones; sibling feature heroes untouched.
