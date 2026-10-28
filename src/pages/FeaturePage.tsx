@@ -13,6 +13,7 @@ import peopleShowcase from "@/assets/people-showcase-map.webp.asset.json";
 import peopleHeroMap from "@/assets/hero-people-map.webp.asset.json";
 import emergencyAsset from "@/assets/Emergency_bild.png.asset.json";
 import emergencyShowcase from "@/assets/emergency-showcase-map.webp.asset.json";
+import emergencyHeroMap from "@/assets/hero-emergency-map.webp.asset.json";
 import assetAsset from "@/assets/asset_tracking_bild.png.asset.json";
 import sensorAsset from "@/assets/sensor_integration_bild.png.asset.json";
 import { PeopleStepVisual } from "@/components/people/PeopleStepVisuals";
@@ -33,7 +34,7 @@ export const featureLinks = [
 export const features: Record<string, FeatureConfig> = {
   people: {
     slug: "/people-workgroup-location", label: "People & Workgroup Location",
-    heroImage: peopleHeroMap.url,
+    heroImage: peopleHeroMap.url, peopleExtras: true,
     h1: ["Locate personnel and ensure authorized access", ""],
     introTitle: ["Locate, track and understand your workforce", ""],
     intro: "See where people and workgroups are across your site in real time. Connect check-in stations to personnel tags or your existing access control system to improve workforce visibility, identify personnel in hazardous areas and support safer operations.",
@@ -44,6 +45,7 @@ export const features: Record<string, FeatureConfig> = {
   },
   emergency: {
     slug: "/emergency-support", label: "Emergency Support",
+    heroImage: emergencyHeroMap.url,
     h1: ["A live overview", "when every second counts"],
     introTitle: ["See who is in danger.", "Follow the evacuation live."],
     intro: "During an emergency, get instant visibility of people in hazardous areas and refuge chambers. Follow the evacuation in real time and see who needs urgent assistance.",
@@ -100,8 +102,8 @@ export default function FeaturePage({ feature }: { feature: FeatureConfig }) {
     </section>
     <Reveal bg="bg-surface"><section className="message-benefits py-20 md:py-[120px]"><div className="message-content"><h2 className="max-w-[900px] text-[32px] font-medium leading-[1.17] md:text-[40px]">Key benefits. <span className="text-foreground/45">Better visibility, safer operations and improved coordination.</span></h2><div className="mt-16 grid border-y border-foreground/10 sm:grid-cols-2 lg:grid-cols-4">{feature.benefits.map(([title,text],index) => <div key={title} className={`border-foreground/10 py-8 sm:px-7 sm:odd:border-r lg:border-r lg:first:pl-0 lg:last:border-r-0 ${index === 0 ? "" : "border-t"} ${index === 1 ? "sm:border-t-0" : ""} lg:border-t-0`}><p className="mb-5 text-xs text-foreground/40">0{index+1}</p><h3 className="mb-4 text-xl font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-foreground/50">{text}</p></div>)}</div></div></section></Reveal>
     <Reveal bg="bg-paper"><section className={`bg-paper py-24 text-ink md:pb-[120px] md:pt-[160px] ${feature.heroImage ? "people-steps" : ""}`}><div className="message-content"><h2 className="max-w-[900px] text-[34px] font-medium leading-[1.12] md:text-[48px]">{feature.stepsTitle[0]}{feature.heroImage ? <br /> : " "}<span className="text-ink/45">{feature.stepsTitle[1]}</span></h2><div className="mt-16 grid gap-5 lg:grid-cols-3">{feature.steps.map(([title,text],index) => <article key={title} className="rounded-[20px] border border-ink/5 bg-card-light p-7">{feature.heroImage ? <PeopleStepVisual step={index} /> : <StepPlaceholder />}<p className="mb-3 mt-8 text-sm text-brand">Step {index+1}</p><h3 className="mb-3 text-[22px] font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-ink/60">{text}</p></article>)}</div></div></section></Reveal>
-    {feature.heroImage && <Reveal bg="bg-paper"><PeopleMobile /></Reveal>}
-    {feature.heroImage && <Reveal bg="bg-paper"><PeoplePrivacy /></Reveal>}
+    {feature.peopleExtras && <Reveal bg="bg-paper"><PeopleMobile /></Reveal>}
+    {feature.peopleExtras && <Reveal bg="bg-paper"><PeoplePrivacy /></Reveal>}
     <Reveal bg="bg-paper"><section className="bg-paper py-24 text-ink md:py-[140px]"><div className="message-content"><div className="flex flex-wrap items-end justify-between gap-6"><h2 className="text-[30px] font-medium leading-tight md:text-[40px]">More features. <span className="text-ink/45">One platform, one live map.</span></h2><Button asChild variant="link" className="h-auto p-0 text-brand"><Link to="/#key-features">All features <ArrowRight /></Link></Button></div><div className="mt-8 grid gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">{others.map(f => <Link key={f.n} to={f.href} className="group flex min-h-0 flex-col rounded-[20px] border border-ink/5 bg-card-light p-5 transition-colors hover:bg-ink/10 sm:min-h-[256px] sm:p-7"><div className="mb-6 flex items-center justify-between sm:mb-14"><span className="text-sm text-ink/40">{f.n}</span><span className="flex h-8 w-8 items-center justify-center rounded-full bg-paper"><ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" /></span></div><h3 className="mb-2 text-lg font-medium leading-snug sm:mb-3 sm:text-xl">{f.title}</h3><p className="text-sm leading-relaxed text-ink/60 sm:text-base">{f.text}</p></Link>)}</div></div></section></Reveal>
     <Reveal bg="bg-white"><ContactSection /></Reveal>
     <Footer />
