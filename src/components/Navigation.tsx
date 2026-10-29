@@ -46,14 +46,6 @@ export const Navigation = () => {
     },
   ];
 
-  // Plain links closing the third column.
-  const siteLinks = [
-    { label: "Product", href: "/product" },
-    {
-      label: "Mobilaris Industrial Solutions",
-      href: "https://mobilarisindustrialsolutions.se/",
-    },
-  ];
 
   const navLinks = [
     { label: "About", href: "https://mobilarisindustrialsolutions.se/about-us/" },
@@ -165,32 +157,19 @@ export const Navigation = () => {
           <div className="site-mega__grid">
             <div className="site-mega__col">{siteMenu.slice(0, 2).map(featureItem)}</div>
             <div className="site-mega__col">{siteMenu.slice(2, 4).map(featureItem)}</div>
-            <div className="site-mega__col site-mega__col--last">
-              {featureItem(siteMenu[4])}
-              <div className="site-mega__links">
-                {siteLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target={link.href.startsWith("http") ? "_blank" : undefined}
-                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="site-mega__link"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </div>
+            <div className="site-mega__col">{featureItem(siteMenu[4])}</div>
           </div>
           <div className="site-mega__footer">
-            <p className="site-mega__note">
-              <span className="site-mega__pill">Platform</span>
-              Five features, one live map.
-            </p>
-            <Link to="/platform" onClick={() => setIsSiteMenuOpen(false)} className="site-mega__more">
+            <p className="site-mega__note">A product by Mobilaris.</p>
+            <a
+              href="https://mobilarisindustrialsolutions.se/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="site-mega__more"
+            >
               Learn more
               <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
+            </a>
           </div>
         </div>
 
