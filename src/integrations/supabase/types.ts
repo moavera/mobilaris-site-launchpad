@@ -32,6 +32,33 @@ export type Database = {
         }
         Relationships: []
       }
+      demo_requests: {
+        Row: {
+          company: string
+          consent: boolean
+          created_at: string
+          email: string
+          id: string
+          name: string
+        }
+        Insert: {
+          company: string
+          consent?: boolean
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+        }
+        Update: {
+          company?: string
+          consent?: boolean
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
