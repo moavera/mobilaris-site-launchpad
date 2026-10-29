@@ -20,10 +20,11 @@ import sensorAsset from "@/assets/sensor_integration_bild.png.asset.json";
 import sensorHeroMap from "@/assets/hero-sensor-map.webp.asset.json";
 import { PeopleStepVisual } from "@/components/people/PeopleStepVisuals";
 import { EmergencyStepVisual } from "@/components/emergency/EmergencyStepVisuals";
+import { SensorStepVisual } from "@/components/sensor/SensorStepVisuals";
 
 type FeatureConfig = {
   slug: string; label: string; h1: [string, string]; introTitle: [string, string]; intro: string;
-  heroImage?: string; peopleExtras?: boolean; stepsVisual?: "people" | "emergency"; image: string; imageAlt: string; showcaseWide?: boolean; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
+  heroImage?: string; peopleExtras?: boolean; stepsVisual?: "people" | "emergency" | "sensor"; image: string; imageAlt: string; showcaseWide?: boolean; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
 };
 
 export const featureLinks = [
@@ -70,14 +71,14 @@ export const features: Record<string, FeatureConfig> = {
   },
   sensors: {
     slug: "/sensor-integration", label: "Sensor Integration",
-    heroImage: sensorHeroMap.url,
+    heroImage: sensorHeroMap.url, stepsVisual: "sensor",
     h1: ["Sensor alarms", "shown where they happen"],
     introTitle: ["Connect sensors.", "Visualize alarms."],
     intro: "View ventilation, gas and environmental sensor data alongside people and assets on the same map. When an alarm is triggered, see its location and identify nearby personnel.",
     image: sensorAsset.url, imageAlt: "Sensor values and alarms shown in the Mobilaris Site map",
     benefits: [["Integrate with existing sensors", "Bring ventilation, gas detection and other systems into one live view."], ["Alarms and warnings in real time", "See status changes the moment they happen, at the exact location."], ["People near an alarm", "Know who is close to an alarm before you send anyone in."], ["Act directly", "Message the affected zone or start an evacuation from the same view."]],
-    stepsTitle: ["From sensor to action.", "Three steps to a complete view."],
-    steps: [["Connect sensors", "Integrate your existing sensors and control systems."], ["See values in the map", "Sensor values and alarms appear where the sensors are."], ["Act on alarms", "See who is nearby and reach them directly."]],
+    stepsTitle: ["From sensor alert to action.", "All in one view."],
+    steps: [["Connect your sensors", "Integrate with your existing systems without replacing your current setup."], ["See alarms in the map", "Warnings and alarms appear on the map, showing who is nearby."], ["Act straight away", "Message an entire zone or initiate an evacuation directly from Mobilaris Site™."]],
   },
 };
 
@@ -106,7 +107,7 @@ export default function FeaturePage({ feature }: { feature: FeatureConfig }) {
       <Reveal bg="bg-surface"><div className="px-3 pb-20 md:px-5 md:pb-[120px]"><div className={`message-showcase-frame ${feature.showcaseWide ? "message-showcase-frame--shot" : "flex justify-center"}`}><img src={feature.image} alt={feature.imageAlt} loading="lazy" className={feature.showcaseWide ? "message-showcase-img" : "h-auto w-full max-w-[720px]"} /></div></div></Reveal>
     </section>
     <Reveal bg="bg-surface"><section className="message-benefits py-20 md:py-[120px]"><div className="message-content"><h2 className="max-w-[900px] text-[32px] font-medium leading-[1.17] md:text-[40px]">Key benefits. <span className="text-foreground/45">Alarms with context, so teams can respond where it matters.</span></h2><div className="mt-16 grid border-y border-foreground/10 sm:grid-cols-2 lg:grid-cols-4">{feature.benefits.map(([title,text],index) => <div key={title} className={`border-foreground/10 py-8 sm:px-7 sm:odd:border-r lg:border-r lg:first:pl-0 lg:last:border-r-0 ${index === 0 ? "" : "border-t"} ${index === 1 ? "sm:border-t-0" : ""} lg:border-t-0`}><p className="mb-5 text-xs text-foreground/40">0{index+1}</p><h3 className="mb-4 text-xl font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-foreground/50">{text}</p></div>)}</div></div></section></Reveal>
-    <Reveal bg="bg-paper"><section className={`bg-paper py-24 text-ink md:pb-[120px] md:pt-[160px] ${feature.stepsVisual === "people" ? "people-steps" : ""}${feature.stepsVisual === "emergency" ? " emergency-steps" : ""}`}><div className="message-content"><h2 className="max-w-[900px] text-[34px] font-medium leading-[1.12] md:text-[48px]">{feature.stepsTitle[0]}{feature.heroImage ? <br /> : " "}<span className="text-ink/45">{feature.stepsTitle[1]}</span></h2><div className="mt-16 grid gap-5 lg:grid-cols-3">{feature.steps.map(([title,text],index) => <article key={title} className="rounded-[20px] border border-ink/5 bg-card-light p-7">{feature.stepsVisual === "people" ? <PeopleStepVisual step={index} /> : feature.stepsVisual === "emergency" ? <EmergencyStepVisual step={index} /> : <StepPlaceholder />}<p className="mb-3 mt-8 text-sm text-brand">Step {index+1}</p><h3 className="mb-3 text-[22px] font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-ink/60">{text}</p></article>)}</div></div></section></Reveal>
+    <Reveal bg="bg-paper"><section className={`bg-paper py-24 text-ink md:pb-[120px] md:pt-[160px] ${feature.stepsVisual === "people" ? "people-steps" : ""}${feature.stepsVisual === "emergency" ? " emergency-steps" : ""}${feature.stepsVisual === "sensor" ? " sensor-steps" : ""}`}><div className="message-content"><h2 className="max-w-[900px] text-[34px] font-medium leading-[1.12] md:text-[48px]">{feature.stepsTitle[0]}{feature.heroImage ? <br /> : " "}<span className="text-ink/45">{feature.stepsTitle[1]}</span></h2><div className="mt-16 grid gap-5 lg:grid-cols-3">{feature.steps.map(([title,text],index) => <article key={title} className="rounded-[20px] border border-ink/5 bg-card-light p-7">{feature.stepsVisual === "people" ? <PeopleStepVisual step={index} /> : feature.stepsVisual === "emergency" ? <EmergencyStepVisual step={index} /> : feature.stepsVisual === "sensor" ? <SensorStepVisual step={index} /> : <StepPlaceholder />}<p className="mb-3 mt-8 text-sm text-brand">Step {index+1}</p><h3 className="mb-3 text-[22px] font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-ink/60">{text}</p></article>)}</div></div></section></Reveal>
     {feature.peopleExtras && <Reveal bg="bg-paper"><PeopleMobile /></Reveal>}
     {feature.peopleExtras && <Reveal bg="bg-paper"><PeoplePrivacy /></Reveal>}
     <Reveal bg="bg-paper"><section className="bg-paper py-24 text-ink md:py-[140px]"><div className="message-content"><div className="flex flex-wrap items-end justify-between gap-6"><h2 className="text-[30px] font-medium leading-tight md:text-[40px]">More features. <span className="text-ink/45">One platform, one live map.</span></h2><Button asChild variant="link" className="h-auto p-0 text-brand"><Link to="/#key-features">All features <ArrowRight /></Link></Button></div><div className="mt-8 grid gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">{others.map(f => <Link key={f.n} to={f.href} className="group flex min-h-0 flex-col rounded-[20px] border border-ink/5 bg-card-light p-5 transition-colors hover:bg-ink/10 sm:min-h-[256px] sm:p-7"><div className="mb-6 flex items-center justify-between sm:mb-14"><span className="text-sm text-ink/40">{f.n}</span><span className="flex h-8 w-8 items-center justify-center rounded-full bg-paper"><ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" /></span></div><h3 className="mb-2 text-lg font-medium leading-snug sm:mb-3 sm:text-xl">{f.title}</h3><p className="text-sm leading-relaxed text-ink/60 sm:text-base">{f.text}</p></Link>)}</div></div></section></Reveal>

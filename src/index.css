@@ -181,6 +181,37 @@
 .emergency-check-count { font-size: 11px; font-weight: 500; color: hsl(var(--emergency-alarm)); }
 @media (min-width: 1024px) and (max-width: 1199px) { .emergency-step-visual { padding-inline: 14px; } }
 @media (max-width: 1023px) { .emergency-step-visual { max-width: 420px; margin-inline: auto; } }
+/* Sensor Integration step cards: the integrations list, an alarm in the map, and the action row. */
+.sensor-steps { --sensor-field: 240 10% 96%; --sensor-alarm: 355 68% 54%; --sensor-ok: 146 67% 37%; --sensor-idle: 240 4% 56%; }
+.sensor-step-visual { height: 268px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 16px 20px; border: 1px solid hsl(var(--ink) / .06); border-radius: 14px; background: hsl(var(--paper)); color: hsl(var(--ink)); font-size: 12px; line-height: 16px; }
+.sensor-mini-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; white-space: nowrap; color: hsl(var(--ink) / .55); }
+.sensor-alarm-text { color: hsl(var(--sensor-alarm)); font-weight: 500; }
+.sensor-list { display: flex; flex-direction: column; gap: 4px; }
+.sensor-row { display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: 8px; background: hsl(var(--sensor-field)); }
+.sensor-row-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; white-space: nowrap; }
+.sensor-row-text b { font-size: 12px; font-weight: 500; }
+.sensor-row-text small { font-size: 10.5px; line-height: 14px; color: hsl(var(--ink) / .5); }
+.sensor-row-state { display: flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 500; white-space: nowrap; color: hsl(var(--sensor-ok)); }
+.sensor-row-state i { width: 7px; height: 7px; border-radius: 50%; background: hsl(var(--sensor-ok)); }
+.sensor-row-state--pending { color: hsl(var(--ink) / .5); }
+.sensor-row-state--pending i { background: hsl(var(--sensor-idle)); }
+.sensor-map { position: relative; width: 100%; overflow: hidden; border: 1px solid hsl(var(--ink) / .08); border-radius: 10px; background: hsl(var(--sensor-field)); }
+.sensor-map--alarm { height: 168px; }
+.sensor-map--action { height: 140px; }
+.sensor-map-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sensor-map-lines path { fill: none; stroke: hsl(var(--ink) / .13); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.sensor-map-route path { fill: none; stroke: hsl(var(--ink) / .5); stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
+.sensor-zone { fill: hsl(var(--sensor-alarm) / .08); stroke: hsl(var(--sensor-alarm) / .7); stroke-width: 1.2; stroke-dasharray: 4 3.5; }
+.sensor-glow { position: absolute; width: 70px; height: 70px; border-radius: 50%; background: hsl(var(--sensor-alarm) / .08); }
+.sensor-pin { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: hsl(var(--sensor-alarm)); box-shadow: 0 0 0 1px hsl(var(--paper)); }
+.sensor-dot { position: absolute; width: 6.5px; height: 6.5px; border-radius: 50%; background: hsl(var(--ink)); box-shadow: 0 0 0 .75px hsl(var(--paper)); }
+.sensor-chip { position: absolute; padding: 2px 6px; border: 1px solid hsl(var(--ink) / .1); border-radius: 8px; background: hsl(var(--paper)); font-size: 9px; font-weight: 500; line-height: 11px; white-space: nowrap; color: hsl(var(--ink) / .7); }
+.sensor-chip--alarm { color: hsl(var(--sensor-alarm)); }
+.sensor-actions { display: flex; gap: 8px; }
+.sensor-action { flex: 1; padding: 11px 0; text-align: center; border: 1px solid hsl(var(--ink) / .11); border-radius: 8px; background: hsl(var(--paper)); font-size: 12px; font-weight: 500; white-space: nowrap; }
+.sensor-action--alarm { color: hsl(var(--sensor-alarm)); }
+@media (min-width: 1024px) and (max-width: 1199px) { .sensor-step-visual { padding-inline: 14px; } }
+@media (max-width: 1023px) { .sensor-step-visual { max-width: 420px; margin-inline: auto; } }
 .message-severity-option { padding: 12px; border: 1px solid hsl(var(--foreground) / .08); border-radius: 7px; background: hsl(var(--message-field)); }
 .message-severity-option:first-child { border-color: hsl(var(--foreground) / .8); background: hsl(var(--foreground) / .1); }
 .message-severity-option > span { display: flex; align-items: center; gap: 6px; color: hsl(var(--foreground)); }
