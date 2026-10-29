@@ -5,7 +5,7 @@ const heroMobileUrl = heroMobileAsset.url;
 
 export const HeroNew = () => {
   return (
-    <section className="relative overflow-hidden bg-surface min-h-[calc(153.5vw+140px)] md:min-h-0 md:aspect-[1920/1700]">
+    <section className="relative overflow-hidden bg-surface min-h-[calc(153.5vw+190px)] md:min-h-0 md:aspect-[1920/1700]">
       {/* Portrait crop of the hero artwork – used as the mobile background */}
       <img
         src={heroMobileUrl}
