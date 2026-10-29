@@ -185,7 +185,7 @@ export const Navigation = () => {
 
       {/* Full-screen mobile menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-[100] flex flex-col bg-background">
+        <div className="lg:hidden fixed inset-0 z-[100] flex flex-col bg-[hsl(var(--mega-surface))]">
           {/* Top row mirrors the header: logo left, close right */}
           <div className="flex items-center justify-between px-6 h-32 flex-shrink-0">
             <Link to="/" className="block" onClick={() => setIsMobileMenuOpen(false)}>
