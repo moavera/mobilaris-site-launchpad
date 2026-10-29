@@ -72,7 +72,7 @@ export const features: Record<string, FeatureConfig> = {
     slug: "/sensor-integration", label: "Sensor Integration",
     heroImage: sensorHeroMap.url,
     h1: ["Sensor alarms", "shown where they happen"],
-    introTitle: ["Connect sensors.", "Together with who is nearby."],
+    introTitle: ["Connect sensors.", "Visualize alarms."],
     intro: "Ventilation, gas and environmental sensors are shown in the same map as people and assets. When an alarm goes off, you see where it is and who is close to it.",
     image: sensorAsset.url, imageAlt: "Sensor values and alarms shown in the Mobilaris Site map",
     benefits: [["Gas and air quality", "O₂, CO, NO₂, methane and dust levels shown in place."], ["Ventilation status", "See airflow and fan status alongside the people in each zone."], ["People near an alarm", "Know instantly who is close to a sensor in alarm."], ["Open integrations", "Connect via SCADA, OPC UA or MQTT, or bring your own sensors."]],
