@@ -715,3 +715,84 @@ All colors MUST be HSL.
 @media (prefers-reduced-motion: reduce) {
   .site-mega { transition: none; transform: translate(-50%, 0); }
 }
+
+/* Book a demo band: dark surface, so every tone is derived from the
+   foreground/paper tokens instead of literal white or black utilities. */
+.book-demo-lead {
+  max-width: 46ch;
+  font-size: 16px;
+  line-height: 1.55;
+  color: hsl(var(--foreground) / .74);
+}
+.book-demo-brand {
+  font-weight: 600;
+  color: hsl(var(--paper));
+}
+.book-demo-note {
+  font-size: 13px;
+  line-height: 1.5;
+  color: hsl(var(--foreground) / .58);
+}
+.book-demo-label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 13px;
+  color: hsl(var(--foreground) / .72);
+}
+.book-demo-field {
+  width: 100%;
+  border: 1px solid hsl(var(--foreground) / .14);
+  border-radius: 12px;
+  background: hsl(var(--foreground) / .05);
+  padding: 14px 16px;
+  font-size: 16px;
+  color: hsl(var(--foreground));
+  transition: border-color 150ms ease, background 150ms ease;
+}
+.book-demo-field::placeholder { color: hsl(var(--foreground) / .46); }
+.book-demo-field:focus {
+  outline: none;
+  border-color: hsl(var(--brand) / .75);
+  background: hsl(var(--foreground) / .08);
+}
+.book-demo-field--invalid { border-color: hsl(var(--destructive) / .8); }
+.book-demo-error {
+  margin-top: 6px;
+  font-size: 13px;
+  color: hsl(var(--destructive));
+}
+.book-demo-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: hsl(var(--foreground) / .66);
+  cursor: pointer;
+}
+.book-demo-consent input {
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  flex-shrink: 0;
+  accent-color: hsl(var(--brand));
+}
+.book-demo-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 999px;
+  background: hsl(var(--paper));
+  color: hsl(var(--ink));
+  padding: 16px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 150ms ease;
+}
+.book-demo-submit:hover:not(:disabled) { background: hsl(var(--paper) / .88); }
+.book-demo-submit:disabled { opacity: .55; cursor: not-allowed; }
+.book-demo-done {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

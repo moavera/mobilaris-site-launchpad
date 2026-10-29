@@ -8,6 +8,7 @@ import { Principles } from "@/components/Principles";
 import { KeyFeatures } from "@/components/KeyFeatures";
 import { Stats } from "@/components/Stats";
 import { GettingStarted } from "@/components/GettingStarted";
+import { BookDemo } from "@/components/BookDemo";
 
 
 import { Partners } from "@/components/Partners";
@@ -22,6 +23,7 @@ const SiteProduct = () => {
       <Reveal bg="bg-white"><KeyFeatures /></Reveal>
       <Principles />
       <Reveal bg="bg-white"><Stats /></Reveal>
+      <Reveal bg="bg-surface"><BookDemo /></Reveal>
       
       
       
