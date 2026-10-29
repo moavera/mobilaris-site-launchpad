@@ -9,7 +9,6 @@ export function SensorSpotlight() {
     <section className="bg-paper px-3 pb-3 md:px-6 md:pb-6">
       <div className="spotlight-card">
         <div className="spotlight-text">
-          <p className="spotlight-eyebrow">Ventilation &amp; gas</p>
           <h2 className="spotlight-title">
             Know the air is safe. <span>Before anyone goes in.</span>
           </h2>
