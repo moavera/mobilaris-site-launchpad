@@ -12,7 +12,6 @@ import heroStage from "@/assets/messaging-hero-stage.webp.asset.json";
 import newMessage from "@/assets/messaging-composer-transparent.webp.asset.json";
 import newMessageMobile from "@/assets/messaging-composer-transparent-mobile.webp.asset.json";
 
-const corporateUrl = "https://mobilarisindustrialsolutions.se/";
 const companionUrl = "https://mobilarisindustrialsolutions.se/use-case/mobilaris-companion-go/";
 const benefits = [
   ["Target one zone, several or the whole site", "Choose exactly which zones a message applies to – nobody else is disturbed."],
