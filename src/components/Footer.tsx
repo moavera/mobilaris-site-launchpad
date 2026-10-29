@@ -99,7 +99,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
               >
-                <img src={micLogo} alt="Mobilaris Innovation Center" className="h-[40px] w-auto" />
+                <img src={micLogo} alt="Mobilaris Innovation Center" className="h-[36px] w-auto" />
               </a>
             </div>
           </div>
