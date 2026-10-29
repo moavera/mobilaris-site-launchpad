@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import spotlightImage from "@/assets/spotlight-fan-mockup-v2.webp.asset.json";
+import spotlightImage from "@/assets/spotlight-control-room.webp.asset.json";
 
 // Ventilation & gas spotlight for Sensor Integration (Figma 407:1560). The mockup is the
 // exported design image; the map on the screen is part of the picture, so nothing inside
@@ -27,10 +27,10 @@ export function SensorSpotlight() {
           <img
             className="spotlight-visual__img"
             src={spotlightImage.url}
-            alt="A ventilation fan detail panel with carbon monoxide, nitrogen dioxide, oxygen and air flow readings next to a mine map showing the fan's location"
+            alt="An operator in a control room following the site map on a large screen"
             loading="lazy"
             width={403}
-            height={475}
+            height={487}
           />
         </div>
       </div>
