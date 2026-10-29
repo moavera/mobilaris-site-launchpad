@@ -47,8 +47,8 @@ const DemoStart = () => {
       <div className="absolute top-6 left-6 z-20">
         <a href="/">
           <img
-            src={logoImage}
-            alt="Mobilaris Logo"
+            src={siteLogo.url}
+            alt="Mobilaris Site"
             className="h-12 md:h-16 w-auto cursor-pointer hover:opacity-80 transition-opacity"
           />
         </a>
