@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
-import logoImage from "@/assets/mobilaris-industrial-logga.svg";
+import siteLogo from "@/assets/site-logo-mono-white.png.asset.json";
 import { Link } from "react-router-dom";
 
 export const Navigation = () => {
@@ -94,13 +94,13 @@ export const Navigation = () => {
         <nav className="flex items-center justify-between h-32 max-w-full">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="https://mobilarisindustrialsolutions.se/" className="block">
+            <Link to="/" className="block">
               <img
-                src={logoImage}
-                alt="Mobilaris Industrial Solutions"
+                src={siteLogo.url}
+                alt="Mobilaris Site"
                 className="h-14 w-auto hover:opacity-80 transition-opacity"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
