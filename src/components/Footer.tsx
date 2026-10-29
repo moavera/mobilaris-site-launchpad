@@ -55,14 +55,20 @@ export const Footer = () => {
             <h3 className={eyebrow}>Navigate</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-8">
               <nav className="space-y-5">
-                <Link to="/" className={linkCls}>
-                  Home
-                </Link>
-                {productLinks.map((item) => (
-                  <Link key={item.href} to={item.href} className={linkCls}>
-                    {item.label}
+                <div>
+                  <Link to="/" className={parentLinkCls}>
+                    Mobilaris Site
                   </Link>
-                ))}
+                  <ul className="mt-4 space-y-3.5 border-l border-ink/10 pl-5">
+                    {productLinks.map((item) => (
+                      <li key={item.href}>
+                        <Link to={item.href} className={subLinkCls}>
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </nav>
               <nav className="space-y-5">
                 {companyLinks.map((item) => (
