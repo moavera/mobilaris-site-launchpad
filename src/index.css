@@ -561,3 +561,19 @@ All colors MUST be HSL.
 
 .mobile-visual { position:relative; min-width:0; display:flex; justify-content:center; }
 .mobile-visual__img { display:block; width:100%; max-width:470px; height:auto; }
+
+/* Sensor page – ventilation & gas spotlight (Figma 407:1560): the same dark surface and
+   type scale as the privacy card, with the photo pinned to the right edge of the text block. */
+.spotlight-card { display:flex; flex-direction:column; gap:40px; background:#151418; border-radius:28px; padding:48px 24px; overflow:hidden; }
+@media (min-width:1024px){ .spotlight-card { flex-direction:row; align-items:center; justify-content:space-between; gap:64px; padding:110px 96px; } .spotlight-text { width:470px; flex-shrink:0; } }
+.spotlight-text { display:flex; flex-direction:column; gap:24px; }
+.spotlight-eyebrow { color:#c7a8fb; font-size:14px; font-weight:500; }
+.spotlight-title { font-size:34px; font-weight:500; line-height:1.1; letter-spacing:-0.02em; color:hsl(var(--foreground)); }
+@media (min-width:768px){ .spotlight-title { font-size:44px; } }
+.spotlight-title span { color:rgba(255,255,255,0.45); }
+.spotlight-body { font-size:17px; line-height:1.55; color:rgba(255,255,255,0.62); }
+.spotlight-link { display:inline-flex; align-items:center; gap:8px; width:max-content; color:#c7a8fb; font-size:15px; font-weight:500; }
+.spotlight-link:hover { text-decoration:underline; }
+.spotlight-visual { flex:1 1 0; min-width:0; display:flex; justify-content:flex-end; }
+.spotlight-visual__img { display:block; width:100%; max-width:403px; height:auto; }
+@media (max-width:1023px){ .spotlight-visual__img { max-width:470px; margin-inline:auto; } }
