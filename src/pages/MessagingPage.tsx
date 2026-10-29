@@ -13,7 +13,7 @@ import newMessage from "@/assets/messaging-composer-transparent.webp.asset.json"
 import newMessageMobile from "@/assets/messaging-composer-transparent-mobile.webp.asset.json";
 
 const corporateUrl = "https://mobilarisindustrialsolutions.se/";
-const companionUrl = `${corporateUrl}companion/`;
+const companionUrl = "https://mobilarisindustrialsolutions.se/use-case/mobilaris-companion-go/";
 const benefits = [
   ["Target one zone, several or the whole site", "Choose exactly which zones a message applies to – nobody else is disturbed."],
   ["Set how long a message is active", "Messages expire automatically when they are no longer relevant."],
