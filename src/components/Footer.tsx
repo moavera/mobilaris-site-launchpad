@@ -4,6 +4,8 @@ import micLogo from "@/assets/mic_logo.svg";
 
 const eyebrow = "text-brand text-[13px] font-bold uppercase tracking-[0.2em] mb-8";
 const linkCls = "block text-ink hover:text-brand transition-colors text-[17px] leading-relaxed";
+const parentLinkCls = "block text-ink hover:text-brand transition-colors text-[17px] leading-relaxed font-semibold";
+const subLinkCls = "block text-ink/70 hover:text-brand transition-colors text-[16px] leading-relaxed";
 
 // The product column mirrors the "Mobilaris Site" mega-menu: same five features, same order.
 const productLinks = [
