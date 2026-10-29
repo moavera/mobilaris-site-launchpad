@@ -20,10 +20,11 @@ import sensorAsset from "@/assets/sensor_integration_bild.png.asset.json";
 import sensorHeroMap from "@/assets/hero-sensor-map.webp.asset.json";
 import { PeopleStepVisual } from "@/components/people/PeopleStepVisuals";
 import { EmergencyStepVisual } from "@/components/emergency/EmergencyStepVisuals";
+import { SensorStepVisual } from "@/components/sensor/SensorStepVisuals";
 
 type FeatureConfig = {
   slug: string; label: string; h1: [string, string]; introTitle: [string, string]; intro: string;
-  heroImage?: string; peopleExtras?: boolean; stepsVisual?: "people" | "emergency"; image: string; imageAlt: string; showcaseWide?: boolean; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
+  heroImage?: string; peopleExtras?: boolean; stepsVisual?: "people" | "emergency" | "sensor"; image: string; imageAlt: string; showcaseWide?: boolean; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
 };
 
 export const featureLinks = [
@@ -70,14 +71,14 @@ export const features: Record<string, FeatureConfig> = {
   },
   sensors: {
     slug: "/sensor-integration", label: "Sensor Integration",
-    heroImage: sensorHeroMap.url,
+    heroImage: sensorHeroMap.url, stepsVisual: "sensor",
     h1: ["Sensor alarms", "shown where they happen"],
     introTitle: ["Connect sensors.", "Visualize alarms."],
     intro: "View ventilation, gas and environmental sensor data alongside people and assets on the same map. When an alarm is triggered, see its location and identify nearby personnel.",
     image: sensorAsset.url, imageAlt: "Sensor values and alarms shown in the Mobilaris Site map",
     benefits: [["Integrate with existing sensors", "Bring ventilation, gas detection and other systems into one live view."], ["Alarms and warnings in real time", "See status changes the moment they happen, at the exact location."], ["People near an alarm", "Know who is close to an alarm before you send anyone in."], ["Act directly", "Message the affected zone or start an evacuation from the same view."]],
-    stepsTitle: ["From sensor to action.", "Three steps to a complete view."],
-    steps: [["Connect sensors", "Integrate your existing sensors and control systems."], ["See values in the map", "Sensor values and alarms appear where the sensors are."], ["Act on alarms", "See who is nearby and reach them directly."]],
+    stepsTitle: ["From sensor alert to action.", "All in one view."],
+    steps: [["Connect your sensors", "Integrate with your existing systems without replacing your current setup."], ["See alarms in the map", "Warnings and alarms appear on the map, showing who is nearby."], ["Act straight away", "Message an entire zone or initiate an evacuation directly from Mobilaris Site™."]],
   },
 };
 
