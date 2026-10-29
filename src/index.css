@@ -310,6 +310,8 @@ All colors MUST be HSL.
     /* Full-bleed section band surface (Figma: #0E0D11) */
     --surface: 255 13% 6%;
     --header-surface: 240 10% 17%;
+    /* Header mega-menu panel (Figma: #151617) */
+    --mega-surface: 210 4.5% 8.6%;
 
     /* Light section palette (Figma: white paper, #f2f2f3 cards, #141317 ink, #8e47f0 accent) */
     --paper: 0 0% 100%;
@@ -630,7 +632,7 @@ All colors MUST be HSL.
   width: min(920px, calc(100vw - 48px));
   border-radius: 18px;
   border: 1px solid hsl(var(--foreground) / .08);
-  background: hsl(var(--card));
+  background: hsl(var(--mega-surface));
   box-shadow: 0 24px 50px -12px rgb(0 0 0 / .7), 0 2px 8px rgb(0 0 0 / .4);
   opacity: 0;
   visibility: hidden;
@@ -684,22 +686,6 @@ All colors MUST be HSL.
   line-height: 1.45;
   color: hsl(var(--foreground) / .45);
 }
-.site-mega__col--last { justify-content: flex-start; }
-.site-mega__links {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 14px;
-  padding: 16px 12px 0;
-  border-top: 1px solid hsl(var(--foreground) / .07);
-}
-.site-mega__link {
-  font-size: 14px;
-  color: hsl(var(--foreground) / .65);
-  text-decoration: none;
-  transition: color 150ms ease;
-}
-.site-mega__link:hover { color: hsl(var(--foreground)); }
 .site-mega__footer {
   display: flex;
   align-items: center;
@@ -715,13 +701,6 @@ All colors MUST be HSL.
   margin: 0;
   font-size: 13px;
   color: hsl(var(--foreground) / .45);
-}
-.site-mega__pill {
-  padding: 3px 9px;
-  border: 1px solid hsl(var(--foreground) / .14);
-  border-radius: 9999px;
-  font-size: 11px;
-  color: hsl(var(--foreground) / .7);
 }
 .site-mega__more {
   display: inline-flex;
