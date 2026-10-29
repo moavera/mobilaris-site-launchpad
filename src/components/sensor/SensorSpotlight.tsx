@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import spotlightImage from "@/assets/spotlight-ventilation.jpg";
+import spotlightImage from "@/assets/spotlight-ventilation.webp.asset.json";
 
-// Ventilation & gas spotlight for Sensor Integration (Figma 407:1560). The photo is a
-// stand-in for the exported Figma image; the map on the monitor is part of the picture,
-// so nothing inside it can be mistaken for a live product control.
+// Ventilation & gas spotlight for Sensor Integration (Figma 407:1560). The photo is the
+// exported design image; the map on the monitor is part of the picture, so nothing inside
+// it can be mistaken for a live product control.
 export function SensorSpotlight() {
   return (
     <section className="bg-paper px-3 pb-3 md:px-6 md:pb-6">
@@ -27,11 +27,11 @@ export function SensorSpotlight() {
         <div className="spotlight-visual">
           <img
             className="spotlight-visual__img"
-            src={spotlightImage}
-            alt="A control room operator looking at a mine map showing sensor alarms and the positions of people and vehicles"
+            src={spotlightImage.url}
+            alt="A control room operator seen from behind looking at a site map showing sensor alarms, people and vehicles"
             loading="lazy"
-            width={1024}
-            height={1248}
+            width={403}
+            height={487}
           />
         </div>
       </div>
