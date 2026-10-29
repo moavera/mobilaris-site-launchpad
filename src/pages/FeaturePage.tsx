@@ -14,7 +14,6 @@ import peopleHeroMap from "@/assets/hero-people-map.webp.asset.json";
 import emergencyAsset from "@/assets/Emergency_bild.png.asset.json";
 import emergencyShowcase from "@/assets/emergency-showcase-map.webp.asset.json";
 import emergencyHeroMap from "@/assets/hero-emergency-map.webp.asset.json";
-import assetAsset from "@/assets/asset_tracking_bild.png.asset.json";
 import assetHeroMap from "@/assets/hero-asset-map.webp.asset.json";
 import assetPhone from "@/assets/asset-tracking-phone.webp.asset.json";
 import sensorAsset from "@/assets/fan-mockup-cutout.webp.asset.json";
