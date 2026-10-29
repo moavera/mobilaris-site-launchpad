@@ -76,7 +76,7 @@ export const features: Record<string, FeatureConfig> = {
     h1: ["Sensor alarms", "shown where they happen"],
     introTitle: ["Connect sensors.", "Visualize alarms."],
     intro: "View ventilation, gas and environmental sensor data alongside people and assets on the same map. When an alarm is triggered, see its location and identify nearby personnel.",
-    image: sensorAsset.url, imageAlt: "Sensor values and alarms shown in the Mobilaris Site map",
+    image: sensorAsset.url, imageAlt: "Ventilation fan VF-320 with carbon monoxide, nitrogen dioxide, oxygen and air flow readings next to its alarm on the site map",
     benefits: [["Integrate with existing sensors", "Bring ventilation, gas detection and other systems into one live view."], ["Alarms and warnings in real time", "See status changes the moment they happen, at the exact location."], ["People near an alarm", "Know who is close to an alarm before you send anyone in."], ["Act directly", "Message the affected zone or start an evacuation from the same view."]],
     stepsTitle: ["From sensor alert to action.", "All in one view."],
     steps: [["Connect your sensors", "Integrate with your existing systems without replacing your current setup."], ["See alarms in the map", "Warnings and alarms appear on the map, showing who is nearby."], ["Act straight away", "Message an entire zone or initiate an evacuation directly from Mobilaris Site™."]],
