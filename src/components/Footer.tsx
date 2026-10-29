@@ -7,7 +7,7 @@ const linkCls = "block text-ink hover:text-brand transition-colors text-[17px] l
 const parentLinkCls = "block text-ink hover:text-brand transition-colors text-[17px] leading-relaxed font-semibold";
 const subLinkCls = "block text-ink/70 hover:text-brand transition-colors text-[16px] leading-relaxed";
 
-// The product column mirrors the "Mobilaris Site" mega-menu: same five features, same order.
+// The product column mirrors the "Product" mega-menu: same five features, same order.
 const productLinks = [
   { label: "People & Workgroup Location", href: "/people-workgroup-location" },
   { label: "Messaging", href: "/messaging" },
@@ -57,7 +57,7 @@ export const Footer = () => {
               <nav className="space-y-5">
                 <div>
                   <Link to="/" className={parentLinkCls}>
-                    Mobilaris Site
+                    Product
                   </Link>
                   <ul className="mt-4 space-y-3.5 border-l border-ink/10 pl-5">
                     {productLinks.map((item) => (
