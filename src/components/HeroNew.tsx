@@ -1,13 +1,24 @@
 import heroAsset from "@/assets/hero-mine-landscape-hd.webp.asset.json";
+import heroMobileAsset from "@/assets/hero-mine-landscape-mobile.webp.asset.json";
 const heroImageUrl = heroAsset.url;
+const heroMobileUrl = heroMobileAsset.url;
 
 export const HeroNew = () => {
   return (
     <section className="relative overflow-hidden bg-surface min-h-[1000px] sm:min-h-[1100px] md:min-h-0 md:aspect-[1920/1700]">
+      {/* Portrait crop of the hero artwork – used as the mobile background */}
+      <img
+        src={heroMobileUrl}
+        alt="Mobilaris Site™ live map in front of a mine landscape at dusk"
+        className="intro-image absolute inset-0 h-full w-full object-cover object-bottom md:hidden"
+        style={{ animationDelay: "0.1s" }}
+        decoding="async"
+        fetchPriority="high"
+      />
       <img
         src={heroImageUrl}
         alt="Mobilaris Site™ live map in front of a mine landscape at dusk"
-        className="intro-image absolute inset-0 h-full w-full object-cover object-bottom [mask-image:linear-gradient(to_bottom,transparent,black_30%)] md:[mask-image:none]"
+        className="intro-image absolute inset-0 hidden h-full w-full object-cover object-bottom [mask-image:linear-gradient(to_bottom,transparent,black_30%)] md:block md:[mask-image:none]"
         style={{ animationDelay: "0.1s" }}
         decoding="async"
         fetchPriority="high"
