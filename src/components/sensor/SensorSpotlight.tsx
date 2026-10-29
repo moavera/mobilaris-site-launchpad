@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import spotlightImage from "@/assets/spotlight-ventilation.webp.asset.json";
 
-// Ventilation & gas spotlight for Sensor Integration (Figma 407:1560). The photo is the
-// exported design image; the map on the monitor is part of the picture, so nothing inside
+// Ventilation & gas spotlight for Sensor Integration (Figma 407:1560). The mockup is the
+// exported design image; the map on the screen is part of the picture, so nothing inside
 // it can be mistaken for a live product control.
 export function SensorSpotlight() {
   return (

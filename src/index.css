@@ -563,7 +563,7 @@ All colors MUST be HSL.
 .mobile-visual__img { display:block; width:100%; max-width:470px; height:auto; }
 
 /* Sensor page – ventilation & gas spotlight (Figma 407:1560): the same dark surface and
-   type scale as the privacy card, with the photo pinned to the right edge of the text block. */
+   type scale as the privacy card, with the product mockup pinned to the right edge of the text block. */
 .spotlight-card { display:flex; flex-direction:column; gap:40px; background:#151418; border-radius:28px; padding:48px 24px; overflow:hidden; }
 @media (min-width:1024px){ .spotlight-card { flex-direction:row; align-items:center; justify-content:space-between; gap:64px; padding:0 96px; } .spotlight-text { width:470px; flex-shrink:0; padding-block:110px; } }
 .spotlight-text { display:flex; flex-direction:column; gap:24px; }
@@ -574,5 +574,8 @@ All colors MUST be HSL.
 .spotlight-link { display:inline-flex; align-items:center; gap:8px; width:max-content; color:#c7a8fb; font-size:15px; font-weight:500; }
 .spotlight-link:hover { text-decoration:underline; }
 .spotlight-visual { flex:1 1 0; min-width:0; display:flex; justify-content:flex-end; }
+/* The mockup is the tallest element in the card, so it alone decides the card height. The
+   15px block padding keeps the Figma gaps (card 505, artwork 487 centred inside it). */
+@media (min-width:1024px){ .spotlight-visual { padding-block:15px; } }
 .spotlight-visual__img { display:block; width:100%; max-width:403px; height:auto; }
 @media (max-width:1023px){ .spotlight-visual__img { max-width:470px; margin-inline:auto; } }
