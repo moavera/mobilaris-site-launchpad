@@ -565,7 +565,7 @@ All colors MUST be HSL.
 /* Sensor page – ventilation & gas spotlight (Figma 407:1560): the same dark surface and
    type scale as the privacy card, with the photo pinned to the right edge of the text block. */
 .spotlight-card { display:flex; flex-direction:column; gap:40px; background:#151418; border-radius:28px; padding:48px 24px; overflow:hidden; }
-@media (min-width:1024px){ .spotlight-card { flex-direction:row; align-items:center; justify-content:space-between; gap:64px; padding:110px 96px; } .spotlight-text { width:470px; flex-shrink:0; } }
+@media (min-width:1024px){ .spotlight-card { flex-direction:row; align-items:center; justify-content:space-between; gap:64px; padding-inline:96px; } .spotlight-text { width:470px; flex-shrink:0; padding-block:110px; } }
 .spotlight-text { display:flex; flex-direction:column; gap:24px; }
 .spotlight-eyebrow { color:#c7a8fb; font-size:14px; font-weight:500; }
 .spotlight-title { font-size:34px; font-weight:500; line-height:1.1; letter-spacing:-0.02em; color:hsl(var(--foreground)); }
