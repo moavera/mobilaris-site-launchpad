@@ -1,69 +1,81 @@
+import { Link } from "react-router-dom";
 import { Linkedin, Facebook, Instagram, ArrowRight } from "lucide-react";
 import micLogo from "@/assets/mic_logo.svg";
 
+const eyebrow = "text-brand text-[13px] font-bold uppercase tracking-[0.2em] mb-8";
+const linkCls = "block text-ink hover:text-brand transition-colors text-[17px] leading-relaxed";
+
+// The product column mirrors the "Mobilaris Site" mega-menu: same five features, same order.
+const productLinks = [
+  { label: "People & Workgroup Location", href: "/people-workgroup-location" },
+  { label: "Messaging", href: "/messaging" },
+  { label: "Emergency Support", href: "/emergency-support" },
+  { label: "Asset Tracking", href: "/asset-tracking" },
+  { label: "Sensor Integration", href: "/sensor-integration" },
+];
+
+const companyLinks = [
+  { label: "About", href: "https://mobilarisindustrialsolutions.se/about-us/" },
+  { label: "Stories", href: "https://mobilarisindustrialsolutions.se/stories/" },
+  { label: "Career", href: "https://mobilarisindustrialsolutions.se/careers/" },
+  { label: "Contact", href: "https://mobilarisindustrialsolutions.se/contact/" },
+];
+
+const socials = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/mobilaris/", Icon: Linkedin, filled: true },
+  { label: "Facebook", href: "https://www.facebook.com/MobilarisAB", Icon: Facebook, filled: true },
+  { label: "Instagram", href: "https://www.instagram.com/worldofmobilaris/", Icon: Instagram, filled: false },
+];
+
 export const Footer = () => {
   return (
-    <footer className="bg-[#F5F5F7] py-24">
+    <footer className="bg-paper py-24">
       <div className="container mx-auto px-6 max-w-[1400px]">
         {/* First Row - Newsletter and Navigate */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 mb-20">
           {/* Newsletter Section - Takes 6 columns */}
           <div className="lg:col-span-6">
-            <h3 className="text-[#8B5CF6] text-[13px] font-bold uppercase tracking-[0.2em] mb-8">
-              Newsletter
-            </h3>
-            <h4 className="text-[#1A1A1A] text-[28px] font-bold mb-10 leading-[1.3]">
+            <h3 className={eyebrow}>Newsletter</h3>
+            <h4 className="text-ink text-[28px] font-bold mb-10 leading-[1.3]">
               Subscribe to our newsletter to stay up&nbsp;to<br className="hidden lg:block" /> date with the future of industry
             </h4>
-            <button 
-              className="bg-[#1A1A1A] hover:bg-[#333333] text-white font-semibold rounded-[8px] px-9 py-4 inline-flex items-center gap-3 transition-all duration-200 group"
-              onClick={() => window.location.href = '#contact'}
+            <button
+              className="bg-ink hover:bg-brand text-paper font-semibold rounded-[8px] px-9 py-4 inline-flex items-center gap-3 transition-all duration-200 group"
+              onClick={() => (window.location.href = "#contact")}
             >
               Subscribe
               <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
             </button>
           </div>
 
-          {/* Navigate Section - Column 1 - Takes 3 columns */}
-          <div className="lg:col-span-3">
-            <h3 className="text-[#8B5CF6] text-[13px] font-bold uppercase tracking-[0.2em] mb-8">
-              Navigate
-            </h3>
-            <nav className="space-y-5">
-              <a href="#" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
-                Home
-              </a>
-              <a href="https://mobilarisindustrialsolutions.se/asset-tracking/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
-                Asset Tracking
-              </a>
-              <a href="https://mobilarisindustrialsolutions.se/people-workgroup-location/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
-                People & Workgroup Location
-              </a>
-              <a href="https://mobilarisindustrialsolutions.se/evacuation-support/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
-                Evacuation Support
-              </a>
-            </nav>
-          </div>
-
-          {/* Navigate Section - Column 2 - Takes 3 columns */}
-          <div className="lg:col-span-3">
-            <h3 className="text-transparent text-[13px] font-bold uppercase tracking-[0.2em] mb-8 select-none pointer-events-none">
-              Navigate
-            </h3>
-            <nav className="space-y-5">
-              <a href="https://mobilarisindustrialsolutions.se/about-us/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
-                About
-              </a>
-              <a href="https://mobilarisindustrialsolutions.se/stories/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
-                Stories
-              </a>
-              <a href="https://mobilarisindustrialsolutions.se/careers/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
-                Career
-              </a>
-              <a href="https://mobilarisindustrialsolutions.se/contact/" target="_blank" rel="noopener noreferrer" className="block text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors text-[17px] leading-relaxed">
-                Contact
-              </a>
-            </nav>
+          {/* Navigate Section - one heading over two link columns */}
+          <div className="lg:col-span-6">
+            <h3 className={eyebrow}>Navigate</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-8">
+              <nav className="space-y-5">
+                <Link to="/" className={linkCls}>
+                  Home
+                </Link>
+                {productLinks.map((item) => (
+                  <Link key={item.href} to={item.href} className={linkCls}>
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+              <nav className="space-y-5">
+                {companyLinks.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={linkCls}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
           </div>
         </div>
 
@@ -71,61 +83,38 @@ export const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
           {/* Our Headquarters - Takes 4 columns */}
           <div className="lg:col-span-4">
-            <h3 className="text-[#8B5CF6] text-[13px] font-bold uppercase tracking-[0.2em] mb-8">
-              Our Headquarters
-            </h3>
+            <h3 className={eyebrow}>Our Headquarters</h3>
             <div className="flex items-start gap-4">
-              <a 
-                href="https://www.mobilarisinnovationcenter.se/" 
-                target="_blank" 
+              <a
+                href="https://www.mobilarisinnovationcenter.se/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
               >
-                <img 
-                  src={micLogo} 
-                  alt="Mobilaris Innovation Center" 
-                  className="h-[60px] w-auto"
-                />
+                <img src={micLogo} alt="Mobilaris Innovation Center" className="h-[60px] w-auto" />
               </a>
             </div>
           </div>
 
           {/* Empty spacer - 2 columns */}
           <div className="hidden lg:block lg:col-span-2"></div>
-          
+
           {/* Social Media - Takes 3 columns */}
           <div className="lg:col-span-3">
-            <h3 className="text-[#8B5CF6] text-[13px] font-bold uppercase tracking-[0.2em] mb-8">
-              Social Media
-            </h3>
-            <div className="flex gap-5">
-              <a 
-                href="https://www.linkedin.com/company/mobilaris/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-[28px] w-[28px]" fill="currentColor" strokeWidth={0} />
-              </a>
-              <a 
-                href="https://www.facebook.com/MobilarisAB" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-[#1A1A1A] hover:text-[#8B5CF6] transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-[28px] w-[28px]" fill="currentColor" strokeWidth={0} />
-              </a>
-              <a 
-                href="https://www.instagram.com/worldofmobilaris/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white hover:text-[#8B5CF6] transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-[28px] w-[28px]" fill="currentColor" strokeWidth={0} />
-              </a>
+            <h3 className={eyebrow}>Social Media</h3>
+            <div className="flex gap-4">
+              {socials.map(({ label, href, Icon, filled }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-ink text-paper hover:bg-brand transition-colors"
+                >
+                  <Icon className="h-5 w-5" fill={filled ? "currentColor" : "none"} strokeWidth={filled ? 0 : 1.7} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
