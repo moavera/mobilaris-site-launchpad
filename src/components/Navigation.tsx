@@ -160,7 +160,7 @@ export const Navigation = () => {
             <div className="site-mega__col">{featureItem(siteMenu[4])}</div>
           </div>
           <div className="site-mega__footer">
-            <p className="site-mega__note">A product by Mobilaris.</p>
+            <p className="site-mega__note">A product by Mobilaris Industrial Solutions</p>
             <a
               href="https://mobilarisindustrialsolutions.se/"
               target="_blank"

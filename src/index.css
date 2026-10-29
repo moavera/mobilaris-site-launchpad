@@ -311,7 +311,7 @@ All colors MUST be HSL.
     --surface: 255 13% 6%;
     --header-surface: 240 10% 17%;
     /* Header mega-menu panel (Figma: #151617) */
-    --mega-surface: 240 2.7% 7.255%;
+    --mega-surface: 240 4.545% 8.627%;
 
     /* Light section palette (Figma: white paper, #f2f2f3 cards, #141317 ink, #8e47f0 accent) */
     --paper: 0 0% 100%;
@@ -630,7 +630,7 @@ All colors MUST be HSL.
   left: 50%;
   transform: translate(-50%, 8px);
   width: min(920px, calc(100vw - 48px));
-  border-radius: 18px;
+  border-radius: 12px;
   border: 1px solid hsl(var(--foreground) / .08);
   background: hsl(var(--mega-surface));
   box-shadow: 0 24px 50px -12px rgb(0 0 0 / .7), 0 2px 8px rgb(0 0 0 / .4);
