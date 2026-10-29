@@ -76,6 +76,9 @@
 .message-severity-warning { color: hsl(var(--message-warning)); }
 .message-severity-info { color: hsl(var(--muted-foreground)); }
 .message-showcase-frame { width: 100%; max-width: 1400px; margin-inline: auto; padding-top: 2.2%; border-radius: 20px; overflow: hidden; background: linear-gradient(to bottom, hsl(var(--message-showcase-light)), hsl(var(--message-showcase-dark))); }
+/* The mockup sits flush with the card's right edge, so the empty left side carries the weight:
+   a horizontal dark veil laid over the vertical gradient, fading out before the artwork starts. */
+.message-showcase-frame--right { background: linear-gradient(to right, hsl(var(--message-showcase-dark) / .96) 0%, hsl(var(--message-showcase-dark) / .62) 34%, hsl(var(--message-showcase-dark) / 0) 68%), linear-gradient(to bottom, hsl(var(--message-showcase-light)), hsl(var(--message-showcase-dark))); }
 .message-showcase-img { display: block; width: 100%; height: auto; }
 /* Like on Messaging: the picture runs flush to the container's bottom edge — matte above and
    at the sides only, square bottom corners, and the shadow falls on the top and sides. */
