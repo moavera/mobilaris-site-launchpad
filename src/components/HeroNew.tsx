@@ -5,12 +5,12 @@ const heroMobileUrl = heroMobileAsset.url;
 
 export const HeroNew = () => {
   return (
-    <section className="relative overflow-hidden bg-surface aspect-[714/1056] min-h-[620px] md:min-h-0 md:aspect-[1920/1700]">
+    <section className="relative overflow-hidden bg-surface min-h-[calc(153.5vw+140px)] md:min-h-0 md:aspect-[1920/1700]">
       {/* Portrait crop of the hero artwork – used as the mobile background */}
       <img
         src={heroMobileUrl}
         alt="Mobilaris Site™ live map in front of a mine landscape at dusk"
-        className="intro-image absolute inset-0 h-full w-full object-cover object-bottom [mask-image:linear-gradient(to_bottom,transparent,black_30%)] md:hidden"
+        className="intro-image absolute inset-x-0 bottom-0 h-auto w-full [mask-image:linear-gradient(to_bottom,transparent,black_30%)] md:hidden"
         style={{ animationDelay: "0.1s" }}
         decoding="async"
         fetchPriority="high"
@@ -28,15 +28,15 @@ export const HeroNew = () => {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto max-w-4xl px-6 pt-28 text-center sm:pt-40 md:pt-[13%]">
-        <h1 className="mb-6 text-[40px] font-medium leading-[1.05] tracking-[-0.02em] text-white sm:text-6xl md:text-[72px] lg:text-[80px]">
+      <div className="relative z-10 mx-auto max-w-4xl px-6 pt-28 text-center sm:pt-36 md:pt-[13%]">
+        <h1 className="mb-6 text-[36px] font-medium leading-[1.05] tracking-[-0.02em] text-white sm:text-6xl md:text-[72px] lg:text-[80px]">
           <span className="intro inline-block" style={{ animationDelay: "0.15s" }}>Site-wide visibility,</span>
           <br />
           <span className="intro inline-block" style={{ animationDelay: "0.22s" }}>in real-time.</span>
         </h1>
 
         <p
-          className="intro mx-auto mb-8 max-w-[680px] text-lg leading-relaxed text-white/70 md:text-[21px]"
+          className="intro mx-auto mb-8 max-w-[680px] text-base sm:text-lg leading-relaxed text-white/70 md:text-[21px]"
           style={{ animationDelay: "0.3s" }}
         >
           Mobilaris Site™ puts people, vehicles and assets in one live map – indoors, outdoors and underground.
