@@ -6,7 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import videoBackground from "@/assets/snurren_blur.mp4";
-import logoImage from "@/assets/site-logo-2.png";
+import siteLogo from "@/assets/site-logo-mono-white.png.asset.json";
 import { Footer } from "@/components/Footer";
 
 const DemoStart = () => {
