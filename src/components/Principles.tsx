@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import techAsset from "@/assets/card-technology-agnostic.png.asset.json";
+import techAsset from "@/assets/card-technology-agnostic-v2.png.asset.json";
 import valueAsset from "@/assets/card-value-from-day-one.png.asset.json";
 import anywhereAsset from "@/assets/card-anywhere-you-work.png.asset.json";
 import modularAsset from "@/assets/card-modular.png.asset.json";
