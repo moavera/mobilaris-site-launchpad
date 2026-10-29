@@ -10,7 +10,7 @@ export const HeroNew = () => {
       <img
         src={heroMobileUrl}
         alt="Mobilaris Site™ live map in front of a mine landscape at dusk"
-        className="intro-image absolute inset-0 h-full w-full object-cover object-bottom md:hidden"
+        className="intro-image absolute inset-0 h-full w-full object-cover object-bottom [mask-image:linear-gradient(to_bottom,transparent,black_30%)] md:hidden"
         style={{ animationDelay: "0.1s" }}
         decoding="async"
         fetchPriority="high"
