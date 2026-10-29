@@ -16,6 +16,7 @@ import emergencyShowcase from "@/assets/emergency-showcase-map.webp.asset.json";
 import emergencyHeroMap from "@/assets/hero-emergency-map.webp.asset.json";
 import assetAsset from "@/assets/asset_tracking_bild.png.asset.json";
 import assetHeroMap from "@/assets/hero-asset-map.webp.asset.json";
+import assetPhone from "@/assets/asset-tracking-phone.webp.asset.json";
 import sensorAsset from "@/assets/fan-mockup-cutout.webp.asset.json";
 import sensorHeroMap from "@/assets/hero-sensor-map.webp.asset.json";
 import { PeopleStepVisual } from "@/components/people/PeopleStepVisuals";
@@ -25,7 +26,7 @@ import { SensorSpotlight } from "@/components/sensor/SensorSpotlight";
 
 type FeatureConfig = {
   slug: string; label: string; h1: [string, string]; introTitle: [string, string]; intro: string;
-  heroImage?: string; peopleExtras?: boolean; stepsVisual?: "people" | "emergency" | "sensor"; spotlight?: "sensor"; image: string; imageAlt: string; showcaseWide?: boolean; showcaseRight?: boolean; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
+  heroImage?: string; peopleExtras?: boolean; stepsVisual?: "people" | "emergency" | "sensor"; spotlight?: "sensor"; image: string; imageAlt: string; showcaseWide?: boolean; showcaseRight?: boolean; showcasePhone?: boolean; benefits: [string, string][]; stepsTitle: [string, string]; steps: [string, string][];
 };
 
 export const featureLinks = [
@@ -65,7 +66,7 @@ export const features: Record<string, FeatureConfig> = {
     h1: ["Find any machine,", "tool or vehicle in seconds"],
     introTitle: ["Less searching.", "More production."],
     intro: "Track the location and status of vehicles, tools and machinery across your operation. Reduce search time, support planning and make sure critical equipment is available when needed.",
-    image: assetAsset.url, imageAlt: "Vehicles and equipment shown in the Mobilaris Site map",
+    image: assetPhone.url, imageAlt: "A phone showing gas cylinder #34 in the Mobilaris Site app: its position on the map, unsafe status, and share, locate and QR-code actions", showcasePhone: true,
     benefits: [["Vehicles, tools and machinery", "Tag anything you need to find, from loaders to hand tools."], ["Last known position", "See where an asset is, or where it was last seen."], ["Status and usage", "Know which equipment is available and which is in use."], ["Better planning", "Use location history to plan shifts and maintenance."]],
     stepsTitle: ["From tag to found.", "Three steps to find any asset."],
     steps: [["Tag your assets", "Attach a tag to vehicles, tools or machinery."], ["Search the site", "Search by name or type and see the asset in the map."], ["Go and get it", "Go straight to the right place instead of searching."]],
@@ -105,7 +106,7 @@ export default function FeaturePage({ feature }: { feature: FeatureConfig }) {
 
 
       <Reveal bg="bg-surface"><div className="message-content grid gap-8 py-20 md:grid-cols-2 md:gap-24 md:py-[120px]"><h2 className="text-[32px] font-medium leading-[1.12] md:text-[40px]">{feature.introTitle[0]}{feature.introTitle[1] && <><br /><span className="text-foreground/45">{feature.introTitle[1]}</span></>}</h2><p className="max-w-[560px] text-base leading-relaxed text-foreground/60 md:text-lg">{feature.intro}</p></div></Reveal>
-      <Reveal bg="bg-surface"><div className="px-3 pb-20 md:px-5 md:pb-[120px]"><div className={`message-showcase-frame ${feature.showcaseWide ? "message-showcase-frame--shot" : feature.showcaseRight ? "message-showcase-frame--right flex justify-end" : "flex justify-center"}`}><img src={feature.image} alt={feature.imageAlt} loading="lazy" className={feature.showcaseWide ? "message-showcase-img" : `h-auto w-full max-w-[720px]${feature.showcaseRight ? " message-showcase-drop" : ""}`} /></div></div></Reveal>
+      <Reveal bg="bg-surface"><div className="px-3 pb-20 md:px-5 md:pb-[120px]"><div className={`message-showcase-frame ${feature.showcasePhone ? "message-showcase-frame--phone" : feature.showcaseWide ? "message-showcase-frame--shot" : feature.showcaseRight ? "message-showcase-frame--right flex justify-end" : "flex justify-center"}`}><img src={feature.image} alt={feature.imageAlt} loading="lazy" className={feature.showcasePhone ? "message-showcase-phone" : feature.showcaseWide ? "message-showcase-img" : `h-auto w-full max-w-[720px]${feature.showcaseRight ? " message-showcase-drop" : ""}`} /></div></div></Reveal>
     </section>
     <Reveal bg="bg-surface"><section className="message-benefits py-20 md:py-[120px]"><div className="message-content"><h2 className="max-w-[900px] text-[32px] font-medium leading-[1.17] md:text-[40px]">Key benefits. <span className="text-foreground/45">Alarms with context, so teams can respond where it matters.</span></h2><div className="mt-16 grid border-y border-foreground/10 sm:grid-cols-2 lg:grid-cols-4">{feature.benefits.map(([title,text],index) => <div key={title} className={`border-foreground/10 py-8 sm:px-7 sm:odd:border-r lg:border-r lg:first:pl-0 lg:last:border-r-0 ${index === 0 ? "" : "border-t"} ${index === 1 ? "sm:border-t-0" : ""} lg:border-t-0`}><p className="mb-5 text-xs text-foreground/40">0{index+1}</p><h3 className="mb-4 text-xl font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-foreground/50">{text}</p></div>)}</div></div></section></Reveal>
     <Reveal bg="bg-paper"><section className={`bg-paper py-24 text-ink md:pb-[120px] md:pt-[160px] ${feature.stepsVisual === "people" ? "people-steps" : ""}${feature.stepsVisual === "emergency" ? " emergency-steps" : ""}${feature.stepsVisual === "sensor" ? " sensor-steps" : ""}`}><div className="message-content"><h2 className="max-w-[900px] text-[34px] font-medium leading-[1.12] md:text-[48px]">{feature.stepsTitle[0]}{feature.heroImage ? <br /> : " "}<span className="text-ink/45">{feature.stepsTitle[1]}</span></h2><div className="mt-16 grid gap-5 lg:grid-cols-3">{feature.steps.map(([title,text],index) => <article key={title} className="rounded-[20px] border border-ink/5 bg-card-light p-7">{feature.stepsVisual === "people" ? <PeopleStepVisual step={index} /> : feature.stepsVisual === "emergency" ? <EmergencyStepVisual step={index} /> : feature.stepsVisual === "sensor" ? <SensorStepVisual step={index} /> : <StepPlaceholder />}<p className="mb-3 mt-8 text-sm text-brand">Step {index+1}</p><h3 className="mb-3 text-[22px] font-medium leading-snug">{title}</h3><p className="text-base leading-relaxed text-ink/60">{text}</p></article>)}</div></div></section></Reveal>
