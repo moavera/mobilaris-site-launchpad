@@ -722,7 +722,7 @@ All colors MUST be HSL.
   max-width: 46ch;
   font-size: 16px;
   line-height: 1.55;
-  color: hsl(var(--foreground) / .62);
+  color: hsl(var(--foreground) / .74);
 }
 .book-demo-brand {
   font-weight: 600;
@@ -731,13 +731,13 @@ All colors MUST be HSL.
 .book-demo-note {
   font-size: 13px;
   line-height: 1.5;
-  color: hsl(var(--foreground) / .4);
+  color: hsl(var(--foreground) / .58);
 }
 .book-demo-label {
   display: block;
   margin-bottom: 7px;
   font-size: 13px;
-  color: hsl(var(--foreground) / .55);
+  color: hsl(var(--foreground) / .72);
 }
 .book-demo-field {
   width: 100%;
@@ -749,7 +749,7 @@ All colors MUST be HSL.
   color: hsl(var(--foreground));
   transition: border-color 150ms ease, background 150ms ease;
 }
-.book-demo-field::placeholder { color: hsl(var(--foreground) / .32); }
+.book-demo-field::placeholder { color: hsl(var(--foreground) / .46); }
 .book-demo-field:focus {
   outline: none;
   border-color: hsl(var(--brand) / .75);
@@ -767,7 +767,7 @@ All colors MUST be HSL.
   gap: 10px;
   font-size: 13px;
   line-height: 1.45;
-  color: hsl(var(--foreground) / .5);
+  color: hsl(var(--foreground) / .66);
   cursor: pointer;
 }
 .book-demo-consent input {
