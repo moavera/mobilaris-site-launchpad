@@ -99,7 +99,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
               >
-                <img src={micLogo} alt="Mobilaris Innovation Center" className="h-[60px] w-auto" />
+                <img src={micLogo} alt="Mobilaris Innovation Center" className="h-[48px] w-auto" />
               </a>
             </div>
           </div>
@@ -110,7 +110,7 @@ export const Footer = () => {
           {/* Social Media - Takes 3 columns */}
           <div className="lg:col-span-3">
             <h3 className={eyebrow}>Social Media</h3>
-            <div className="flex gap-4">
+            <div className="flex gap-5">
               {socials.map(({ label, href, Icon, filled }) => (
                 <a
                   key={label}
@@ -118,9 +118,9 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-ink text-paper hover:bg-brand transition-colors"
+                  className="flex h-7 w-7 items-center justify-center rounded-[6px] bg-ink text-paper hover:bg-brand transition-colors"
                 >
-                  <Icon className="h-5 w-5" fill={filled ? "currentColor" : "none"} strokeWidth={filled ? 0 : 1.7} />
+                  <Icon className="h-4 w-4" fill={filled ? "currentColor" : "none"} strokeWidth={filled ? 0 : 1.7} />
                 </a>
               ))}
             </div>
