@@ -65,9 +65,10 @@
 @media (max-width: 767px) {
   .feature-map-visual { height: auto; aspect-ratio: 1 / 1; }
   .feature-map-visual .message-hero-bg { object-position: 100% 50%; }
-  /* The Messaging hero's message cards live in the right half of the artwork;
-     center-cropping on phones shows only empty darkness, so anchor the crop there. */
-  .message-stage .message-hero-bg { object-position: 65% 50%; }
+  /* The Messaging hero's message cards sit in the left-centre of the artwork (their text
+     spans roughly 24-48% of the width); a left-anchored crop shows the card stack with its
+     labels readable, like the reference framing, instead of the empty right-hand map. */
+  .message-stage .message-hero-bg { object-position: 25% 50%; }
 }
 
 
