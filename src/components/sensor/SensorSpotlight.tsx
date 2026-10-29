@@ -27,10 +27,10 @@ export function SensorSpotlight() {
           <img
             className="spotlight-visual__img"
             src={spotlightImage.url}
-            alt="A control room operator seen from behind looking at a site map showing sensor alarms, people and vehicles"
+            alt="A ventilation fan detail panel with carbon monoxide, nitrogen dioxide, oxygen and air flow readings next to a mine map showing the fan's location"
             loading="lazy"
             width={403}
-            height={487}
+            height={475}
           />
         </div>
       </div>
