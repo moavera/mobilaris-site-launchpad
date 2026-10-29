@@ -66,7 +66,7 @@ export const features: Record<string, FeatureConfig> = {
     introTitle: ["Less searching.", "More production."],
     intro: "Track the location and status of vehicles, tools and machinery across your operation. Reduce search time, support planning and make sure critical equipment is available when needed.",
     image: assetPhone.url, imageAlt: "A phone showing gas cylinder #34 in the Mobilaris Site app: its position on the map, unsafe status, and share, locate and QR-code actions", showcasePhone: true,
-    benefits: [["Real-time location of vehicles, tools and machinery", "See where every tagged asset is right now – underground or on the surface."], ["Last known position", "See where an asset is, or where it was last seen."], ["Status and usage", "Know which equipment is available and which is in use."], ["Better planning", "Use location history to plan shifts and maintenance."]],
+    benefits: [["Real-time location of vehicles, tools and machinery", "See where every tagged asset is right now – underground or on the surface."], ["Equipment in context", "View equipment alongside people and other assets on the same map."], ["Reduced delays and downtime", "Find the right equipment fast instead of waiting for it to turn up."], ["Safe storage of hazardous equipment", "Keep track of explosives and other hazardous items and where they are kept."]],
     stepsTitle: ["From tag to found.", "Three steps to find any asset."],
     steps: [["Tag your assets", "Attach a tag to vehicles, tools or machinery."], ["Search the site", "Search by name or type and see the asset in the map."], ["Go and get it", "Go straight to the right place instead of searching."]],
   },
