@@ -17,6 +17,14 @@ export const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll while the full-screen mobile menu is open.
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
   // The five Mobilaris Site features, laid out two / two / one across the mega-menu columns.
   const siteMenu = [
     {
@@ -172,44 +180,81 @@ export const Navigation = () => {
             </a>
           </div>
         </div>
+      </div>
+      </header>
 
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-white/20 bg-background/95 backdrop-blur-md">
-            <div className="flex flex-col space-y-4">
-            <p className="py-2 text-xs font-semibold uppercase tracking-wider text-foreground/50">Product</p>
-            {siteMenu.map((item) => (
-              <Link key={item.href} to={item.href} onClick={() => setIsMobileMenuOpen(false)} className="py-2 pl-3 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">
-                {item.label}
-              </Link>
-            ))}
-            <p className="py-2 text-xs font-semibold uppercase tracking-wider text-foreground/50">Mobilaris Industrial Solutions</p>
-            {navLinks.map((link) => (
+      {/* Full-screen mobile menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 z-[100] flex flex-col bg-background">
+          {/* Top row mirrors the header: logo left, close right */}
+          <div className="flex items-center justify-between px-6 h-32 flex-shrink-0">
+            <Link to="/" className="block" onClick={() => setIsMobileMenuOpen(false)}>
+              <img
+                src={siteLogo.url}
+                alt="Mobilaris Site"
+                className="h-14 w-auto"
+              />
+            </Link>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-2 text-foreground hover:opacity-80 transition-opacity"
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+
+          {/* Link list */}
+          <nav className="flex-1 overflow-y-auto px-6 pb-6">
+            <p className="pt-2 pb-4 text-xs font-semibold uppercase tracking-wider text-foreground/50">
+              Product
+            </p>
+            <div className="flex flex-col">
+              {siteMenu.map((item) => (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="py-3 text-lg font-medium text-foreground/85 transition-colors hover:text-foreground"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+
+            <p className="pt-8 pb-4 text-xs font-semibold uppercase tracking-wider text-foreground/50">
+              Mobilaris Industrial Solutions
+            </p>
+            <div className="flex flex-col">
+              {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-foreground hover:text-primary transition-colors py-2 flex items-center gap-1"
+                  className="py-3 text-lg font-medium text-foreground/85 transition-colors hover:text-foreground"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
-              <a
-                href="https://mobilarisindustrialsolutions.se/contact/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium border-2 border-foreground px-6 py-2 rounded text-center hover:bg-foreground hover:text-background transition-all"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact us
-              </a>
             </div>
+          </nav>
+
+          {/* Contact CTA pinned to the bottom */}
+          <div className="px-6 pb-8 pt-4 flex-shrink-0">
+            <a
+              href="https://mobilarisindustrialsolutions.se/contact/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center text-base font-semibold border border-foreground/40 rounded-full px-6 py-4 text-foreground transition-colors hover:bg-foreground hover:text-background"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact us
+            </a>
           </div>
-        )}
-      </div>
-      </header>
+        </div>
+      )}
     </>
   );
 };
