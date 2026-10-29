@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import logoImage from "@/assets/mobilaris-industrial-logga.svg";
 import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSiteMenuOpen, setIsSiteMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +17,42 @@ export const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // The five Mobilaris Site features, laid out two / two / one across the mega-menu columns.
   const siteMenu = [
-    { label: "People & Workgroup Location", href: "/people-workgroup-location" },
-    { label: "Messaging", href: "/messaging" },
-    { label: "Emergency Support", href: "/emergency-support" },
-    { label: "Asset Tracking", href: "/asset-tracking" },
-    { label: "Sensor Integration", href: "/sensor-integration" },
+    {
+      label: "People & Workgroup Location",
+      href: "/people-workgroup-location",
+      desc: "See where people and workgroups are across your site in real time.",
+    },
+    {
+      label: "Messaging",
+      href: "/messaging",
+      desc: "Messages from the control room straight to people on site.",
+    },
+    {
+      label: "Emergency Support",
+      href: "/emergency-support",
+      desc: "Instant visibility of people in hazardous areas and refuge chambers.",
+    },
+    {
+      label: "Asset Tracking",
+      href: "/asset-tracking",
+      desc: "Track the location and status of vehicles, tools and machinery.",
+    },
+    {
+      label: "Sensor Integration",
+      href: "/sensor-integration",
+      desc: "Sensor data alongside people and assets on the same map.",
+    },
+  ];
+
+  // Plain links closing the third column.
+  const siteLinks = [
+    { label: "Product", href: "/product" },
+    {
+      label: "Mobilaris Industrial Solutions",
+      href: "https://mobilarisindustrialsolutions.se/",
+    },
   ];
 
   const navLinks = [
@@ -29,6 +60,18 @@ export const Navigation = () => {
     { label: "Careers", href: "https://mobilarisindustrialsolutions.se/careers/" },
     { label: "Stories", href: "https://mobilarisindustrialsolutions.se/stories/" },
   ];
+
+  const featureItem = (item: { label: string; href: string; desc: string }) => (
+    <Link
+      key={item.href}
+      to={item.href}
+      onClick={() => setIsSiteMenuOpen(false)}
+      className="site-mega__item"
+    >
+      <span className="site-mega__title">{item.label}</span>
+      <span className="site-mega__desc">{item.desc}</span>
+    </Link>
+  );
 
   return (
     <>
@@ -53,8 +96,9 @@ export const Navigation = () => {
             ? "opacity-0 invisible -translate-y-full"
             : "opacity-100 visible translate-y-0"
         }`}
+        onMouseLeave={() => setIsSiteMenuOpen(false)}
       >
-      <div className="w-full px-6">
+      <div className="relative w-full px-6">
         <nav className="flex items-center justify-between h-32 max-w-full">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -69,21 +113,22 @@ export const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-12 mr-[250px]">
-            <div className="group relative flex items-center">
-              <Link to="/" className="text-white text-lg font-semibold transition-opacity hover:opacity-80 flex items-center gap-1">
-                Mobilaris Site
-                <ChevronDown className="h-4 w-4" />
-              </Link>
-              <div className="invisible absolute left-0 top-full pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
-                <div className="flex min-w-[280px] flex-col rounded-xl bg-background/95 p-2 shadow-xl ring-1 ring-white/10 backdrop-blur-md">
-                  {siteMenu.map((item) => (
-                    <Link key={item.href} to={item.href} className="rounded-lg px-4 py-2.5 text-sm font-medium text-foreground/80 transition-colors hover:bg-white/10 hover:text-foreground">
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <Link
+              to="/"
+              onMouseEnter={() => setIsSiteMenuOpen(true)}
+              onFocus={() => setIsSiteMenuOpen(true)}
+              aria-expanded={isSiteMenuOpen}
+              className={`flex items-center gap-1 rounded-full px-4 py-2 text-lg font-semibold text-white no-underline transition-colors hover:bg-white/10 ${
+                isSiteMenuOpen ? "bg-white/10" : ""
+              }`}
+            >
+              Mobilaris Site
+              <ChevronDown
+                className={`h-4 w-4 transition-transform duration-200 ${
+                  isSiteMenuOpen ? "rotate-180" : ""
+                }`}
+              />
+            </Link>
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -110,6 +155,44 @@ export const Navigation = () => {
             )}
           </button>
         </nav>
+
+        {/* Mobilaris Site mega-menu */}
+        <div
+          className={`site-mega hidden lg:block ${isSiteMenuOpen ? "is-open" : ""}`}
+          onMouseEnter={() => setIsSiteMenuOpen(true)}
+          aria-hidden={!isSiteMenuOpen}
+        >
+          <div className="site-mega__grid">
+            <div className="site-mega__col">{siteMenu.slice(0, 2).map(featureItem)}</div>
+            <div className="site-mega__col">{siteMenu.slice(2, 4).map(featureItem)}</div>
+            <div className="site-mega__col site-mega__col--last">
+              {featureItem(siteMenu[4])}
+              <div className="site-mega__links">
+                {siteLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="site-mega__link"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="site-mega__footer">
+            <p className="site-mega__note">
+              <span className="site-mega__pill">Platform</span>
+              Five features, one live map.
+            </p>
+            <Link to="/platform" onClick={() => setIsSiteMenuOpen(false)} className="site-mega__more">
+              Learn more
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
