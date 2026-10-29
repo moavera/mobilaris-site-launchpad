@@ -28,7 +28,7 @@ export const HeroNew = () => {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto max-w-4xl px-6 pt-28 text-center sm:pt-36 md:pt-[13%]">
+      <div className="relative z-10 mx-auto max-w-4xl px-6 pt-36 text-center sm:pt-36 md:pt-[13%]">
         <h1 className="mb-6 text-[36px] font-medium leading-[1.05] tracking-[-0.02em] text-white sm:text-6xl md:text-[72px] lg:text-[80px]">
           <span className="intro inline-block" style={{ animationDelay: "0.15s" }}>Site-wide visibility,</span>
           <br />
