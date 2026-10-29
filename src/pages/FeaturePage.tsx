@@ -62,7 +62,7 @@ export const features: Record<string, FeatureConfig> = {
   assets: {
     slug: "/asset-tracking", label: "Asset Tracking",
     heroImage: assetHeroMap.url,
-    h1: ["Locate equipment", "in seconds, not hours"],
+    h1: ["Find any machine,", "tool or vehicle in seconds"],
     introTitle: ["Less searching.", "More production."],
     intro: "Track the location and status of vehicles, tools and machinery across your operation. Reduce search time, support planning and make sure critical equipment is available when needed.",
     image: assetAsset.url, imageAlt: "Vehicles and equipment shown in the Mobilaris Site map",
