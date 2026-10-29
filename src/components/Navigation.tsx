@@ -22,27 +22,27 @@ export const Navigation = () => {
     {
       label: "People & Workgroup Location",
       href: "/people-workgroup-location",
-      desc: "See where people and workgroups are across your site in real time.",
+      desc: "Locate personnel and ensure authorized access",
     },
     {
       label: "Messaging",
       href: "/messaging",
-      desc: "Messages from the control room straight to people on site.",
+      desc: "Reach the right people on site, in seconds",
     },
     {
       label: "Emergency Support",
       href: "/emergency-support",
-      desc: "Instant visibility of people in hazardous areas and refuge chambers.",
+      desc: "A live overview when every second counts",
     },
     {
       label: "Asset Tracking",
       href: "/asset-tracking",
-      desc: "Track the location and status of vehicles, tools and machinery.",
+      desc: "Find any machine, tool or vehicle in seconds",
     },
     {
       label: "Sensor Integration",
       href: "/sensor-integration",
-      desc: "Sensor data alongside people and assets on the same map.",
+      desc: "Real-time insights from connected sensors",
     },
   ];
 
