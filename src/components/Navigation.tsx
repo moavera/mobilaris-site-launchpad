@@ -247,7 +247,8 @@ export const Navigation = () => {
               href="https://mobilarisindustrialsolutions.se/contact/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center text-base font-semibold border border-foreground/40 rounded-full px-6 py-4 text-foreground transition-colors hover:bg-foreground hover:text-background"
+              className="block text-center text-base font-semibold rounded-full px-6 py-4 text-white transition-opacity hover:opacity-90"
+              style={{ background: '#A029FF' }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact us
