@@ -95,10 +95,10 @@
 .message-showcase-drop { filter: drop-shadow(-26px 0 34px rgb(0 0 0 / .45)) drop-shadow(-10px -14px 26px rgb(0 0 0 / .3)); }
 /* Asset Tracking: portrait phone floating in a card sized like the Messaging showcase */
 .message-showcase-frame--phone { display: flex; align-items: center; justify-content: center; padding: 0; aspect-ratio: 1240 / 674; }
-.message-showcase-phone { display: block; width: auto; height: 84%; max-width: 90%; filter: drop-shadow(0 18px 26px rgb(0 0 0 / .45)); }
+.message-showcase-phone { display: block; width: auto; height: 76%; max-width: 88%; filter: drop-shadow(0 18px 26px rgb(0 0 0 / .45)); }
 @media (max-width: 767px) {
-  .message-showcase-frame--phone { aspect-ratio: 366 / 470; }
-  .message-showcase-phone { height: auto; width: 64%; max-width: 250px; }
+  .message-showcase-frame--phone { aspect-ratio: 366 / 413; }
+  .message-showcase-phone { height: 80%; width: auto; max-width: 88%; }
 }
 .message-severity-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .people-steps { --people-position: 234 82% 60%; --people-safe: 151 79% 35%; --people-unsafe: 356 74% 49%; }
