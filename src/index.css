@@ -65,6 +65,9 @@
 @media (max-width: 767px) {
   .feature-map-visual { height: auto; aspect-ratio: 1 / 1; }
   .feature-map-visual .message-hero-bg { object-position: 100% 50%; }
+  /* The Messaging hero's message cards live in the right half of the artwork;
+     center-cropping on phones shows only empty darkness, so anchor the crop there. */
+  .message-stage .message-hero-bg { object-position: 65% 50%; }
 }
 
 
