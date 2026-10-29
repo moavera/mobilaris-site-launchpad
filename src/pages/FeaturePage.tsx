@@ -73,7 +73,7 @@ export const features: Record<string, FeatureConfig> = {
   sensors: {
     slug: "/sensor-integration", label: "Sensor Integration",
     heroImage: sensorHeroMap.url, stepsVisual: "sensor", spotlight: "sensor",
-    h1: ["Sensor alarms with", "real-time context"],
+    h1: ["Real-time insights", "from connected sensors"],
     introTitle: ["Connect sensors.", "Visualize alarms."],
     intro: "View ventilation, gas and environmental sensor data alongside people and assets on the same map. When an alarm is triggered, see its location and identify nearby personnel.",
     image: sensorAsset.url, imageAlt: "Ventilation fan VF-320 with carbon monoxide, nitrogen dioxide, oxygen and air flow readings next to its alarm on the site map", showcaseRight: true,
